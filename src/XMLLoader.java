@@ -18,6 +18,10 @@ public class XMLLoader {
 	public static void main(String[] args)
 	{
 		// DEMO CODE
+		
+		Team inladen = laadTeam(ClassLoader.getSystemClassLoader().getResourceAsStream("test.xml"));
+		
+		System.out.println(inladen.toString());
 	}
 	
 	/**
@@ -26,17 +30,20 @@ public class XMLLoader {
 	 * @return		Het ingeladen team
 	 */
 	// Let op. Demomethode
-	public Team laadTeam(InputStream in){
+	public static Team laadTeam(InputStream in){
 		try {
 			DocumentBuilderFactory docbuilderf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docb = docbuilderf.newDocumentBuilder();
 			
 			Document doc = docb.parse(in);
 			doc.getDocumentElement().normalize();
-			NodeList teams = doc.getElementsByTagName("teams");
-			Element teamel = (Element) teams.item(0);
-			return Team.laadXMLElement(teamel);
 			
+			NodeList teams = doc.getElementsByTagName("teams");
+			Element teamsel = (Element) teams.item(0);
+			
+			Element teamel = (Element) teamsel.getElementsByTagName("team").item(0);
+			
+			return Team.laadXMLElement(teamel);
 			
 		} catch (ParserConfigurationException e) {
 			// Dit zou niet moeten gebeuren.
@@ -58,8 +65,9 @@ public class XMLLoader {
 	public static String getTaggedString(String tag, Element el)
 	{
 		NodeList match = el.getElementsByTagName(tag);
+		
 		if(match!=null && match.getLength()>0)
-			return el.getFirstChild().getNodeValue();
+			return ((Element) match.item(0)).getFirstChild().getNodeValue().trim();
 		
 		return ""; // TODO Temporary, throw error on missing node.
 	}
