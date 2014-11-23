@@ -1,0 +1,25 @@
+<teams>
+	<team>
+		<speler>
+			<naam>James Watt</naam>
+			<nummer>1</nummer>
+			<prijs>1000000</prijs>
+			<offensief>30</offensief>
+			<defensief>30</defensief>
+			<uithoudingsvermogen>60</uithoudingsvermogen>
+			<status>Beschikbaar</status>
+			<type>Middenvelder</type>
+		</speler>
+
+		<speler>
+			<naam>John Bell</naam>
+			<nummer>2</nummer>
+			<prijs>1200000</prijs>
+			<offensief>20</offensief>
+			<defensief>50</defensief>
+			<uithoudingsvermogen>60</uithoudingsvermogen>
+			<status>Beschikbaar</status>
+			<type>Verdediger</type>
+		</speler>
+	</team>
+</teams>

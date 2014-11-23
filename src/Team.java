@@ -2,7 +2,12 @@ import java.util.ArrayList;
 
 import exceptions.OpstellingException;
 import exceptions.TransferException;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
+/**
+ * Een klasse die een team voorstelt.
+ */
 public class Team {
 	private ArrayList<Speler> spelers, aanvallers, verdedigers, middenvelders;			// eventueel nog reserves?
 	private ArrayList<Doelman> doelmannen;
@@ -74,6 +79,40 @@ public class Team {
 				doelmannen.size() == 1)
 			return true;
 		return false;
+
+
+	@Override
+	public String toString()
+	{
+		StringBuilder res = new StringBuilder();
+		
+		for(Speler speler:spelers)
+		{
+			res.append(speler.toString());
+			res.append('\n');
+		}
+		
+		return res.toString();
+	}
+	
+	/**
+	 * Creeër een team door een XML Element in te laden.
+	 * @param el
+	 * @return Het gecreeërde team.
+	 */
+	public static Team laadXMLElement(Element el)
+	{
+		Team team = new Team();
+		NodeList spelers = el.getElementsByTagName("speler");
+		
+		for(int i=0; i<spelers.getLength(); i++)
+		{
+			Element speler = (Element) spelers.item(i);
+			
+			team.voegToe(Speler.laadXMLElement(speler));
+		}
+		
+		return team;
 	}
 	
 	public void verwijderSpeler(Speler sp) throws OpstellingException {

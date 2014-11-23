@@ -1,3 +1,6 @@
+/*
+Op verzoek van de studentassistent (wil speler op keeperpositie kunnen plaatsen) is deze klasse buiten gebruik
+Een doelman en een veldspeler zijn nu allebij gewoon spelers.
 
 public class Veldspeler extends Speler {
 	private Type type;
@@ -5,9 +8,7 @@ public class Veldspeler extends Speler {
 	private int DefensieveScore;
 	private int Uithoudingsvermogen;
 	
-	public enum Type {
-		Aanvaller, Middenvelder, Verdediger;
-	}
+	
 	
 	public Veldspeler(String naam,int nummer,int prijs, Status status, int uithvermogen, int offScore, int defScore, Type typ){
 		super(naam,nummer,prijs,status);
@@ -29,3 +30,4 @@ public class Veldspeler extends Speler {
 		return false;
 	}
 }
+*/
