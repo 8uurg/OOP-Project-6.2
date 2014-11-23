@@ -61,6 +61,7 @@ public class Speler {
 		return false;
 	}
 	
+	@Override
 	public String toString()
 	{
 		StringBuilder res = new StringBuilder();

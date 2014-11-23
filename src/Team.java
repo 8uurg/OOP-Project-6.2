@@ -29,6 +29,7 @@ public class Team {
 		}
 	}
 	
+	@Override
 	public String toString()
 	{
 		StringBuilder res = new StringBuilder();
