@@ -9,11 +9,11 @@ public class Veldspeler extends Speler {
 		Aanvaller, Middenvelder, Verdediger;
 	}
 	
-	public Veldspeler(String naam,int nummer,int prijs, Status status, int uithvermogen, int Offscore, int defscore, Type typ){
+	public Veldspeler(String naam,int nummer,int prijs, Status status, int uithvermogen, int offScore, int defScore, Type typ){
 		super(naam,nummer,prijs,status);
 		type = typ;
-		OffensieveScore = Offscore;
-		DefensieveScore = defscore;
+		OffensieveScore = offScore;
+		DefensieveScore = defScore;
 		Uithoudingsvermogen = uithvermogen;
 		
 	}
