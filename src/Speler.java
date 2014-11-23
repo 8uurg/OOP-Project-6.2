@@ -56,4 +56,19 @@ public class Speler {
 			this.status=Speler.Status.Gelekaart;
 		}
 	}
+	
+	public static Speler laadXMLElement(Element el)
+	{
+		String	naam		= XMLLoader.getTaggedString("naam", el);
+		int		nummer		= XMLLoader.getTaggedInt("nummer", el);
+		int		prijs		= XMLLoader.getTaggedInt("prijs", el);
+		Status	status		= Status.valueOf(XMLLoader.getTaggedString("status", el));
+		Type	type		= Type.valueOf(XMLLoader.getTaggedString("type", el));
+		int		offensief	= XMLLoader.getTaggedInt("offensief", el);
+		int		defensief	= XMLLoader.getTaggedInt("defensief", el);
+		int		uithoudingsvermogen = XMLLoader.getTaggedInt("uithoudingsvermogen", el);
+		
+		return new Speler(naam, nummer, prijs, status, type, offensief, defensief, uithoudingsvermogen);
+		
+	}
 }
