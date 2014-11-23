@@ -10,8 +10,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-
-
+/**
+ * Hulpklasse om XML Bestanden in te laden.
+ */
 public class XMLLoader {
 	
 	public static void main(String[] args)

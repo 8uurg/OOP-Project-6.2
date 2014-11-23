@@ -3,20 +3,35 @@ import java.util.ArrayList;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-
+/**
+ * Een klasse die een team voorstelt.
+ */
 public class Team {
-	private ArrayList<Speler> Team;
+	private ArrayList<Speler> team;
 	
+	/**
+	 * Maak een leeg team aan.
+	 */
 	public Team()
 	{
-		Team = new ArrayList<Speler>();
+		team = new ArrayList<Speler>();
 	}
 	
+	/**
+	 * Voeg een speler toe aan het team.
+	 * @param sp	De speler die toegevoegd moet worden.
+	 */
 	public void voegToe(Speler sp){
-		if(Team.indexOf(sp)==-1&&Team.size()<22)
-			Team.add(sp);
+		if(team.indexOf(sp)==-1 	// Voorkom dat hetzelfde teamlid twee keer wordt toegevoegd.
+				&& team.size()<22)	// Maximale grootte team.
+			team.add(sp);
 	}
 	
+	/**
+	 * Creeër een team door een XML Element in te laden.
+	 * @param el
+	 * @return
+	 */
 	public static Team laadXMLElement(Element el)
 	{
 		Team team = new Team();
