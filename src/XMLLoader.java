@@ -10,12 +10,14 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import exceptions.TransferException;
+
 /**
  * Hulpklasse om XML Bestanden in te laden.
  */
 public class XMLLoader {
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws TransferException
 	{
 		// DEMO CODE
 		
@@ -28,9 +30,10 @@ public class XMLLoader {
 	 * Laad een team in uit een inputstream.
 	 * @param in	De inputstream die ingeladen moet worden
 	 * @return		Het ingeladen team
+	 * @throws TransferException 
 	 */
 	// Let op. Demomethode
-	public static Team laadTeam(InputStream in){
+	public static Team laadTeam(InputStream in) throws TransferException{
 		try {
 			DocumentBuilderFactory docbuilderf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docb = docbuilderf.newDocumentBuilder();

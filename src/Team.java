@@ -9,8 +9,7 @@ import org.w3c.dom.NodeList;
  * Een klasse die een team voorstelt.
  */
 public class Team {
-	private ArrayList<Speler> spelers, aanvallers, verdedigers, middenvelders;			// eventueel nog reserves?
-	private ArrayList<Doelman> doelmannen;
+	private ArrayList<Speler> spelers, aanvallers, verdedigers, middenvelders, doelmannen;			// eventueel nog reserves?
 	int maxSpelers = 22, maxAanvallers = 3, maxVerdedigers = 4, maxMiddenvelders = 3, maxDoelmannen = 1;
 	
 	public Team() {
@@ -18,12 +17,12 @@ public class Team {
 		aanvallers = new ArrayList<Speler>();
 		middenvelders = new ArrayList<Speler>();
 		verdedigers = new ArrayList<Speler>();
-		doelmannen = new ArrayList<Doelman>();
+		doelmannen = new ArrayList<Speler>();
 	}
 	
 	public void voegToeSelectie(Speler sp) throws TransferException {
 		if (spelers.indexOf(sp) != -1)
-			throw new TransferException(sp + " zit al in de selectie!");
+			throw new TransferException(sp.naam + " zit al in de selectie!");
 		else if (spelers.size() >= maxSpelers)
 			throw new TransferException("De selectie bevat al het maximum aantal spelers!");
 		else
@@ -32,15 +31,15 @@ public class Team {
 	
 	public void verwijderVanSelectie(Speler sp) throws TransferException {
 		if (spelers.indexOf(sp) == -1)
-			throw new TransferException(sp + " zit niet in de selectie!");
+			throw new TransferException(sp.naam + " zit niet in de selectie!");
 	}
 	
 	public void kanWordenOpgesteld(Speler sp) throws OpstellingException  {
 		if(aanvallers.indexOf(sp) != -1 || middenvelders.indexOf(sp) != -1 || verdedigers.indexOf(sp) != -1)
-			throw new OpstellingException(sp + " staat al opgesteld!");
+			throw new OpstellingException(sp.naam + " staat al opgesteld!");
 		
 		if (spelers.indexOf(sp) == -1) 
-			throw new OpstellingException(sp + " zit niet in de selectie!");
+			throw new OpstellingException(sp.naam + " zit niet in de selectie!");
 	}
 	
 	public void voegToeAanvaller(Speler sp) throws OpstellingException {
@@ -68,10 +67,7 @@ public class Team {
 		kanWordenOpgesteld(sp);
 		if (maxDoelmannen <= aanvallers.size())
 			throw new OpstellingException("Verwijder eerst uw doelman voordat u een nieuwe opstelt!");
-		if (sp instanceof Doelman)
-			doelmannen.add((Doelman)sp);
-		else
-			throw new OpstellingException(sp + " is geen doelman!");
+		doelmannen.add(sp);
 	}
 	
 	public boolean geldigeOpstelling () {
@@ -79,6 +75,7 @@ public class Team {
 				doelmannen.size() == 1)
 			return true;
 		return false;
+	}
 
 
 	@Override
@@ -99,8 +96,9 @@ public class Team {
 	 * Creeër een team door een XML Element in te laden.
 	 * @param el
 	 * @return Het gecreeërde team.
+	 * @throws TransferException 
 	 */
-	public static Team laadXMLElement(Element el)
+	public static Team laadXMLElement(Element el) throws TransferException
 	{
 		Team team = new Team();
 		NodeList spelers = el.getElementsByTagName("speler");
@@ -109,7 +107,7 @@ public class Team {
 		{
 			Element speler = (Element) spelers.item(i);
 			
-			team.voegToe(Speler.laadXMLElement(speler));
+			team.voegToeSelectie(Speler.laadXMLElement(speler));
 		}
 		
 		return team;
