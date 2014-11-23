@@ -1,3 +1,6 @@
+/*
+Op verzoek van de studentassistent (wil speler op keeperpositie kunnen plaatsen) is deze klasse buiten gebruik.
+Een doelman en een veldspeler zijn nu allebij gewoon spelers.
 
 public class Doelman extends Speler{
 	
@@ -15,3 +18,4 @@ public class Doelman extends Speler{
 		return false;
 	}
 }
+*/
