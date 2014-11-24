@@ -11,6 +11,7 @@ import org.w3c.dom.NodeList;
 public class Team {
 	private ArrayList<Speler> spelers, aanvallers, verdedigers, middenvelders, doelmannen;			// eventueel nog reserves?
 	int maxSpelers = 22, maxAanvallers = 3, maxVerdedigers = 4, maxMiddenvelders = 3, maxDoelmannen = 1;
+	int budget = -1;
 	
 	public Team() {
 		spelers = new ArrayList<Speler>();
@@ -20,18 +21,52 @@ public class Team {
 		doelmannen = new ArrayList<Speler>();
 	}
 	
-	public void voegToeSelectie(Speler sp) throws TransferException {
+	public void maakBudget(int budget) {
+		this.budget = budget;
+	}
+	
+	public int getBudget() {
+		return this.budget;
+	}
+	
+	public void verhoogBudget(int verhoging) throws TransferException {
+		if (verhoging == 0) {}
+		else if (budget != -1) 
+			budget += verhoging;
+		else
+			throw new TransferException("Er is nog geen budget geïnitialiseerd voor dit team!");
+	}
+	
+	public void verlaagBudget(int verlaging) throws TransferException {
+		if (verlaging == 0) {}
+		else if (budget == -1) 
+			throw new TransferException("Er is nog geen budget geïnitialiseerd voor dit team!");
+		else if (budget - verlaging < 0) 
+			throw new TransferException("Er is niet voldoende budget om deze transactie te maken!");
+		else
+			budget -= verlaging;
+			
+	}
+	
+	public void voegToeSelectie(Speler sp, int transferbedrag) throws TransferException {
 		if (spelers.indexOf(sp) != -1)
 			throw new TransferException(sp.naam + " zit al in de selectie!");
 		else if (spelers.size() >= maxSpelers)
 			throw new TransferException("De selectie bevat al het maximum aantal spelers!");
-		else
+		else {
+			verlaagBudget(transferbedrag);
 			spelers.add(sp);
+		}
+			
 	}
 	
-	public void verwijderVanSelectie(Speler sp) throws TransferException {
+	public void verwijderVanSelectie(Speler sp, int transferbedrag) throws TransferException {
 		if (spelers.indexOf(sp) == -1)
 			throw new TransferException(sp.naam + " zit niet in de selectie!");
+		else {
+			verhoogBudget(transferbedrag);
+			spelers.remove(sp);
+		}
 	}
 	
 	public void kanWordenOpgesteld(Speler sp) throws OpstellingException  {
@@ -71,12 +106,11 @@ public class Team {
 	}
 	
 	public boolean geldigeOpstelling () {
-		if (aanvallers.size() + middenvelders.size() + verdedigers.size() + doelmannen.size() == 11 && 
+		if (aanvallers.size() + middenvelders.size() + verdedigers.size() == 10 && 
 				doelmannen.size() == 1)
 			return true;
 		return false;
 	}
-
 
 	@Override
 	public String toString()
@@ -107,7 +141,7 @@ public class Team {
 		{
 			Element speler = (Element) spelers.item(i);
 			
-			team.voegToeSelectie(Speler.laadXMLElement(speler));
+			team.voegToeSelectie(Speler.laadXMLElement(speler), 0);
 		}
 		
 		return team;
