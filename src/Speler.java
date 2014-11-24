@@ -14,7 +14,7 @@ public class Speler {
 	Type	type;
 	
 	public enum Status {
-		Beschikbaar, Blessure, Gelekaart, GelekaartTwee, Rodekaart;
+		Beschikbaar, Blessure, Gelekaart, Rodekaart;
 	}
 	
 	public enum Type {
