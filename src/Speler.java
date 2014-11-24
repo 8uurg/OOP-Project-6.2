@@ -1,6 +1,9 @@
 import org.w3c.dom.Element;
 
-public abstract class Speler {
+/**
+ * Een klasse die een speler representeerdt
+ */
+public class Speler {
 	String	naam;
 	int		nummer;
 	int 	prijs;
