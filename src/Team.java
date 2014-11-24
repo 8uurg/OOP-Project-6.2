@@ -132,7 +132,7 @@ public class Team {
 	 * @return Het gecreeërde team.
 	 * @throws TransferException 
 	 */
-	public static Team laadXMLElement(Element el) throws TransferException
+	public static Team laadXMLElement(Element el)
 	{
 		Team team = new Team();
 		NodeList spelers = el.getElementsByTagName("speler");
@@ -140,8 +140,11 @@ public class Team {
 		for(int i=0; i<spelers.getLength(); i++)
 		{
 			Element speler = (Element) spelers.item(i);
-			
+			try {
 			team.voegToeSelectie(Speler.laadXMLElement(speler), 0);
+			} catch (TransferException e) {
+				// Ingeladen bestand bevat een invalide team, NOPE!
+			}
 		}
 		
 		return team;
