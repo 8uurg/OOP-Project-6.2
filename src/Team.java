@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 
-import exceptions.TransferException;
+import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+
+import exceptions.TransferException;
 
 /**
  * Een klasse die een team voorstelt.
@@ -11,8 +13,9 @@ public class Team {
 	private String naam;
 	private ArrayList<Speler> spelers;
 	private Opstelling opstelling;
-	private int maxSpelers = 22;
 	private int budget = -1;
+	
+	private int maxSpelers = 22;
 	
 	public Team(String naam) {
 		this.naam = naam;
@@ -89,6 +92,26 @@ public class Team {
 			res.append('\n');
 		}	
 		return res.toString();
+	}
+	
+	/**
+	 * Creeër een XML element waarin de gegevens zitten om dit team opnieuw te kunnen reconstrueren.
+	 * @param doc
+	 * @return
+	 */
+	public Element getXMLElement(Document doc)
+	{
+		Element team = doc.createElement("team");
+		
+		team.setAttribute("naam", naam);
+		team.setAttribute("budget", Integer.toString(budget));
+		
+		for(Speler speler: spelers)
+		{
+			team.appendChild(speler.getXMLElement(doc));
+		}
+		
+		return team;
 	}
 	
 	/**

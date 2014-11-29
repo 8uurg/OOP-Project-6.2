@@ -1,3 +1,4 @@
+import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 /**
@@ -122,7 +123,23 @@ public class Speler {
 		return status;
 	}
 	
-	
+	public Element getXMLElement(Document doc)
+	{
+		Element me = doc.createElement("speler");
+		
+		me.appendChild(XMLWriter.getElementContainingString("naam", naam, doc));
+		me.appendChild(XMLWriter.getElementContainingInt("nummer", nummer, doc));
+		me.appendChild(XMLWriter.getElementContainingInt("prijs", prijs, doc));
+		me.appendChild(XMLWriter.getElementContainingString("status", status.toString(), doc));
+		me.appendChild(XMLWriter.getElementContainingString("type", type.toString(), doc));
+		me.appendChild(XMLWriter.getElementContainingInt("offensief", offensief, doc));
+		me.appendChild(XMLWriter.getElementContainingInt("defensief", defensief, doc));
+		
+		//TODO Vervang door uithoudings. Dit is iets te lang.
+		me.appendChild(XMLWriter.getElementContainingInt("uithoudingsvermogen", uithoudingsvermogen, doc));
+		
+		return me;
+	}
 	
 	public static Speler laadXMLElement(Element el)
 	{
