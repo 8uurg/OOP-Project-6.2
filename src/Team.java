@@ -14,6 +14,7 @@ public class Team {
 	private ArrayList<Speler> spelers;
 	private Opstelling opstelling;
 	private int budget = -1;
+	private int punten;
 	
 	private int maxSpelers = 22;
 	
@@ -21,6 +22,7 @@ public class Team {
 		this.naam = naam;
 		spelers = new ArrayList<Speler>();
 		opstelling = new Opstelling();
+		punten = 0;
 	}
 	
 	public String getNaam() {

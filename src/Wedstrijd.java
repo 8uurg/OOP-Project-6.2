@@ -23,5 +23,19 @@ public class Wedstrijd {
 	public Team[] getTeams() {
 		return teams;
 	}
+	/**
+	 * Puntentelling in Wedstrijd gezet omdat Wedstrijd de uitslag bevat na een game
+	 */
+	public void Punten(){
+		if(uitslag[0]<uitslag[1])
+			teams[1].geefPunten(3);
+		else if(uitslag[0]==uitslag[1]){
+			teams[0].geefPunten(1);
+			teams[1].geefPunten(1);
+		}
+		else
+			teams[0].geefPunten(3);
+		
+	}
 
 }
