@@ -69,6 +69,7 @@ public class Team {
 		else {
 			verlaagBudget(transferbedrag);
 			spelers.add(sp);
+			sp.wijzigTeam(this);
 		}
 	}
 	
@@ -78,6 +79,7 @@ public class Team {
 		else {
 			verhoogBudget(transferbedrag);
 			spelers.remove(sp);
+			sp.wijzigTeam(new Team("Vrij beschikbaar"));
 		}
 	}
 
