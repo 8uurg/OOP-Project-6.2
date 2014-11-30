@@ -45,18 +45,25 @@ public class Team {
 		return this.budget;
 	}
 	
+	public int getPunten() {
+		return this.punten;
+	}
+	public void geefPunten(int punten){
+		this.punten = this.punten+punten;
+	}
+	
 	public void verhoogBudget(int verhoging) throws TransferException {
 		if (verhoging == 0) {}
 		else if (budget != -1) 
 			budget += verhoging;
 		else
-			throw new TransferException("Er is nog geen budget geïnitialiseerd voor dit team!");
+			throw new TransferException("Er is nog geen budget geÃ¯nitialiseerd voor dit team!");
 	}
 	
 	public void verlaagBudget(int verlaging) throws TransferException {
 		if (verlaging == 0) {}
 		else if (budget == -1) 
-			throw new TransferException("Er is nog geen budget geïnitialiseerd voor dit team!");
+			throw new TransferException("Er is nog geen budget geÃ¯nitialiseerd voor dit team!");
 		else if (budget - verlaging < 0) 
 			throw new TransferException("Er is niet voldoende budget om deze transactie te maken!");
 		else
@@ -84,6 +91,8 @@ public class Team {
 			sp.wijzigTeam(new Team("Vrij beschikbaar"));
 		}
 	}
+	
+	
 
 	@Override
 	public String toString()
@@ -99,7 +108,7 @@ public class Team {
 	}
 	
 	/**
-	 * Creeër een XML element waarin de gegevens zitten om dit team opnieuw te kunnen reconstrueren.
+	 * CreeÃ«r een XML element waarin de gegevens zitten om dit team opnieuw te kunnen reconstrueren.
 	 * @param doc
 	 * @return
 	 */
@@ -119,9 +128,9 @@ public class Team {
 	}
 	
 	/**
-	 * Creeër een team door een XML Element in te laden.
+	 * CreeÃ«r een team door een XML Element in te laden.
 	 * @param el
-	 * @return Het gecreeërde team.
+	 * @return Het gecreeÃ«rde team.
 	 * @throws TransferException 
 	 */
 	public static Team laadXMLElement(Element el)
