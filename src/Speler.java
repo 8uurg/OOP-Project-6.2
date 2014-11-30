@@ -13,6 +13,7 @@ public class Speler {
 	int		uithoudingsvermogen;
 	Status	status;
 	Type	type;
+	Team	team = new Team("Ongedefinieerd");
 	
 	public enum Status {
 		Beschikbaar, Blessure, Gelekaart, Rodekaart;
@@ -57,9 +58,14 @@ public class Speler {
 					this.type.equals(that.type) &&
 					this.offensief == that.offensief &&
 					this.defensief == that.defensief &&
-					this.uithoudingsvermogen == that.uithoudingsvermogen;
+					this.uithoudingsvermogen == that.uithoudingsvermogen &&
+					this.team == that.team;
 		}
 		return false;
+	}
+	
+	public void wijzigTeam(Team team) {
+		this.team = team;
 	}
 	
 	@Override
@@ -96,6 +102,10 @@ public class Speler {
 		
 		res.append("Uithoudingsvermogen: ");
 		res.append(uithoudingsvermogen);
+		res.append('\n');
+		
+		res.append("Team: ");
+		res.append(team);
 		res.append('\n');
 		
 		return res.toString();
