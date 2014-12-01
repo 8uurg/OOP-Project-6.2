@@ -17,7 +17,7 @@
    <bottom>
       <HBox spacing="410.0" BorderPane.alignment="CENTER">
          <children>
-           <Button fx:id="Back2" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack2" prefWidth="115.0" text="Back" />
+           <Button fx:id="Back2" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack2" prefWidth="115.0" text="Terug" />
            <Button fx:id="StartManagement" layoutX="90.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartManagement" prefWidth="115.0" text="Start Management" />
            </children>
          <padding>

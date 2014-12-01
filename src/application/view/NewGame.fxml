@@ -31,8 +31,8 @@
    <bottom>
       <HBox spacing="410.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Back" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack" prefWidth="115.0" text="Back" />
-            <Button fx:id="Next" layoutX="90.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNext" prefWidth="115.0" text="Next" />
+            <Button fx:id="Back" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack" prefWidth="115.0" text="Terug" />
+            <Button fx:id="Next" layoutX="90.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNext" prefWidth="115.0" text="Volgende" />
          </children>
          <padding>
             <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />
