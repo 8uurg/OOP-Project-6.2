@@ -1,3 +1,4 @@
+package voetbalmanager;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -9,6 +10,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+
+import voetbalmanager.model.Team;
 
 /**
  * Hulpklasse om XML Bestanden in te laden.

@@ -1,6 +1,7 @@
+package voetbalmanager.model;
 import java.util.ArrayList;
 
-import exceptions.OpstellingException;
+import voetbalmanager.exceptions.OpstellingException;
 
 public class Opstelling {
 	

@@ -1,4 +1,4 @@
-package exceptions;
+package voetbalmanager.exceptions;
 @SuppressWarnings("serial")
 
 /*	Dit soort excepties worden gebruikt bij het transferscherm

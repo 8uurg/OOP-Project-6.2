@@ -1,3 +1,4 @@
+package voetbalmanager;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -16,7 +17,11 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import exceptions.TransferException;
+import voetbalmanager.exceptions.TransferException;
+import voetbalmanager.model.Speler;
+import voetbalmanager.model.Team;
+import voetbalmanager.model.Speler.Status;
+import voetbalmanager.model.Speler.Type;
 
 
 /**

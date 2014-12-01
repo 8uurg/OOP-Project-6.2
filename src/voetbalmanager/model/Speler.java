@@ -1,5 +1,9 @@
+package voetbalmanager.model;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+
+import voetbalmanager.XMLLoader;
+import voetbalmanager.XMLWriter;
 
 /**
  * Een klasse die een speler representeerdt

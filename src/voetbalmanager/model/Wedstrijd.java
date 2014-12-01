@@ -1,3 +1,4 @@
+package voetbalmanager.model;
 
 public class Wedstrijd {
 	

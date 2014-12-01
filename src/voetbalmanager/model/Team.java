@@ -1,10 +1,11 @@
+package voetbalmanager.model;
 import java.util.ArrayList;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import exceptions.TransferException;
+import voetbalmanager.exceptions.TransferException;
 
 /**
  * Een klasse die een team voorstelt.

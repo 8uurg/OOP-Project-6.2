@@ -1,4 +1,4 @@
-package exceptions;
+package voetbalmanager.exceptions;
 @SuppressWarnings("serial")
 
 /*	Deze excepties worden gebruikt in het opstellingscherm.
