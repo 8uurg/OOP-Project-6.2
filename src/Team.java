@@ -25,6 +25,20 @@ public class Team {
 		punten = 0;
 	}
 	
+	public boolean equals(Object other) {
+		if(other instanceof Team){
+			Team that = (Team)other;
+			
+			return	this.naam.equals(that.naam) &&
+					this.spelers.equals(that.spelers)&&
+					this.opstelling.equals(that.opstelling)&&
+					this.budget==that.budget&&
+					this.punten==that.punten;
+					
+		}
+		return false;
+	}
+	
 	public String getNaam() {
 		return this.naam;
 	}

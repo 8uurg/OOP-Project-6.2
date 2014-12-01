@@ -16,6 +16,18 @@ public class Opstelling {
 		doelmannen = new ArrayList<Speler>();
 	}
 	
+	public boolean equals(Object other) {
+		if(other instanceof Opstelling){
+			Opstelling that = (Opstelling)other;
+			
+			return 	this.aanvallers.equals(that.aanvallers)&&
+					this.verdedigers.equals(that.verdedigers)&&
+					this.middenvelders.equals(that.middenvelders)&&
+					this.doelmannen.equals(that.doelmannen);
+		}
+		return false;
+	}
+	
 	public void setTypeOpstelling(int maxaanvallers, int maxverdedigers, int maxmiddenvelders) {
 		this.maxAanvallers = maxaanvallers;
 		this.maxVerdedigers = maxverdedigers;
