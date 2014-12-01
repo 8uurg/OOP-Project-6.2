@@ -1,3 +1,4 @@
+package voetbalmanager.model;
 import java.util.ArrayList;
 
 

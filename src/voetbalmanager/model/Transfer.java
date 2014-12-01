@@ -1,4 +1,5 @@
-import exceptions.TransferException;
+package voetbalmanager.model;
+import voetbalmanager.exceptions.TransferException;
 
 
 public class Transfer {

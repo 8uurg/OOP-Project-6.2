@@ -1,5 +1,6 @@
+package voetbalmanager.model;
 import java.util.ArrayList;
-import exceptions.TransferException;
+import voetbalmanager.exceptions.TransferException;
 
 
 public class TransferMarkt {
