@@ -29,15 +29,29 @@ public class Competitie{
 	}
 	/**
 	 * Het speelschema van de competitie
-	 * Ben op dit moment bezig om een systeem te maken wat het mogelijk maakt dat ieder team 1x speelt per week.
-	 */
-	public void SpeelSchema(){
-		for(int i=0;i<(2*teams.size()-2);i++){//aantal games (teams.size()-2) omdat je 2x jezelf moet overslaan
-			for(int k=0;k<teams.size();k++){//hier wordt nog aan gewerkt.
-			//WIP		
+	 * Ben er helaas niet in geslaagd om het voor nu voor elkaar te krijgen om ieder team 1 game te laten spelen en resultaten te weergeven.
+	 * Op dit moment worden er 2 games gespeeld door ieder team per Speelronde.
+ 	 */
+	public void speelSchema(){
+		Competitie B = this;
+		for(int i=0;i<(this.teams.size()-1);i++){//aantal games (teams.size()-1) omdat je jezelf moet overslaan
+			B.nextRound();
+			if(B.teams.get(0).equals(this.teams.get(0))){
+				B.nextRound();
+			}
+			for(int k=0;k<this.teams.size();k=k++){//Ieder Team speelt nu 2 games per Speelronde
+			//	Game a = new Game(B.teams.get(k),this.teams.get(k));
 			}	
 		}
 				
+	}
+	/**
+	 * Verandert de indeling van de teams zodat iedere ronde tegen andere teams gespeeld wordt.
+	 */
+	public void nextRound(){
+		Team temp = this.teams.get(0);
+		teams.remove(0);
+		teams.add(temp);
 	}
 	
 	/**
