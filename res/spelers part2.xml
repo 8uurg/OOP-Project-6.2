@@ -1,3 +1,4 @@
+<teams>
 <team naam = "NAC Breda">
 <speler>
 <naam> Jelle ten Rouwelaar </naam>
@@ -241,7 +242,7 @@
 <prijs> 200 </prijs>
 </speler>
 </team>
-<team naam = "Vitesse">
+<team naam="Vitesse">
 <speler>
 <naam> Eloy Room </naam>
 <rugnummer> 1 </rugnummer>
@@ -1461,3 +1462,4 @@
 <prijs> 230 </prijs>
 </speler>
 </team>
+</teams>

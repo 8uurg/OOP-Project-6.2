@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane prefHeight="567.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.MainController">
+   <children>
+      <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+   <center>
+      <VBox alignment="CENTER" prefHeight="449.0" prefWidth="655.0" spacing="10.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox spacing="410.0" BorderPane.alignment="CENTER">
+         <children>
+           <Button fx:id="Back2" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack2" prefWidth="115.0" text="Back" />
+           <Button fx:id="StartManagement" layoutX="90.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartManagement" prefWidth="115.0" text="Start Management" />
+           </children>
+         <padding>
+            <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <top>
+      <Label text="Kies een team" textFill="#726d6d" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         </Label>
+   </top>
+</BorderPane>

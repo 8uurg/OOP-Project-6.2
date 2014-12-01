@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.StartMatchMarketController">
+   <center>
+      <TabPane prefHeight="551.0" prefWidth="653.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Kopen">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Aanvaller" />
+                      <Tab text="Verdediger" />
+                        <Tab text="Doelman">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+          <Tab text="Verkopen">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Aanvaller" />
+                      <Tab text="Verdediger" />
+                        <Tab text="Doelman">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <Pane prefHeight="88.0" prefWidth="653.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="BackMarket" layoutX="37.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleBackMarket" text="Terug" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

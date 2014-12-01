@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane prefHeight="527.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.MainController">
+   <children>
+      <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+   <center>
+      <VBox alignment="CENTER" prefHeight="527.0" prefWidth="505.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefHeight="0.0" prefWidth="800.0">
+               <padding>
+                  <Insets bottom="170.0" />
+               </padding>
+            </Separator>
+            <TextField maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" VBox.vgrow="NEVER" />
+           <Separator prefHeight="0.0" prefWidth="800.0">
+               <VBox.margin>
+                  <Insets top="180.0" />
+               </VBox.margin>
+            </Separator>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox spacing="410.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Back" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack" prefWidth="115.0" text="Back" />
+            <Button fx:id="Next" layoutX="90.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNext" prefWidth="115.0" text="Next" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <Label text="Voer een naam in" textFill="#726d6d" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         </Label>
+   </top>
+</BorderPane>
