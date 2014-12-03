@@ -19,7 +19,7 @@
                   <Insets bottom="170.0" />
                </padding>
             </Separator>
-            <TextField maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" VBox.vgrow="NEVER" />
+            <TextField fx:id="TekstVeld" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" VBox.vgrow="NEVER" />
            <Separator prefHeight="0.0" prefWidth="800.0">
                <VBox.margin>
                   <Insets top="180.0" />
