@@ -109,7 +109,7 @@ public class Speler {
 		res.append('\n');
 		
 		res.append("Team: ");
-		res.append(team);
+		res.append(team.getNaam());
 		res.append('\n');
 		
 		return res.toString();

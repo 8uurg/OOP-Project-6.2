@@ -18,11 +18,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import voetbalmanager.exceptions.TransferException;
+import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Speler;
 import voetbalmanager.model.Team;
-import voetbalmanager.model.Speler.Status;
-import voetbalmanager.model.Speler.Type;
-
 
 /**
  * Hulpklasse om een XML Bestand in te laden
@@ -77,6 +75,53 @@ public class XMLWriter {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	/**
+	 * Methode om competitie weg te schrijven naar een uitvoer.
+	 * @param competitie	Competitie die weggeschreven moet worden 
+	 * @param locatie		Plek waar de competitie naar weggeschreven moet worden.
+	 */
+	public static void saveCompetitie(Competitie competitie, StreamResult locatie) {
+		Document doc = XMLWriter.getDocument();
+		
+		doc.appendChild(competitie.getXMLElement(doc));
+		
+		XMLWriter.writeDOM(doc, locatie);		
+	}
+	
+	/**
+	 * Vraag een leeg document op om de gegevens in op te slaan.
+	 * @return Een leeg document.
+	 */
+	private static Document getDocument() {
+		try {
+			DocumentBuilder docbuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+			return docbuilder.newDocument();
+		} catch (ParserConfigurationException e) {
+			// Configuration should be okay in any case.
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	private static void writeDOM(Document doc, StreamResult out) {
+		try {
+			Transformer transformer = TransformerFactory.newInstance().newTransformer();
+			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+			transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+			DOMSource doms = new DOMSource(doc);
+			
+			transformer.transform(doms, out);
+		} catch (TransformerConfigurationException e) {
+			// Configuratie zou correct moeten zijn.
+			throw new RuntimeException(e);
+		} catch (TransformerFactoryConfigurationError e) {
+			// Configuratie van de factory zou ook correct moeten zijn.
+			throw new RuntimeException(e);
+		} catch (TransformerException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	/**

@@ -118,7 +118,8 @@ public class Team {
 		{
 			res.append(speler.toString());
 			res.append('\n');
-		}	
+		}
+		
 		return res.toString();
 	}
 	
@@ -143,9 +144,9 @@ public class Team {
 	}
 	
 	/**
-	 * CreeÃ«r een team door een XML Element in te laden.
+	 * Creeër een team door een XML Element in te laden.
 	 * @param el
-	 * @return Het gecreeÃ«rde team.
+	 * @return Het gecreeërde team.
 	 * @throws TransferException 
 	 */
 	public static Team laadXMLElement(Element el)
@@ -162,7 +163,7 @@ public class Team {
 		{
 			Element speler = (Element) spelers.item(i);
 			try {
-			team.voegToe(Speler.laadXMLElement(speler), 0);
+				team.voegToe(Speler.laadXMLElement(speler), 0);
 			} catch (TransferException e) {
 				// Ingeladen bestand bevat een invalide team, NOPE!
 			}

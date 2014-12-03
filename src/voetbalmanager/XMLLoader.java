@@ -9,8 +9,10 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Team;
 
 /**
@@ -34,7 +36,7 @@ public class XMLLoader {
 	 * @throws TransferException 
 	 */
 	// Let op. Demomethode
-	public static Team laadTeam(InputStream in) {
+	private static Team laadTeam(InputStream in) {
 		try {
 			DocumentBuilderFactory docbuilderf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docb = docbuilderf.newDocumentBuilder();
@@ -57,6 +59,30 @@ public class XMLLoader {
 			// ?
 		}
 		return null; 
+	}
+	
+	public Competitie laadCompetitie(InputSource in)
+	{
+		Document doc = XMLLoader.getDocument(in);
+		
+		return Competitie.laadXMLElement((Element) doc.getElementsByTagName("competitie").item(0));
+	}
+	
+	private static Document getDocument(InputSource in){		
+		try {
+			DocumentBuilderFactory docbuilderf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder docb = docbuilderf.newDocumentBuilder();
+			return docb.parse(in);
+		} catch (SAXException e) {
+			// TODO Parseprobleem... Invalide bestand.
+			throw new RuntimeException(e);
+		} catch (IOException e) {
+			// TODO IOException, bestand bestaat niet of doet iets anders.
+			throw new RuntimeException(e);
+		} catch (ParserConfigurationException e) {
+			// Configuratie zou moeten werken
+			throw new RuntimeException(e);
+		}
 	}
 	
 	// Hulpmiddelen.

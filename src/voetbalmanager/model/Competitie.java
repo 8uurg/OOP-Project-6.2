@@ -1,6 +1,11 @@
 package voetbalmanager.model;
 import java.util.ArrayList;
-import java.util.*;
+import java.util.Collections;
+import java.util.Comparator;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 /**
  * Klasse die een Competitie representeert.
@@ -84,6 +89,43 @@ public class Competitie{
 		}
 		return res.toString();
 	}
+	
+	/**
+	 * Creeër een XML Element waarin de gegevens zitten 
+	 * @param doc Document waarin de gegevens gestopt worden.
+	 * @return	Het element dat in een bepaald document gestopt kan worden.
+	 */
+	public Element getXMLElement(Document doc){
+		Element comp = doc.createElement("competitie");
+		
+		comp.setAttribute("naam", this.naam);
+		
+		Element teamlist = doc.createElement("teams");
+		
+		for(Team team:teams)
+			teamlist.appendChild(team.getXMLElement(doc));
+		
+		return comp;
+	}
+	
+	/**
+	 * Laad een XML element in om een competitie in te laden of te creeëren.
+	 * @param el
+	 * @return
+	 */
+	public static Competitie laadXMLElement(Element el) {
+		String naam = el.getAttribute("naam");
+		
+		Competitie competitie = new Competitie(naam);
+		
+		NodeList teamsnodes = ((Element) el.getElementsByTagName("teams").item(0)).getElementsByTagName("team");
+		
+		for(int i=0; i<teamsnodes.getLength(); i++)
+			competitie.addTeam(Team.laadXMLElement((Element) teamsnodes.item(i)));
+		
+		return competitie;
+	}
+	
 	/**
 	 * Maakt een nieuwe klasse competitie welke gesorteerd wordt en wordt teruggegeven. 
 	 * @param voorwaarde Op dit moment moet de voorwaarde "Naam" of "Punten" op gegeven worden om te sorteren op naam of punten
