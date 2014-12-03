@@ -61,9 +61,25 @@ public class XMLLoader {
 		return null; 
 	}
 	
-	public Competitie laadCompetitie(InputSource in)
+	/**
+	 * Laad een competitie uit een savebestand.
+	 * @param in	Het bestand om in te laden.
+	 * @return Een ingeladen competitie
+	 */
+	public static Competitie laadCompetitie(InputSource in)
 	{
 		Document doc = XMLLoader.getDocument(in);
+		
+		return Competitie.laadXMLElement((Element) doc.getElementsByTagName("competitie").item(0));
+	}
+	
+	/**
+	 * Creeer een nieuwe competitie vanuit een beginsituatie.
+	 * @param competitie	De competitie die ingeladen moet worden.
+	 * @return Een nieuwe competitie
+	 */
+	public static Competitie creeerCompetitie(String competitie) {
+		Document doc = XMLLoader.getDocument(new InputSource(XMLLoader.class.getResourceAsStream("/competities/" + competitie + ".xml")));
 		
 		return Competitie.laadXMLElement((Element) doc.getElementsByTagName("competitie").item(0));
 	}

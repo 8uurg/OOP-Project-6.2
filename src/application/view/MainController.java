@@ -2,13 +2,10 @@ package application.view;
 
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,9 +13,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import javax.xml.transform.stream.StreamResult;
+
+import voetbalmanager.XMLLoader;
+import voetbalmanager.XMLWriter;
+import voetbalmanager.model.Competitie;
 
 public class MainController implements Initializable{
 
@@ -101,11 +103,12 @@ public class MainController implements Initializable{
    public void handleNext(ActionEvent event) throws IOException {
 	  
 	   String naam = TekstVeld.getText();
-	  
-	   FileWriter fw = new FileWriter("C:/Users/Mayke/Documents/OOP-Project-6.2/res/" + naam + ".xml", true);
-	   PrintWriter pw = new PrintWriter(fw);
-	   pw.println("<naam = " + naam + ">");
-	   //xml files inlezen en toevoegen aan nieuwe xml
+	   String loc = "./saves/" + naam + ".xml";
+	   
+	   Competitie competitie = XMLLoader.creeerCompetitie("eredivisie");
+	   // TODO geef huidige competitie door aan centrale spelbeheerder.
+	   
+	   XMLWriter.saveCompetitie(competitie, new StreamResult(new File(loc)));
 			   
 	   Parent root = FXMLLoader.load(MainController.class.getResource("NewGameNext.fxml"));
 	   Scene scene = new Scene(root);
@@ -113,8 +116,7 @@ public class MainController implements Initializable{
 		
 		ps.setScene(scene);
 		ps.show();
-		pw.close();
-	
+			
     }
    
    @FXML
