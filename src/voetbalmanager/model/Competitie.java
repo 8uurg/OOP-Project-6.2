@@ -38,26 +38,31 @@ public class Competitie{
 	 * Ben er helaas niet in geslaagd om het voor nu voor elkaar te krijgen om ieder team 1 game te laten spelen en resultaten te weergeven.
 	 * Op dit moment worden er 2 games gespeeld door ieder team per Speelronde.
  	 */
-	public void speelSchema(){
-		Competitie B = this;
-		for(int i=0;i<(this.teams.size()-1);i++){//aantal games (teams.size()-1) omdat je jezelf moet overslaan
-			B.nextRound();
-			if(B.teams.get(0).equals(this.teams.get(0))){
-				B.nextRound();
+	public void maakSpeelSchema(){
+		ArrayList<Team> B = this.teams;
+		ArrayList<Team[]> C = new ArrayList<Team[]>();
+		
+		for(int i=0;i<(B.size()-1)*2;i++){//aantal games (teams.size()-1) omdat je jezelf moet overslaan
+			int k = 0;
+			while(k<=(B.size()-k-1)){
+				
+				Team[] a = {B.get(k),B.get(B.size()-k-1)};
+				C.add(a);
+				k++;
 			}
-			for(int k=0;k<this.teams.size();k=k++){//Ieder Team speelt nu 2 games per Speelronde
-			//	Game a = new Game(B.teams.get(k),this.teams.get(k));
-			}	
+			nextRound(B);
 		}
+		Speelschema S = new Speelschema(C,B.size());
+		S.maakWedstrijden();
 				
 	}
 	/**
 	 * Verandert de indeling van de teams zodat iedere ronde tegen andere teams gespeeld wordt.
 	 */
-	public void nextRound(){
-		Team temp = this.teams.get(0);
-		teams.remove(0);
-		teams.add(temp);
+	public static void nextRound(ArrayList<Team> B){
+		Team temp = B.get(1);
+		B.remove(1);
+		B.add(temp);
 	}
 	
 	/**
@@ -66,20 +71,14 @@ public class Competitie{
 	 */
 	@Override
 	public String toString(){
-		int i = 0;
 		StringBuilder res = new StringBuilder();
 		res.append("Competitie: ");
 		res.append(naam);
 		res.append("\n");
-		res.append("Plaats");
-		res.append("	");
 		res.append("Team");
 		res.append("		");
 		res.append("Punten\n");
 		for(Team team:teams){
-		i=i+1;
-		res.append(i);
-		res.append("	");
 		res.append(team.getNaam());
 		if(team.getNaam().length()<8)
 			res.append("	");

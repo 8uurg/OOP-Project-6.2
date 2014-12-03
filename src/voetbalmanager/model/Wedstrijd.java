@@ -5,9 +5,8 @@ public class Wedstrijd {
 	private Team[] teams;
 	private int[] uitslag;
 	
-	public Wedstrijd(Team team1, Team team2, int scoreTeam1, int scoreTeam2) {
+	public Wedstrijd(Team team1, Team team2) {
 		teams = new Team[]{team1, team2};
-		uitslag = new int[]{scoreTeam1, scoreTeam2};
 	}
 	
 	public String toString() {
@@ -15,6 +14,10 @@ public class Wedstrijd {
 		s += teams[0].getNaam() + " - " + teams[1].getNaam();
 		s += ": " + uitslag[0] + " - "  + uitslag[1];
 		return s;
+	}
+	
+	public void maakUitslag(int score1, int score2){
+		this.uitslag = new int[]{score1,score2};
 	}
 	
 	public int[] getUitslag() {
