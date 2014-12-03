@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class StartMatchMarketController implements Initializable{
+public class MarktController implements Initializable{
 
 	@FXML
 	private Button BackMarket;
