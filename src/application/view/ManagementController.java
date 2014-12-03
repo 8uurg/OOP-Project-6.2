@@ -18,20 +18,13 @@ import javafx.stage.Stage;
 
 public class ManagementController implements Initializable{
 	
-	@FXML
-	   private Button StartMatch;
-	   @FXML
-	   private Button Opstelling;
-	   @FXML
-	   private Button Spelersmarkt;
-	   @FXML
-	   private Button Klassement;
-	   @FXML
-	   private Button Statistieken;
-	   @FXML
-	   private Button Opslaan;
-	   @FXML
-	   private Button Exit;
+	@FXML private Button StartMatch;
+    @FXML private Button Opstelling;
+    @FXML private Button Spelersmarkt;
+    @FXML private Button Klassement;
+    @FXML private Button Statistieken;
+    @FXML private Button Opslaan;
+    @FXML private Button Exit;
 	 
 	
 	@FXML
