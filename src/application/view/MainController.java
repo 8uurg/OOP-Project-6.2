@@ -102,7 +102,8 @@ public class MainController implements Initializable{
 	  
 	   String naam = TekstVeld.getText();
 	  
-	   FileWriter fw = new FileWriter("C:/Users/Mayke/Documents/OOP-Project-6.2/res/" + naam + ".xml", true);
+	   FileWriter fw = new FileWriter(System.getProperty("user.dir") + "/" + naam + ".xml", true);
+	 
 	   PrintWriter pw = new PrintWriter(fw);
 	   pw.println("<naam = " + naam + ">");
 	   //xml files inlezen en toevoegen aan nieuwe xml
