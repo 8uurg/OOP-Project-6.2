@@ -24,24 +24,15 @@ import voetbalmanager.model.Competitie;
 
 public class MainController implements Initializable{
 
-   @FXML
-   private Button NewGame;
-   @FXML
-   private Button LoadGame;
-   @FXML
-   private Button Exit;
-   @FXML
-   private Button Help;
-   @FXML
-   private Button Next;
-   @FXML
-   private Button Back;
-   @FXML
-   private Button Back2;
-   @FXML
-   private Button StartManagement;
-   @FXML
-   private TextField TekstVeld;
+   @FXML private Button NewGame;
+   @FXML private Button LoadGame;
+   @FXML private Button Exit;
+   @FXML private Button Help;
+   @FXML private Button Next;
+   @FXML private Button Back;
+   @FXML private Button Back2;
+   @FXML private Button StartManagement;
+   @FXML private TextField TekstVeld;
 
    
    @FXML
@@ -103,6 +94,7 @@ public class MainController implements Initializable{
    public void handleNext(ActionEvent event) throws IOException {
 	  
 	   String naam = TekstVeld.getText();
+	   
 	   String loc = "./saves/" + naam + ".xml";
 	   
 	   Competitie competitie = XMLLoader.creeerCompetitie("eredivisie");
