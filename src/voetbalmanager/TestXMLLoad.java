@@ -33,6 +33,9 @@ public class TestXMLLoad {
 		XMLWriter.saveCompetitie(oud, outs);
 		
 		ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
+		
+		System.out.print(out);
+		
 		Competitie nieuw = XMLLoader.laadCompetitie(new InputSource(in));
 		
 		assertEquals(oud, nieuw);

@@ -105,6 +105,8 @@ public class Competitie{
 		for(Team team:teams)
 			teamlist.appendChild(team.getXMLElement(doc));
 		
+		comp.appendChild(teamlist);
+		
 		return comp;
 	}
 	
