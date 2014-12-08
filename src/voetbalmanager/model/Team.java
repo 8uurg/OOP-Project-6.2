@@ -182,6 +182,7 @@ public class Team {
 	 */
 	public void overrideAdd(Speler speler) {
 		spelers.add(speler);
+		speler.wijzigTeam(this);
 	}
 	
 }

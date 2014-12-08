@@ -62,8 +62,8 @@ public class Speler {
 					this.type.equals(that.type) &&
 					this.offensief == that.offensief &&
 					this.defensief == that.defensief &&
-					this.uithoudingsvermogen == that.uithoudingsvermogen &&
-					this.team.equals(that.team);
+					this.uithoudingsvermogen == that.uithoudingsvermogen;
+					//this.team.equals(that.team);
 		}
 		return false;
 	}

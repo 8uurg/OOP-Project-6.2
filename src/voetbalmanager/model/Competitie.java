@@ -24,6 +24,17 @@ public class Competitie{
 		this.naam = naam;
 		this.teams = new ArrayList<Team>();
 	}
+	
+	public boolean equals(Object other) {
+		if(other instanceof Competitie) {
+			Competitie that = (Competitie) other;
+			return	this.naam.equals(that.naam) &&
+					this.teams.equals(that.teams);
+		}
+		
+		return false;
+	}
+	
 	/**
 	 * Voeg een team toe aan een bestaande competitie
 	 * @param a Het team wat je in de competitie wil laten deelnemen.
@@ -33,6 +44,7 @@ public class Competitie{
 		if(teams.size()<19)
 		teams.add(a);
 	}
+	
 	/**
 	 * Het speelschema van de competitie
 	 * Ben er helaas niet in geslaagd om het voor nu voor elkaar te krijgen om ieder team 1 game te laten spelen en resultaten te weergeven.
@@ -57,6 +69,7 @@ public class Competitie{
 		for(int i=0;i<S.maakRonden().size();i++)
 		System.out.println(S.maakRonden().get(i).toString());
 	}
+	
 	/**
 	 * Verandert de indeling van de teams zodat iedere ronde tegen andere teams gespeeld wordt.
 	 */
@@ -79,14 +92,18 @@ public class Competitie{
 		res.append("Team");
 		res.append("		");
 		res.append("Punten\n");
+		
 		for(Team team:teams){
-		res.append(team.getNaam());
-		if(team.getNaam().length()<8)
+			res.append(team.getNaam());
+			if(team.getNaam().length()<8)
+				res.append("	");
 			res.append("	");
-		res.append("	");
-		res.append(team.getPunten());
-		res.append("\n");
+			res.append(team.getPunten());
+			res.append("\n");
+			res.append(team.toString());
+			res.append('\n');
 		}
+		
 		return res.toString();
 	}
 	
