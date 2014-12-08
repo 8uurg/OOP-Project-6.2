@@ -8,12 +8,26 @@ public class Wedstrijd {
 	public Wedstrijd(Team team1, Team team2) {
 		teams = new Team[]{team1, team2};
 	}
+	public boolean equals(Object other){
+		if(other instanceof Wedstrijd){
+			 Wedstrijd that= (Wedstrijd)other;
+			 return this.teams[1].equals(that.teams[1])&&
+					 this.teams[0].equals(that.teams[0]);
+		}
+		return false;
+	}
 	
-	public String toString() {
-		String s = "";
-		s += teams[0].getNaam() + " - " + teams[1].getNaam();
-		s += ": " + uitslag[0] + " - "  + uitslag[1];
-		return s;
+	public boolean teamEquals(Object other){
+		if(other instanceof Wedstrijd){
+			Wedstrijd that = (Wedstrijd)other;
+			if(	this.teams[1].equals(that.teams[1])|
+				this.teams[0].equals(that.teams[1])|
+				this.teams[1].equals(that.teams[0])|
+				this.teams[0].equals(that.teams[0])){
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public void maakUitslag(int score1, int score2){
@@ -40,6 +54,12 @@ public class Wedstrijd {
 		else
 			teams[0].geefPunten(3);
 		
+	}
+	public String toString() {
+		String s = "";
+		s += teams[0].getNaam() + " - " + teams[1].getNaam();
+//		s += ": " + uitslag[0] + " - "  + uitslag[1];
+		return s;
 	}
 
 }

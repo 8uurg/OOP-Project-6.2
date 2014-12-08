@@ -22,4 +22,7 @@ public class Speelronde {
 			s += wedstrijden.get(i).toString() + "\n";
 		return s;
 	}
+	public ArrayList<Wedstrijd> getWedstrijden(){
+		return wedstrijden;
+	}
 }

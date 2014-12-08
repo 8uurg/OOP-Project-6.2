@@ -53,8 +53,9 @@ public class Competitie{
 			nextRound(B);
 		}
 		Speelschema S = new Speelschema(C,B.size());
-		S.maakWedstrijden();
-				
+		S.maakRonden().get(0).toString();
+		for(int i=0;i<S.maakRonden().size();i++)
+		System.out.println(S.maakRonden().get(i).toString());
 	}
 	/**
 	 * Verandert de indeling van de teams zodat iedere ronde tegen andere teams gespeeld wordt.
