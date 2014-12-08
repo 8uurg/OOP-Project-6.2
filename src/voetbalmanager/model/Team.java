@@ -155,8 +155,10 @@ public class Team {
 		 * TODO: Budget moet worden ingelezen uit XML-bestand (kan worden ingevoerd door getBudget()
 		 * 		 of door 
 		 */
-		String teamNaam = "Moet nog worden gemaakt";
-		Team team = new Team(teamNaam);
+		String naam = el.getAttribute("naam");
+		int budget = Integer.parseInt(el.getAttribute("budget"));
+		
+		Team team = new Team(naam);
 		NodeList spelers = el.getElementsByTagName("speler");
 		
 		for(int i=0; i<spelers.getLength(); i++)
@@ -173,6 +175,13 @@ public class Team {
 	}
 	
 
-	
+	/**
+	 * Functie om spelers toe te voegen
+	 * Alleen gebruiken voor testen!
+	 * @param speler
+	 */
+	public void overrideAdd(Speler speler) {
+		spelers.add(speler);
+	}
 	
 }
