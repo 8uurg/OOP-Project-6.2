@@ -1,6 +1,10 @@
 package voetbalmanager;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -12,6 +16,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import voetbalmanager.exceptions.TransferException;
 import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Team;
 
@@ -84,7 +89,22 @@ public class XMLLoader {
 		return Competitie.laadXMLElement((Element) doc.getElementsByTagName("competitie").item(0));
 	}
 	
-	private static Document getDocument(InputSource in){		
+	/**
+	 * Lees een XML File uit.
+	 * @param in
+	 * @return
+	 * @throws FileNotFoundException
+	 */
+	public static Document getDocument(File in) throws FileNotFoundException{
+		return XMLLoader.getDocument(new InputSource(new InputStreamReader(new FileInputStream(in))));
+	}
+	
+	/**
+	 * Lees een document uit een inputsource.
+	 * @param in	Invoer om gegevens uit te lezen.
+	 * @return
+	 */
+	public static Document getDocument(InputSource in){		
 		try {
 			DocumentBuilderFactory docbuilderf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docb = docbuilderf.newDocumentBuilder();

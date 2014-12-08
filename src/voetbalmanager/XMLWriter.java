@@ -94,7 +94,7 @@ public class XMLWriter {
 	 * Vraag een leeg document op om de gegevens in op te slaan.
 	 * @return Een leeg document.
 	 */
-	private static Document getDocument() {
+	public static Document getDocument() {
 		try {
 			DocumentBuilder docbuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			return docbuilder.newDocument();
@@ -104,8 +104,12 @@ public class XMLWriter {
 		}
 	}
 	
-	
-	private static void writeDOM(Document doc, StreamResult out) {
+	/**
+	 * Sla een document (DOM) op in een streamresult
+	 * @param doc	Document om op te slaan
+	 * @param out	Uitvoer
+	 */
+	public static void writeDOM(Document doc, StreamResult out) {
 		try {
 			Transformer transformer = TransformerFactory.newInstance().newTransformer();
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
