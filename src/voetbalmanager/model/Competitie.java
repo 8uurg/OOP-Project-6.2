@@ -16,6 +16,7 @@ public class Competitie{
 	private String naam;
 	private ArrayList<Team> teams;
 	
+	private Team spelerTeam;
 	/**
 	 * Creëert een competitie met een naam (Bv, Eredivisie)en maakt het mogelijk om teams toe te voegen aan deze competitie.
 	 * @param naam
@@ -43,6 +44,29 @@ public class Competitie{
 	public void addTeam(Team a){
 		if(teams.size()<19)
 		teams.add(a);
+	}
+	
+	/**
+	 * Geeft een lijstje van de teams in de huidige competitie.
+	 * @return
+	 */
+	public ArrayList<Team> getTeams(){
+		return teams;
+	}
+	
+	/**
+	 * Vraagt het team op dat door de speler bestuurd wordt.
+	 * @return Het team van de speler als dat bestaat. Anders null.
+	 */
+	public Team getSpelerTeam(){
+		if(spelerTeam != null)
+			return spelerTeam;
+		
+		for(Team team:teams)
+			if(team.isSpelerBestuurd())
+				return (spelerTeam = team);
+		
+		return null;
 	}
 	
 	/**

@@ -1,5 +1,5 @@
 <teams>
-	<team>
+	<team budget="50000">
 		<speler>
 			<naam>James Watt</naam>
 			<nummer>1</nummer>
@@ -20,6 +20,5 @@
 			<uithoudingsvermogen>60</uithoudingsvermogen>
 			<status>Beschikbaar</status>
 			<type>Verdediger</type>
-		</speler>
-	</team>
+		</speler></team>
 </teams>

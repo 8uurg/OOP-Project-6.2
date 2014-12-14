@@ -17,7 +17,7 @@ public class Speler {
 	int		uithoudingsvermogen;
 	Status	status;
 	Type	type;
-	Team	team = new Team("Ongedefinieerd");
+	Team	team = new Team("Ongedefinieerd", false);
 	
 	public enum Status {
 		Beschikbaar, Blessure, Gelekaart, Rodekaart;

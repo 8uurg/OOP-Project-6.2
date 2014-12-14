@@ -22,11 +22,11 @@ public class TestXMLLoad {
 	public void test() {
 		Competitie oud = new Competitie("eredivisie");
 		
-		Team a = new Team("Ajax");
+		Team a = new Team("Ajax", false);
 			a.overrideAdd(new Speler("James", 12, 12, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 90, 10, 70));
 			a.overrideAdd(new Speler("Patrick", 13, 2, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 60, 40, 70));
 		
-		Team b = new Team("Vitesse");
+		Team b = new Team("Vitesse", true);
 			b.overrideAdd(new Speler("James", 12, 12, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 90, 10, 70));
 			b.overrideAdd(new Speler("Patrick", 13, 2, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 60, 40, 70));
 	

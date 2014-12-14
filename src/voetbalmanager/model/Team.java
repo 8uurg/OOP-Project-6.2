@@ -18,9 +18,11 @@ public class Team {
 	private int punten;
 	
 	private int maxSpelers = 22;
+	private boolean gebruikerTeam;
 	
-	public Team(String naam) {
+	public Team(String naam, boolean gebruikerTeam) {
 		this.naam = naam;
+		this.gebruikerTeam = gebruikerTeam;
 		spelers = new ArrayList<Speler>();
 		opstelling = new Opstelling();
 		punten = 0;
@@ -103,7 +105,7 @@ public class Team {
 		else {
 			verhoogBudget(transferbedrag);
 			spelers.remove(sp);
-			sp.wijzigTeam(new Team("Vrij beschikbaar"));
+			sp.wijzigTeam(new Team("Vrij beschikbaar", false));
 		}
 	}
 	
@@ -134,6 +136,7 @@ public class Team {
 		
 		team.setAttribute("naam", naam);
 		team.setAttribute("budget", Integer.toString(budget));
+		team.setAttribute("gebruikerteam", Boolean.toString(gebruikerTeam));
 		
 		for(Speler speler: spelers)
 		{
@@ -156,9 +159,10 @@ public class Team {
 		 * 		 of door 
 		 */
 		String naam = el.getAttribute("naam");
+		boolean gebruikerTeam = el.getAttribute("gebruikerteam").equalsIgnoreCase("true");
 		int budget = Integer.parseInt(el.getAttribute("budget"));
 		
-		Team team = new Team(naam);
+		Team team = new Team(naam, gebruikerTeam);
 		NodeList spelers = el.getElementsByTagName("speler");
 		
 		for(int i=0; i<spelers.getLength(); i++)
@@ -174,6 +178,21 @@ public class Team {
 		return team;
 	}
 	
+	/**
+	 * Is een team computergestuurd?
+	 * @return Boolean die aangeeft of dit team gemanaged wordt door een computer.
+	 */
+	public boolean isComputerGestuurd(){
+		return !gebruikerTeam;
+	}
+	
+	/**
+	 * Is het team van de speler.
+	 * @return Boolean die aangeeft of dit team van de speler is.
+	 */
+	public boolean isSpelerBestuurd(){
+		return gebruikerTeam;
+	}
 
 	/**
 	 * Functie om spelers toe te voegen

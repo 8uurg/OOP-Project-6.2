@@ -23,8 +23,8 @@ public class SpelerTest {
 	public void testWijzigTeam() {
 		Speler.Status B = Speler.Status.Beschikbaar;
 		Speler.Type A= Speler.Type.Aanvaller;
-		Team T = new Team("Test");
-		Team J = new Team("Ja");
+		Team T = new Team("Test", false);
+		Team J = new Team("Ja", false);
 		Speler C = new Speler("Naam",5,1,B,A,5,5,3);
 		Speler D = new Speler("Naam",5,1,B,A,5,5,3);
 		Speler E = new Speler("Naam",5,1,B,A,5,5,3);
