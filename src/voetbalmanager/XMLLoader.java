@@ -24,7 +24,7 @@ import voetbalmanager.model.Team;
  * Hulpklasse om XML Bestanden in te laden.
  */
 public class XMLLoader {
-	
+	/*
 	public static void main(String[] args) 
 	{
 		// DEMO CODE
@@ -40,7 +40,7 @@ public class XMLLoader {
 	 * @return		Het ingeladen team
 	 * @throws TransferException 
 	 */
-	// Let op. Demomethode
+	/*// Let op. Demomethode
 	private static Team laadTeam(InputStream in) {
 		try {
 			DocumentBuilderFactory docbuilderf = DocumentBuilderFactory.newInstance();
@@ -65,6 +65,7 @@ public class XMLLoader {
 		}
 		return null; 
 	}
+	*/
 	
 	/**
 	 * Laad een competitie uit een savebestand.

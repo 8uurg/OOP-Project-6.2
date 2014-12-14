@@ -26,7 +26,7 @@ import voetbalmanager.model.Team;
  * Hulpklasse om een XML Bestand in te laden
  */
 public class XMLWriter {
-
+	/*
 	public static void main(String[] args)
 	{
 		try {
@@ -76,7 +76,7 @@ public class XMLWriter {
 		}
 		
 	}
-	
+	*/
 	/**
 	 * Methode om competitie weg te schrijven naar een uitvoer.
 	 * @param competitie	Competitie die weggeschreven moet worden 
