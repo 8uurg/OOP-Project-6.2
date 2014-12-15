@@ -9,56 +9,56 @@ public class Speelschema {
 	ArrayList<Team[]> wedstrijdlijst;
 	ArrayList<Wedstrijd> wedstrijden;
 	int aantalTeams;
-	
-	
-	public Speelschema(ArrayList<Team[]> wedstrijdlijst,int aantalTeams){
+
+	/**
+	 * Creëert Speelschema voor de competitie
+	 * @param wedstrijdlijst Lijst met teams die ingedeeld worden in wedstrijden
+	 * @param aantalTeams Het aantal teams dat meedoet in de competitie
+	 */
+	public Speelschema(ArrayList<Team[]> wedstrijdlijst, int aantalTeams) {
 		this.wedstrijdlijst = wedstrijdlijst;
 		this.aantalTeams = aantalTeams;
 		this.wedstrijden = new ArrayList<Wedstrijd>();
 	}
 	
-	public void maakWedstrijden(){
-		Collections.shuffle(wedstrijdlijst,new Random());
-		for(int i=0;i<wedstrijdlijst.size();i++){
-			wedstrijden.add(new Wedstrijd(wedstrijdlijst.get(i)[0],wedstrijdlijst.get(i)[1]));
+	/**
+	 * Creëert uit verschillende teams wedstrijden.
+	 */
+	public void maakWedstrijden() {
+		for (int i = 0; i < wedstrijdlijst.size(); i++) {
+			wedstrijden.add(new Wedstrijd(wedstrijdlijst.get(i)[0],
+					wedstrijdlijst.get(i)[1]));
 		}
 	}
-	public ArrayList<Speelronde> maakRonden(){
-		this.maakWedstrijden();
+	/**
+	 * Maakt verschillende speelronden voor de competitie
+	 * @return ArrayList<Speelronde> Iedere speelronde in de ArrayList is een speelronde die gespeeld wordt.
+	 */
+	public ArrayList<Speelronde> maakRonden() {
+		maakWedstrijden();
 		ArrayList<Speelronde> a = new ArrayList<Speelronde>();
 		ArrayList<Wedstrijd> b = wedstrijden;
-		for(int i=0;i<aantalTeams*2-2;i++){
-			Speelronde ronde = new Speelronde(i+1);
-			for(int j=0;j<aantalTeams/2;j++){
-				int r = 0;
-				while(RondeContains(b,ronde,r)){
-					r++;
-				}
-				ronde.voegToe(b.get(r));
-				b.remove(r); //Hier gaat iets mis, waarschijnlijk mag dit niet?
-				r++;
-			}
+		Collections.shuffle(wedstrijdlijst,new Random());
+		for (int i = 0; i < aantalTeams * 2 - 2; i++) {
+			Speelronde ronde = new Speelronde();
 			a.add(ronde);
 		}
+		int y = 0;
+		int z;
+		for (z = 0; z < a.size(); z++) {
+			a.get(z).voegToe(b.get(z));
+		}
+		for (z = a.size(); z < b.size(); z++) {
+			while (a.get(y).getSize() < aantalTeams / 2 ) {
+				if (!a.get(y).WedstrijdEquals(b.get(z))) { 
+					a.get(y).voegToe(b.get(z));
+				} else {
+					a.get(y+1).voegToe(b.get(z));
+				}z++;
+			}z--;
+			y++;
+		}
+		Collections.shuffle(a,new Random());
 		return a;
-		
 	}
-	
-	public static boolean RondeContains(ArrayList<Wedstrijd> a,Speelronde ronde,int i){
-			for(int j=0;j<ronde.getWedstrijden().size();j++){
-				if(ronde.getWedstrijden().get(j).teamEquals(a.get(i)))
-					return true;
-			}
-		return false;
-	}
-/*	public void callRemove(Wedstrijd a){
-	//	wedstrijden.remove(i);
-		Iterator<Wedstrijd> it = wedstrijden.iterator();
-	    while (it.hasNext()) {
-	        if (it.next().getTeams().equals(a)) {
-	            it.remove();
-	            break;
-	        }
-	    }
-	}*/
 }

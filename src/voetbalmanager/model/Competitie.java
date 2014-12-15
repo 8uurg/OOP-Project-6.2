@@ -25,7 +25,9 @@ public class Competitie{
 		this.naam = naam;
 		this.teams = new ArrayList<Team>();
 	}
-	
+	/**
+	 * Equals-methode voor verschillende competities.
+	 */
 	public boolean equals(Object other) {
 		if(other instanceof Competitie) {
 			Competitie that = (Competitie) other;
@@ -77,21 +79,25 @@ public class Competitie{
 	public void maakSpeelSchema(){
 		ArrayList<Team> B = this.teams;
 		ArrayList<Team[]> C = new ArrayList<Team[]>();
+		ArrayList<Team[]> D = new ArrayList<Team[]>();
 		
-		for(int i=0;i<(B.size()-1)*2;i++){//aantal games (teams.size()-1) omdat je jezelf moet overslaan
+		for(int i=0;i<(B.size()-1);i++){//aantal games (teams.size()-1) omdat je jezelf moet overslaan
 			int k = 0;
 			while(k<=(B.size()-k-1)){
-				
 				Team[] a = {B.get(k),B.get(B.size()-k-1)};
+				Team[] b = {B.get(B.size()-k-1),B.get(k)};
 				C.add(a);
+				D.add(b);
 				k++;
 			}
 			nextRound(B);
 		}
+		C.addAll(D);
 		Speelschema S = new Speelschema(C,B.size());
-		S.maakRonden().get(0).toString();
-		for(int i=0;i<S.maakRonden().size();i++)
-		System.out.println(S.maakRonden().get(i).toString());
+		ArrayList<Speelronde> A = S.maakRonden();
+		A.get(0).toString();
+		for(int i=0;i<A.size();i++)
+		System.out.println(A.get(i).toString());
 	}
 	
 	/**
@@ -105,7 +111,6 @@ public class Competitie{
 	
 	/**
 	 * Maakt een String-representatie van de competitie.
-	 * Plaats is op dit moment coded om altijd 1 2 3 te weergeven, al wordt er op bv naam gesorteerd.
 	 */
 	@Override
 	public String toString(){
