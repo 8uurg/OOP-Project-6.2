@@ -20,6 +20,11 @@ public class Team {
 	private int maxSpelers = 22;
 	private boolean gebruikerTeam;
 	
+	/**
+	 * Maakt een nieuw team aan met een bepaalde naam.
+	 * @param naam			De naam van het team
+	 * @param gebruikerTeam	Is de gebruiker (de speler zelf) de eigenaar van dit team?
+	 */
 	public Team(String naam, boolean gebruikerTeam) {
 		this.naam = naam;
 		this.gebruikerTeam = gebruikerTeam;
@@ -42,10 +47,18 @@ public class Team {
 		return false;
 	}
 	
+	/**
+	 * Vraag de naam op van dit team.
+	 * @return De naam van dit team.
+	 */
 	public String getNaam() {
 		return this.naam;
 	}
 	
+	/**
+	 * Vraag de opstelling op van dit team.
+	 * @return De opstelling van dit team.
+	 */
 	public Opstelling getOpstelling() {
 		return this.opstelling;
 	}
