@@ -5,6 +5,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import voetbalmanager.exceptions.OpstellingException;
 import voetbalmanager.exceptions.TransferException;
 
 /**
@@ -215,6 +216,39 @@ public class Team {
 	public void overrideAdd(Speler speler) {
 		spelers.add(speler);
 		speler.wijzigTeam(this);
+	}
+	
+	/**
+	 * Functie die ook direct een selectiespeler aan de opstelling toevoegt.
+	 * Voegt spelers toe aan een team, zonder selectieoverhead.
+	 * Alleen gebruiken voor testen!
+	 *
+	 * @param speler
+	 * @param selectie
+	 */
+	//Misschien slim om zo'n zelfde systeem te gebruiken voor inlezen opstelling.
+	public void overrideAdd(Speler speler, boolean selectie) {
+		try {
+		overrideAdd(speler);
+		switch(speler.type) {
+		case Aanvaller:
+			opstelling.voegToeAanvaller(speler);
+			break;
+		case Doelman:
+			opstelling.voegToeDoelman(speler);
+			break;
+		case Middenvelder:
+			opstelling.voegToeMiddenvelder(speler);
+			break;
+		case Verdediger:
+			opstelling.voegToeVerdediger(speler);
+			break;
+		default:
+			break;
+		}
+		} catch(OpstellingException e) {
+			// Zal in testsituaties niet gebeuren, weer een block erbij die niet getest wordt...
+		}
 	}
 	
 }
