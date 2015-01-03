@@ -228,26 +228,29 @@ public class Team {
 	 */
 	//Misschien slim om zo'n zelfde systeem te gebruiken voor inlezen opstelling.
 	public void overrideAdd(Speler speler, boolean selectie) {
-		try {
 		overrideAdd(speler);
-		switch(speler.type) {
-		case Aanvaller:
-			opstelling.voegToeAanvaller(speler);
-			break;
-		case Doelman:
-			opstelling.voegToeDoelman(speler);
-			break;
-		case Middenvelder:
-			opstelling.voegToeMiddenvelder(speler);
-			break;
-		case Verdediger:
-			opstelling.voegToeVerdediger(speler);
-			break;
-		default:
-			break;
-		}
-		} catch(OpstellingException e) {
-			// Zal in testsituaties niet gebeuren, weer een block erbij die niet getest wordt...
+		
+		if(selectie) {
+		try {
+			switch(speler.type) {
+			case Aanvaller:
+				opstelling.voegToeAanvaller(speler);
+				break;
+			case Doelman:
+				opstelling.voegToeDoelman(speler);
+				break;
+			case Middenvelder:
+				opstelling.voegToeMiddenvelder(speler);
+				break;
+			case Verdediger:
+				opstelling.voegToeVerdediger(speler);
+				break;
+			default:
+				break;
+			}
+			} catch(OpstellingException e) {
+				// Zal in testsituaties niet gebeuren, weer een block erbij die niet getest wordt...
+			}
 		}
 	}
 	
