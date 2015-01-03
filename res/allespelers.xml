@@ -1,0 +1,4395 @@
+<teams>	
+	<team naam = "NAC Breda">
+		<speler>
+			<naam> Jelle ten Rouwelaar </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 46 </offensief>
+			<defensief> 78 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+		</speler>
+		<speler>
+			<naam> Sepp de Roover </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 70 </offensief>
+			<defensief> 74 </defensief>
+			<uithouding> 75 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Henrico Drost </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 56 </offensief>
+			<defensief> 68 </defensief>
+			<uithouding> 70 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 230 </prijs>
+		</speler>
+		<speler>
+			<naam> Aleksandar Damcevski </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 47 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 271 </prijs>
+		</speler>
+		<speler>
+			<naam> R�my Amieux </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 58 </offensief>
+			<defensief> 70 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 125 </prijs>
+		</speler>
+		<speler>
+			<naam> Joeri de Kamps </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 63 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 265 </prijs>
+		</speler>
+		<speler>
+			<naam> Elson Hooi </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> M </type>
+			<offensief> 89 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 47 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 325 </prijs>
+		</speler>
+		<speler>
+			<naam> Jeffrey Sarpong </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 78 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 54 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 195 </prijs>
+		</speler>
+		<speler>
+			<naam> Kingsley Boateng </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 82 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 69 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 340 </prijs>
+		</speler>
+		<speler>
+			<naam> Uros Matic </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> A </type>
+			<offensief> 71 </offensief>
+			<defensief> 52 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Adnane Tighadouini </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 77 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 190 </prijs>
+		</speler>
+		<speler>
+			<naam> Andries Noppert </naam>
+			<rugnummer> 12 </rugnummer>
+			<type> A </type>
+			<offensief> 75 </offensief>
+			<defensief> 43 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 150 </prijs>
+		</speler>
+		<speler>
+			<naam> Joey Suk </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> M </type>
+			<offensief> 45 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 89 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 245 </prijs>
+		</speler>
+		<speler>
+			<naam> Erik Falkenburg </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> M </type>
+			<offensief> 66 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Mounir el Allouchi </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 165 </prijs>
+		</speler>
+		<speler>
+			<naam> Mats Seuntjens </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> V </type>
+			<offensief> 57 </offensief>
+			<defensief> 76 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Gabor Babos </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> V </type>
+			<offensief> 28 </offensief>
+			<defensief> 56 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Gill Swerts </naam>
+			<rugnummer> 22 </rugnummer>
+			<type> V </type>
+			<offensief> 54 </offensief>
+			<defensief> 55 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 190 </prijs>
+		</speler>
+		<speler>
+			<naam> Kenny van der Weg </naam>
+			<rugnummer> 28 </rugnummer>
+			<type> V </type>
+			<offensief> 64 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 160 </prijs>
+		</speler>
+		<speler>
+			<naam> Stipe Perica </naam>
+			<rugnummer> 13 </rugnummer>
+			<type> A </type>
+			<offensief> 67 </offensief>
+			<defensief> 68 </defensief>
+			<uithouding> 79 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 210 </prijs>
+		</speler>
+		<speler>
+			<naam> Isak Ssewankambo </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> V </type>
+			<offensief> 47 </offensief>
+			<defensief> 68 </defensief>
+			<uithouding> 58 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Dilson Gabbay </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> M </type>
+			<offensief> 77 </offensief>
+			<defensief> 56 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+	</team>
+	<team naam="Vitesse">
+		<speler>
+			<naam> Eloy Room </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 37 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jeroen Houwen </naam>
+			<rugnummer> 48 </rugnummer>
+			<type> K </type>
+			<offensief> 34 </offensief>
+			<defensief> 56 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Rochdi Achenteh </naam>
+			<rugnummer> 35 </rugnummer>
+			<type> V </type>
+			<offensief> 56 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 230 </prijs>
+		</speler>
+		<speler>
+			<naam> Kevin Diks </naam>
+			<rugnummer> 40 </rugnummer>
+			<type> V </type>
+			<offensief> 44 </offensief>
+			<defensief> 56 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 160 </prijs>
+		</speler>
+		<speler>
+			<naam> Dan Mori </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 56 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 175 </prijs>
+		</speler>
+		<speler>
+			<naam> Wallace Cardo </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 33 </offensief>
+			<defensief> 56 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 150 </prijs>
+		</speler>
+		<speler>
+			<naam> Guram Kashia </naam>
+			<rugnummer> 37 </rugnummer>
+			<type> V </type>
+			<offensief> 44 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 140 </prijs>
+		</speler>
+		<speler>
+			<naam> Arnold Kruiswijk </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 190 </prijs>
+		</speler>
+		<speler>
+			<naam> Jan-Arie van der Heijden </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> V </type>
+			<offensief> 49 </offensief>
+			<defensief> 69 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 130 </prijs>
+		</speler>
+		<speler>
+			<naam> Kelvin Leerdam </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> M </type>
+			<offensief> 66 </offensief>
+			<defensief> 71 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 165 </prijs>
+		</speler>
+		<speler>
+			<naam> Josh McEachran </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 75 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 140 </prijs>
+		</speler>
+		<speler>
+			<naam> Marko Vejinovi? </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> M </type>
+			<offensief> 43 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 180 </prijs>
+		</speler>
+		<speler>
+			<naam> Gino Bosz </naam>
+			<rugnummer> 25 </rugnummer>
+			<type> M </type>
+			<offensief> 73 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie>False</selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 175 </prijs>
+		</speler>
+		<speler>
+			<naam> Zakaria Labyad </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> M </type>
+			<offensief> 49 </offensief>
+			<defensief> 74 </defensief>
+			<uithouding> 19 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 160 </prijs>
+		</speler>
+		<speler>
+			<naam> Marvelous Nakamba </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> M </type>
+			<offensief> 77 </offensief>
+			<defensief> 43 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 110 </prijs>
+		</speler>
+		<speler>
+			<naam> Davy Propper </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 59 </offensief>
+			<defensief> 69 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 125 </prijs>
+		</speler>
+		<speler>
+			<naam> Uro� ?ur?evi? </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 69 </offensief>	
+			<defensief> 64 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 160 </prijs>
+		</speler>
+		<speler>
+			<naam> Valeri Qazaishvili </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> A </type>
+			<offensief> 89 </offensief>
+			<defensief> 24 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 170 </prijs>
+		</speler>
+		<speler>
+			<naam> Denys Oliynyk </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 77 </offensief>
+			<defensief> 44 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 230 </prijs>
+		</speler>
+		<speler>
+			<naam> Abiola Dauda </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> A </type>
+			<offensief> 69 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 69 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs>160</prijs>
+		</speler>
+		<speler>
+			<naam> Renato Ibarra </naam>
+			<rugnummer> 30 </rugnummer>
+			<type> A </type>
+			<offensief> 77 </offensief>
+			<defensief> 37 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 170 </prijs>
+		</speler>
+		<speler>
+			<naam> Bertrand Traor� </naam>
+			<rugnummer> 27 </rugnummer>
+			<type> A </type>
+			<offensief> 67 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 125 </prijs>
+		</speler>
+	</team>
+	<team naam = "FC Dordrecht">
+		<speler>
+			<naam> Filip Kurto </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 45 </offensief>
+			<defensief> 69 </defensief>
+			<uithouding> 88 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 240 </prijs>
+		</speler>
+		<speler>
+			<naam>Robbert te Loeke</naam>
+			<rugnummer> 13 </rugnummer>
+			<type> K </type>
+			<offensief> 47 </offensief>
+			<defensief> 72 </defensief>
+			<uithouding> 54 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 189 </prijs>
+		</speler>
+		<speler>
+			<naam>Sem de Wit</naam>
+			<rugnummer> 99 </rugnummer>
+			<type> V </type>
+			<offensief> 54 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jeffry Fortes </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 47 </offensief>
+			<defensief> 78 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 210 </prijs>
+		</speler>
+		<speler>
+			<naam> Ilias Haddad </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 53 </offensief>
+			<defensief> 81 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 190 </prijs>
+		</speler>
+		<speler>
+			<naam> Marvin Peersman </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 62 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 190 </prijs>
+		</speler>
+		<speler>
+			<naam> Josimar Lima </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> V </type>
+			<offensief> 64 </offensief>
+			<defensief> 73 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 210 </prijs>
+		</speler>
+		<speler>
+			<naam> William Troost-Ekong </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 210 </prijs>
+		</speler>
+		<speler>
+			<naam>Jordy van Deelen</naam>
+			<rugnummer> 19 </rugnummer>
+			<type> V </type>
+			<offensief> 34 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 220 </prijs>
+		</speler>
+		<speler>
+			<naam> Nando Wormgoor </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> V </type>
+			<offensief> 28 </offensief>
+			<defensief> 78 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Funso Ojo </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 77 </offensief>
+			<defensief> 78 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Robin Gosens </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 78 </offensief>
+			<defensief> 76 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 230 </prijs>
+		</speler>
+		<speler>
+			<naam> Adnan Ali�i? </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 65 </offensief>
+			<defensief> 78 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 220 </prijs>
+		</speler>
+		<speler>
+			<naam> Quincy Boogers </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 78 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Ryan Koolwijk </naam>
+			<rugnummer> 22 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 81 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Ibrahima Tour� </naam>
+			<rugnummer> 24 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 72 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Rihairo Meulens </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 78 </offensief>
+			<defensief> 33 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Mart Lieder </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 83 </offensief>
+			<defensief> 25 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Giovanni Korte </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 81 </offensief>
+			<defensief> 22 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 290 </prijs>
+		</speler>
+		<speler>
+			<naam> Erixon Danso </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> A </type>
+			<offensief> 69 </offensief>
+			<defensief> 38 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mohamed Hamdaoui </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> A </type>
+			<offensief> 72 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Everon Pisas </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> A </type>
+			<offensief> 75 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+	</team>
+	<team naam= "Heracles">
+		<speler>
+			<naam> Dennis Telgenkamp </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 56 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 240 </prijs>
+		</speler>
+		<speler>
+			<naam>Renze Fij</naam>
+			<rugnummer> 25 </rugnummer>
+			<type> K </type>
+			<offensief> 56 </offensief>
+			<defensief> 72 </defensief>
+			<uithouding> 54 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Fahd Aktaou </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> A </type>
+			<offensief> 77 </offensief>
+			<defensief> 76 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 230 </prijs>
+		</speler>
+		<speler>
+			<naam> Milano Koenders </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 56 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 45 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Bart Schenkeveld </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 75 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 220 </prijs>
+		</speler>
+		<speler>
+			<naam> Jeroen Veldmate </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mark Engberink </naam>
+			<rugnummer> 30 </rugnummer>
+			<type> V </type>
+			<offensief> 65 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 210 </prijs>
+		</speler>
+		<speler>
+			<naam> Coen Gortemaker </naam>
+			<rugnummer> 29 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 76 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam>Mike te Wierik</naam>
+			<rugnummer>32</rugnummer>
+			<type> V </type>
+			<offensief> 64 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 76 </uithouding>	
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 210 </prijs>
+		</speler>
+		<speler>
+			<naam> Ramon Zomer </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> V </type>
+			<offensief> 77 </offensief>
+			<defensief> 76 </defensief>
+			<uithouding> 44 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Thomas Bruns </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 68 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 220 </prijs>
+		</speler>
+		<speler>
+			<naam> Bas Sibum </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 81 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Simon Cziommer </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> M </type>
+			<offensief> 68 </offensief>
+			<defensief> 79 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mark-Jan Fledderus </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> M </type>
+			<offensief> 77 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 210 </prijs>
+		</speler>
+		<speler>
+			<naam> Menno Heerkes </naam>
+			<rugnummer> 24 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 76 </defensief>
+			<uithouding> 54 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 240 </prijs>
+		</speler>
+		<speler>
+			<naam> Rick Hemmink </naam>
+			<rugnummer> 35 </rugnummer>
+			<type> M </type>
+			<offensief> 62 </offensief>
+			<defensief> 52 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 230 </prijs>
+		</speler>
+		<speler>
+			<naam> Denni Avdi? </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 67 </offensief>
+			<defensief> 53 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 230 </prijs>
+		</speler>
+		<speler>
+			<naam> Bryan Linssen </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 76 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 210 </prijs>
+		</speler>
+		<speler>
+			<naam> Aleksei Kangaskolkka </naam>
+			<rugnummer> 12 </rugnummer>
+			<type> A </type>
+			<offensief> 76 </offensief>
+			<defensief> 35 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> True </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 210 </prijs>
+		</speler>
+		<speler>
+			<naam> Edwin Gyasi </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> A </type>
+			<offensief> 76 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jaroslav Navratil </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> A </type>
+			<offensief> 77 </offensief>
+			<defensief> 54 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Dragan Palji? </naam>
+			<rugnummer> 13 </rugnummer>
+			<type> A </type>
+			<offensief> 81 </offensief>
+			<defensief> 51 </defensief>
+			<uithouding> 41 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 220 </prijs>
+		</speler>
+	</team>
+    <team naam= "Feyenoord">
+        <speler>
+            <naam> Erwin Mulder </naam>
+            <rugnummer> 1 </rugnummer>
+            <type> K </type>
+            <offensief> 45 </offensief>
+            <defensief> 77 </defensief>
+            <uithouding> 78 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 250 </prijs>
+        </speler>
+        <speler>
+            <naam> Luke Wilkshire </naam>
+            <rugnummer> 2 </rugnummer>
+            <type> V </type>
+            <offensief> 68 </offensief>
+            <defensief> 70 </defensief>
+            <uithouding> 78 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 250 </prijs>
+        </speler>
+        <speler>
+            <naam> Joris Mathijsen </naam>
+            <rugnummer> 4 </rugnummer>
+            <type> V </type>
+            <offensief> 60 </offensief>
+            <defensief> 78 </defensief>
+            <uithouding> 80 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 180 </prijs>
+        </speler>
+        <speler>
+            <naam> Terence Kongolo </naam>
+            <rugnummer> 5 </rugnummer>
+            <type> V </type>
+            <offensief> 78 </offensief>
+            <defensief> 73 </defensief>
+            <uithouding> 74 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 245 </prijs>
+        </speler>
+        <speler>
+            <naam> Miquel Nelom </naam>
+            <rugnummer> 18 </rugnummer>
+            <type> V </type>
+            <offensief> 80 </offensief>
+            <defensief> 79 </defensief>
+            <uithouding> 79 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 380 </prijs>
+        </speler>
+        <speler>
+            <naam> Jordy Clasie </naam>
+            <rugnummer> 6 </rugnummer>
+            <type> M </type>
+            <offensief> 68 </offensief>
+            <defensief> 65 </defensief>
+            <uithouding> 73 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 280 </prijs>
+        </speler>
+        <speler>
+            <naam> Mayke Kloppenburg </naam>
+            <rugnummer> 8 </rugnummer>
+            <type> M </type>
+            <offensief> 69 </offensief>
+            <defensief> 63 </defensief>
+            <uithouding> 70 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 220 </prijs>
+        </speler>
+        <speler>
+            <naam> Lex Immers </naam>
+            <rugnummer> 10 </rugnummer>
+            <type> M </type>
+            <offensief> 58 </offensief>
+            <defensief> 67 </defensief>
+            <uithouding> 78 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 230 </prijs>
+        </speler>
+        <speler>
+            <naam> Jean-Paul Boëtius</naam>
+            <rugnummer> 7 </rugnummer>
+            <type> A </type>
+            <offensief> 88 </offensief>
+            <defensief> 26 </defensief>
+            <uithouding> 49 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 300 </prijs>
+        </speler>
+        <speler>
+            <naam> Wesley Verhoek</naam>
+            <rugnummer> 11 </rugnummer>
+            <type> A </type>
+            <offensief> 65 </offensief>
+            <defensief> 35 </defensief>
+            <uithouding> 76 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 310 </prijs>
+        </speler>
+        <speler>
+            <naam> Bilal Basacikoglu </naam>
+            <rugnummer> 14 </rugnummer>
+            <type> A </type>
+            <offensief> 89 </offensief>
+            <defensief> 29 </defensief>
+            <uithouding> 58 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 280 </prijs>
+        </speler>
+        <speler>
+            <naam> Colin Kazim-Richards </naam>
+            <rugnummer> 15 </rugnummer>
+            <type> A </type>
+            <offensief> 77 </offensief>
+            <defensief> 37 </defensief>
+            <uithouding> 45 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 240 </prijs>
+        </speler>
+        <speler>
+            <naam> Elvis Manu </naam>
+            <rugnummer> 17 </rugnummer>
+            <type> A </type>
+            <offensief> 86 </offensief>
+            <defensief> 27 </defensief>
+            <uithouding> 67 </uithouding>
+            <selectie> False</selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 260 </prijs>
+        </speler>
+        <speler>
+            <naam> Mitchell te Vrede</naam>
+            <rugnummer> 19 </rugnummer>
+            <type> A </type>
+            <offensief> 60 </offensief>
+            <defensief> 27 </defensief>
+            <uithouding> 67 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 215 </prijs>
+        </speler>
+        <speler>
+            <naam> Tonny Vilhena </naam>
+            <rugnummer> 21 </rugnummer>
+            <type> M </type>
+            <offensief> 74 </offensief>
+            <defensief> 60 </defensief>
+            <uithouding> 73 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 195 </prijs>
+        </speler>
+        <speler>
+            <naam> Rick Karsdorp</naam>
+            <rugnummer> 26 </rugnummer>
+            <type> M </type>
+            <offensief> 77 </offensief>
+            <defensief> 73 </defensief>
+            <uithouding> 29 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 195 </prijs>
+        </speler>
+        <speler>
+            <naam> Jens Toornstra </naam>
+            <rugnummer> 28 </rugnummer>
+            <type> M </type>
+            <offensief> 71 </offensief>
+            <defensief> 54 </defensief>
+            <uithouding> 75 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 210 </prijs>
+        </speler>
+        <speler>
+            <naam> Sven van Beek </naam>
+            <rugnummer> 22 </rugnummer>
+            <type> V </type>
+            <offensief> 66 </offensief>
+            <defensief> 68 </defensief>
+            <uithouding> 72 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 260 </prijs>
+        </speler>
+        <speler>
+            <naam> Khalid Boulahrouz </naam>
+            <rugnummer> 23 </rugnummer>
+            <type> V </type>
+            <offensief> 42 </offensief>
+            <defensief> 74 </defensief>
+            <uithouding> 72 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 210 </prijs>
+        </speler>
+        <speler>
+            <naam> Lucas Woudenberg </naam>
+            <rugnummer> 25 </rugnummer>
+            <type> V </type>
+            <offensief> 44 </offensief>
+            <defensief> 67 </defensief>
+            <uithouding> 66 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 180 </prijs>
+        </speler>
+        <speler>
+            <naam> Ravi Autar </naam>
+            <rugnummer> 32 </rugnummer>
+            <type> V </type>
+            <offensief> 50 </offensief>
+            <defensief> 54 </defensief>
+            <uithouding> 47 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 140 </prijs>
+        </speler>
+        <speler>
+            <naam> Ronald Graafland </naam>
+            <rugnummer> 13 </rugnummer>
+            <type> K </type>
+            <offensief> 34 </offensief>
+            <defensief> 66 </defensief>
+            <uithouding> 54 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 200 </prijs>
+        </speler>
+    </team>
+    <team naam="AZ">
+        <speler>
+            <naam> Esteban </naam>
+            <rugnummer> 1 </rugnummer>
+            <type> K </type>
+            <offensief> 54 </offensief>
+            <defensief> 81 </defensief>
+            <uithouding> 60  </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 210 </prijs>
+        </speler>
+        <speler>
+            <naam> Yves de Winter </naam>
+            <rugnummer> 16 </rugnummer>
+            <type> K </type>
+            <offensief> 40 </offensief>
+            <defensief> 76 </defensief>
+            <uithouding> 45</uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 190 </prijs>
+        </speler>
+        <speler>
+            <naam> Mattias Johansson </naam>
+            <rugnummer> 2 </rugnummer>
+            <type> V </type>
+            <offensief> 67 </offensief>
+            <defensief> 78 </defensief>
+            <uithouding> 66 </uithouding>
+            <selectie>  True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 230 </prijs>
+        </speler>
+        <speler>
+            <naam>  Jeffrey Gouweleeuw</naam>
+            <rugnummer> 3 </rugnummer>
+            <type> V </type>
+            <offensief> 58 </offensief>
+            <defensief> 79 </defensief>
+            <uithouding> 68 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 240 </prijs>
+        </speler>
+        <speler>
+            <naam> Jan Wuytens </naam>
+            <rugnummer> 4 </rugnummer>
+            <type> V </type>
+            <offensief> 69 </offensief>
+            <defensief> 78 </defensief>
+            <uithouding> 78  </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 230 </prijs>
+        </speler>
+        <speler>
+            <naam> Wesley Hoedt </naam>
+            <rugnummer> 14 </rugnummer>
+            <type> V </type>
+            <offensief> 69 </offensief>
+            <defensief> 80 </defensief>
+            <uithouding> 67 </uithouding>
+            <selectie>  True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 240 </prijs>
+        </speler>
+        <speler>
+            <naam> Jeroen Kleene </naam>
+            <rugnummer> 15 </rugnummer>
+            <type> V </type>
+            <offensief> 58 </offensief>
+            <defensief> 69 </defensief>
+            <uithouding> 67 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 180 </prijs>
+        </speler>
+        <speler>
+            <naam> Derrick Luckassen </naam>
+            <rugnummer> 23 </rugnummer>
+            <type> V </type>
+            <offensief> 68 </offensief>
+            <defensief> 68 </defensief>
+            <uithouding> 55 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 235 </prijs>
+        </speler>
+        <speler>
+            <naam> Ridgeciano Haps </naam>
+            <rugnummer> 24 </rugnummer>
+            <type> V </type>
+            <offensief> 59 </offensief>
+            <defensief> 65 </defensief>
+            <uithouding> 67 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 222 </prijs>
+        </speler>
+        <speler>
+            <naam> Celso Ortiz </naam>
+            <rugnummer> 6 </rugnummer>
+            <type> M </type>
+            <offensief> 78 </offensief>
+            <defensief> 78 </defensief>
+            <uithouding> 72 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 195 </prijs>
+        </speler>
+        <speler>
+            <naam> Nemanja Gudelj </naam>
+            <rugnummer> 8 </rugnummer>
+            <type> M </type>
+            <offensief> 80 </offensief>
+            <defensief> 69 </defensief>
+            <uithouding> 75 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 210 </prijs>
+        </speler>
+        <speler>
+            <naam> Markus Henriksen </naam>
+            <rugnummer> 10 </rugnummer>
+            <type> M </type>
+            <offensief> 69 </offensief>
+            <defensief> 70 </defensief>
+            <uithouding> 80 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 230 </prijs>
+        </speler>
+        <speler>
+            <naam> Viktor Elm </naam>
+            <rugnummer> 12 </rugnummer>
+            <type> M </type>
+            <offensief> 70 </offensief>
+            <defensief> 76 </defensief>
+            <uithouding> 78 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 230 </prijs>
+        </speler>
+        <speler>
+            <naam> Djavan Anderson </naam>
+            <rugnummer> 17 </rugnummer>
+            <type> M </type>
+            <offensief> 67 </offensief>
+            <defensief> 78 </defensief>
+            <uithouding> 77 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 210 </prijs>
+        </speler>
+        <speler>
+            <naam> Thom Haye </naam>
+            <rugnummer> 20 </rugnummer>
+            <type> M </type>
+            <offensief> 68 </offensief>
+            <defensief> 80 </defensief>
+            <uithouding> 68 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 189 </prijs>
+        </speler>
+        <speler>
+            <naam> Robert Mühren</naam>
+            <rugnummer> 21 </rugnummer>
+            <type> M </type>
+            <offensief> 77 </offensief>
+            <defensief> 67 </defensief>
+            <uithouding> 61 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 167 </prijs>
+        </speler>
+        <speler>
+            <naam> Dabney dos Santos </naam>
+            <rugnummer> 36</rugnummer>
+            <type> M </type>
+            <offensief> 76 </offensief>
+            <defensief> 66 </defensief>
+            <uithouding> 66 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 180 </prijs>
+        </speler>
+        <speler>
+            <naam> Guus Hupperts </naam>
+            <rugnummer> 7 </rugnummer>
+            <type> A </type>
+            <offensief> 88 </offensief>
+            <defensief> 67 </defensief>
+            <uithouding> 69 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 160 </prijs>
+        </speler>
+        <speler>
+            <naam> Aron Jóhannsson </naam>
+            <rugnummer> 9 </rugnummer>
+            <type> A </type>
+            <offensief> 79 </offensief>
+            <defensief> 74 </defensief>
+            <uithouding> 66 </uithouding>
+            <selectie> True </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 240 </prijs>
+        </speler>
+        <speler>
+            <naam> Muamer Tankovic </naam>
+            <rugnummer> 11 </rugnummer>
+            <type> A </type>
+            <offensief> 89 </offensief>
+            <defensief> 77 </defensief>
+            <uithouding> 67 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 230 </prijs>
+        </speler>
+        <speler>
+            <naam> Arthur Guijit </naam>
+            <rugnummer> 18 </rugnummer>
+            <type> A </type>
+            <offensief> 70 </offensief>
+            <defensief> 76 </defensief>
+            <uithouding> 68 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 190 </prijs>
+        </speler>
+        <speler>
+            <naam> Steven Berghuis </naam>
+            <rugnummer> 34 </rugnummer>
+            <type> A </type>
+            <offensief> 68 </offensief>
+            <defensief> 66 </defensief>
+            <uithouding> 69 </uithouding>
+            <selectie> False </selectie>
+            <beschikbaar> 0 </beschikbaar>
+            <prijs> 180 </prijs>
+        </speler>
+    </team>
+	<team naam = "PSV">
+		<speler>
+			<naam> Jeroen Zoet </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 35 </offensief>
+			<defensief> 87 </defensief>
+			<uithouding> 40 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Remko Pasveer </naam>
+			<rugnummer> 22 </rugnummer>
+			<type> K </type>
+			<offensief> 35 </offensief>
+			<defensief> 90 </defensief>
+			<uithouding> 40 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 450 </prijs>
+		</speler>
+			<speler>
+			<naam> Nicolas Isimat-Mirin </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 69 </offensief>
+			<defensief> 70 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 450 </prijs>
+		</speler>
+			<speler>
+			<naam> Karim Rekik </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 73 </offensief>
+			<defensief> 72 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 2900 </prijs>
+		</speler>
+			<speler>
+			<naam> Santiago Arias </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief>87</offensief>
+			<defensief> 69 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 4200 </prijs>
+		</speler>
+			<speler>
+			<naam> Jeffrey Bruma </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 70 </defensief>
+			<uithouding> 80 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1300 </prijs>
+		</speler>
+			<speler>
+			<naam> Jetro Willems </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> V </type>
+			<offensief> 80 </offensief>
+			<defensief> 70 </defensief>
+			<uithouding> 80 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1300 </prijs>
+		</speler>
+			<speler>
+			<naam> Joshua Brenet </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> V </type>
+			<offensief> 86 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+			<speler>
+			<naam> Adam Maher</naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 75 </offensief>
+			<defensief> 53  </defensief>
+			<uithouding> 55 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1500 </prijs>
+		</speler>
+			<speler>
+			<naam> Stijn Schaars </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 51 </offensief>
+			<defensief> 69 </defensief>
+			<uithouding> 70 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+			<speler>
+			<naam> Georginio Wijnaldum </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 83 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 800 </prijs>
+		</speler>
+			<speler>
+			<naam> Andrés Guardado </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> M </type>
+			<offensief> 74 </offensief>
+			<defensief> 51 </defensief>
+			<uithouding> 54 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+			<speler>
+			<naam> Marcel Ritzmaier </naam>
+			<rugnummer> 24 </rugnummer>
+			<type> M </type>
+			<offensief> 72 </offensief>
+			<defensief> 57 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+			<speler>
+			<naam> Clint Leemans </naam>
+			<rugnummer> 26 </rugnummer>
+			<type> M </type>
+			<offensief>65 </offensief>
+			<defensief> 53 </defensief>
+			<uithouding> 55 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+			<speler>
+			<naam> Oscar Hiljemark </naam>
+			<rugnummer> 27 </rugnummer>
+			<type> M </type>
+			<offensief> 68 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+			<speler>
+			<naam> Rai Vloed </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> M</type>
+			<offensief> 65 </offensief>
+			<defensief> 29  </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Memphis Depay </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 91 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 75 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1800 </prijs>
+		</speler>	
+		<speler>
+			<naam> Luuk de Jong </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 64 </offensief>
+			<defensief> 43 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>	
+		<speler>
+			<naam> Luciano Narsingh </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 93 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 61 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 850 </prijs>
+		</speler>	
+		<speler>
+			<naam> Florian Jozefzoon </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> A </type>
+			<offensief> 90 </offensief>
+			<defensief> 24 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>	
+		<speler>
+			<naam> Jürhen Locadia </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> A </type>
+			<offensief> 74 </offensief>
+			<defensief> 34 </defensief>
+			<uithouding> 69 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 950 </prijs>
+		</speler>	
+		<speler>
+			<naam> Zakaia Bakkali </naam>
+			<rugnummer> 39 </rugnummer>
+			<type> A </type>
+			<offensief> 85 </offensief>
+			<defensief> 25 </defensief>
+			<uithouding> 40 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1400 </prijs>
+		</speler>	
+	</team>
+	<team naam = "Ajax">
+		<speler>
+			<naam> Jasper Cillissen </naam>
+			<rugnummer> 22 </rugnummer>
+			<type> K </type>
+			<offensief> 27 </offensief>
+			<defensief> 92 </defensief>
+			<uithouding> 35 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Peter Leeuwenburgh </naam>
+			<rugnummer> 31 </rugnummer>
+			<type> K </type>
+			<offensief> 31 </offensief>
+			<defensief> 85 </defensief>
+			<uithouding> 39 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Ricardo van Rhijn </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief>86 </offensief>
+			<defensief> 73 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 7100 </prijs>
+		</speler>
+		<speler>
+			<naam> Joël Veltman </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 68 </offensief>
+			<defensief> 77 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Niklas Moisander </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 76 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Nicolai Boilesen </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 78 </offensief>
+			<defensief> 72 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 3100 </prijs>
+		</speler>
+		<speler>
+			<naam> Mike van der Hoorn </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> V </type>
+			<offensief> 59 </offensief>
+			<defensief> 72 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Jaïro Riedewald </naam>
+			<rugnummer> 12 </rugnummer>
+			<type> V </type>
+			<offensief> 65 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Kenny Tete </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> V </type>
+			<offensief> 77 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> False </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Lerin Duarte </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 75 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1400 </prijs>
+		</speler>
+		<speler>
+			<naam> Davy Klaassen </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 74 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Lucas Andersen </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> M </type>
+			<offensief> 71 </offensief>
+			<defensief> 33 </defensief>
+			<uithouding> 36 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Nick Viergever </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 73 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Riechedly Bazoer </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> M </type>
+			<offensief> 75 </offensief>
+			<defensief> 61 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Thulani Serero </naam>
+			<rugnummer> 25 </rugnummer>
+			<type> M </type>
+			<offensief>84 </offensief>
+			<defensief>55 </defensief>
+			<uithouding> 59 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 2900 </prijs>
+		</speler>
+		<speler>
+			<naam> Richairo Zivkonic </naam>
+			<rugnummer> 30 </rugnummer>
+			<type> A </type>
+			<offensief> 79 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 650 </prijs>
+		</speler>
+		<speler>
+			<naam> Victor Fischer </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 77 </offensief>
+			<defensief> 35 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Kolbeinn Sigthorsson </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 69 </offensief>
+			<defensief> 42 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 800 </prijs>
+		</speler>
+		<speler>
+			<naam> Ricardo Kishana </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 86 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 3300 </prijs>
+		</speler>
+		<speler>
+			<naam> Arkadiusz Milik </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> A </type>
+			<offensief> 74 </offensief>
+			<defensief> 37 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> FALSE</selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1500 </prijs>
+		</speler>
+		<speler>
+			<naam> Anwar el Ghazi </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> A </type>
+			<offensief> 77 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1000 </prijs>
+		</speler>
+		<speler>
+			<naam> Tobias Sana </naam>
+			<rugnummer> 28 </rugnummer>
+			<type> A </type>
+			<offensief> 86 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 43 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 450 </prijs>
+		</speler>		
+	</team>
+	<team naam = "FC Twente">
+		<speler>
+			<naam> Nick Marsman </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 25 </offensief>
+			<defensief> 92 </defensief>
+			<uithouding> 43 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 550 </prijs>
+		</speler>
+		<speler>
+			<naam> Sonny Stevens </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> K </type>
+			<offensief> 26 </offensief>
+			<defensief> 84 </defensief>
+			<uithouding> 32 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Cuco Martina </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 77 </offensief>
+			<defensief> 68 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Andreas Bjelland </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 54 </offensief>
+			<defensief> 76 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Darryl Lachman </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 70 </offensief>
+			<defensief> 72 </defensief>
+			<uithouding> 82 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Robbert Schilder </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 57 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 750 </prijs>
+		</speler>
+		<speler>
+			<naam> Dico Koppers </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 63 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Tim Breukers </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> V </type>
+			<offensief> 72 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Kyle Ebecilio </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 75 </offensief>
+			<defensief> 68 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Hakim Ziyech </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 73 </offensief>
+			<defensief> 42 </defensief>
+			<uithouding> 57 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1700 </prijs>
+		</speler>
+		<speler>
+			<naam> Jesús Manuel Corona </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> M </type>
+			<offensief> 72 </offensief>
+			<defensief> 40 </defensief>
+			<uithouding> 50 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Ryo Miyaichi </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> M </type>
+			<offensief> 94 </offensief>
+			<defensief> 24 </defensief>
+			<uithouding> 40 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 800 </prijs>
+		</speler>
+		<speler>
+			<naam> Shadrach Eghan </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> M </type>
+			<offensief> 80 </offensief>
+			<defensief> 39 </defensief>
+			<uithouding> 61 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Felipe Gutiérrez </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> M </type>
+			<offensief> 71 </offensief>
+			<defensief> 58 </defensief>
+			<uithouding> 59 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 550 </prijs>
+		</speler>
+		<speler>
+			<naam> Kamohelo Mokotjo </naam>
+			<rugnummer> 22 </rugnummer>
+			<type> M </type>
+			<offensief> 70 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 69 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Renato Tapia </naam>
+			<rugnummer> 24 </rugnummer>
+			<type> M </type>
+			<offensief> 58 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Kasper Kusk </naam>
+			<rugnummer> 12 </rugnummer>
+			<type> A </type>
+			<offensief>  80 </offensief>
+			<defensief>  32 </defensief>
+			<uithouding>  61 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Tim Hölscher </naam>
+			<rugnummer> 13 </rugnummer>
+			<type> A </type>
+			<offensief> 71 </offensief>
+			<defensief> 43 </defensief>
+			<uithouding> 59 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Youness Mokhtar </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 77 </offensief>
+			<defensief> 37 </defensief>
+			<uithouding> 57 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Torgeir Borven </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 76 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 63 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 450 </prijs>
+		</speler>
+		<speler>
+			<naam> Bilal Ould-Chikh </naam>
+			<rugnummer> 25 </rugnummer>
+			<type> A </type>
+			<offensief> 76 </offensief>
+			<defensief> 25 </defensief>
+			<uithouding> 41 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Luc Castaignos </naam>
+			<rugnummer> 30 </rugnummer>
+			<type> A </type>
+			<offensief> 81 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>		
+	</team>
+	<team naam = "PEC Zwolle">
+		<speler>
+			<naam> Warner Hahn </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 30 </offensief>
+			<defensief> 86 </defensief>
+			<uithouding> 34 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Kevin Begois </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> K </type>
+			<offensief> 28 </offensief>
+			<defensief> 83 </defensief>
+			<uithouding> 35 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Bram van Polen </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 74 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1400 </prijs>
+		</speler>
+		<speler>
+			<naam> Trent Sainsbury </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 73 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Maikel van der Werff </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 65 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 70 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Bart van Hintum </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Joost Broerse </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> V </type>
+			<offensief> 34 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Rick Dekker </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> V </type>
+			<offensief> 74 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 58 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam>  Mustafa Saymak </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 83 </offensief>
+			<defensief> 25 </defensief>
+			<uithouding> 49 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Thanasis Karagounis </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 75 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 52 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Stefan Nijland </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 66 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1800 </prijs>
+		</speler>
+		<speler>
+			<naam> Jesper Drost </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> M </type>
+			<offensief>74 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 63  </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> </prijs>
+		</speler>
+		<speler>
+			<naam> Wouter Marinus </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> M </type>
+			<offensief> 76 </offensief>
+			<defensief> 34 </defensief>
+			<uithouding> 55 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Wout Brama </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> M </type>
+			<offensief> 70 </offensief>
+			<defensief> 40 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Ben Rienstra </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> M </type>
+			<offensief> 60 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Ryan Thomas </naam>
+			<rugnummer> 30 </rugnummer>
+			<type> M </type>
+			<offensief> 74 </offensief>
+			<defensief> 36 </defensief>
+			<uithouding> 50 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jody Lukoki </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 93 </offensief>
+			<defensief> 26 </defensief>
+			<uithouding> 45 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1200 </prijs>
+		</speler>
+		<speler>
+			<naam> Nikos Ionnidis </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 70 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Thomas Necid </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> A </type>
+			<offensief> 72 </offensief>
+			<defensief> 34 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Soufian Moro </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> A </type>
+			<offensief> 75 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> FALSE</selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Thomas Lam </naam>
+			<rugnummer> 44 </rugnummer>
+			<type> V </type>
+			<offensief> 63 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 70 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Leroy Labylle </naam>
+			<rugnummer> 35 </rugnummer>
+			<type> A </type>
+			<offensief> 73 </offensief>
+			<defensief> 53 </defensief>
+			<uithouding> 48 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>		
+	</team>
+	<team naam = "FC Grongingen">
+		<speler>
+			<naam> Sergio Padt </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 20 </offensief>
+			<defensief> 94 </defensief>
+			<uithouding> 43 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1000 </prijs>
+		</speler>
+		<speler>
+			<naam> Peter van der Vlag </naam>
+			<rugnummer> 26 </rugnummer>
+			<type> K </type>
+			<offensief> 12 </offensief>
+			<defensief> 84 </defensief>
+			<uithouding> 32 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Eric Botteghin </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 39 </offensief>
+			<defensief> 76 </defensief>
+			<uithouding> 84 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Johan Kappelhof </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 71 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Lorenzo Burnet </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 81 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 63 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 550 </prijs>
+		</speler>
+		<speler>
+			<naam> Martijn van der Laan </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 73 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 70 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Hans Hateboer </naam>
+			<rugnummer> 33 </rugnummer>
+			<type> V </type>
+			<offensief> 72 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 700 </prijs>
+		</speler>
+		<speler>
+			<naam> Nick Bakker </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> V </type>
+			<offensief> 72 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 59 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Tjaonn Chery </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 79 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 63 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Maikel Kieftenbeld </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 71 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 75 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Tom Hiariej </naam>
+			<rugnummer> 24 </rugnummer>
+			<type> M </type>
+			<offensief> 72 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Rasmus Lindgren </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> M </type>
+			<offensief> 45 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Yoëll van Nieff </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> M </type>
+			<offensief> 66 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Hilal Ben Moussa </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 48 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Burak Saban </naam>
+			<rugnummer> 32 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 43 </defensief>
+			<uithouding> 52 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Nick van der Velden </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> M </type>
+			<offensief> 59 </offensief>
+			<defensief> 58 </defensief>
+			<uithouding> 79 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jarchinio Antonia </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 91 </offensief>
+			<defensief> 26 </defensief>
+			<uithouding> 46 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 450 </prijs>
+		</speler>
+		<speler>
+			<naam> Danny Hoesen </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 79 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Michael de Leeuw </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> A </type>
+			<offensief> 64 </offensief>
+			<defensief> 42 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Género Zeefuik </naam>
+			<rugnummer> 36 </rugnummer>
+			<type> A </type>
+			<offensief> 40 </offensief>
+			<defensief> 32 </defensief>
+			<uithouding> 63 </uithouding>
+			<selectie> FALSE</selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 450 </prijs>
+		</speler>
+		<speler>
+			<naam> Henk Bos </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> A </type>
+			<offensief> 71 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 48 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Dio Islamovic </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> A </type>
+			<offensief> 50 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>		
+	</team>
+	<team naam = "Willem II">
+		<speler>
+			<naam> Konstantinos Lamprou </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 15 </offensief>
+			<defensief> 85 </defensief>
+			<uithouding> 20 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> David Meul </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> K </type>
+			<offensief> 19 </offensief>
+			<defensief> 83 </defensief>
+			<uithouding> 23 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mitchell Dijks </naam>
+			<rugnummer> 35 </rugnummer>
+			<type> V </type>
+			<offensief> 68 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Frank van der Struijk </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 56 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 75 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Jonas Heymans </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> V </type>
+			<offensief> 73 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Tim Cornelisse </naam>
+			<rugnummer> 28 </rugnummer>
+			<type> V </type>
+			<offensief> 37 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Dies Wuytens </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> V </type>
+			<offensief> 64 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Freek Heerkens</naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 31 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Stijn Wuytens </naam>
+			<rugnummer> 29 </rugnummer>
+			<type> M </type>
+			<offensief> 63 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Fabian Sprokslede </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 69 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Niek Vossebelt </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> M </type>
+			<offensief> 52 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Ali Messaoud </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 65 </offensief>
+			<defensief> 26 </defensief>
+			<uithouding> 57 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Robbie Haemhouts </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 63 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Simon van Zeelst </naam>
+			<rugnummer> 25 </rugnummer>
+			<type> M </type>
+			<offensief> 64 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 220 </prijs>
+		</speler>
+		<speler>
+			<naam> Ricardo Ippel </naam>
+			<rugnummer> 12 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 57 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Renan Zanelli </naam>
+			<rugnummer> 39 </rugnummer>
+			<type> M </type>
+			<offensief> 66 </offensief>
+			<defensief> 48 </defensief>
+			<uithouding> 61 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Ben Sahar </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> A </type>
+			<offensief> 78 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 58 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Samuel Armentos </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 68 </offensief>
+			<defensief> 32 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Jerson Cabral </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> A </type>
+			<offensief> 81 </offensief>
+			<defensief> 32 </defensief>
+			<uithouding> 44 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Terell Ondaan </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 89 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> FALSE</selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Bruno Andrade </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 71 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 61 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Charlton Vicento </naam>
+			<rugnummer> 36 </rugnummer>
+			<type> A </type>
+			<offensief> 87 </offensief>
+			<defensief> 25 </defensief>
+			<uithouding> 63 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 2000 </prijs>
+		</speler>		
+	</team>
+	<team naam = "SBV Excelsior">
+		<speler>
+			<naam> Jordy Deckers </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 23 </offensief>
+			<defensief> 79 </defensief>
+			<uithouding> 25 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Alessandro Damen </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> K </type>
+			<offensief> 18 </offensief>
+			<defensief> 81 </defensief>
+			<uithouding> 20 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Sander Fischer </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> V </type>
+			<offensief> 64 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Kevin van Diermen </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 61 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 75 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Daan Bovenberg </naam>
+			<rugnummer> 24 </rugnummer>
+			<type> V </type>
+			<offensief> 56 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Khalid Karami </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 70 </offensief>
+			<defensief> 61 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Bas Kuipers </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 65 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 61 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Elso Brito </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> V </type>
+			<offensief> 70 </offensief>
+			<defensief> 58 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jeff Stans </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 63 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Rick Kruys </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> M </type>
+			<offensief> 51 </offensief>
+			<defensief> 58 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Lars Hutten </naam>
+			<rugnummer> 22 </rugnummer>
+			<type> M </type>
+			<offensief> 69 </offensief>
+			<defensief> 36 </defensief>
+			<uithouding> 69 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Adil Auassar </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 45 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Kevin Vermeulen </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> M </type>
+			<offensief> 65 </offensief>
+			<defensief> 56 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Daan Blij </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> M </type>
+			<offensief> 68 </offensief>
+			<defensief> 51 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jurgen Mattheij </naam>
+			<rugnummer> 12 </rugnummer>
+			<type> V </type>
+			<offensief> 54 </offensief>
+			<defensief> 57 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Carlo de Reuver </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> A </type>
+			<offensief> 65 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jordan Botaka </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 86 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 550 </prijs>
+		</speler>
+		<speler>
+			<naam> Ninos Gouriye </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> A </type>
+			<offensief> 73 </offensief>
+			<defensief> 36 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Tom van Weert </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 65 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 58 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Daryl van Mieghem </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 86 </offensief>
+			<defensief> 25 </defensief>
+			<uithouding> 46 </uithouding>
+			<selectie>  FALSE</selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Marko Maletic </naam>
+			<rugnummer> 25 </rugnummer>
+			<type> A </type>
+			<offensief> 53 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Richard Stolte</naam>
+			<rugnummer> 15 </rugnummer>
+			<type> A </type>
+			<offensief> 69 </offensief>
+			<defensief> 40 </defensief>
+			<uithouding> 63 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>		
+	</team>
+	<team naam = "Go Ahead Eagels">
+		<speler>
+			<naam> Mickey van der Hart </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 23 </offensief>
+			<defensief> 85 </defensief>
+			<uithouding> 20 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Erik Cummins </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> K </type>
+			<offensief> 32 </offensief>
+			<defensief> 78 </defensief>
+			<uithouding> 23 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Giliano Wijnaldum </naam>
+			<rugnummer> 25 </rugnummer>
+			<type> V </type>
+			<offensief> 74 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 550 </prijs>
+		</speler>
+		<speler>
+			<naam> Bart Vriends </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 58 </offensief>
+			<defensief> 61 </defensief>
+			<uithouding> 75 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jop van der Linden </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 49 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 70 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Xandro Schenk </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 64 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mawouna Amevor </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> V </type>
+			<offensief> 74 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Sven Nieuwpoort </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> V </type>
+			<offensief> 74 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Deniz Türüc </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 74 </offensief>
+			<defensief> 53 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Sander Duits </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> M </type>
+			<offensief> 51 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Jeffrey Rijsdijk </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 74 </offensief>
+			<defensief> 39 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Sjoerd Overgoor </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 61 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Peter van Ooijen </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 58 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Lars Lambooij </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> M </type>
+			<offensief> 70 </offensief>
+			<defensief> 58 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Teije ten Den </naam>
+			<rugnummer> 26 </rugnummer>
+			<type> M </type>
+			<offensief> 58 </offensief>
+			<defensief> 43 </defensief>
+			<uithouding> 53 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jules Reimerink </naam>
+			<rugnummer> 22 </rugnummer>
+			<type> M </type>
+			<offensief> 74 </offensief>
+			<defensief> 25 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Lesly de Sa </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 88 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 58 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Marnix Kolder </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 42 </offensief>
+			<defensief> 37 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Alex Schalk </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 73 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 54 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Fernando Lewis </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> A </type>
+			<offensief> 78 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 61 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Nick de Bondt </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> A </type>
+			<offensief> 77 </offensief>
+			<defensief> 26 </defensief>
+			<uithouding> 50 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Puck Postma </naam>
+			<rugnummer> 27 </rugnummer>
+			<type> A </type>
+			<offensief> 63 </offensief>
+			<defensief> 26 </defensief>
+			<uithouding> 48 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>		
+	</team>
+	<team naam = "ADO Den Haag">
+		<speler>
+			<naam> Robert Zwinkels </naam>
+			<rugnummer> 22 </rugnummer>
+			<type> K </type>
+			<offensief> 14 </offensief>
+			<defensief> 86 </defensief>
+			<uithouding> 30 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Tim Coremens </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> K </type>
+			<offensief> 12 </offensief>
+			<defensief> 89 </defensief>
+			<uithouding> 32 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Timothy Derijck </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 63 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 75 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Aaron Meijers </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> V </type>
+			<offensief> 76 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 70 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Dion Malone </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 69 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 75 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Vito Wormgoor </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 50 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 76 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Gianni Zuiverloon </naam>
+			<rugnummer> 51 </rugnummer>
+			<type> V </type>
+			<offensief> 73 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Wilfried Kanon </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 60 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Roland Alberg </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> M </type>
+			<offensief> 75 </offensief>
+			<defensief> 44 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Thomas Kristensen </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 63 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mathias Gehrt </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 79 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Kevin Jansen </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> M </type>
+			<offensief> 66 </offensief>
+			<defensief> 57 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Danny Bakker </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> M </type>
+			<offensief> 64 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 58 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Vidarell Merencia </naam>
+			<rugnummer> 37 </rugnummer>
+			<type> M </type>
+			<offensief> 64 </offensief>
+			<defensief> 58 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Tyronne Ebuehi </naam>
+			<rugnummer> 28 </rugnummer>
+			<type> V </type>
+			<offensief> 80 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 50 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Robin Buwalda </naam>
+			<rugnummer> 41 </rugnummer>
+			<type> V </type>
+			<offensief>67 </offensief>
+			<defensief> 57 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Mike van Duinen </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 75 </offensief>
+			<defensief> 45 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mitchell Schet </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> A </type>
+			<offensief> 85 </offensief>
+			<defensief> 33 </defensief>
+			<uithouding> 57 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Xander Houtkoop </naam>
+			<rugnummer> 26 </rugnummer>
+			<type> A </type>
+			<offensief> 84 </offensief>
+			<defensief> 24 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Michiel Kramer </naam>
+			<rugnummer> 29 </rugnummer>
+			<type> A </type>
+			<offensief> 63 </offensief>
+			<defensief> 34 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Mitchell de Vlugt </naam>
+			<rugnummer> 25 </rugnummer>
+			<type> A </type>
+			<offensief> 72 </offensief>
+			<defensief> 43 </defensief>
+			<uithouding> 45 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Richelo Fecunda </naam>
+			<rugnummer> 27 </rugnummer>
+			<type> V </type>
+			<offensief> 70 </offensief>
+			<defensief> 57 </defensief>
+			<uithouding> 52 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>		
+	</team>
+	<team naam = "SC Cambuur">
+		<speler>
+			<naam> Leonard Nienhuis </naam>
+			<rugnummer> 22 </rugnummer>
+			<type> K </type>
+			<offensief> 12 </offensief>
+			<defensief> 86 </defensief>
+			<uithouding> 23 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Harm Zeinstra </naam>
+			<rugnummer> 26 </rugnummer>
+			<type> K </type>
+			<offensief> 16 </offensief>
+			<defensief> 89 </defensief>
+			<uithouding> 10 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Wout Droste </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 75 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Lucas Bijker </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> V </type>
+			<offensief> 75 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Calvin Mac-Intosh </naam>
+			<rugnummer> 30 </rugnummer>
+			<type> V </type>
+			<offensief> 68 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 67 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mart Dijkstra </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> V </type>
+			<offensief> 48 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 70 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Vytautas Andriuskevicius </naam>
+			<rugnummer> 4 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 62 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Ron Janzen </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> V </type>
+			<offensief> 54 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 69 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mohamed El Makrini </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> M </type>
+			<offensief> 59 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 73 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Erik Bakker </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 72 </offensief>
+			<defensief> 48 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Albert Rusnak </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> M </type>
+			<offensief> 76 </offensief>
+			<defensief> 34 </defensief>
+			<uithouding> 43 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Sander van de Streek </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> M </type>
+			<offensief> 62 </offensief>
+			<defensief> 40 </defensief>
+			<uithouding> 51 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Berend Schootstra </naam>
+			<rugnummer> 25 </rugnummer>
+			<type> M </type>
+			<offensief> 57 </offensief>
+			<defensief> 57 </defensief>
+			<uithouding> 52 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Daniel de Ridder </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 70 </offensief>
+			<defensief> 36 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Dejan Meleg </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Sebastian Steblecki </naam>
+			<rugnummer> 24 </rugnummer>
+			<type> M </type>
+			<offensief> 69 </offensief>
+			<defensief> 44 </defensief>
+			<uithouding> 55 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Bartholomew Ogbeche </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> A </type>
+			<offensief> 81 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 70 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Michiel Hemmen </naam>
+			<rugnummer> 13 </rugnummer>
+			<type> A </type>
+			<offensief> 42 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 81 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Furjel Narsingh </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 84 </offensief>
+			<defensief> 34 </defensief>
+			<uithouding> 53 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Bob Schepers </naam>
+			<rugnummer> 27 </rugnummer>
+			<type> A </type>
+			<offensief> 76 </offensief>
+			<defensief> 35 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Martijn Barto </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 60 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Oebele Schokker </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> A </type>
+			<offensief> 41 </offensief>
+			<defensief> 34 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+	</team>
+	<team naam = "FC Utrecht">
+		<speler>
+			<naam> Robbin Ruiter </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 20 </offensief>
+			<defensief> 97 </defensief>
+			<uithouding> 25 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 700 </prijs>
+		</speler>
+		<speler>
+			<naam> Jeroen Verhoeven </naam>
+			<rugnummer> 30 </rugnummer>
+			<type> K </type>
+			<offensief> 18  </offensief>
+			<defensief> 94 </defensief>
+			<uithouding> 23 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Ramon Leeuwin </naam>
+			<rugnummer> 3 </rugnummer>
+			<type> V </type>
+			<offensief> 71 </offensief>
+			<defensief> 69 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Gévero Markiet </naam>
+			<rugnummer> 13 </rugnummer>
+			<type> V </type>
+			<offensief> 63 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Chris Kum </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 74 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Mark van der Maarel </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 73 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Kai Heerings </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> V </type>
+			<offensief> 63 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Michael Zullo </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> V </type>
+			<offensief> 81 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Yassin Ayoub </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> M </type>
+			<offensief> 71 </offensief>
+			<defensief> 66 </defensief>
+			<uithouding> 66 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Anouar Kali </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 57 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Nacer Barazite </naam>
+			<rugnummer> 10 </rugnummer>
+			<type> M </type>
+			<offensief> 72 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Willem Janssen </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 65 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 77 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Adam Sarota </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> M </type>
+			<offensief> 69 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 72 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Mark Diemers </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> M </type>
+			<offensief> 64 </offensief>
+			<defensief> 56 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Fernando Quesada </naam>
+			<rugnummer> 18 </rugnummer>
+			<type> M </type>
+			<offensief> 64 </offensief>
+			<defensief> 43 </defensief>
+			<uithouding> 52 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Gyliano van Velzen </naam>
+			<rugnummer> 27 </rugnummer>
+			<type> M </type>
+			<offensief> 80 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 60 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Thomas Oar </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 80 </offensief>
+			<defensief> 32 </defensief>
+			<uithouding> 51 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Edouard Duplan </naam>
+			<rugnummer> 7 </rugnummer>
+			<type> A </type>
+			<offensief> 69 </offensief>
+			<defensief> 36 </defensief>
+			<uithouding> 56 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Ruud Boymans </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 53 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Danny Verbeek </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> A </type>
+			<offensief> 84 </offensief>
+			<defensief> 24 </defensief>
+			<uithouding> 59 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Rodney Antwi </naam>
+			<rugnummer> 47 </rugnummer>
+			<type> A </type>
+			<offensief> 89 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 54 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Rubio Rubin </naam>
+			<rugnummer> 45 </rugnummer>
+			<type> A </type>
+			<offensief> 69 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 48 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+	</team>
+	<team naam = "SC Heerenveen">
+		<speler>
+			<naam> Kristoffer Nordeldt </naam>
+			<rugnummer> 1 </rugnummer>
+			<type> K </type>
+			<offensief> 25 </offensief>
+			<defensief> 98 </defensief>
+			<uithouding> 31 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 1100 </prijs>
+		</speler>
+		<speler>
+			<naam> Viktor Noring </naam>
+			<rugnummer> 31 </rugnummer>
+			<type> K </type>
+			<offensief> 20 </offensief>
+			<defensief> 96 </defensief>
+			<uithouding> 29 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 500 </prijs>
+		</speler>
+		<speler>
+			<naam> Pele van Anholt </naam>
+			<rugnummer> 5 </rugnummer>
+			<type> V </type>
+			<offensief> 77 </offensief>
+			<defensief> 67 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Kenneth Otigba </naam>
+			<rugnummer> 2 </rugnummer>
+			<type> V </type>
+			<offensief> 75 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 79 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Joost van Aken </naam>
+			<rugnummer> 14 </rugnummer>
+			<type> V </type>
+			<offensief> 72 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 68 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Stefano Marzo </naam>
+			<rugnummer> 6 </rugnummer>
+			<type> V </type>
+			<offensief> 75 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 450 </prijs>
+		</speler>
+		<speler>
+			<naam> Jukka Raitala </naam>
+			<rugnummer> 20 </rugnummer>
+			<type> V </type>
+			<offensief> 69 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Doke Schmidt </naam>
+			<rugnummer> 12 </rugnummer>
+			<type> V </type>
+			<offensief> 67 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 71 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Jordy Buijs </naam>
+			<rugnummer> 23 </rugnummer>
+			<type> M </type>
+			<offensief> 53 </offensief>
+			<defensief> 65 </defensief>
+			<uithouding> 74 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Joris Voest </naam>
+			<rugnummer> 32 </rugnummer>
+			<type> M </type>
+			<offensief> 74 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 300 </prijs>
+		</speler>
+		<speler>
+			<naam> Jeoy van den Berg </naam>
+			<rugnummer> 21 </rugnummer>
+			<type> M </type>
+			<offensief> 61 </offensief>
+			<defensief> 64 </defensief>
+			<uithouding> 83 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 550 </prijs>
+		</speler>
+		<speler>
+			<naam> Marten de Roon </naam>
+			<rugnummer> 15 </rugnummer>
+			<type> M </type>
+			<offensief> 67 </offensief>
+			<defensief> 63 </defensief>
+			<uithouding> 78 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 550 </prijs>
+		</speler>
+		<speler>
+			<naam> Daley Sinkgraven </naam>
+			<rugnummer> 16 </rugnummer>
+			<type> M </type>
+			<offensief> 73 </offensief>
+			<defensief> 51 </defensief>
+			<uithouding> 51 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Michael Chacón </naam>
+			<rugnummer> 27 </rugnummer>
+			<type> M </type>
+			<offensief> 74 </offensief>
+			<defensief> 59 </defensief>
+			<uithouding> 64 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Morten Thorsby </naam>
+			<rugnummer> 8 </rugnummer>
+			<type> M </type>
+			<offensief> 62 </offensief>
+			<defensief> 39 </defensief>
+			<uithouding> 54 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Janio Bikel </naam>
+			<rugnummer> 26 </rugnummer>
+			<type> M </type>
+			<offensief> 74 </offensief>
+			<defensief> 60 </defensief>
+			<uithouding> 62 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Sam Larsson </naam>
+			<rugnummer> 11 </rugnummer>
+			<type> A </type>
+			<offensief> 76 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 59 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 350 </prijs>
+		</speler>
+		<speler>
+			<naam> Mark Uth </naam>
+			<rugnummer> 19 </rugnummer>
+			<type> A </type>
+			<offensief> 71 </offensief>
+			<defensief> 32 </defensief>
+			<uithouding> 65 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 250 </prijs>
+		</speler>
+		<speler>
+			<naam> Thomas Dalgaard </naam>
+			<rugnummer> 9 </rugnummer>
+			<type> A </type>
+			<offensief> 62 </offensief>
+			<defensief> 29 </defensief>
+			<uithouding> 69 </uithouding>
+			<selectie> TRUE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+		<speler>
+			<naam> Luciano Slagveer </naam>
+			<rugnummer> 17 </rugnummer>
+			<type> A </type>
+			<offensief> 87 </offensief>
+			<defensief> 30 </defensief>
+			<uithouding> 58 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 400 </prijs>
+		</speler>
+		<speler>
+			<naam> Jeroen Lumu </naam>
+			<rugnummer> 24 </rugnummer>
+			<type> A </type>
+			<offensief> 84 </offensief>
+			<defensief> 28 </defensief>
+			<uithouding> 54 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 450 </prijs>
+		</speler>
+		<speler>
+			<naam> Pascal Huser </naam>
+			<rugnummer> 28 </rugnummer>
+			<type> A </type>
+			<offensief> 64 </offensief>
+			<defensief> 27 </defensief>
+			<uithouding> 55 </uithouding>
+			<selectie> FALSE </selectie>
+			<beschikbaar> 0 </beschikbaar>
+			<prijs> 200 </prijs>
+		</speler>
+	</team>
+</teams>
+ 
+ 
