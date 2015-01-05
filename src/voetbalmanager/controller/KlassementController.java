@@ -1,4 +1,4 @@
-package application.view;
+package voetbalmanager.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +21,8 @@ import voetbalmanager.XMLLoader;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
 
-public class OpstellingController implements Initializable {
+public class KlassementController implements Initializable{
+	
 	
 	
 	 @Override

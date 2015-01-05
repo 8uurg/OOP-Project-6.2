@@ -1,4 +1,4 @@
-package application.view;
+package voetbalmanager.controller;
 
 
 import java.io.File;
@@ -22,62 +22,14 @@ import voetbalmanager.XMLLoader;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
 
-public class MainController implements Initializable{
+public class NewGameController implements Initializable{
 
-   @FXML private Button NewGame;
-   @FXML private Button LoadGame;
-   @FXML private Button Exit;
-   @FXML private Button Help;
    @FXML private Button Next;
    @FXML private Button Back;
    @FXML private Button Back2;
    @FXML private Button StartManagement;
    @FXML private TextField TekstVeld;
 
-   
-   @FXML
-   public void handleNewGame(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
-		Scene scene = new Scene(root);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();
-	
-    }
-   
-   @FXML
-   public void handleLoadGame(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
-		Scene scene = new Scene(root,800,600);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();
-	
-    }
-   
-   @FXML
-   public void handleHelp(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
-		Scene scene = new Scene(root,800,600);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();
-	
-    }
-   
-   @FXML
-   public void handleExit(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
-		Scene scene = new Scene(root,800,600);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();
-	
-    }
    
    @FXML
    public void handleBack(ActionEvent event) throws IOException {

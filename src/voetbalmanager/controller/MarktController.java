@@ -1,4 +1,4 @@
-package application.view;
+package voetbalmanager.controller;
 
 import java.io.IOException;
 import java.net.URL;
