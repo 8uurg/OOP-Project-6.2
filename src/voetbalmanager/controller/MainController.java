@@ -15,9 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import javax.xml.transform.stream.StreamResult;
-
+import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
@@ -32,7 +30,7 @@ public class MainController implements Initializable{
    
    @FXML
    public void handleNewGame(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
+	   	Parent root = FXMLLoader.load(Main.class.getResource("/view/NewGame.fxml"));
 		Scene scene = new Scene(root);
 		Stage ps = new Stage();
 		
@@ -43,7 +41,7 @@ public class MainController implements Initializable{
    
    @FXML
    public void handleLoadGame(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
+	   	Parent root = FXMLLoader.load(MainController.class.getResource("view/NewGame.fxml"));
 		Scene scene = new Scene(root,800,600);
 		Stage ps = new Stage();
 		
@@ -54,7 +52,7 @@ public class MainController implements Initializable{
    
    @FXML
    public void handleHelp(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
+	   	Parent root = FXMLLoader.load(MainController.class.getResource("view/NewGame.fxml"));
 		Scene scene = new Scene(root,800,600);
 		Stage ps = new Stage();
 		
@@ -65,7 +63,7 @@ public class MainController implements Initializable{
    
    @FXML
    public void handleExit(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
+	   	Parent root = FXMLLoader.load(MainController.class.getResource("view/NewGame.fxml"));
 		Scene scene = new Scene(root,800,600);
 		Stage ps = new Stage();
 		
