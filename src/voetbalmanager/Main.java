@@ -1,7 +1,7 @@
-package application;
+package voetbalmanager;
 
 	
-import application.view.*;
+import voetbalmanager.view.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
