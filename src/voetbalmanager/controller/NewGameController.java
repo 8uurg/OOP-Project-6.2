@@ -14,10 +14,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import javax.xml.transform.stream.StreamResult;
 
+import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
@@ -29,12 +31,13 @@ public class NewGameController implements Initializable{
    @FXML private Button Back2;
    @FXML private Button StartManagement;
    @FXML private TextField TekstVeld;
+  
 
    
    @FXML
    public void handleBack(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("MainMenu.fxml"));
-		Scene scene = new Scene(root,800,600);
+	   	Parent root = FXMLLoader.load(Main.class.getResource("view/MainMenu.fxml"));
+		Scene scene = new Scene(root);
 		Stage ps = new Stage();
 		
 		ps.setScene(scene);
@@ -49,12 +52,12 @@ public class NewGameController implements Initializable{
 	   
 	   String loc = "./saves/" + naam + ".xml";
 	   
-	   Competitie competitie = XMLLoader.creeerCompetitie("eredivisie");
+	  // Competitie competitie = XMLLoader.creeerCompetitie("eredivisie");
 	   // TODO geef huidige competitie door aan centrale spelbeheerder.
 	   
-	   XMLWriter.saveCompetitie(competitie, new StreamResult(new File(loc)));
+	  // XMLWriter.saveCompetitie(competitie, new StreamResult(new File(loc)));
 			   
-	   Parent root = FXMLLoader.load(MainController.class.getResource("NewGameNext.fxml"));
+	   Parent root = FXMLLoader.load(Main.class.getResource("view/NewGameNext.fxml"));
 	   Scene scene = new Scene(root);
 	   Stage ps = new Stage();
 		
@@ -65,8 +68,8 @@ public class NewGameController implements Initializable{
    
    @FXML
    public void handleBack2(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
-		Scene scene = new Scene(root,800,600);
+	   	Parent root = FXMLLoader.load(Main.class.getResource("view/NewGame.fxml"));
+		Scene scene = new Scene(root);
 		Stage ps = new Stage();
 		
 		ps.setScene(scene);
@@ -76,8 +79,8 @@ public class NewGameController implements Initializable{
    
    @FXML
    public void handleStartManagement(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("ManagementMain.fxml"));
-		Scene scene = new Scene(root,800,600);
+	   	Parent root = FXMLLoader.load(Main.class.getResource("view/ManagementMain.fxml"));
+		Scene scene = new Scene(root);
 		Stage ps = new Stage();
 		
 		ps.setScene(scene);
