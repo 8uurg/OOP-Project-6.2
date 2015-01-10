@@ -8,4 +8,8 @@ public class Resultaat {
 		this.scoreA = scoreA;
 		this.scoreB = scoreB;
 	}
+	
+	public String toString() {
+		return "(" + scoreA + ", " + scoreB + ")";
+	}
 }

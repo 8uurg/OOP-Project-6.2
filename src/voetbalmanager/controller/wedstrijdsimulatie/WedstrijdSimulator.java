@@ -28,13 +28,22 @@ public class WedstrijdSimulator {
 	
 	public WedstrijdSimulator(Team a, Team b)
 	{
-		this.a = new WedstrijdTeam(a, true);
-		this.b = new WedstrijdTeam(b, false);
+		this.a = new WedstrijdTeam(a);
+		this.b = new WedstrijdTeam(b);
+	}
+	
+	public void reset() {
+		balpositie = 3;
+		rn = 0;
 		
 		rnd = new Random();
+		
+		this.a.resetScore();
+		this.b.resetScore();
 	}
 	
 	public Resultaat simuleer() {
+		reset();
 		this.balA = true;
 		simuleerHelft();
 		this.balA = false;
@@ -73,10 +82,42 @@ public class WedstrijdSimulator {
 			}
 		}
 		
-		if(rnd.nextFloat()>0.9) {
-			// Doelpoging
-		}
+		//System.out.println(balpositie);
+		
+		boolean doelpunt = false;
+		
+		if(balpositie == 6) {doelpoging(a, b);}
+		if(balpositie == 0) {doelpoging(b, a);}
+		
 		
 	}
 	
+	public void doelpoging(WedstrijdTeam aanval, WedstrijdTeam verdedig) {
+		// Is er echt een doelpoging?
+		if(rnd.nextFloat()>0) {
+			// Doelpoging
+			float a = aanval.getTeam().getOpstelling().getWillekeurigeAanvaller(rnd).getOffensief();
+			a = a * (1+rnd.nextFloat()/5);
+			float b = verdedig.getKeeper().getVerdediging();
+			// Haal commentaarstrepen weg om de aanvalskracht tegen de keeper te zien. (Doelpunt of niet)
+			//System.out.println("A:" + a + ", B:" + b);
+			if(a>b) {
+				// Door keeper of in doel?
+				if(true)
+				{
+					aanval.maakDoelpunt(rn);
+					balpositie = 3;
+					balA = !balA;
+					return;
+				}
+			}
+		}
+		if(balpositie==6) {
+			balpositie = 5;
+			balA = false;
+		} else if (balpositie == 0) {
+			balpositie = 1;
+			balA = true;
+		}
+	}
 }

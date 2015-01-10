@@ -3,8 +3,7 @@ package voetbalmanager.controller.wedstrijdsimulatie.unit;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
+import voetbalmanager.controller.wedstrijdsimulatie.WedstrijdSimulator;
 import voetbalmanager.model.Speler;
 import voetbalmanager.model.Team;
 
@@ -67,8 +66,19 @@ public class TestWedstrijdSimulator {
 	}
 	
 	@Test
+	public void testSimulatieTegenZichzelf() {
+		System.out.println("Tegen zichzelf:");
+		WedstrijdSimulator sim = new WedstrijdSimulator(a, a);
+		for(int i=0; i<10; ++i)
+			System.out.println(sim.simuleer().toString());
+	}
+	
+	@Test
 	public void testSimulatie() {
-		fail("Not yet implemented!");
+		System.out.println("Gewoon:");
+		WedstrijdSimulator sim = new WedstrijdSimulator(a, b);
+		for(int i=0; i<10; ++i)
+			System.out.println(sim.simuleer().toString());
 	}
 
 }

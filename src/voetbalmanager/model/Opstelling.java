@@ -1,5 +1,6 @@
 package voetbalmanager.model;
 import java.util.ArrayList;
+import java.util.Random;
 
 import voetbalmanager.controller.wedstrijdsimulatie.SomKrachten;
 import voetbalmanager.exceptions.OpstellingException;
@@ -114,6 +115,20 @@ public class Opstelling {
 	}
 	
 	/**
+	 * Geeft de som van de krachten van alle verdedigers.
+	 * @return De som van alle krachten van alle verdedigers.
+	 */
+	public SomKrachten getKeeperKrachten() {
+		// TODO Auto-generated method stub
+		return getKrachten(doelmannen);
+	}
+	
+	public Speler getWillekeurigeAanvaller(Random rnd) {
+		int i = rnd.nextInt(aanvallers.size());
+		return aanvallers.get(i);
+	}
+	
+	/**
 	 * Geeft de som van de krachten in een bepaalde arraylist.
 	 * @param spelers De arraylist waar de krachten van opgeteld moeten worden.
 	 * @return De som van alle krachten.
@@ -131,4 +146,6 @@ public class Opstelling {
 		
 		return new SomKrachten(aanval, verdediging, uithouding);
 	}
+
+	
 }

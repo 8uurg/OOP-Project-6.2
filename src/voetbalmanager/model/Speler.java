@@ -169,4 +169,18 @@ public class Speler {
 		return new Speler(naam, nummer, prijs, status, type, offensief, defensief, uithoudingsvermogen);
 		
 	}
+	
+	public int getOffensief() {
+		return offensief;
+	}
+	
+	public int getDefensief() {
+		return defensief;
+	}
+	
+	public int getUithouding() {
+		return uithoudingsvermogen;
+	}
+	
+	
 }

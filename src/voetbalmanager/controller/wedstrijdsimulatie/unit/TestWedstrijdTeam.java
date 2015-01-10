@@ -47,7 +47,7 @@ public class TestWedstrijdTeam {
 	@Test
 	public void testDoelpunt() {
 		WedstrijdTeam actual = new WedstrijdTeam(b);
-		actual.maakDoelpunt();
+		actual.maakDoelpunt(0);
 		assertEquals(1, actual.getScore());
 	}
 	@After
