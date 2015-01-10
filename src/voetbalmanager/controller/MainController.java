@@ -28,12 +28,14 @@ public class MainController implements Initializable{
    @FXML private Button Exit;
    @FXML private Button Help;
    
+   
   
    
    @FXML
    public void handleNewGame(ActionEvent event) throws IOException {
-	  
-	   Parent root = FXMLLoader.load(Main.class.getResource("view/NewGame.fxml"));
+	
+      
+	    Parent root = FXMLLoader.load(Main.class.getResource("view/NewGame.fxml"));
 		Scene scene = new Scene(root);
 		Stage ps = new Stage();
 		
