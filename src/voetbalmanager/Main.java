@@ -19,7 +19,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(Main.class.getResource("view/MainMenu.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("view/MainMenu.fxml"));
 			Scene scene = new Scene(root);
 			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -27,6 +27,7 @@ public class Main extends Application {
 			this.primaryStage = primaryStage;
 			this.primaryStage.setScene(scene);
 			this.primaryStage.show();
+			primaryStage.setTitle("Total Control");
 			
 		} catch(Exception e) {
 			e.printStackTrace();

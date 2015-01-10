@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 
 import javax.xml.transform.stream.StreamResult;
 
+import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
@@ -33,7 +34,7 @@ public class NewGameController implements Initializable{
    
    @FXML
    public void handleBack(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("MainMenu.fxml"));
+	   Parent root = FXMLLoader.load(Main.class.getResource("view/MainMenu.fxml"));
 		Scene scene = new Scene(root,800,600);
 		Stage ps = new Stage();
 		
@@ -54,7 +55,7 @@ public class NewGameController implements Initializable{
 	   
 	   XMLWriter.saveCompetitie(competitie, new StreamResult(new File(loc)));
 			   
-	   Parent root = FXMLLoader.load(MainController.class.getResource("NewGameNext.fxml"));
+	   Parent root = FXMLLoader.load(Main.class.getResource("view/NewGameNext.fxml"));
 	   Scene scene = new Scene(root);
 	   Stage ps = new Stage();
 		
@@ -65,7 +66,7 @@ public class NewGameController implements Initializable{
    
    @FXML
    public void handleBack2(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("NewGame.fxml"));
+	   	Parent root = FXMLLoader.load(Main.class.getResource("view/NewGame.fxml"));
 		Scene scene = new Scene(root,800,600);
 		Stage ps = new Stage();
 		
@@ -76,7 +77,7 @@ public class NewGameController implements Initializable{
    
    @FXML
    public void handleStartManagement(ActionEvent event) throws IOException {
-	   	Parent root = FXMLLoader.load(MainController.class.getResource("ManagementMain.fxml"));
+	   	Parent root = FXMLLoader.load(Main.class.getResource("view/ManagementMain.fxml"));
 		Scene scene = new Scene(root,800,600);
 		Stage ps = new Stage();
 		

@@ -39,7 +39,7 @@ public class ManagementController implements Initializable{
 	
 	@FXML
 	public void handleSpelersmarkt() throws IOException{
-		Parent root = FXMLLoader.load(MainController.class.getResource("Market.fxml"));
+		Parent root = FXMLLoader.load(Main.class.getResource("view/Market.fxml"));
 		Scene scene = new Scene(root,800,600);
 		Stage ps = new Stage();
 		
@@ -65,7 +65,7 @@ public class ManagementController implements Initializable{
 	
 	@FXML
 	public void handleExit() throws IOException{
-		Parent root = FXMLLoader.load(MainController.class.getResource("MainMenu.fxml"));
+		Parent root = FXMLLoader.load(Main.class.getResource("view/MainMenu.fxml"));
 		Scene scene = new Scene(root,800,600);
 		Stage ps = new Stage();
 		
