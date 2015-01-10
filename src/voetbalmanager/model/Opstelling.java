@@ -1,6 +1,7 @@
 package voetbalmanager.model;
 import java.util.ArrayList;
 
+import voetbalmanager.controller.wedstrijdsimulatie.SomKrachten;
 import voetbalmanager.exceptions.OpstellingException;
 
 public class Opstelling {
@@ -86,5 +87,48 @@ public class Opstelling {
 			doelmannen.remove(sp);
 		else
 			throw new OpstellingException(sp.naam + " staat niet opgesteld!");
+	}
+	
+	/**
+	 * Geeft de som van de krachten van alle aanvallers.
+	 * @return De som van alle krachten van alle aanvallers.
+	 */
+	public SomKrachten getAanvallersKrachten() {
+		return getKrachten(aanvallers);
+	}
+	
+	/**
+	 * Geeft de som van de krachten van alle middenvelders.
+	 * @return De som van alle krachten van alle middenvelders.
+	 */
+	public SomKrachten getMiddenveldersKrachten() {
+		return getKrachten(middenvelders);
+	}
+	
+	/**
+	 * Geeft de som van de krachten van alle verdedigers.
+	 * @return De som van alle krachten van alle verdedigers.
+	 */
+	public SomKrachten getVerdedigersKrachten() {
+		return getKrachten(verdedigers);
+	}
+	
+	/**
+	 * Geeft de som van de krachten in een bepaalde arraylist.
+	 * @param spelers De arraylist waar de krachten van opgeteld moeten worden.
+	 * @return De som van alle krachten.
+	 */
+	private SomKrachten getKrachten(ArrayList<Speler> spelers) {
+		int aanval = 0;
+		int verdediging = 0;
+		int uithouding = 0;
+		
+		for(Speler speler: spelers) {
+			aanval += speler.offensief;
+			verdediging += speler.defensief;
+			uithouding += speler.uithoudingsvermogen;
+		}
+		
+		return new SomKrachten(aanval, verdediging, uithouding);
 	}
 }

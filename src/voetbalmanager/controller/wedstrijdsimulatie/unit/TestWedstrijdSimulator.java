@@ -20,7 +20,7 @@ public class TestWedstrijdSimulator {
 		a.overrideAdd(new Speler("Sepp de Roover", 2, 200, Speler.Status.Beschikbaar, Speler.Type.Verdediger, 70, 74, 75), true);
 		a.overrideAdd(new Speler("Henrico Drost", 3, 230, Speler.Status.Beschikbaar, Speler.Type.Verdediger, 56, 68, 70), true);
 		a.overrideAdd(new Speler("Aleksandar Damcevski", 4, 271, Speler.Status.Beschikbaar, Speler.Type.Verdediger, 47, 67, 78), true);
-		a.overrideAdd(new Speler("Römy Amieux ", 5, 125, Speler.Status.Beschikbaar, Speler.Type.Verdediger, 58, 70, 78), true);
+		a.overrideAdd(new Speler("Romy Amieux ", 5, 125, Speler.Status.Beschikbaar, Speler.Type.Verdediger, 58, 70, 78), true);
 		a.overrideAdd(new Speler("Joeri de Kamps", 6, 265, Speler.Status.Beschikbaar, Speler.Type.Middenvelder, 63, 63, 73), true);
 		a.overrideAdd(new Speler("Elson Hooi", 7, 325, Speler.Status.Beschikbaar, Speler.Type.Middenvelder, 89, 28, 47), true);
 		a.overrideAdd(new Speler("Jeffrey Sarpong", 8, 195, Speler.Status.Beschikbaar, Speler.Type.Middenvelder, 78, 29, 54), true);
