@@ -14,6 +14,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import javax.xml.transform.stream.StreamResult;
@@ -30,6 +31,7 @@ public class NewGameController implements Initializable{
    @FXML private Button Back2;
    @FXML private Button StartManagement;
    @FXML private TextField TekstVeld;
+  
 
    
    @FXML
@@ -50,10 +52,10 @@ public class NewGameController implements Initializable{
 	   
 	   String loc = "./saves/" + naam + ".xml";
 	   
-	   Competitie competitie = XMLLoader.creeerCompetitie("eredivisie");
+	  // Competitie competitie = XMLLoader.creeerCompetitie("eredivisie");
 	   // TODO geef huidige competitie door aan centrale spelbeheerder.
 	   
-	   XMLWriter.saveCompetitie(competitie, new StreamResult(new File(loc)));
+	  // XMLWriter.saveCompetitie(competitie, new StreamResult(new File(loc)));
 			   
 	   Parent root = FXMLLoader.load(Main.class.getResource("view/NewGameNext.fxml"));
 	   Scene scene = new Scene(root);
