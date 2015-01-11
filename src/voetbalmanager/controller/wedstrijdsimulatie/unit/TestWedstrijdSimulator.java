@@ -1,9 +1,15 @@
 package voetbalmanager.controller.wedstrijdsimulatie.unit;
 
+import java.io.File;
+
+import javax.xml.transform.stream.StreamResult;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import voetbalmanager.XMLWriter;
 import voetbalmanager.controller.wedstrijdsimulatie.WedstrijdSimulator;
+import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Speler;
 import voetbalmanager.model.Team;
 
@@ -77,6 +83,14 @@ public class TestWedstrijdSimulator {
 	public void testSimulatie() {
 		System.out.println("Gewoon:");
 		WedstrijdSimulator sim = new WedstrijdSimulator(a, b);
+		for(int i=0; i<10; ++i)
+			System.out.println(sim.simuleer().toString());
+	}
+	
+	@Test
+	public void testSimulatie2() {
+		System.out.println("Gewoon 2:");
+		WedstrijdSimulator sim = new WedstrijdSimulator(b, a);
 		for(int i=0; i<10; ++i)
 			System.out.println(sim.simuleer().toString());
 	}

@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URL;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -84,9 +85,19 @@ public class XMLLoader {
 	 * @param competitie	De competitie die ingeladen moet worden.
 	 * @return Een nieuwe competitie
 	 */
-	public static Competitie creeerCompetitie(String competitie) {
-		Document doc = XMLLoader.getDocument(new InputSource(XMLLoader.class.getResourceAsStream("/competities/" + competitie + ".xml")));
-		
+	public static Competitie creeerCompetitie(String naam) {
+		InputStream a;
+		try {
+			URL x = ClassLoader.getSystemClassLoader().getResource("competitie/eredivisie.xml");
+			//System.out.println(x);
+			a = x.openStream();
+		} catch(IOException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		System.out.println(a);
+
+		Document doc = XMLLoader.getDocument(a);
 		return Competitie.laadXMLElement((Element) doc.getElementsByTagName("competitie").item(0));
 	}
 	
@@ -115,12 +126,37 @@ public class XMLLoader {
 			throw new RuntimeException(e);
 		} catch (IOException e) {
 			// TODO IOException, bestand bestaat niet of doet iets anders.
+			e.printStackTrace();
 			throw new RuntimeException(e);
 		} catch (ParserConfigurationException e) {
 			// Configuratie zou moeten werken
 			throw new RuntimeException(e);
 		}
 	}
+	
+	/**
+	 * Lees een document uit een stream.
+	 * @param in	Invoer om gegevens uit te lezen.
+	 * @return
+	 */
+	public static Document getDocument(InputStream in){		
+		try {
+			DocumentBuilderFactory docbuilderf = DocumentBuilderFactory.newInstance();
+			DocumentBuilder docb = docbuilderf.newDocumentBuilder();
+			return docb.parse(in);
+		} catch (SAXException e) {
+			// TODO Parseprobleem... Invalide bestand.
+			throw new RuntimeException(e);
+		} catch (IOException e) {
+			// TODO IOException, bestand bestaat niet of doet iets anders.
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} catch (ParserConfigurationException e) {
+			// Configuratie zou moeten werken
+			throw new RuntimeException(e);
+		}
+	}
+	
 	
 	// Hulpmiddelen.
 	/**
@@ -147,6 +183,19 @@ public class XMLLoader {
 	 */
 	public static int getTaggedInt(String tag, Element el)
 	{
-		return Integer.parseInt(getTaggedString(tag, el));
+		String s = getTaggedString(tag, el);
+		//if(s=="") {flag=1; errtag += tag; return 0;}
+		//try {
+		return Integer.parseInt(s.trim());
+		/*} catch (NumberFormatException e) {
+			flag = 1;
+			errtag += tag;
+			
+			return 0;
+		}*/
 	}
+	
+	// For testing
+	public static int flag = 0;
+	public static String errtag = "";
 }

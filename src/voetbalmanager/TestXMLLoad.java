@@ -48,5 +48,10 @@ public class TestXMLLoad {
 		assertEquals(oud, nieuw);
 		
 	}
+	
+	@Test
+	public void testCreatie() {
+		Competitie c = XMLLoader.creeerCompetitie("eredivisie");
+	}
 
 }

@@ -174,7 +174,10 @@ public class Team {
 		 */
 		String naam = el.getAttribute("naam");
 		boolean gebruikerTeam = el.getAttribute("gebruikerteam").equalsIgnoreCase("true");
-		int budget = Integer.parseInt(el.getAttribute("budget"));
+		
+		//TODO Controleer budget van alle teams.
+		String bg = el.getAttribute("budget"); 
+		int budget = bg==""?-1:Integer.parseInt(bg);
 		
 		Team team = new Team(naam, gebruikerTeam);
 		NodeList spelers = el.getElementsByTagName("speler");
@@ -188,6 +191,8 @@ public class Team {
 				// Ingeladen bestand bevat een invalide team, NOPE!
 			}
 		}
+		
+		team.maakBudget(budget);
 		
 		return team;
 	}

@@ -166,6 +166,11 @@ public class Speler {
 		int		defensief	= XMLLoader.getTaggedInt("defensief", el);
 		int		uithoudingsvermogen = XMLLoader.getTaggedInt("uithoudingsvermogen", el);
 		
+		// File debugging code.
+		/*if(XMLLoader.flag == 1) System.out.println("Fout in speler: " + naam + ". Tag: " + XMLLoader.errtag);
+		XMLLoader.flag = 0;
+		XMLLoader.errtag = "";/**/
+		
 		return new Speler(naam, nummer, prijs, status, type, offensief, defensief, uithoudingsvermogen);
 		
 	}
