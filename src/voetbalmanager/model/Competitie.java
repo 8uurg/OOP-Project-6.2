@@ -17,8 +17,9 @@ import org.w3c.dom.NodeList;
 public class Competitie {
 	private String naam;
 	private ArrayList<Team> teams;
-
+	private TransferMarkt transfer;
 	private Team spelerTeam;
+	private Speelschema schema;
 
 	/**
 	 * Creëert een competitie met een naam (Bv, Eredivisie)en maakt het mogelijk
@@ -29,6 +30,7 @@ public class Competitie {
 	public Competitie(String naam) {
 		this.naam = naam;
 		this.teams = new ArrayList<Team>();
+		this.transfer = new TransferMarkt();
 	}
 
 	/**
@@ -111,6 +113,7 @@ public class Competitie {
 			S = new Speelschema(C, B.size());
 			A = S.maakRonden();
 		}
+		schema = S;
 		return S;
 	}
 
@@ -171,6 +174,12 @@ public class Competitie {
 		comp.appendChild(teamlist);
 
 		return comp;
+	}
+	public Speelschema getSchema(){
+		return schema;
+	}
+	public TransferMarkt getTransferMarkt(){
+		return transfer;
 	}
 
 	/**
