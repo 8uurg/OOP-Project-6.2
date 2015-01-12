@@ -21,6 +21,7 @@ import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
+import voetbalmanager.controller.ControlledScreen;
 
 @SuppressWarnings("unused")
 public class MainController implements Initializable, ControlledScreen{

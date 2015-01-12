@@ -18,6 +18,7 @@ public class Team {
 	private int budget = -1;
 	private int punten;
 	
+	private static int maxSpeler = 22;
 	private int maxSpelers = 22;
 	private boolean gebruikerTeam;
 	
@@ -76,9 +77,14 @@ public class Team {
 		return this.budget;
 	}
 	
+	public static int maxAantalSpelers(){
+		return maxSpeler;
+	}
+	
 	public int getPunten() {
 		return this.punten;
 	}
+	
 	public void geefPunten(int punten){
 		this.punten = this.punten+punten;
 	}

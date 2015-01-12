@@ -187,5 +187,34 @@ public class Speler {
 		return uithoudingsvermogen;
 	}
 	
-	
+	public Team getTeam() {
+		return team;
+	}
+
+	public double getSpelerWaarde() {
+		double a = 0;
+		switch(type) {
+		case Aanvaller:
+			a = offensief*0.8+defensief*0.2+uithoudingsvermogen*1;
+			break;
+		case Doelman:
+			a = offensief*0.2+defensief*1.6+uithoudingsvermogen*0.2;
+			break;
+		case Middenvelder:
+			a = offensief*0.5+defensief*0.5+uithoudingsvermogen*1;
+			break;
+		case Verdediger:
+			a = offensief*0.2+defensief*0.8+uithoudingsvermogen*1;
+
+			break;
+		default:
+			break;
+		}
+		return a;
+	}
+
+	public Type getType() {
+		return type;
+		
+	}
 }

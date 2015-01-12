@@ -6,11 +6,11 @@ import voetbalmanager.exceptions.TransferException;
 public class TransferMarkt {
 	
 	private ArrayList<Transfer> recenteTransfers;
-	private ArrayList<Speler> verhandelbareSpelers;
+	private ArrayList<BeschikbareSpeler> verhandelbareSpelers;
 	
 	public TransferMarkt(){
 		recenteTransfers = new ArrayList<Transfer>();
-		verhandelbareSpelers = new ArrayList<Speler>();
+		verhandelbareSpelers = new ArrayList<BeschikbareSpeler>();
 	}
 	
 	// Hierbij wordt gewoon de prijs van de speler zelf gebruikt (dus speler.prijs)
@@ -19,7 +19,8 @@ public class TransferMarkt {
 	}
 	
 	public void maakVerhandelbaar(Speler sp) {
-		verhandelbareSpelers.add(sp);
+		BeschikbareSpeler bsp = new BeschikbareSpeler(sp,sp.getTeam());
+		verhandelbareSpelers.add(bsp);
 	}
 	
 	// Moet prijs bij ontslag op 0 worden gezet?
@@ -32,8 +33,39 @@ public class TransferMarkt {
 		return recenteTransfers;
 	}
 	
-	public ArrayList<Speler> getVerhandelbareSpelers() {
+	public ArrayList<BeschikbareSpeler> getVerhandelbareSpelers() {
 		return verhandelbareSpelers;
 	}
+	public boolean getOudTeam(Team team){
+		return verhandelbareSpelers.contains(team);
+	}
+
+	public double getMinWaarde() {
+		double minSpelerwaarde = 5*10^6;
+		for(BeschikbareSpeler speler:verhandelbareSpelers){
+			if(speler.getSpeler().getSpelerWaarde()<minSpelerwaarde){
+				minSpelerwaarde=speler.getSpeler().getSpelerWaarde();
+			}
+		}
+		return 0;
+	}
+
+	public void koopSpeler(Team team,BeschikbareSpeler speler) {
+		try {
+			team.voegToe(speler.getSpeler(),5);
+		} catch (TransferException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		verkocht(speler);
+	}
+
+	private void verkocht(BeschikbareSpeler speler) {
+		int i = verhandelbareSpelers.indexOf(speler);
+		verhandelbareSpelers.remove(i);
+		
+	}
+	
+	
 
 }
