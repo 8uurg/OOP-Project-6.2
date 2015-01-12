@@ -28,7 +28,7 @@ import voetbalmanager.model.Competitie;
 public class LaadGameController implements Initializable, ControlledScreen{
 
    @FXML private Button Terug;
-   @FXML private Button Doorgaan cc cff cfffffvvvc f c c cvc f cfv cf cfcffcff f;
+   @FXML private Button Doorgaan;
    @FXML private Button Back2;
    @FXML private Button StartManagement;
    @FXML private TextField TekstVeld;
