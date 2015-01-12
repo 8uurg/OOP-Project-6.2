@@ -61,7 +61,7 @@ public class ScreensController extends StackPane {
 	 * dan 1 word de eerste verwijdert en de tweede weergegeven. Als er geen
 	 * scherm is om tentoon te stellen wordt het gewoon toegevoegd aan de root.
 	 */
-	public boolean setScreen(final String name) {
+	public boolean setScreen(String name) {
 		if (screens.get(name) != null) { // als scherm wel ingeladen is.
 			final DoubleProperty opacity = opacityProperty();
 

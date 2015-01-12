@@ -5,6 +5,6 @@
 <?import javafx.scene.layout.BorderPane?>
 
 
-<BorderPane prefHeight="390.0" prefWidth="458.0" stylesheets="@Opstelling.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="voetbalmanager.controller.KlassementController">
 	<!-- TODO Add Nodes -->
 </BorderPane>
