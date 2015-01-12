@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.shape.*?>
@@ -8,22 +9,33 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<<<<<<< HEAD:src/voetbalmanager/view/MainMenu.fxml
 <BorderPane prefHeight="527.0" prefWidth="461.0" styleClass="background" stylesheets="@MainMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.MainController">
+=======
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@MainMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.MainController">
+>>>>>>> f0ccb0e6a574fc05ff1a0d5a56e65cc75e8ea997:src/voetbalmanager/controller/MainMenu.fxml
    <children>
       <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
    <center>
-      <VBox alignment="CENTER" prefHeight="527.0" prefWidth="505.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="800.0" spacing="10.0" styleClass="navigator" stylesheets="@MainMenu.css" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Naam spel" textFill="#726d6d">
+            <Label text="Total Control 2015" textFill="#d90909">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
+<<<<<<< HEAD:src/voetbalmanager/view/MainMenu.fxml
             <Button fx:id="NewGame" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNewGame" prefHeight="25.0" prefWidth="125.0" text="Nieuw Spel" />
             <Button fx:id="LoadGame" layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleLoadGame" prefWidth="125.0" text="Laad spel" />
             <Button fx:id="Help" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHelp" prefWidth="125.0" text="Help" />
             <Button fx:id="Exit" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleExit" prefWidth="125.0" text="Exit" />
+=======
+            <Button fx:id="NewGame" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNewGame" prefHeight="25.0" prefWidth="88.0" styleClass="NewGame" text="Nieuw Spel" VBox.vgrow="ALWAYS" />
+            <Button fx:id="LoadGame" layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleLoadGame" prefWidth="88.0" styleClass="NewGame" text="Laad spel" VBox.vgrow="ALWAYS" />
+            <Button fx:id="Help" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHelp" prefWidth="88.0" styleClass="NewGame" text="Help" VBox.vgrow="ALWAYS" />
+            <Button fx:id="Exit" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleExit" prefWidth="88.0" styleClass="NewGame" text="Exit" VBox.vgrow="ALWAYS" />
+>>>>>>> f0ccb0e6a574fc05ff1a0d5a56e65cc75e8ea997:src/voetbalmanager/controller/MainMenu.fxml
          </children>
       </VBox>
    </center>
