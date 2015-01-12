@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane prefHeight="527.0" prefWidth="461.0" stylesheets="@MainMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.MainController">
+<BorderPane prefHeight="527.0" prefWidth="461.0" styleClass="background" stylesheets="@MainMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.MainController">
    <children>
       <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
@@ -20,10 +20,10 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <Button fx:id="NewGame" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNewGame" prefHeight="25.0" prefWidth="88.0" text="Nieuw Spel" />
-            <Button fx:id="LoadGame" layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleLoadGame" prefWidth="88.0" text="Laad spel" />
-            <Button fx:id="Help" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHelp" prefWidth="88.0" text="Help" />
-            <Button fx:id="Exit" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleExit" prefWidth="88.0" text="Exit" />
+            <Button fx:id="NewGame" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNewGame" prefHeight="25.0" prefWidth="125.0" text="Nieuw Spel" />
+            <Button fx:id="LoadGame" layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleLoadGame" prefWidth="125.0" text="Laad spel" />
+            <Button fx:id="Help" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHelp" prefWidth="125.0" text="Help" />
+            <Button fx:id="Exit" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleExit" prefWidth="125.0" text="Exit" />
          </children>
       </VBox>
    </center>
