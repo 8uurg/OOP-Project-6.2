@@ -17,8 +17,8 @@ public class Main extends Application {
     public static final String screen3ID = "screen3";
     public static final String NewGameNext = "NewGameNext.fxml";
     
-    public static  String screen4ID = "laadScreen";
-    public static  String LaadGame = "NewGameNext.fxml";
+    public static  final String screen4ID = "laadScreen";
+    public static final  String LaadGame = "NewGameNext.fxml";
     
     public static final String screenHelp = "helpScreen";
     public static final String HelpMe= "Help.fxml";
