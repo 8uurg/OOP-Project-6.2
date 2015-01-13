@@ -22,10 +22,7 @@ import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
 
 public class KlassementController implements Initializable{
-	
-	
-	
-	 @Override
+		@Override
 	   public void initialize(URL location, ResourceBundle resources){
 		   
 	   }

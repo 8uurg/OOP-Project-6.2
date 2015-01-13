@@ -38,13 +38,10 @@ public class MainController implements Initializable, ControlledScreen{
    
    @FXML
    public void handleNewGame(ActionEvent event) throws IOException {
-	  myController.getScene().getStylesheets().add(MainController.class.getResource("NewGame.css").toExternalForm());
-      myController.setScreen(Main.screen2ID);
-      
+      myController.setScreen(Main.screen2ID);      
 	   /* Parent root = FXMLLoader.load(Main.class.getResource("view/NewGame.fxml"));
 		Scene scene = new Scene(root);
 		Stage ps = new Stage();
-		
 		ps.setScene(scene);
 		ps.show();
 	*/

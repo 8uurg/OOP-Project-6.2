@@ -43,9 +43,7 @@ public class Main extends Application {
         //Geef aan de verschillende schermen die er zijn
     	//TODO De rest van de schermen ook functionaliteit zetten net als deze.
     	//TODO Scherm nog kunnen laten resizen.
-        
-    
-    	
+   
     	mainContainer = new ScreensController();
    
     	//plaats de beschikbare schermen "ready to use"
