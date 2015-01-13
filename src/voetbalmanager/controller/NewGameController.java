@@ -78,9 +78,8 @@ public class NewGameController implements Initializable, ControlledScreen{
    
    @FXML
    public void handleBack2(ActionEvent event) throws IOException {
-	   myController.setScreen(Main.screen3ID);
-
-	   	/*Parent root = FXMLLoader.load(Main.class.getResource("view/NewGame.fxml"));
+	   myController.setScreen(Main.NewGameNext);
+	   /*Parent root = FXMLLoader.load(Main.class.getResource("view/NewGame.fxml"));
 		Scene scene = new Scene(root);
 		Stage ps = new Stage();
 		
@@ -92,7 +91,6 @@ public class NewGameController implements Initializable, ControlledScreen{
    @FXML
    public void handleStartManagement(ActionEvent event) throws IOException {
 	   myController.setScreen(Main.screen3ID);
-
 	  /* 	Parent root = FXMLLoader.load(Main.class.getResource("view/ManagementMain.fxml"));
 		Scene scene = new Scene(root);
 		Stage ps = new Stage();

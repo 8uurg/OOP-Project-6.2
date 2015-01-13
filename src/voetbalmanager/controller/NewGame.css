@@ -1,0 +1,6 @@
+.newGameNavigator{
+	-fx-background-image: url("http://media.edge-online.com/wp-content/uploads/sites/117/2013/08/Football-Manager1.jpg");
+	-fx-background-repeat: stretch;  
+    -fx-background-size:100.0% 100.0%; 
+	-fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0);
+}

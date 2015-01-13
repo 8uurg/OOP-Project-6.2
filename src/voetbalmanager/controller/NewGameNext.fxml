@@ -7,18 +7,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane prefHeight="567.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.NewGameController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.NewGameController">
    <children>
       <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
    <center>
-      <VBox alignment="CENTER" prefHeight="449.0" prefWidth="655.0" spacing="10.0" BorderPane.alignment="CENTER" />
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="800.0" spacing="10.0" BorderPane.alignment="CENTER" />
    </center>
    <bottom>
       <HBox spacing="410.0" BorderPane.alignment="CENTER">
          <children>
-           <Button fx:id="Back2" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack2" prefWidth="115.0" text="Terug" />
-           <Button fx:id="StartManagement" layoutX="90.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartManagement" prefWidth="115.0" text="Start Management" />
+           <Button fx:id="Back2" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack2" prefWidth="115.0" text="Terug" translateX="60.0" />
+           <Button fx:id="StartManagement" layoutX="90.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartManagement" prefWidth="115.0" text="Start Management" translateX="70.0" />
            </children>
          <padding>
             <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />

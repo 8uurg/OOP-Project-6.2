@@ -50,7 +50,7 @@ public class ScreensController extends StackPane {
 			addScreen(name, loadScreen);
 			return true;
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println("Niet gelukt");
 			return false;
 		}
 	}
@@ -82,7 +82,7 @@ public class ScreensController extends StackPane {
 										opacity, 1.0)));
 						fadeIn.play();
 					}
-				}, new KeyValue(opacity, 0.0)));
+				},new KeyValue(opacity, 0.0)));
 				fade.play();
 
 			} else {
