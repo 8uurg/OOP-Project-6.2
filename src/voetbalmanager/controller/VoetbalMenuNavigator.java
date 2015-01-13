@@ -4,7 +4,7 @@ import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
 
-import voetbalmanager.Main;
+//import voetbalmanager.Main;
  
 /**
  * Klasse voor de navigatie tussen de menu's

@@ -1,101 +1,52 @@
 package voetbalmanager;
 
-	
-import java.io.IOException;
 
-import voetbalmanager.view.*;
-import voetbalmanager.controller.*;
+import voetbalmanager.controller.ScreensController;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
-import javafx.scene.Parent;
+import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
-
-@SuppressWarnings("unused")
 public class Main extends Application {
-	
-	private Stage primaryStage;
-    private BorderPane RootLayout;
-
+	public static final String screen1ID = "main";
+    public static final String screen1File = "MainMenu.fxml";
+    
+    public static String screen2ID = "screen2";
+    public static final String screen2File = "NewGame.fxml";
+    
+    public static String screen3ID = "screen3";
+    public static final String screen3File = "NewGameNext.fxml";
+    /*
+    public static final String Help    = "Help.fxml";
+    public static final String Klassement = "Klassement.fxml";
+    public static final String LaadGame = "LaadGame.fxml"; 
+    public static final String ManagmentMain = "ManagmentMain.fxml";
+    public static final String Market = "Market.fxml";
+    public static final String Opstelling = "Opstelling.fxml";
+    public static final String StartMatch = "StartMatch.fxml";
+    public static final String Statistieken = "Statistieken.fxml";
+    */
+    
     @Override
     public void start(Stage primaryStage) {
-        this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Total Ball Control");
-
-        initRootLayout();
-
-        showMainMenu();
-    }
-    
-
-    /**
-     * Initialiseer de RootLayout.
-     */
-    public void initRootLayout() {
-        try {
-            // Laad root layout van fxml file.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/RootLayout.fxml"));
-            RootLayout = (BorderPane) loader.load();
-
-            // Laat de scene zien met de RootLayout
-            Scene scene = new Scene(RootLayout);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //Geef aan de verschillende schermen die er zijn
+    	//TODO De rest van de schermen ook functionaliteit zetten net als deze.
+    	//TODO Scherm nog kunnen laten resizen.
+        ScreensController mainContainer = new ScreensController();
+        mainContainer.loadScreen(Main.screen1ID, Main.screen1File);
+        mainContainer.loadScreen(Main.screen2ID, Main.screen2File);
+        mainContainer.loadScreen(Main.screen3ID, Main.screen3File);
+        
+        mainContainer.setScreen(Main.screen1ID);
+        
+        Group root = new Group();
+        root.getChildren().addAll(mainContainer);
+        Scene scene = new Scene(root,670,600);
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
-    /**
-     * MainMenu in rootlayout
-     */
-    public void showMainMenu() {
-        try {
-            // Laad het MainMenu.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/MainMenu.fxml"));
-            BorderPane MainMenu = (BorderPane) loader.load();
-
-            // MainMenu in het midden van de RootLayout.
-            RootLayout.setCenter(MainMenu);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) {
+        launch(args);
     }
-    
-    
-    /**
-     * @return de Primarystage
-     */
-    public Stage getPrimaryStage() {
-        return primaryStage;
-    }
-    
-	
-	/*@Override
-	public void start(Stage primaryStage) {
-		try {
-			Parent root = FXMLLoader.load(getClass().getResource("view/MainMenu.fxml"));
-			Scene scene = new Scene(root);
-			
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			
-			this.primaryStage = primaryStage;
-			this.primaryStage.setScene(scene);
-			this.primaryStage.show();
-			primaryStage.setTitle("Total Control");
-			
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	} */
-	
-
-	public static void main(String[] args) {
-		launch(args);
-	}
-	
 }

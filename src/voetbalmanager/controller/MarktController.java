@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 import voetbalmanager.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,20 +14,24 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class MarktController implements Initializable{
+public class MarktController implements Initializable, ControlledScreen{
 
 	@FXML
 	private Button BackMarket;
-	 
+	ScreensController myController;   
+	public void setScreenParent(ScreensController screenParent){
+	       myController = screenParent;
+	   }
+	   
 	
 	@FXML
 	public void handleBackMarket() throws IOException{
-			Parent root = FXMLLoader.load(Main.class.getResource("view/ManagementMain.fxml"));
+		/*	Parent root = FXMLLoader.load(Main.class.getResource("view/ManagementMain.fxml"));
 			Scene scene = new Scene(root,800,600);
 			Stage ps = new Stage();
 			
 			ps.setScene(scene);
-			ps.show();
+			ps.show();*/
 	 } 
 	 
 

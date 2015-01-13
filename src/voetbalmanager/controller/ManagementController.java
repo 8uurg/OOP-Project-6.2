@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import voetbalmanager.Main;
+//import voetbalmanager.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -39,13 +39,13 @@ public class ManagementController implements Initializable{
 	
 	@FXML
 	public void handleSpelersmarkt() throws IOException{
-		Parent root = FXMLLoader.load(Main.class.getResource("view/Market.fxml"));
+		/*Parent root = FXMLLoader.load(Main.class.getResource("view/Market.fxml"));
 		Scene scene = new Scene(root);
 		Stage ps = new Stage();
 		
 		ps.setScene(scene);
 		ps.show();
-		
+		*/
 	} 
 	
 	@FXML
@@ -65,12 +65,12 @@ public class ManagementController implements Initializable{
 	
 	@FXML
 	public void handleExit() throws IOException{
-		Parent root = FXMLLoader.load(Main.class.getResource("view/MainMenu.fxml"));
+		/*Parent root = FXMLLoader.load(Main.class.getResource("view/MainMenu.fxml"));
 		Scene scene = new Scene(root);
 		Stage ps = new Stage();
 		
 		ps.setScene(scene);
-		ps.show();
+		ps.show();*/
 	} 
 	
 	/** 
@@ -86,6 +86,6 @@ public class ManagementController implements Initializable{
 
 	   @Override
 	   public void initialize(URL location, ResourceBundle resources){
-		   
+		   //TODO Code hier
 	   }
 }
