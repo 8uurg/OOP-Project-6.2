@@ -41,4 +41,7 @@ public class LaadGameController implements Initializable, ControlledScreen{
    public void initialize(URL location, ResourceBundle resources){
 	   //TODO Code hier
    }
+   public void handleLaadTerug(ActionEvent event){
+	   myController.setScreen(Main.MainMenu);
+   }
 }

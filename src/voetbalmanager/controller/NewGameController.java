@@ -23,6 +23,9 @@ import javax.xml.transform.stream.StreamResult;
 
 
 
+
+import com.sun.glass.ui.Window;
+
 import voetbalmanager.Main;
 //import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
@@ -41,10 +44,10 @@ public class NewGameController implements Initializable, ControlledScreen{
    public void setScreenParent(ScreensController screenParent){
        myController = screenParent;
    }
-   
+   /*
    @FXML
    public void handleBack(ActionEvent event) throws IOException {
-	   myController.setScreen(Main.screen1ID);
+	   myController.setScreen(Main.MainMenu);*/
 	   /*	Parent root = FXMLLoader.load(Main.class.getResource("view/MainMenu.fxml"));
 		Scene scene = new Scene(root);
 		Stage ps = new Stage();
@@ -52,7 +55,7 @@ public class NewGameController implements Initializable, ControlledScreen{
 		ps.setScene(scene);
 		ps.show();
 	*/
-    }
+    //}
    
    @FXML
    public void handleNext(ActionEvent event) throws IOException {
@@ -60,7 +63,7 @@ public class NewGameController implements Initializable, ControlledScreen{
 	   String naam = TekstVeld.getText();
 	   String loc = "./saves/" + naam + ".xml";
 	   
-	   myController.setScreen(Main.screen3ID);
+	   myController.setScreen(Main.ChooseTeam);
 
 	  /*Competitie competitie = XMLLoader.creeerCompetitie("eredivisie");
 	   //TODO geef huidige competitie door aan centrale spelbeheerder.
@@ -76,33 +79,6 @@ public class NewGameController implements Initializable, ControlledScreen{
 		*/	
     }
    
-   @FXML
-   public void handleBack2(ActionEvent event) throws IOException {
-	   myController.setScreen(Main.NewGameNext);
-	   /*Parent root = FXMLLoader.load(Main.class.getResource("view/NewGame.fxml"));
-		Scene scene = new Scene(root);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();
-	*/
-    }
-   
-   @FXML
-   public void handleStartManagement(ActionEvent event) throws IOException {
-	   myController.setScreen(Main.screen3ID);
-	  /* 	Parent root = FXMLLoader.load(Main.class.getResource("view/ManagementMain.fxml"));
-		Scene scene = new Scene(root);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();
-	*/
-    }
-   
-  
- 
-
    @Override
    public void initialize(URL location, ResourceBundle resources){
 	   //TODO Code hier
