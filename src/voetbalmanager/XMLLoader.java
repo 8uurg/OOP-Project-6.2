@@ -95,7 +95,7 @@ public class XMLLoader {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
-		System.out.println(a);
+		//System.out.println(a);
 
 		Document doc = XMLLoader.getDocument(a);
 		return Competitie.laadXMLElement((Element) doc.getElementsByTagName("competitie").item(0));
@@ -198,4 +198,6 @@ public class XMLLoader {
 	// For testing
 	public static int flag = 0;
 	public static String errtag = "";
+	
+
 }

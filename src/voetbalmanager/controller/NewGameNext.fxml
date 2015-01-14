@@ -11,9 +11,6 @@
    <children>
       <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
-   <center>
-      <VBox alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="800.0" spacing="10.0" BorderPane.alignment="CENTER" />
-   </center>
    <bottom>
       <HBox spacing="410.0" BorderPane.alignment="CENTER">
          <children>
@@ -38,4 +35,10 @@
          </padding>
          </Label>
    </top>
+   <left>
+      <ListView fx:id="List" prefHeight="307.0" prefWidth="564.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <TextArea fx:id="myTextField" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
 </BorderPane>
