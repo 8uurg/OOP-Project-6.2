@@ -18,11 +18,11 @@ public class Main extends Application {
     public static final String ChooseTeam = "screen3";
     public static final String screen3ID = "NewGameNext.fxml";
     
-    public static  String LoadGame = "laadScreen";
-    public static  String Screen4ID ="LoadGame.fxml";
+    public static final String LoadGame = "laadScreen";
+    public static final String Screen4ID ="LoadGame.fxml";
     
-    public static final String screenHelp = "helpScreen";
-    public static final String HelpMe= "Help.fxml";
+    public static final String HelpMe = "helpScreen";
+    public static final String HelpScreen= "Help.fxml";
     
     public static final String screenKlass= "klassScreen";
     public static final String Klassement = "Klassement.fxml";
@@ -52,7 +52,7 @@ public class Main extends Application {
         mainContainer.loadScreen(Main.NewGame, Main.screen2ID);
         mainContainer.loadScreen(Main.ChooseTeam, Main.screen3ID);
         mainContainer.loadScreen(Main.LoadGame, Main.Screen4ID);
-        //mainContainer.loadScreen(screenHelp, HelpMe);
+        mainContainer.loadScreen(Main.HelpMe, Main.HelpScreen);
         
         mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
         Group root = new Group();

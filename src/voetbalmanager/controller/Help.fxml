@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.BorderPane?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="HelpBackGround" stylesheets="@Help.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.HelpGameController">
+   <children>
+      <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+   <center>
+      <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="10.0" stylesheets="@Help.css" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox spacing="410.0" stylesheets="@Help.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Back" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHelpTerug" prefWidth="115.0" styleClass="Buttons" stylesheets="@Help.css" text="Terug" translateX="40.0">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin></Button>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Help" translateX="80.0" translateY="40.0" underline="true" BorderPane.alignment="TOP_LEFT">
+         <font>
+            <Font name="System Bold Italic" size="34.0" />
+         </font>
+      </Text>
+   </top>
+   <left>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Help yourself.. The world will not manage itself." translateX="20.0" translateY="-150.0" BorderPane.alignment="CENTER_LEFT">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Text>
+   </left>
 </BorderPane>
-

@@ -75,7 +75,7 @@ public class MainController implements Initializable, ControlledScreen{
    
    @FXML
    public void handleExit(ActionEvent event) throws IOException {
-	      myController.setScreen(Main.screen2ID);
+	      myController.setScreen(Main.NewGame);
 
 	/* Parent root = FXMLLoader.load(MainController.class.getResource("view/NewGame.fxml"));
 		Scene scene = new Scene(root,800,600);
