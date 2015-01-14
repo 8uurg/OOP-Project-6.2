@@ -1,10 +1,17 @@
 package voetbalmanager.controller;
 
 
+import java.awt.Event;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javax.swing.event.HyperlinkEvent.EventType;
+
+import com.sun.glass.events.MouseEvent;
+import com.sun.glass.ui.Application.EventHandler;
+import com.sun.javafx.scene.EventHandlerProperties;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -73,10 +80,9 @@ public class MainController implements Initializable, ControlledScreen{
 	*/
     }
    
-   @FXML
+@FXML
    public void handleExit(ActionEvent event) throws IOException {
-	      myController.setScreen(Main.NewGame);
-
+	//myController.addEventHandler(javafx.event.ActionEvent.ANY, javafx.even>);
 	/* Parent root = FXMLLoader.load(MainController.class.getResource("view/NewGame.fxml"));
 		Scene scene = new Scene(root,800,600);
 		Stage ps = new Stage();

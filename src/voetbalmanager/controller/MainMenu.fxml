@@ -33,8 +33,11 @@
                   <Font name="System Bold Italic" size="14.0" />
                </font>
             </Text>
-            <Button fx:id="NewGame" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNewGame" prefHeight="25.0" prefWidth="88.0" styleClass="NewGame" text="Nieuw Spel" VBox.vgrow="ALWAYS" />
-            <Button fx:id="LoadGame" layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleLoadGame" prefWidth="88.0" styleClass="NewGame" text="Laad spel" VBox.vgrow="ALWAYS" />
+            <Button fx:id="NewGame" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNewGame" prefHeight="25.0" prefWidth="88.0" styleClass="NewGame" text="Nieuw Spel" textFill="#463e3e" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="LoadGame" layoutX="400.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleLoadGame" prefWidth="88.0" styleClass="NewGame" text="Laad spel" textFill="#030303" VBox.vgrow="ALWAYS" />
             <Button fx:id="Help" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHelp" prefWidth="88.0" styleClass="NewGame" text="Help" VBox.vgrow="ALWAYS" />
             <Button fx:id="Exit" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleExit" prefWidth="88.0" styleClass="NewGame" text="Exit" VBox.vgrow="ALWAYS" />
          </children>

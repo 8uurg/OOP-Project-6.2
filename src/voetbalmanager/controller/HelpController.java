@@ -23,7 +23,7 @@ import voetbalmanager.model.Competitie;
 
 public class HelpController implements Initializable, ControlledScreen {
 	
-	ScreensController myController;
+	ScreensController myController= new ScreensController();
 
 	public void setScreenParent(ScreensController screenParent) {
 		myController = screenParent;
