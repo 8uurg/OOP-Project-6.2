@@ -6,22 +6,23 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import voetbalmanager.view.*;
 
 public class Main extends Application {
-	public static final String screen1ID = "main";
-    public static final String MainMenu = "MainMenu.fxml";
+	public static final String MainMenu = "main";
+    public static final String screen1ID = "MainMenu.fxml";
     
-    public static final String screen2ID = "screen";
-    public static final String NewGame = "NewGame.fxml";
+    public static final String NewGame = "screen";
+    public static final String screen2ID = "NewGame.fxml";
     
-    public static final String screen3ID = "screen3";
-    public static final String NewGameNext = "NewGameNext.fxml";
+    public static final String ChooseTeam = "screen3";
+    public static final String screen3ID = "NewGameNext.fxml";
     
-    public static  final String screen4ID = "laadScreen";
-    public static final  String LaadGame = "NewGameNext.fxml";
+    public static final String LoadGame = "laadScreen";
+    public static final String Screen4ID ="LoadGame.fxml";
     
-    public static final String screenHelp = "helpScreen";
-    public static final String HelpMe= "Help.fxml";
+    public static final String HelpMe = "helpScreen";
+    public static final String HelpScreen= "Help.fxml";
     
     public static final String screenKlass= "klassScreen";
     public static final String Klassement = "Klassement.fxml";
@@ -47,13 +48,13 @@ public class Main extends Application {
     	mainContainer = new ScreensController();
    
     	//plaats de beschikbare schermen "ready to use"
-        mainContainer.loadScreen(Main.screen1ID, Main.MainMenu);
-        mainContainer.loadScreen(Main.screen2ID, Main.NewGame);
-        mainContainer.loadScreen(Main.screen3ID, Main.NewGameNext);
-        mainContainer.loadScreen(Main.screen4ID, Main.LaadGame);
-        //mainContainer.loadScreen(screenHelp, HelpMe);
+        mainContainer.loadScreen(Main.MainMenu, Main.screen1ID);
+        mainContainer.loadScreen(Main.NewGame, Main.screen2ID);
+        mainContainer.loadScreen(Main.ChooseTeam, Main.screen3ID);
+        mainContainer.loadScreen(Main.LoadGame, Main.Screen4ID);
+        mainContainer.loadScreen(Main.HelpMe, Main.HelpScreen);
         
-        mainContainer.setScreen(Main.screen1ID); //Zet de eerste scherm te voorschijn
+        mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
         Group root = new Group();
         root.getChildren().addAll(mainContainer);
         Scene scene = new Scene(root,800,600);

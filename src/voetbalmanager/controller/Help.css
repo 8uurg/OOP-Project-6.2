@@ -1,1 +1,11 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.HelpBackGround{
+	-fx-background-image: url("http://wallpaperwonder.com/wp-content/uploads/2014/06/Manager-Netherlands-National-Team-Wallpaper.jpg");
+	-fx-background-size: 100% 100%;
+}
+.Buttons{
+	-fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color:  radial-gradient( focus-angle 0.0deg, focus-distance 0.0%, center 50.0% 50.0%, radius 100.0%, rgb(0,26,128) 0.0, rgb(0,0,0) 100.0 );
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
