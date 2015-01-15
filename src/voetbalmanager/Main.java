@@ -35,7 +35,7 @@ public class Main extends Application {
     public static final String StartMatch = "StartMatch.fxml";
     public static final String Statistieken = "Statistieken.fxml";
     ScreensController mainContainer;
-    
+    static Stage stage = new Stage();
     public ScreensController getController(){
     	return mainContainer;
     }
@@ -44,9 +44,9 @@ public class Main extends Application {
         //Geef aan de verschillende schermen die er zijn
     	//TODO De rest van de schermen ook functionaliteit zetten net als deze.
     	//TODO Scherm nog kunnen laten resizen.
-   
+    	Main.stage=primaryStage;
     	mainContainer = new ScreensController();
-   
+    	
     	//plaats de beschikbare schermen "ready to use"
         mainContainer.loadScreen(Main.MainMenu, Main.screen1ID);
         mainContainer.loadScreen(Main.NewGame, Main.screen2ID);
@@ -61,7 +61,9 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
+public static Stage getStage(){
+	return stage;
+}
     public static void main(String[] args) {
         launch(args);
     }

@@ -44,19 +44,6 @@ public class NewGameController implements Initializable, ControlledScreen {
 
 		myController.setScreen(Main.ChooseTeam);
 
-		/*
-		 * Competitie competitie = XMLLoader.creeerCompetitie("eredivisie");
-		 * //TODO geef huidige competitie door aan centrale spelbeheerder.
-		 * 
-		 * XMLWriter.saveCompetitie(competitie, new StreamResult(new
-		 * File(loc)));
-		 * 
-		 * Parent root =
-		 * FXMLLoader.load(Main.class.getResource("view/NewGameNext.fxml"));
-		 * Scene scene = new Scene(root); Stage ps = new Stage();
-		 * 
-		 * ps.setScene(scene); ps.show();
-		 */
 	}
 
 	   @FXML

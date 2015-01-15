@@ -8,6 +8,7 @@ import voetbalmanager.XMLLoader;
 import voetbalmanager.Main;
 import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Team;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -73,7 +74,8 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
 	   
 	   @FXML
 	   public void handleStartManagement(ActionEvent event) throws IOException {
-		   myController.setScreen(Main.MainMenu);
+		   Platform.exit();
+		   System.exit(0);
 		  /* 	Parent root = FXMLLoader.load(Main.class.getResource("view/ManagementMain.fxml"));
 			Scene scene = new Scene(root);
 			Stage ps = new Stage();
