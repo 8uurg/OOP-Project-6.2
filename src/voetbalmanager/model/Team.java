@@ -54,7 +54,18 @@ public class Team {
 	 * @return De naam van dit team.
 	 */
 	public String getNaam() {
-		return this.naam;
+		return naam;
+	}
+	/**geeft een Lijstje van speler namen
+	 * 
+	 * @return
+	 */
+	public String getSpelerNamen(Team team){
+		String res="";
+		for(int i=0;i<22;i++){
+			res= res + spelers.get(i).getNaam() + "\n";
+		}
+		return res;
 	}
 	
 	/**
