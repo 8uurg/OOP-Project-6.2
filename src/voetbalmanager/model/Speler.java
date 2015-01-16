@@ -116,7 +116,10 @@ public class Speler {
 		return res.toString();
 	}
 
-	// Huh?
+/*	Deze methode wordt vooralsnog niet gebruikt,
+ * 	wellicht later wel. Moet dan nog wel worden aangevuld
+ *  met de andere statussen
+ 
 	public void veranderStatus(Status z) {
 		if (z.equals("Beschikbaar")) {
 			this.status = Speler.Status.Beschikbaar;
@@ -125,6 +128,7 @@ public class Speler {
 			this.status = Speler.Status.Gelekaart;
 		}
 	}
+*/
 
 	public int getRugNummer() {
 		return nummer;

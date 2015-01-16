@@ -46,50 +46,24 @@ public class MainController implements Initializable, ControlledScreen{
    @FXML
    public void handleNewGame(ActionEvent event) throws IOException {
       myController.setScreen(Main.NewGame);      
-	   /* Parent root = FXMLLoader.load(Main.class.getResource("view/NewGame.fxml"));
-		Scene scene = new Scene(root);
-		Stage ps = new Stage();
-		ps.setScene(scene);
-		ps.show();
-	*/
+      Main.getStage().setTitle("New Game");
+
     }
    
    @FXML
    public void handleLoadGame(ActionEvent event) throws IOException {
 	      myController.setScreen(Main.LoadGame);
-
-	   	/*Parent root = FXMLLoader.load(Main.class.getResource("view/LaadGame.fxml"));
-		Scene scene = new Scene(root,800,600);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();
-	*/
+	      
     }
    
    @FXML
    public void handleHelp(ActionEvent event) throws IOException {
 	      myController.setScreen(Main.HelpMe);
-
-	  /* 	Parent root = FXMLLoader.load(Main.class.getResource("view/Help.fxml"));
-		Scene scene = new Scene(root,800,600);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();
-	*/
     }
    
 @FXML
    public void handleExit(ActionEvent event) throws IOException {
-	//myController.addEventHandler(javafx.event.ActionEvent.ANY, javafx.even>);
-	/* Parent root = FXMLLoader.load(MainController.class.getResource("view/NewGame.fxml"));
-		Scene scene = new Scene(root,800,600);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();*/
-	
+	Main.getStage().close();	
     }
    
    @Override
