@@ -1,0 +1,30 @@
+.loadGameBackground {
+   -fx-background-image : url("http://wallpaper-download.net/wallpapers/football-wallpapers-football-stadium-wallpaper-wallpaper-36537.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size:100.0% 100.0%; 
+	-fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0);
+   }
+   
+.mainMenuBackground{
+   -fx-background-image : url("http://wallpaper-download.net/wallpapers/football-wallpapers-football-stadium-wallpaper-wallpaper-36537.jpg");
+    -fx-background-repeat: stretch;  
+    -fx-background-size:100.0% 100.0%; 
+	-fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0);
+ }
+.chooseTeamBackground{
+	-fx-background-image: url("http://p1.pichost.me/i/56/1792402.jpg");
+	-fx-background-repeat: stretch;  
+    -fx-background-size:100.0% 100.0%; 
+	-fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0);
+} 
+.newGameBackGround{
+	-fx-background-image: url("http://www.fm-base.co.uk/forum/attachments/football-manager-2012-discussion/191840d1313427732-football-manager-2012-screenshots-wallpapers-game-background-1920-uk.jpg");
+	-fx-background-repeat: stretch;  
+    -fx-background-size:100.0% 100.0%; 
+	-fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0);
+}
+.helpBackGround{
+	-fx-background-image: url("http://wallpaperwonder.com/wp-content/uploads/2014/06/Manager-Netherlands-National-Team-Wallpaper.jpg");
+	-fx-background-repeat: stretch;
+	-fx-background-size: 100% 100%;
+}

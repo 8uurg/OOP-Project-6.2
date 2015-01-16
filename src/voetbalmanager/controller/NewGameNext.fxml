@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" styleClass="newGameNavigator" stylesheets="@NewGameNext.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.ChooseTeamController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" styleClass="chooseTeamBackground" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.ChooseTeamController">
    <children>
       <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
@@ -26,9 +28,9 @@
       </HBox>
    </bottom>
    <top>
-      <Label ellipsisString="" text="Kies een team" textFill="#02c8ff" textOverrun="LEADING_WORD_ELLIPSIS" BorderPane.alignment="CENTER">
+      <Label ellipsisString="" text="Kies een team" textFill="#00ccc1" textOverrun="LEADING_WORD_ELLIPSIS" BorderPane.alignment="CENTER">
          <font>
-            <Font size="36.0" />
+            <Font name="System Bold Italic" size="41.0" />
          </font>
          <padding>
             <Insets top="20.0" />
@@ -41,4 +43,8 @@
    <right>
       <TextArea fx:id="myTextField" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </right>
+   <stylesheets>
+      <URL value="@Backgrounds.css" />
+      <URL value="@Buttons.css" />
+   </stylesheets>
 </BorderPane>
