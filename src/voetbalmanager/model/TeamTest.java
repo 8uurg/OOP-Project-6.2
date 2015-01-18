@@ -13,7 +13,7 @@ public class TeamTest {
 	
 	
 	@Before
-	public void voorElkeTest() {
+	public void voorElkeTest() throws TransferException {
 		A = new Speler("SpelerA",1,10,Speler.Status.Beschikbaar,Speler.Type.Aanvaller,1,2,3);
 		B = new Speler("SpelerB",2,10,Speler.Status.Beschikbaar,Speler.Type.Verdediger,4,5,6);
 		C = new Speler("SpelerC",3,10,Speler.Status.Beschikbaar,Speler.Type.Doelman,7,8,9);
@@ -24,13 +24,18 @@ public class TeamTest {
 		
 		Ajax.overrideAdd(A);
 		Feyenoord.overrideAdd(B);
-		try {
-			Ajax.voegToe(C, 0);
-			Feyenoord.voegToe(D, 0);
-		} catch (TransferException e) {
-			System.out.println("Error bij methode Team.voegToe()");
-			e.printStackTrace();
-		}
+		Ajax.voegToe(C, 0);
+		Feyenoord.voegToe(D, 0);
+	}
+	
+	@Test
+	public void testToString() {
+		String s = "";
+		s += A.toString();
+		s += "\n";
+		s += C.toString();
+		s += "\n";
+		assertEquals(Ajax.toString(), s);
 	}
 	
 	@Test
@@ -43,6 +48,11 @@ public class TeamTest {
 		Ajax2.overrideAdd(A);
 		Ajax2.overrideAdd(C);
 		assertEquals(Ajax2, Ajax);
+	}
+	
+	@Test
+	public void testGetSpelerNamen() {
+		assertEquals(Ajax.getSpelerNamen(Ajax), "SpelerA\nSpelerC\n");
 	}
 	
 	@Test
@@ -75,14 +85,46 @@ public class TeamTest {
 		assertEquals(Ajax.getBudget(), 100);
 	}
 	
-/*	@Test
-	public void testOpstelling() throws OpstellingException {
-		Ajax.overrideAdd(A);
-		Ajax.overrideAdd(B);
-		Ajax.overrideAdd(C);
-		Ajax.overrideAdd(D);
+	@Test
+	public void testVerwijderVanSelectie() throws TransferException {
+		Ajax.maakBudget(50);
+		Ajax.verwijderVanSelectie(A, 500);
+		String s = "";
+		s += C.toString();
+		s += "\n";
+		assertEquals(Ajax.toString(), s);
+	}
+	
+	@Test
+	public void testVoegToe() throws TransferException {
+		Ajax.maakBudget(200);
+		Ajax.voegToe(B, 100);
+		String s = A.toString();
+		s += "\n";
+		s += C.toString();
+		s += "\n";
+		s += B.toString();
+		s += "\n";
+		assertEquals(Ajax.toString(), s);
+	}
+	
+	@Test
+	public void testOverrideAdd() throws OpstellingException {
+		Team PSV = new Team("PSV", false);
+		PSV.overrideAdd(A, true);
+		PSV.overrideAdd(B, true);
+		PSV.overrideAdd(C, true);
+		PSV.overrideAdd(D, true);
+		
 		Opstelling opstelling = new Opstelling();
 		opstelling.voegToeAanvaller(A);
+		opstelling.voegToeVerdediger(B);
+		opstelling.voegToeDoelman(C);
+		opstelling.voegToeMiddenvelder(D);
+		
+		assertEquals(PSV.getOpstelling(), opstelling);
 	}
-*/
+	
+	
+
 }

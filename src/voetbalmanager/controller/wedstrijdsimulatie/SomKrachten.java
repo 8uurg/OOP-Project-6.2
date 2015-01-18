@@ -22,4 +22,13 @@ public class SomKrachten {
 	public int getUithouding() {
 		return uithouding;
 	}
+	
+	public boolean equals(Object other) {
+		if (other instanceof SomKrachten) {
+			SomKrachten that = (SomKrachten)other;
+			if (this.aanval == that.aanval && this.verdediging == that.verdediging && this.uithouding == that.uithouding)
+				return true;
+		}
+		return false;
+	}
 }
