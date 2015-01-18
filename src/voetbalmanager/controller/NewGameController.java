@@ -1,6 +1,6 @@
 package voetbalmanager.controller;
 
-import java.awt.Dialog;
+//import java.awt.Dialog;
 import java.io.File;
 
 import javafx.stage.Modality;
@@ -19,7 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 
-import org.controlsfx.*;
+//import org.controlsfx.*;
 import org.*;
 
 import javafx.scene.Parent;
