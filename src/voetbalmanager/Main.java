@@ -26,15 +26,15 @@ public class Main extends Application {
     public static final String screenKlass= "klassScreen";
     public static final String Klassement = "Klassement.fxml";
     
-    
-    
     public static final String ManagmentMain = "ManagmentMain.fxml";
     public static final String Market = "Market.fxml";
     public static final String Opstelling = "Opstelling.fxml";
     public static final String StartMatch = "StartMatch.fxml";
     public static final String Statistieken = "Statistieken.fxml";
     ScreensController mainContainer;
-    static Stage stage = new Stage();
+    public static Stage stage = new Stage();
+    public static Group root = new Group();
+    
     public ScreensController getController(){
     	return mainContainer;
     }
@@ -54,7 +54,6 @@ public class Main extends Application {
         mainContainer.loadScreen(Main.HelpMe, Main.HelpScreen);
         
         mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
-        Group root = new Group();
         root.getChildren().addAll(mainContainer);
         Scene scene = new Scene(root,800,600);
         primaryStage.setScene(scene);
