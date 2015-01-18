@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
 
-<BorderPane prefHeight="486.0" prefWidth="592.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
-	<!-- TODO Add Nodes -->
+<BorderPane prefHeight="486.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.OpstellingController">
+   <bottom>
+      <HBox>
+         <children>
+            <Button fx:id="Terug" mnemonicParsing="false" text="Terug" BorderPane.alignment="CENTER" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
 </BorderPane>

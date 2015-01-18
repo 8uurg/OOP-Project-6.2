@@ -6,7 +6,6 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import voetbalmanager.view.*;
 
 public class Main extends Application {
 	public static final String MainMenu = "main";
