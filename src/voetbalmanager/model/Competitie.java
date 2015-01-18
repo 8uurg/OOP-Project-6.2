@@ -145,8 +145,6 @@ public class Competitie {
 			if (team.getNaam().length() < 8)
 				res.append("	");
 			res.append("	");
-			res.append(team.getPunten());
-			res.append("\n");
 			res.append(team.toString());
 			res.append('\n');
 		}
@@ -238,7 +236,7 @@ public class Competitie {
 	 */
 	static Comparator<Team> PuntenOrder = new Comparator<Team>() {
 		public int compare(Team a, Team b) {
-			return Integer.compare(b.getPunten(), a.getPunten());
+			return Integer.compare(b.getPuntenTotaal(), a.getPuntenTotaal());
 		}
 	};
 }
