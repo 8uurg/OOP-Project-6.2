@@ -17,7 +17,7 @@
          <top>
             <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="51.0" layoutY="14.0" text="Wallet: 1 million">
+                  <Label layoutX="6.0" layoutY="14.0" text="Portefeuille: 1 million">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -48,12 +48,12 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <Button layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="Start wedstrijd" />
-            <Button layoutX="400.0" layoutY="323.0" minWidth="-Infinity" mnemonicParsing="false" prefWidth="100.0" text="Opstelling" />
+            <Button fx:id="StartMatch" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartMatch" prefWidth="100.0" text="Start wedstrijd" />
+            <Button fx:id="Opstelling" layoutX="400.0" layoutY="323.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOpstelling" prefWidth="100.0" text="Opstelling" />
             <Button fx:id="Spelersmarkt" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpelersmarkt" prefWidth="100.0" text="Spelersmarkt" />
-            <Button layoutX="400.0" layoutY="418.0" mnemonicParsing="false" prefWidth="100.0" text="Klassement" />
-            <Button mnemonicParsing="false" prefWidth="100.0" text="Statistiek" />
-            <Button mnemonicParsing="false" prefWidth="100.0" text="Opslaan" />
+            <Button fx:id="Klassement" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleKlassement" prefWidth="100.0" text="Klassement" />
+            <Button fx:id="Statistieken" mnemonicParsing="false" onAction="#handleStatistieken" prefWidth="100.0" text="Statistiek" />
+            <Button fx:id="Opslaan" mnemonicParsing="false" onAction="#handleOpslaan" prefWidth="100.0" text="Opslaan" />
             <Button fx:id="Exit" mnemonicParsing="false" onAction="#handleExit" prefWidth="100.0" text="Terug" />
          </children>
       </VBox>
