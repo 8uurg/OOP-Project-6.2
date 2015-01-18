@@ -1,5 +1,8 @@
 package voetbalmanager.model;
 
+import voetbalmanager.controller.wedstrijdsimulatie.Resultaat;
+import voetbalmanager.controller.wedstrijdsimulatie.WedstrijdSimulator;
+
 public class Wedstrijd {
 	
 	private Team[] teams;
@@ -58,20 +61,16 @@ public class Wedstrijd {
 	public Team[] getTeams() {
 		return teams;
 	}
+	
 	/**
-	 * Puntentelling in Wedstrijd gezet omdat Wedstrijd de uitslag bevat na een game.
+	 * Simuleer deze wedstrijd en sla de score op.
 	 */
-	public void Punten(){
-		if(uitslag[0]<uitslag[1])
-			teams[1].geefPunten(3);
-		else if(uitslag[0]==uitslag[1]){
-			teams[0].geefPunten(1);
-			teams[1].geefPunten(1);
-		}
-		else
-			teams[0].geefPunten(3);
-		
+	public void speelWedstrijd() {
+		WedstrijdSimulator sim = new WedstrijdSimulator(this.teams[0], this.teams[1]);
+		Resultaat res = sim.simuleer();
+		this.uitslag = res.getScore();
 	}
+	
 	/**
 	 * Geeft een string terug met de wedstrijd.
 	 */

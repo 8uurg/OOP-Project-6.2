@@ -16,7 +16,12 @@ public class Team {
 	private ArrayList<Speler> spelers;
 	private Opstelling opstelling;
 	private int budget = -1;
-	private int punten;
+	
+	private int gewonnen = 0;
+	private int gelijk = 0;
+	private int verloren = 0;
+	private int doelpunten = 0;
+	private int tegenpunten = 0;
 	
 	private static int maxSpeler = 22;
 	private int maxSpelers = 22;
@@ -32,7 +37,6 @@ public class Team {
 		this.gebruikerTeam = gebruikerTeam;
 		spelers = new ArrayList<Speler>();
 		opstelling = new Opstelling();
-		punten = 0;
 	}
 	
 	public boolean equals(Object other) {
@@ -43,10 +47,62 @@ public class Team {
 					this.spelers.equals(that.spelers)&&
 					this.opstelling.equals(that.opstelling)&&
 					this.budget==that.budget&&
-					this.punten==that.punten;
+					this.gewonnen==that.gewonnen&&
+					this.verloren==that.verloren&&
+					this.gelijk==that.gelijk&&
+					this.doelpunten==that.doelpunten&&
+					this.tegenpunten==that.tegenpunten;
 					
 		}
 		return false;
+	}
+	
+	/**
+	 * Berekend het huidige puntensaldo van dit team op.
+	 * @return Het huidige puntensaldo.
+	 */
+	public int getPuntenTotaal() {
+		return gewonnen * 3 + gelijk;
+	}
+	
+	/**
+	 * Vraag het aantal doelpunten van dit team op.
+	 * @return Het totale aantal doelpunten van dit team.
+	 */
+	public int getDoelsaldo() {
+		return doelpunten;
+	}
+	
+	/**
+	 * Vraag het aantal doelpunten wat dit team tegen heeft gekregen op.
+	 * @return Het totale aantal tegendoelpunten van dit team.
+	 */
+	public int getTegendoelpunten() {
+		return tegenpunten;
+	}
+	
+	/**
+	 * Vraag het aantal gewonnen wedstrijden op.
+	 * @return Aantal gewonnen wedstrijden.
+	 */
+	public int getGewonnen() {
+		return gewonnen;
+	}
+	
+	/**
+	 * Vraag het aantal gelijkgespeelde wedstrijden op.
+	 * @return Aantal gelijkgespeelde wedstrijden.
+	 */
+	public int getGelijk() {
+		return gelijk;
+	}
+	
+	/**
+	 * Vraag het aantal verloren wedstrijden op.
+	 * @return Aantal verloren wedstrijden.
+	 */
+	public int getVerloren() {
+		return verloren;
 	}
 	
 	/**
@@ -90,14 +146,6 @@ public class Team {
 	
 	public static int maxAantalSpelers(){
 		return maxSpeler;
-	}
-	
-	public int getPunten() {
-		return this.punten;
-	}
-	
-	public void geefPunten(int punten){
-		this.punten = this.punten+punten;
 	}
 	
 	public void verhoogBudget(int verhoging) throws TransferException {
