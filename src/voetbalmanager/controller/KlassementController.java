@@ -17,15 +17,25 @@ import javafx.stage.Stage;
 
 import javax.xml.transform.stream.StreamResult;
 
+import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
 
 public class KlassementController implements Initializable{
+	
+		@FXML private Button Terug;
+		ScreensController myController;
+	   
 		@Override
 	   public void initialize(URL location, ResourceBundle resources){
 		   
 	   }
+		
+		 @FXML
+		   public void handleTerug(ActionEvent event)throws IOException{
+			   myController.setScreen(Main.ManagmentMain);
+		   }
 
 
 }
