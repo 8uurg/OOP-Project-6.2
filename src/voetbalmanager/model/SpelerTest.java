@@ -173,16 +173,5 @@ public class SpelerTest {
 		Speler C = new Speler("Naam",5,1,B,A,6,5,3);
 		assertEquals(C.getSpelerWaarde(), 8.2, 0.0001);
 	}
-	
-	
-	@Test
-	public void testGetXMLElement() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testLaadXMLElement() {
-		fail("Not yet implemented");
-	}
 
 }
