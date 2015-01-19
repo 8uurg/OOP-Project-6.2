@@ -91,6 +91,16 @@ public class XMLWriter {
 	}
 	
 	/**
+	 * Simpele methode om competitie op te slaan.
+	 * @param competitie
+	 */
+	public static void saveCompetitie(Competitie competitie) {
+		File loc = new File("./saves/" + competitie.getNaam() + ".xml");
+		loc.mkdirs();
+		XMLWriter.saveCompetitie(competitie, new StreamResult(loc));
+	}
+	
+	/**
 	 * Vraag een leeg document op om de gegevens in op te slaan.
 	 * @return Een leeg document.
 	 */
