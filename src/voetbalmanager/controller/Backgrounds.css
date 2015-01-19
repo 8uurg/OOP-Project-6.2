@@ -13,10 +13,13 @@
 }
    
 .mainMenuBackground{
-   -fx-background-image : url("http://wallpaper-download.net/wallpapers/football-wallpapers-football-stadium-wallpaper-wallpaper-36537.jpg");
-    -fx-background-repeat: stretch;  
+   -fx-background-image : url("backgrounds/MainMenu.jpg");
+     -fx-background-repeat: stretch;  
     -fx-background-size:100.0% 100.0%; 
 	-fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0);
+ }
+ .extra{
+ 	 -fx-background-color:   rgb(179,26,26,0.4);
  }
 .chooseTeamBackground{
 	-fx-background-image: url("http://p1.pichost.me/i/56/1792402.jpg");
