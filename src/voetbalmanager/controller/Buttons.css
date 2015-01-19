@@ -1,13 +1,26 @@
  .Buttons {
-   -fx-text-fill: white;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #0E0E0E;
     -fx-font-family: "Arial Narrow";
     -fx-font-weight: bold;
-    -fx-background-radius: 0;
-    -fx-background-color:  radial-gradient( focus-angle 0.0deg, focus-distance 0.0%, center 50.0% 50.0%, radius 100.0%, rgb(0.0,26.0,128.0) 0.0, rgb(0.0,0.0,0.0) 100.0 );
-    -fx-effect: dropshadow( three-pass-box , rgba(0.0,0.0,0.0,0.6) , 5.0, 0.0 , 0.0 , 1.0 );
-     
-   }
+    -fx-text-fill: #FFFFFF;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
  
  .Buttons:hover{
- 	 -fx-background-color: blue;
+ 	-fx-background-color: #FFFFFF;
+ 	-fx-text-fill: #0E0E0E;  
+    -fx-border-color: #0E0E0E;
+    -fx-border-width: 2;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
  }
+ 
+
+ 
+ 
+ /* *radial-gradient( focus-angle 0.0deg, focus-distance 0.0%, center 50.0% 50.0%, radius 100.0%, rgb(0.0,26.0,128.0) 0.0, rgb(0.0,0.0,0.0) 100.0 );
+    -fx-effect: dropshadow( three-pass-box , rgba(0.0,0.0,0.0,0.6) , 5.0, 0.0 , 0.0 , 1.0 ); */

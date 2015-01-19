@@ -44,6 +44,7 @@ public class ManagementController implements Initializable, ControlledScreen {
 	@FXML
 	public void handleStartMatch() throws IOException{
 		myController.setScreen(Main.MainMenu);
+		//todo linken naar start wedstrijd simulatie
 	}
 
 	@FXML
@@ -53,27 +54,32 @@ public class ManagementController implements Initializable, ControlledScreen {
 
 	@FXML
 	public void handleSpelersmarkt() throws IOException {
-		myController.setScreen(Main.MainMenu);
+		myController.setScreen(Main.Market);
+		
+
 	}
 
 	@FXML
 	public void handleKlassement() throws IOException{
-		myController.setScreen(Main.MainMenu);
+		myController.setScreen(Main.Klassement);
 	}
 
 	@FXML
 	public void handleStatistieken() throws IOException{
-		myController.setScreen(Main.MainMenu);
+		myController.setScreen(Main.Statistieken);
 	}
 
 	@FXML
 	public void handleOpslaan()throws IOException {
 		myController.setScreen(Main.MainMenu);
+		//TODO game opslaan en schrijven naar xml
+		//TODO popup geven met opslaan is gelukt (of niet)
 	}
 
 	@FXML
 	public void handleExit() throws IOException {
 		myController.setScreen(Main.MainMenu);
+		//TODO popup met 'heeft u het spel opgeslagen?'
 	}
 
 	@Override
