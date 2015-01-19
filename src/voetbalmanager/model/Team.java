@@ -323,5 +323,10 @@ public class Team {
 			}
 		}
 	}
+
+	public int doeBod(Speler sp) {
+		int a =(int) (sp.getPrijs()*1.25);
+		return a;
+	}
 	
 }

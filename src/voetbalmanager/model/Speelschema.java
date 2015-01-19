@@ -25,7 +25,9 @@ public class Speelschema {
 		this.wedstrijden = new ArrayList<Wedstrijd>();
 		this.schema = new ArrayList<Speelronde>();
 	}
-
+	public ArrayList<Speelronde> getSchema(){
+		return schema;
+	}
 	/**
 	 * Creëert uit verschillende teams wedstrijden.
 	 */
