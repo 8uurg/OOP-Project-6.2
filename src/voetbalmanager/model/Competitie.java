@@ -236,7 +236,17 @@ public class Competitie {
 	 */
 	static Comparator<Team> PuntenOrder = new Comparator<Team>() {
 		public int compare(Team a, Team b) {
-			return Integer.compare(b.getPuntenTotaal(), a.getPuntenTotaal());
+			int puntena = a.getPuntenTotaal();
+			int puntenb = b.getPuntenTotaal();
+			if(puntena>puntenb) return 1;
+			if(puntenb>puntena) return -1;
+			// Zelfde aantal punten.
+			puntena = a.getDoelsaldo();
+			puntenb = b.getDoelsaldo();
+			if(puntena>puntenb) return 1;
+			if(puntenb>puntena) return -1;
+			return 0;
+			
 		}
 	};
 }
