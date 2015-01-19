@@ -1,5 +1,6 @@
 package voetbalmanager;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -93,11 +94,14 @@ public class XMLWriter {
 	/**
 	 * Simpele methode om competitie op te slaan.
 	 * @param competitie
+	 * @throws IOException 
 	 */
-	public static void saveCompetitie(Competitie competitie) {
+	public static void saveCompetitie(Competitie competitie) throws IOException {
+		(new File("saves")).mkdirs();
 		File loc = new File("saves/" + competitie.getNaam() + ".xml");
-		loc.mkdirs();
+		loc.createNewFile();
 		XMLWriter.saveCompetitie(competitie, new StreamResult(loc));
+		
 	}
 	
 	/**

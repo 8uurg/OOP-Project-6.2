@@ -28,6 +28,7 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
     private TextArea myTextField;
     
     public ChooseTeamController(){
+    	//TODO Arthur
     	Competitie com = new Competitie("blah");
 		com = XMLLoader.creeerCompetitie("this");
 		for(int i=0; i<18; i++)
@@ -58,6 +59,8 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
 			myTextField.clear();
 			myTextField.appendText(newValue.getSpelerNamen());
 			Main.huidigeCompetitie.setSpelerTeam(newValue);
+			//System.out.println(newValue.isSpelerBestuurd());
+			//TODO Arthur
 			
 		});
 	}
