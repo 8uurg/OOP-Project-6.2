@@ -55,8 +55,6 @@ public class ManagementController implements Initializable, ControlledScreen {
 	@FXML
 	public void handleSpelersmarkt() throws IOException {
 		myController.setScreen(Main.Market);
-		
-
 	}
 
 	@FXML

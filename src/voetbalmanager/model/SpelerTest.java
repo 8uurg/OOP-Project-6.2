@@ -177,5 +177,4 @@ public class SpelerTest {
 		assertTrue(H.transferAanbieden(player));
 		assertFalse(I.transferAanbieden(player));
 	}
-
 }

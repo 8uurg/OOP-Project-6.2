@@ -46,8 +46,8 @@ public class Speler {
 			int offensief, int defensief, int uithoudingsvermogen) {
 		this.naam = naam;
 		this.nummer = nummer;
-		this.status = status;
 		this.type = type;
+		this.status = status;
 		this.offensief = offensief;
 		this.defensief = defensief;
 		this.uithoudingsvermogen = uithoudingsvermogen;

@@ -1,14 +1,15 @@
-package voetbalmanager.controller;
+package voetbalmanager.controller.teammanager;
 
 import java.util.ArrayList;
 import java.util.Random;
 
+import voetbalmanager.exceptions.OpstellingException;
 import voetbalmanager.exceptions.TransferException;
 import voetbalmanager.model.BeschikbareSpeler;
 import voetbalmanager.model.Competitie;
+import voetbalmanager.model.Opstelling;
 import voetbalmanager.model.Speler;
 import voetbalmanager.model.Team;
-import voetbalmanager.model.TransferMarkt;
 
 /**
  * Algemene klasse voor teambeheer
@@ -161,6 +162,63 @@ public class AITeamManager {
 			}
 		}
 		return speler;
+	}
+	
+	
+	public void genereerOpstelling(Team team) {
+		Opstelling opstelling = team.getOpstelling();
+		opstelling.clear();
+		
+		ArrayList<Speler> a = new ArrayList<>();
+		ArrayList<Speler> m = new ArrayList<>();
+		ArrayList<Speler> v = new ArrayList<>();
+		ArrayList<Speler> d = new ArrayList<>();
+		
+		// TODO: overleg alle spelers op alle posities, of gebruik maken van type?
+		// In geval van alle spelers op alle posities, let op dat je een speler niet op meer dan 1 positie zet.
+		
+		for(Speler s:team.getSelectie()) {
+			switch(s.getType()) {
+			case Aanvaller:
+				a.add(s);
+				break;
+			case Middenvelder:
+				m.add(s);
+				break;
+			case Verdediger:
+				v.add(s);
+				break;
+			case Doelman:
+				d.add(s);
+				break;
+			}
+		}
+		
+		SpelerStatVergelijker ac = new SpelerStatVergelijker(1, 0);
+		a.sort(ac);
+		SpelerStatVergelijker mc = new SpelerStatVergelijker(1, 1);
+		m.sort(mc);
+		SpelerStatVergelijker vc = new SpelerStatVergelijker(0.5F, 1);
+		v.sort(vc);
+		SpelerStatVergelijker dc = new SpelerStatVergelijker(0, 1);
+		d.sort(dc);
+		
+		try {
+		for(int i=0; i<opstelling.getAanvallers(); ++i) {
+			opstelling.voegToeAanvaller(a.get(i));
+		}
+		for(int i=0; i<opstelling.getMiddenvelders(); ++i) {
+			opstelling.voegToeMiddenvelder(m.get(i));
+		}
+		for(int i=0; i<opstelling.getVerdedigers(); ++i) {
+			opstelling.voegToeVerdediger(v.get(i));
+		}
+		for(int i=0; i<opstelling.getDoelmannen(); ++i) {
+			opstelling.voegToeDoelman(d.get(i));
+		}
+		} catch(OpstellingException e) {
+		}
+		
 	}
 	
 }

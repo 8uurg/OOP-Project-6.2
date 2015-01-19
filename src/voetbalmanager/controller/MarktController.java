@@ -26,12 +26,8 @@ public class MarktController implements Initializable, ControlledScreen{
 	
 	@FXML
 	public void handleBackMarket() throws IOException{
-		/*	Parent root = FXMLLoader.load(Main.class.getResource("view/ManagementMain.fxml"));
-			Scene scene = new Scene(root,800,600);
-			Stage ps = new Stage();
-			
-			ps.setScene(scene);
-			ps.show();*/
+	myController.setScreen(Main.ManagementMain);
+	Main.getStage().setTitle("Main Managment");
 	 } 
 	 
 
