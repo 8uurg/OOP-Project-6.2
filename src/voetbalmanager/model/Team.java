@@ -323,6 +323,10 @@ public class Team {
 			}
 		}
 	}
+	
+	public void setGebruikerTeam(boolean computer) {
+		gebruikerTeam = computer;
+	}
 
 	public int doeBod(Speler sp) {
 		int a =(int) (sp.getPrijs()*1.25);

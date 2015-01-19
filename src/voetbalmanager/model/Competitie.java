@@ -126,6 +126,8 @@ public class Competitie {
 		B.remove(1);
 		B.add(temp);
 	}
+	
+	
 
 	/**
 	 * Maakt een String-representatie van de competitie.
@@ -266,4 +268,16 @@ public class Competitie {
 			
 		}
 	};
+	
+	
+	/**
+	 * Setter voor gebruikerTeam
+	 */
+	public void setSpelerTeam(Team team) {
+		if(spelerTeam!=null) {
+			spelerTeam.setGebruikerTeam(false);
+		}
+		spelerTeam = team;
+		spelerTeam.setGebruikerTeam(true);
+	}
 }
