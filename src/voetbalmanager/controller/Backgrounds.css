@@ -4,6 +4,11 @@
     -fx-background-size:100.0% 100.0%; 
 	-fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0);
    }
+.popupBackground{
+	-fx-background-color:  linear-gradient( from 0.0% 0.0% to 100.0% 100.0%, rgb(51,77,179) 0.0, rgb(128,153,255) 100.0);
+	-fx-background-size: 100.0% 100.0%;
+	 
+}
    
 .mainMenuBackground{
    -fx-background-image : url("http://wallpaper-download.net/wallpapers/football-wallpapers-football-stadium-wallpaper-wallpaper-36537.jpg");

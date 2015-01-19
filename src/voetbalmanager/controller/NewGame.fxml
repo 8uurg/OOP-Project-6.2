@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane id="newGameNavigator" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" styleClass="newGameBackGround" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.NewGameController">
+<BorderPane id="newGameNavigator" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="newGameBackGround" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.NewGameController">
    <children>
       <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
    </children>
    <center>
-      <VBox alignment="CENTER" fillWidth="false" maxHeight="800.0" maxWidth="600.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" fillWidth="false" maxHeight="800.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Voer uw naam in">
                <font>
@@ -23,7 +23,11 @@
                   <Insets top="20.0" />
                </padding>
                </Label>
-            <TextField fx:id="TekstVeld" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="TekstVeld" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" VBox.vgrow="ALWAYS">
+               <styleClass>
+                  <String fx:value="no-prompt" />
+                  <String fx:value="persistent-prompt" />
+               </styleClass></TextField>
          </children>
       </VBox>
    </center>
@@ -44,5 +48,6 @@
    <stylesheets>
       <URL value="@Backgrounds.css" />
       <URL value="@Buttons.css" />
+      <URL value="@../persistent-prompt.css" />
    </stylesheets>
 </BorderPane>
