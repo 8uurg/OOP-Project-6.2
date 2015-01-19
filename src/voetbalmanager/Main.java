@@ -1,11 +1,12 @@
 package voetbalmanager;
 
 
-import voetbalmanager.controller.ScreensController;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import voetbalmanager.controller.ScreensController;
+import voetbalmanager.model.Competitie;
 
 public class Main extends Application {
 	public static final String MainMenu = "main";
@@ -37,6 +38,8 @@ public class Main extends Application {
     ScreensController mainContainer;
     public static Stage stage = new Stage();
     public static Group root = new Group();
+    
+    public Competitie huidigeCompetitie;
     
     public ScreensController getController(){
     	return mainContainer;
