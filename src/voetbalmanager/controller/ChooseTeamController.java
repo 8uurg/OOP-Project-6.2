@@ -56,7 +56,8 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
 		// handle listview
 		List.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
 			myTextField.clear();
-			myTextField.appendText(newValue.getSpelerNamen(oldValue));
+			myTextField.appendText(newValue.getSpelerNamen());
+			
 		});
 	}
 	
@@ -68,6 +69,8 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
 	   @FXML
 	   public void handleStartManagement(ActionEvent event) throws IOException {
 		   myController.setScreen(Main.ManagementMain);
+		   
+		   
 	    }
 	  
 }

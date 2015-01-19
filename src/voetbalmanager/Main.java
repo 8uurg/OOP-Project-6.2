@@ -39,7 +39,7 @@ public class Main extends Application {
     public static Stage stage = new Stage();
     public static Group root = new Group();
     
-    public Competitie huidigeCompetitie;
+    public static Competitie huidigeCompetitie;
     
     public ScreensController getController(){
     	return mainContainer;

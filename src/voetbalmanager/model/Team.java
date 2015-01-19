@@ -116,7 +116,7 @@ public class Team {
 	 * 
 	 * @return
 	 */
-	public String getSpelerNamen(Team team){
+	public String getSpelerNamen(){
 		String res="";
 		for(int i=0;i<spelers.size();i++){
 			res= res + spelers.get(i).getNaam() + "\n";

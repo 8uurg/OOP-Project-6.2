@@ -53,8 +53,11 @@ public class NewGameController implements Initializable, ControlledScreen {
 
 	@FXML
 	public void handleNext(ActionEvent event) throws IOException{
+		
 		String naam = TekstVeld.getText();
 		String loc = "./saves/" + naam + ".xml";
+		Main.huidigeCompetitie = XMLLoader.creeerCompetitie(naam);
+		
 	if(naam==null || naam.isEmpty()){
 		Parent root = FXMLLoader.load(Main.class.getResource("view/Popup.fxml"));
 		Scene my = new Scene(root);
