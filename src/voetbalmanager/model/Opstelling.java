@@ -19,6 +19,38 @@ public class Opstelling {
 		doelmannen = new ArrayList<Speler>();
 	}
 	
+	/**
+	 * Getter voor maxAanvallers
+	 * @return het maximale aantal aanvallers.
+	 */
+	public int getAanvallers() {
+		return maxAanvallers;
+	}
+	
+	/**
+	 * Getter voor maxMiddenvelders
+	 * @return het maximale aantal middenvelders.
+	 */
+	public int getMiddenvelders() {
+		return maxMiddenvelders;
+	}
+	
+	/**
+	 * Getter voor maxVerdedigers
+	 * @return het maximale aantal verdedigers.
+	 */
+	public int getVerdedigers() {
+		return maxVerdedigers;
+	}
+	
+	/**
+	 * Getter voor maxDoelmannen
+	 * @return het maximale aantal doelmannen.
+	 */
+	public int getDoelmannen() {
+		return maxDoelmannen;
+	}
+	
 	public boolean equals(Object other) {
 		if(other instanceof Opstelling){
 			Opstelling that = (Opstelling)other;
@@ -157,5 +189,16 @@ public class Opstelling {
 		return new SomKrachten(aanval, verdediging, uithouding);
 	}
 
+	/**
+	 * Reset de opstelling naar een lege opstelling.
+	 */
+	public void clear() {
+		aanvallers.clear();
+		middenvelders.clear();
+		verdedigers.clear();
+		doelmannen.clear();
+	}
+	
+	
 	
 }
