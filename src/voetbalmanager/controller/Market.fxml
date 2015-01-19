@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -14,12 +15,18 @@
                <content>
                   <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
-                      <Tab text="Aanvaller" />
-                      <Tab text="Verdediger" />
-                        <Tab text="Doelman">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                          </content>
+                      <Tab text="Aanvallers">
+                           <content>
+                              <ListView prefHeight="200.0" prefWidth="200.0" />
+                           </content></Tab>
+                      <Tab text="Verdedigers">
+                           <content>
+                              <ListView prefHeight="200.0" prefWidth="200.0" />
+                           </content></Tab>
+                        <Tab text="Doelmannen">
+                           <content>
+                              <ListView prefHeight="200.0" prefWidth="200.0" />
+                           </content>
                         </Tab>
                     </tabs>
                   </TabPane>
@@ -29,12 +36,18 @@
                <content>
                   <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
-                      <Tab text="Aanvaller" />
-                      <Tab text="Verdediger" />
-                        <Tab text="Doelman">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                          </content>
+                      <Tab text="Aanvallers">
+                           <content>
+                              <ListView prefHeight="200.0" prefWidth="200.0" />
+                           </content></Tab>
+                      <Tab text="Verdedigers">
+                           <content>
+                              <ListView prefHeight="200.0" prefWidth="200.0" />
+                           </content></Tab>
+                        <Tab text="Doelmannen">
+                           <content>
+                              <ListView prefHeight="200.0" prefWidth="200.0" />
+                           </content>
                         </Tab>
                     </tabs>
                   </TabPane>

@@ -62,7 +62,7 @@ public class Team {
 	 */
 	public String getSpelerNamen(Team team){
 		String res="";
-		for(int i=0;i<22;i++){
+		for(int i=0;i<spelers.size();i++){
 			res= res + spelers.get(i).getNaam() + "\n";
 		}
 		return res;

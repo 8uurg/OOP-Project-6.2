@@ -37,6 +37,16 @@ public class Opstelling {
 		this.maxMiddenvelders = maxmiddenvelders;
 	}
 	
+	public String getOpstelling() {
+		String s = "";
+		s += maxVerdedigers;
+		s += " - ";
+		s += maxMiddenvelders;
+		s += " - ";
+		s += maxAanvallers;
+		return s;
+	}
+	
 	public void kanWordenOpgesteld(Speler sp) throws OpstellingException  {
 		if(aanvallers.indexOf(sp) != -1 || middenvelders.indexOf(sp) != -1 || verdedigers.indexOf(sp) != -1)
 			throw new OpstellingException(sp.naam + " staat al opgesteld!");
@@ -51,21 +61,21 @@ public class Opstelling {
 	
 	public void voegToeMiddenvelder(Speler sp) throws OpstellingException {
 		kanWordenOpgesteld(sp);
-		if (maxMiddenvelders <= aanvallers.size())
+		if (maxMiddenvelders <= middenvelders.size())
 			throw new OpstellingException("Verwijder eerst een middenvelder voordat u een nieuwe opstelt!");
 		middenvelders.add(sp);
 	}
 	
 	public void voegToeVerdediger(Speler sp) throws OpstellingException {
 		kanWordenOpgesteld(sp);
-		if (maxVerdedigers <= aanvallers.size())
+		if (maxVerdedigers <= verdedigers.size())
 			throw new OpstellingException("Verwijder eerst een verdediger voordat u een nieuwe opstelt!");
 		verdedigers.add(sp);
 	}
 	
 	public void voegToeDoelman(Speler sp) throws OpstellingException {
 		kanWordenOpgesteld(sp);
-		if (maxDoelmannen <= aanvallers.size())
+		if (maxDoelmannen <= doelmannen.size())
 			throw new OpstellingException("Verwijder eerst uw doelman voordat u een nieuwe opstelt!");
 		doelmannen.add(sp);
 	}
