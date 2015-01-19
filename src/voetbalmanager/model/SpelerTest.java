@@ -1,56 +1,40 @@
 package voetbalmanager.model;
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Test;
 
 public class SpelerTest {
+	Speler.Status B = Speler.Status.Beschikbaar;
+	Speler.Type A= Speler.Type.Aanvaller;
+	Team T = new Team("Test", false);
+	Team J = new Team("Ja", false);
+	Speler C = new Speler("Naam",5,1,B,A,5,5,3);
+	Speler D = new Speler("Naam",5,1,B,A,5,5,3);
+	Speler E = new Speler("Naam",5,2,B,A,6,5,3);
+	Speler F = new Speler("Naam",5,2,B,A,6,5,3);
+	Speler G = new Speler("Naam",5,1,B,A,5,5,3);
+	Speler H = new Speler("Naam",5,1,B,A,10,15,7);
+	Speler I = new Speler("Naam",5,1,B,A,2,2,2);
+	ArrayList<Speler> player = new ArrayList<Speler>();
 
 	@Test
-	public void testSpeler() {
-		Speler.Status B = Speler.Status.Beschikbaar;
-		Speler.Type A= Speler.Type.Aanvaller;
-		Speler C = new Speler("Naam",5,1,B,A,5,5,3);
-		Speler D = new Speler("Naam",5,1,B,A,5,5,3);
-		Speler E = new Speler("Naam",5,2,B,A,5,5,3);
-		assertTrue(C.equals(D));
-		assertFalse(D.equals(E));
-		assertFalse(D.equals("A"));
-		assertTrue(C.team.equals(D.team));
+	public void testSpeler() {	
+		assertEquals(C,D);
+		assertNotEquals(D,E);
+		assertNotEquals(D,"A");
+		assertEquals(C.team,D.team);
+		assertEquals(E,F);
 	}
 
 	@Test
 	public void testWijzigTeam() {
-		Speler.Status B = Speler.Status.Beschikbaar;
-		Speler.Type A= Speler.Type.Aanvaller;
-		Team T = new Team("Test", false);
-		Team J = new Team("Ja", false);
-		Speler C = new Speler("Naam",5,1,B,A,5,5,3);
-		Speler D = new Speler("Naam",5,1,B,A,5,5,3);
-		Speler E = new Speler("Naam",5,1,B,A,5,5,3);
 		C.wijzigTeam(T);
 		D.team=T;
-		E.team=J;
+		G.team=J;
 		assertEquals(D,C);
-		assertFalse(C.team.equals(E.team));
-	}
-
-	@Test
-	public void testToString() {
-		Speler.Status B = Speler.Status.Beschikbaar;
-		Speler.Type A= Speler.Type.Aanvaller;
-		Speler C = new Speler("Naam",5,1,B,A,5,5,3);
-		String s = "";
-		Team T = new Team("Test", false);
-		C.wijzigTeam(T);
-		s += "---------------------\nNaam";
-		s += "\n---------------------\n";
-		s += "Nummer: 5\n";
-		s += "Prijs: 1\n";
-		s += "Status: Beschikbaar\nType: Aanvaller\n";
-		s += "Offensief: 5\nDefensief: 5\nUithoudingsvermogen: 3\n";
-		s += "Team: Test\n";
-		
-		assertEquals(C.toString(), s);
+		assertNotEquals(C.team,G.team);
 	}
 	
 /*	@Test
@@ -87,7 +71,7 @@ public class SpelerTest {
 		Speler.Type A= Speler.Type.Aanvaller;
 		Speler C = new Speler("Naam",5,1,B,A,5,5,3);
 		assertEquals(C.getStatus(),Speler.Status.Beschikbaar);
-		assertFalse(C.getStatus().equals(Speler.Status.Blessure));
+		assertNotEquals(C.getStatus(),Speler.Status.Blessure);
 	}
 
 	@Test
@@ -173,5 +157,24 @@ public class SpelerTest {
 		Speler C = new Speler("Naam",5,1,B,A,6,5,3);
 		assertEquals(C.getSpelerWaarde(), 8.2, 0.0001);
 	}
+	
+	
+/*	@Test
+	public void testGetXMLElement() {
+		fail("Not yet implemented");
+	}
 
+	@Test
+	public void testLaadXMLElement() {
+		fail("Not yet implemented");
+	}*/
+	
+	@Test
+	public void testTransferAanbieden(){
+		player.add(C);
+		player.add(D);
+		player.add(E);
+		assertTrue(H.transferAanbieden(player));
+		assertFalse(I.transferAanbieden(player));
+	}
 }

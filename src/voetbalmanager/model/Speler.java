@@ -47,11 +47,11 @@ public class Speler {
 		this.naam = naam;
 		this.nummer = nummer;
 		this.type = type;
-		this.prijs = setPrijs();
 		this.status = status;
 		this.offensief = offensief;
 		this.defensief = defensief;
 		this.uithoudingsvermogen = uithoudingsvermogen;
+		this.prijs = setPrijs();
 	}
 
 	@Override
@@ -60,12 +60,12 @@ public class Speler {
 			Speler that = (Speler) other;
 
 			return this.naam.equals(that.naam) && this.nummer == that.nummer
-					&& this.prijs == that.prijs
 					&& this.status.equals(that.status)
 					&& this.type.equals(that.type)
 					&& this.offensief == that.offensief
 					&& this.defensief == that.defensief
-					&& this.uithoudingsvermogen == that.uithoudingsvermogen;
+					&& this.uithoudingsvermogen == that.uithoudingsvermogen
+					&& this.prijs == that.prijs;
 			// this.team.equals(that.team);
 		}
 		return false;
