@@ -220,6 +220,23 @@ public class Competitie {
 			Collections.sort(a.teams, PuntenOrder);
 		return a;
 	}
+	
+	/**
+	 * Setter voor naam
+	 * @param naam Nieuwe naam voor deze competitie
+	 */
+	public void setNaam(String naam) {
+		this.naam = naam;
+	}
+	
+	/**
+	 * Getter voor naam
+	 * @return De naam van deze competitie
+	 */
+	public String getNaam() {
+		return this.naam;
+	}
+	
 
 	/**
 	 * Sorteert met behulp van de Comparator van Java de ArrayList op Teamnaam.
