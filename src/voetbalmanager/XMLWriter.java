@@ -95,7 +95,7 @@ public class XMLWriter {
 	 * @param competitie
 	 */
 	public static void saveCompetitie(Competitie competitie) {
-		File loc = new File("./saves/" + competitie.getNaam() + ".xml");
+		File loc = new File("saves/" + competitie.getNaam() + ".xml");
 		loc.mkdirs();
 		XMLWriter.saveCompetitie(competitie, new StreamResult(loc));
 	}

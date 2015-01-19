@@ -1,11 +1,18 @@
 package voetbalmanager.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 
+
+
+
+import javax.xml.transform.stream.StreamResult;
+
 import voetbalmanager.Main;
+import voetbalmanager.XMLWriter;
 //import voetbalmanager.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -70,8 +77,10 @@ public class ManagementController implements Initializable, ControlledScreen {
 	@FXML
 	public void handleOpslaan()throws IOException {
 		myController.setScreen(Main.MainMenu);
-		//TODO game opslaan en schrijven naar xml
-		//TODO popup geven met opslaan is gelukt (of niet)
+		
+		XMLWriter.saveCompetitie(Main.huidigeCompetitie);
+		
+		//TODO popup geven met opslaan is gelukt
 	}
 
 	@FXML
