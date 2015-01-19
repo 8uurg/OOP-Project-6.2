@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,9 +8,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.MarktController">
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="653.0" styleClass="mainMenuBackground" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.MarktController">
    <center>
-      <TabPane prefHeight="551.0" prefWidth="653.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+      <TabPane prefHeight="551.0" prefWidth="653.0" styleClass="transparentBackground" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
           <Tab text="Kopen">
                <content>
@@ -59,8 +60,12 @@
    <bottom>
       <Pane prefHeight="88.0" prefWidth="653.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="BackMarket" layoutX="37.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleBackMarket" text="Terug" />
+            <Button fx:id="BackMarket" layoutX="37.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleBackMarket" styleClass="Buttons" text="Terug" />
          </children>
       </Pane>
    </bottom>
+   <stylesheets>
+      <URL value="@Backgrounds.css" />
+      <URL value="@Buttons.css" />
+   </stylesheets>
 </BorderPane>
