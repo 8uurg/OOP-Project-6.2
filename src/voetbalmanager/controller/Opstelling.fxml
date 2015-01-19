@@ -1,21 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane prefHeight="486.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.OpstellingController">
-   <bottom>
-      <HBox>
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.OpstellingController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="loadGameBackground" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Terug" mnemonicParsing="false" text="Terug" BorderPane.alignment="CENTER" />
+            <SplitPane dividerPositions="0.5075187969924813" layoutX="-1.0" layoutY="-1.0" prefHeight="558.0" prefWidth="800.0" styleClass="transparentBackground">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="186.0">
+                     <children>
+                        <ListView fx:id="Opstelling" prefHeight="446.0" prefWidth="212.0" styleClass="transparentBackground" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="transparentBackground">
+                     <children>
+                        <Pane layoutX="4.0" layoutY="101.0" prefHeight="633.0" prefWidth="465.0" AnchorPane.bottomAnchor="-77.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="-79.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Circle fill="DODGERBLUE" layoutX="103.0" layoutY="410.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="DODGERBLUE" layoutX="164.0" layoutY="461.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="DODGERBLUE" layoutX="234.0" layoutY="461.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="DODGERBLUE" layoutX="297.0" layoutY="410.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="#9aff1f" layoutX="103.0" layoutY="244.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="#9aff1f" layoutX="164.0" layoutY="300.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="#ff6c1e" layoutX="199.0" layoutY="194.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="#ff6c1e" layoutX="297.0" layoutY="135.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="#9aff1f" layoutX="297.0" layoutY="244.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="#9aff1f" layoutX="234.0" layoutY="300.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Circle fill="#ff6c1e" layoutX="103.0" layoutY="135.0" radius="10.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="25.0" layoutX="164.0" layoutY="532.0" opacity="0.62" stroke="#7c7070" strokeType="INSIDE" strokeWidth="10.0" width="70.0" />
+                              <Circle fill="#ff1f1f" layoutX="199.0" layoutY="532.0" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+                              <Text fill="#c33d3d" layoutX="17.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Op de pitch">
+                                 <font>
+                                    <Font name="System Bold Italic" size="35.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <Button fx:id="Terug" layoutX="27.0" layoutY="563.0" mnemonicParsing="false" onAction="#handleTerug" styleClass="Buttons" text="Terug" />
          </children>
-         <padding>
-            <Insets bottom="10.0" left="10.0" />
-         </padding>
-      </HBox>
-   </bottom>
+      </Pane>
+   </center>
+   <stylesheets>
+      <URL value="@Buttons.css" />
+      <URL value="@Backgrounds.css" />
+   </stylesheets>
 </BorderPane>

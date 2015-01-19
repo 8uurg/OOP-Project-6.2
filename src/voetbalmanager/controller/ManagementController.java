@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
+import voetbalmanager.Main;
 //import voetbalmanager.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,76 +18,66 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ManagementController implements Initializable{
-	
-	@FXML private Button StartMatch;
-    @FXML private Button Opstelling;
-    @FXML private Button Spelersmarkt;
-    @FXML private Button Klassement;
-    @FXML private Button Statistieken;
-    @FXML private Button Opslaan;
-    @FXML private Button Exit;
-	 
-	
-	@FXML
-	public void handleStartMatch(){
-		
-	} 
-	
-	@FXML
-	public void handleOpstelling(){
-		
-	} 
-	
-	@FXML
-	public void handleSpelersmarkt() throws IOException{
-		/*Parent root = FXMLLoader.load(Main.class.getResource("view/Market.fxml"));
-		Scene scene = new Scene(root);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();
-		*/
-	} 
-	
-	@FXML
-	public void handleKlassement(){
-		
-	} 
-	
-	@FXML
-	public void handleStatistieken(){
-		
-	} 
-	
-	@FXML
-	public void handleOpslaan(){
-		
-	} 
-	
-	@FXML
-	public void handleExit() throws IOException{
-		/*Parent root = FXMLLoader.load(Main.class.getResource("view/MainMenu.fxml"));
-		Scene scene = new Scene(root);
-		Stage ps = new Stage();
-		
-		ps.setScene(scene);
-		ps.show();*/
-	} 
-	
-	/** 
-		 * @FXML
-		 * private Button button;
-		 * 
-		 * @FXML
-		 * public void handlebutton(){} 
-		 **/
-	
-	
-	
+public class ManagementController implements Initializable, ControlledScreen {
 
-	   @Override
-	   public void initialize(URL location, ResourceBundle resources){
-		   //TODO Code hier
-	   }
+	@FXML
+	private Button StartMatch;
+	@FXML
+	private Button Opstelling;
+	@FXML
+	private Button Spelersmarkt;
+	@FXML
+	private Button Klassement;
+	@FXML
+	private Button Statistieken;
+	@FXML
+	private Button Opslaan;
+	@FXML
+	private Button Exit;
+	
+	ScreensController myController;
+	
+	public void setScreenParent(ScreensController screens){
+		myController = screens;
+	}
+	
+	@FXML
+	public void handleStartMatch() throws IOException{
+		myController.setScreen(Main.MainMenu);
+	}
+
+	@FXML
+	public void handleOpstelling() throws IOException{
+		myController.setScreen(Main.Opstelling);
+	}
+
+	@FXML
+	public void handleSpelersmarkt() throws IOException {
+		myController.setScreen(Main.MainMenu);
+	}
+
+	@FXML
+	public void handleKlassement() throws IOException{
+		myController.setScreen(Main.MainMenu);
+	}
+
+	@FXML
+	public void handleStatistieken() throws IOException{
+		myController.setScreen(Main.MainMenu);
+	}
+
+	@FXML
+	public void handleOpslaan()throws IOException {
+		myController.setScreen(Main.MainMenu);
+	}
+
+	@FXML
+	public void handleExit() throws IOException {
+		myController.setScreen(Main.MainMenu);
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Code hier
+	}
 }

@@ -67,7 +67,7 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
 	   
 	   @FXML
 	   public void handleStartManagement(ActionEvent event) throws IOException {
-		   myController.setScreen(Main.ManagmentMain);
+		   myController.setScreen(Main.ManagementMain);
 	    }
 	  
 }

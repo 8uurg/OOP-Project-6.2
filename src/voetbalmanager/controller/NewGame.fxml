@@ -24,10 +24,7 @@
                </padding>
                </Label>
             <TextField fx:id="TekstVeld" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" VBox.vgrow="ALWAYS">
-               <styleClass>
-                  <String fx:value="no-prompt" />
-                  <String fx:value="persistent-prompt" />
-               </styleClass></TextField>
+                  </TextField>
          </children>
       </VBox>
    </center>
@@ -48,6 +45,5 @@
    <stylesheets>
       <URL value="@Backgrounds.css" />
       <URL value="@Buttons.css" />
-      <URL value="@../persistent-prompt.css" />
    </stylesheets>
 </BorderPane>

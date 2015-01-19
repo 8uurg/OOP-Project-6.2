@@ -34,7 +34,7 @@ public class KlassementController implements Initializable{
 		
 		 @FXML
 		   public void handleTerug(ActionEvent event)throws IOException{
-			   myController.setScreen(Main.ManagmentMain);
+			   myController.setScreen(Main.ManagementMain);
 		   }
 
 

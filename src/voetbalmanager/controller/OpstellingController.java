@@ -22,19 +22,23 @@ import voetbalmanager.XMLLoader;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
 
-public class OpstellingController implements Initializable {
+public class OpstellingController implements Initializable, ControlledScreen {
 	
 	@FXML private Button Terug;
+	@FXML private TextField tekst;
+	
 	ScreensController myController;
    
 	@Override
    public void initialize(URL location, ResourceBundle resources){
 	   
    }
-	
+	public void setScreenParent(ScreensController screen){
+		myController = screen;
+	}
 	 @FXML
 	   public void handleTerug(ActionEvent event)throws IOException{
-		   myController.setScreen(Main.ManagmentMain);
+		   myController.setScreen(Main.ManagementMain);
 	   }
 
 }

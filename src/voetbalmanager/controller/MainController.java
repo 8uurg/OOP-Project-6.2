@@ -50,12 +50,14 @@ public class MainController implements Initializable, ControlledScreen{
    @FXML
    public void handleLoadGame(ActionEvent event) throws IOException {
 	      myController.setScreen(Main.LoadGame);
+	      Main.getStage().setTitle("Load Game");
 	      
     }
    
    @FXML
    public void handleHelp(ActionEvent event) throws IOException {
 	      myController.setScreen(Main.HelpMe);
+	      Main.getStage().setTitle("Help");
     }
    
 @FXML
