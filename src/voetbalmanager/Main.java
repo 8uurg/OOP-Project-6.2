@@ -66,7 +66,7 @@ public class Main extends Application {
         
         mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
         root.getChildren().addAll(mainContainer);
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root,800,600);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Main Menu");
         primaryStage.show();

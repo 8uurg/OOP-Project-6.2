@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.shape.*?>
@@ -8,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane prefHeight="527.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.ManagementController">
+<BorderPane prefHeight="527.0" prefWidth="743.0" styleClass="mainMenuBackground" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.ManagementController">
    <children>
       <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" AnchorPane.topAnchor="-159.0" />
    </children>
@@ -17,12 +19,12 @@
          <top>
             <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="6.0" layoutY="14.0" text="Portefeuille: 1 million">
+                  <Label layoutX="6.0" layoutY="14.0" text="Portefeuille: 1 million" textFill="#bc0303">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutY="176.0" text="Top 5">
+                  <Label layoutY="176.0" text="Top 5" textFill="#a3271c">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -31,7 +33,7 @@
             </Pane>
          </top>
          <left>
-            <TableView prefHeight="298.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <TableView prefHeight="298.0" prefWidth="200.0" styleClass="transparentBackground" BorderPane.alignment="CENTER">
               <columns>
                 <TableColumn prefWidth="128.0" text="Club" />
                 <TableColumn prefWidth="71.0" text="Punten" />
@@ -43,19 +45,31 @@
    <center>
       <VBox alignment="CENTER" prefHeight="527.0" prefWidth="398.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Naam spel" textFill="#726d6d">
+            <Label text="Total Control">
                <font>
-                  <Font size="36.0" />
+                  <Font name="System Bold Italic" size="39.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="0.8476190476190476" endY="0.7904761904761906" startX="0.8380952380952381" startY="0.20952380952380953">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Label>
-            <Button fx:id="StartMatch" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartMatch" prefWidth="100.0" text="Start wedstrijd" />
-            <Button fx:id="Opstelling" layoutX="400.0" layoutY="323.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOpstelling" prefWidth="100.0" text="Opstelling" />
-            <Button fx:id="Spelersmarkt" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpelersmarkt" prefWidth="100.0" text="Spelersmarkt" />
-            <Button fx:id="Klassement" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleKlassement" prefWidth="100.0" text="Klassement" />
-            <Button fx:id="Statistieken" mnemonicParsing="false" onAction="#handleStatistieken" prefWidth="100.0" text="Statistiek" />
-            <Button fx:id="Opslaan" mnemonicParsing="false" onAction="#handleOpslaan" prefWidth="100.0" text="Opslaan" />
-            <Button fx:id="Exit" mnemonicParsing="false" onAction="#handleExit" prefWidth="100.0" text="Terug" />
+            <Button fx:id="StartMatch" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartMatch" prefWidth="100.0" styleClass="Buttons" text="Start wedstrijd" />
+            <Button fx:id="Opstelling" layoutX="400.0" layoutY="323.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOpstelling" prefWidth="100.0" styleClass="Buttons" text="Opstelling" />
+            <Button fx:id="Spelersmarkt" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpelersmarkt" prefWidth="100.0" styleClass="Buttons" text="Spelersmarkt" />
+            <Button fx:id="Klassement" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleKlassement" prefWidth="100.0" styleClass="Buttons" text="Klassement" />
+            <Button fx:id="Statistieken" mnemonicParsing="false" onAction="#handleStatistieken" prefWidth="100.0" styleClass="Buttons" text="Statistiek" />
+            <Button fx:id="Opslaan" mnemonicParsing="false" onAction="#handleOpslaan" prefWidth="100.0" styleClass="Buttons" text="Opslaan" />
+            <Button fx:id="Exit" mnemonicParsing="false" onAction="#handleExit" prefWidth="100.0" styleClass="Buttons" text="Terug" />
          </children>
       </VBox>
    </center>
+   <stylesheets>
+      <URL value="@Backgrounds.css" />
+      <URL value="@Buttons.css" />
+   </stylesheets>
 </BorderPane>
