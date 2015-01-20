@@ -4,32 +4,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
-
-
-
-
-
-
-
-import voetbalmanager.Main;
-import voetbalmanager.XMLLoader;
-import voetbalmanager.model.Competitie;
-import voetbalmanager.model.Speler;
-import voetbalmanager.model.Team;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
-import javafx.stage.Stage;
+import voetbalmanager.Main;
+import voetbalmanager.model.Speler;
 
 public class MarktController implements Initializable, ControlledScreen{
 
@@ -77,12 +62,13 @@ public class MarktController implements Initializable, ControlledScreen{
 	   
 	   
 	   public static void addList(ObservableList<Speler> data){
-		 //TODO Arthur
 	    	//Competitie com = new Competitie("blah");
 			//com = XMLLoader.creeerCompetitie("this");
 			//for(int i=0; i < data.size(); i++)
 			//TODO methode oproepen die een arraylist van een bepaald type terug geeft
 			//data.add(Main.huidigeCompetitie);
+		   
+		   data.addAll(Main.huidigSpel.getCompetitie().getSpelerTeam().getSelectie());
 	   }
 	   
 	   public static void LijstNaarScherm(ObservableList<Speler> data){
