@@ -79,13 +79,16 @@ public class ManagementController implements Initializable, ControlledScreen {
 
 	@FXML
 	public void handleOpslaan()throws IOException {
+	//TODO game opslaan en schrijven naar xml
 	 Parent root = FXMLLoader.load(Main.class.getResource("view/LoadPopup.fxml"));
 	 Scene scene = new Scene(root);
 	 stage.setScene(scene);
 	 stage.setTitle("Save succesfull");
 	 stage.show();
+		
 		XMLWriter.saveCompetitie(Main.huidigeCompetitie);
 		
+		//TODO popup geven met opslaan is gelukt
 	}
 
 	@FXML
