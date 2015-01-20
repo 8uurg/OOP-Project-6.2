@@ -72,8 +72,14 @@ public class MarktController implements Initializable, ControlledScreen{
 		 //TODO Arthur
 	    	//Competitie com = new Competitie("blah");
 			//com = XMLLoader.creeerCompetitie("this");
-			for(int i=0; i < data.size(); i++)
-			data.add(Main.huidigeCompetitie.get);
+			//for(int i=0; i < data.size(); i++)
+			//TODO methode oproepen die een arraylist van een bepaald type terug geeft
+			//data.add(Main.huidigeCompetitie);
+	   }
+	   
+	   public static void LijstNaarScherm(ObservableList<Speler> data){
+		   
+		   
 	   }
 	
 	public void setScreenParent(ScreensController screenParent){
