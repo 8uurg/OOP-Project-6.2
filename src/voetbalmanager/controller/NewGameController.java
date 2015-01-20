@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,8 +14,11 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Popup;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import voetbalmanager.Main;
@@ -29,9 +33,16 @@ public class NewGameController implements Initializable, ControlledScreen {
 	
 	ScreensController myController;
 	Stage ps;
+	
+
+	Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+	private double width = screen.getWidth();
+	private double height = screen.getHeight();
 
 	public void setScreenParent(ScreensController screenParent) {
 		myController = screenParent;
+		this.newGameNavigator.setPrefSize(width, height);
+
 	}
 	
 	@FXML
@@ -69,8 +80,6 @@ public class NewGameController implements Initializable, ControlledScreen {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
-		newGameNavigator.setPrefSize(screen.getWidth(), screen.getHeight());
 	}
 
 }
