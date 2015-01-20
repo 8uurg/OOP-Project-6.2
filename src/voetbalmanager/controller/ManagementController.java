@@ -53,12 +53,12 @@ public class ManagementController implements Initializable, ControlledScreen {
 
 	@FXML
 	public void handleSpelersmarkt() throws IOException {
-		myController.setScreen(Main.MainMenu);
+		myController.setScreen(Main.Market);
 	}
 
 	@FXML
 	public void handleKlassement() throws IOException{
-		myController.setScreen(Main.MainMenu);
+		myController.setScreen(Main.Klassement);
 	}
 
 	@FXML

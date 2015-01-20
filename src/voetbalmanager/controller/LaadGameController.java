@@ -44,6 +44,6 @@ public class LaadGameController implements Initializable, ControlledScreen{
    }
    @FXML
    public void handleDoorgaan(ActionEvent event)throws IOException{
-	   myController.setScreen(Main.MainMenu);
+	   myController.setScreen(Main.ManagementMain);
    }
 }
