@@ -2,9 +2,17 @@ package voetbalmanager.model;
 import java.util.ArrayList;
 import voetbalmanager.exceptions.TransferException;
 
-
+/**
+ * De transfermarkt, bedoeld om spelers te verhandelen.
+ * @author Jeroen, Marco
+ * 
+ */
 public class TransferMarkt {
 	
+	/**
+	 * recenteTransfers geeft alle transfers terug die tussen teams plaatsvonden.
+	 * verhandelbarespelers geeft alle Beschikbare Spelers op de spelersmarkt.
+	 */
 	private ArrayList<Transfer> recenteTransfers;
 	private ArrayList<BeschikbareSpeler> verhandelbareSpelers;
 	
@@ -14,29 +22,56 @@ public class TransferMarkt {
 	}
 	
 	// Hierbij wordt gewoon de prijs van de speler zelf gebruikt (dus speler.prijs)
+	/**
+	 * Maakt transfers mogelijk tussen twee verschillende teams.
+	 * @param verkopendTeam Team dat een aanbod gekregen heeft.
+	 * @param kopendTeam Team dat een aanbod gedaan heeft op een speler.
+	 * @param sp De speler die transferred wordt tussen de teams.
+	 * @param prijs De prijs die voor de speler betaald wordt.
+	 * @throws TransferException
+	 */
 	public void Transfer(Team verkopendTeam, Team kopendTeam, Speler sp, int prijs) throws TransferException {
 		sp.prijs=prijs;
 		recenteTransfers.add(new Transfer(verkopendTeam, kopendTeam, sp));
 	}
 	
+	/**
+	 * Maak een speler uit je team verhandelbaar.
+	 * @param sp De speler die het team op de spelersmarkt wil zetten.
+	 */
 	public void maakVerhandelbaar(Speler sp) {
 		BeschikbareSpeler bsp = new BeschikbareSpeler(sp,sp.getTeam());
 		verhandelbareSpelers.add(bsp);
 	}
 	
 	// Moet prijs bij ontslag op 0 worden gezet?
+	//Wordt op dit moment nog niet geimplementeerd.
 	public void Ontsla(Speler sp) throws TransferException {
 		sp.team.verwijderVanSelectie(sp, 0);
 		maakVerhandelbaar(sp);
 	}
 	
+	/**
+	 * Laat alle transfers zien tussen teams die er hebben plaatsgevonden.
+	 * @return alle recente transfers.
+	 */
 	public ArrayList<Transfer> getRecenteTransfers() {
 		return recenteTransfers;
 	}
 	
+	/**
+	 * Geeft alle Spelers die op de spelermarkt staan om te verkopen.
+	 * @return alle beschikbare spelers op de markt.
+	 */
 	public ArrayList<BeschikbareSpeler> getVerhandelbareSpelers() {
 		return verhandelbareSpelers;
 	}
+	
+	/**
+	 * Vergelijkt de oude teams van de beschikbare spelers met 1 team. Dit is voor de AI om te checken of de speler de markt gebruikt heeft.
+	 * @param team Het team waarvan gecheckt moet worden of er een speler op de markt staat.
+	 * @return boolean.
+	 */
 	public boolean getOudTeam(Team team){
 		for(BeschikbareSpeler a:verhandelbareSpelers){
 			if(a.getOudTeam().equals(team)){
@@ -45,7 +80,10 @@ public class TransferMarkt {
 		}
 		return false; 
 	}
-
+	/**
+	 * Geeft de score terug van de slechtste speler op de spelersmarkt.
+	 * @return Score.
+	 */
 	public double getMinWaarde() {
 		double minSpelerwaarde = 5*10^6;
 		for(BeschikbareSpeler speler:verhandelbareSpelers){
@@ -55,10 +93,14 @@ public class TransferMarkt {
 		}
 		return 0;
 	}
-
+	/**
+	 * Koop een speler van de markt voor de gevraagde prijs.
+	 * @param team Het team dat de speler gekocht heeft.
+	 * @param speler De speler die verkocht is aan het team.
+	 */
 	public void koopSpeler(Team team,BeschikbareSpeler speler) {
 		try {
-			team.voegToe(speler.getSpeler(),(int) (speler.getSpeler().getPrijs()*1.1));
+			team.voegToe(speler.getSpeler(),speler.getSpeler().getPrijs());
 			
 		} catch (TransferException e) {
 			// TODO Auto-generated catch block
@@ -66,11 +108,26 @@ public class TransferMarkt {
 		}
 		verkocht(speler);
 	}
-
+	/**
+	 * Als een speler gekocht is wordt hier het bedrag overgemaakt naar het oude team dat is betaald voor de speler.
+	 * ook wordt de speler van de lijst beschikbare spelers afgehaald.
+	 * @param speler De speler die verkocht is.
+	 */
 	private void verkocht(BeschikbareSpeler speler){
+		try {
+			speler.getOudTeam().verhoogBudget(speler.getSpeler().getPrijs());
+		} catch (TransferException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		verhandelbareSpelers.remove(verhandelbareSpelers.indexOf(speler));		
 	}
 	
+	/**
+	 * Retourneert aan de AI een aantal spelers die voordelig zijn om het team te versterken.
+	 * @param spelers De spelers waarmee de beschikbare spelers vergeleken worden.
+	 * @return een lijst met BeschikbareSpelers die het team versterken als ze aan de selectie worden toegevoegd.
+	 */
 	public ArrayList<BeschikbareSpeler> interesse(ArrayList<Speler> spelers){
 		ArrayList<BeschikbareSpeler> potentieel = new ArrayList<BeschikbareSpeler>();
 		for(BeschikbareSpeler speler: verhandelbareSpelers){

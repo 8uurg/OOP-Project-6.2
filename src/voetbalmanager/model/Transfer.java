@@ -1,13 +1,24 @@
 package voetbalmanager.model;
 import voetbalmanager.exceptions.TransferException;
 
-
+/**
+ * Methode voor transfers tussen teams
+ * @author Jeroen
+ *
+ */
 public class Transfer {
 	
 	Team verkopendTeam, kopendTeam;
 	Speler speler;
 	int transferbedrag;
 	
+	/**
+	 * 
+	 * @param verkopendTeam Team dat de speler verkoopt
+	 * @param kopendTeam Team dat de speler aankoopt
+	 * @param sp De speler die transferred wordt.
+	 * @throws TransferException
+	 */
 	public Transfer(Team verkopendTeam, Team kopendTeam, Speler sp) throws TransferException {
 		this.verkopendTeam = verkopendTeam;
 		this.kopendTeam = kopendTeam;
@@ -21,7 +32,9 @@ public class Transfer {
 			throw e;
 		}
 	}
-	
+	/**
+	 * String-representatie van de transfer
+	 */
 	public String toString() {
 		String s = "";
 		s += "Speler: " + speler.toString();
@@ -30,7 +43,9 @@ public class Transfer {
 		s += "\nTransferbedrag: " + transferbedrag;
 		return s;
 	}
-	
+	/**
+	 * Equals-methode
+	 */
 	public boolean equals(Object other) {
 		if (other instanceof Transfer) {
 			Transfer that = (Transfer)other;
