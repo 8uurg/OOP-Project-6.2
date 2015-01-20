@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import voetbalmanager.controller.ScreensController;
 import voetbalmanager.model.Competitie;
 
@@ -73,11 +74,11 @@ public class Main extends Application {
         mainContainer.loadScreen(Main.HelpMe, Main.HelpScreen);
         mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
         root.getChildren().addAll(mainContainer);
-        
         Rectangle2D screen = Screen.getPrimary().getVisualBounds();
         Scene scene = new Scene(root,screen.getWidth(),screen.getHeight());
         primaryStage.setScene(scene);
-        primaryStage.sizeToScene();
+        primaryStage.centerOnScreen();
+        primaryStage.alwaysOnTopProperty();
         primaryStage.setFullScreen(true);;
         primaryStage.setTitle("Main Menu");
         primaryStage.show();
