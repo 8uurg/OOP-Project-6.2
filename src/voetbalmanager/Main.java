@@ -63,12 +63,14 @@ public class Main extends Application {
         
         mainContainer.loadScreen(Main.LoadGame, Main.LoadScreen);
         mainContainer.loadScreen(Main.HelpMe, Main.HelpScreen);
-        
-        
         mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
         root.getChildren().addAll(mainContainer);
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root,800,600);
         primaryStage.setScene(scene);
+        primaryStage.sizeToScene();
+        primaryStage.setResizable(true);
+        primaryStage.setFullScreen(true);;
+        
         primaryStage.setTitle("Main Menu");
         primaryStage.show();
     }

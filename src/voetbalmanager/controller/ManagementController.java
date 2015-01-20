@@ -34,8 +34,11 @@ public class ManagementController implements Initializable, ControlledScreen {
 	private Button Opslaan;
 	@FXML
 	private Button Exit;
+	@FXML
+	private Button closeButton;
 	
 	ScreensController myController;
+	Stage stage = new Stage();
 	
 	public void setScreenParent(ScreensController screens){
 		myController = screens;
@@ -69,9 +72,12 @@ public class ManagementController implements Initializable, ControlledScreen {
 
 	@FXML
 	public void handleOpslaan()throws IOException {
-		myController.setScreen(Main.MainMenu);
-		//TODO game opslaan en schrijven naar xml
-		//TODO popup geven met opslaan is gelukt (of niet)
+	//TODO game opslaan en schrijven naar xml
+	 Parent root = FXMLLoader.load(Main.class.getResource("view/LoadPopup.fxml"));
+	 Scene scene = new Scene(root);
+	 stage.setScene(scene);
+	 stage.setTitle("Save succesfull");
+	 stage.show();
 	}
 
 	@FXML
@@ -79,7 +85,11 @@ public class ManagementController implements Initializable, ControlledScreen {
 		myController.setScreen(Main.MainMenu);
 		//TODO popup met 'heeft u het spel opgeslagen?'
 	}
-
+	@FXML
+	public void handleLoadPopup(){
+		Stage st = (Stage)closeButton.getScene().getWindow();
+		st.close();
+	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Code hier
