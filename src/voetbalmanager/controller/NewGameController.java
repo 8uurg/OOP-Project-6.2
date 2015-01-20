@@ -35,7 +35,6 @@ import javafx.stage.Stage;
 import javax.xml.transform.stream.StreamResult;
 
 import com.sun.glass.ui.Window;
-import com.sun.javafx.scene.accessibility.Action;
 
 import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
@@ -68,22 +67,20 @@ public class NewGameController implements Initializable, ControlledScreen {
 		
 		String naam = TekstVeld.getText();
 		String loc = "./saves/" + naam + ".xml";
-		Main.huidigeCompetitie = XMLLoader.creeerCompetitie(naam);
-		Main.huidigeCompetitie.setNaam(naam);
+		Main.huidigSpel.setCompetitie(XMLLoader.creeerCompetitie(naam));
+		Main.huidigSpel.getCompetitie().setNaam(naam);
 		
-	if(naam==null || naam.isEmpty()){
-		Parent root = FXMLLoader.load(Main.class.getResource("view/Popup.fxml"));
-		Scene my = new Scene(root);
-		ps = new Stage();
-		ps.setScene(my);
-		ps.setTitle("No name entered");
-		ps.show();
-		
-	}
-	else{
-		myController.setScreen(Main.ChooseTeam);
-		Main.getStage().setTitle("Choose a team to start the competition");
-	}
+		if(naam==null || naam.isEmpty()){
+			Parent root = FXMLLoader.load(Main.class.getResource("view/Popup.fxml"));
+			Scene my = new Scene(root);
+			ps = new Stage();
+			ps.setScene(my);
+			ps.setTitle("No name entered");
+			ps.show();	
+		} else {
+			myController.setScreen(Main.ChooseTeam);
+			Main.getStage().setTitle("Choose a team to start the competition");
+		}
 	}
 	
 	@FXML
@@ -94,8 +91,8 @@ public class NewGameController implements Initializable, ControlledScreen {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-Rectangle2D screen = Screen.getPrimary().getVisualBounds();
-newGameNavigator.setPrefSize(screen.getWidth(), screen.getHeight());
+		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+		newGameNavigator.setPrefSize(screen.getWidth(), screen.getHeight());
 	}
 
 }

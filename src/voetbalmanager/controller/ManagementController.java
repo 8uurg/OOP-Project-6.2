@@ -81,7 +81,7 @@ public class ManagementController implements Initializable, ControlledScreen {
 
 	@FXML
 	public void handleOpslaan() throws IOException {
-		XMLWriter.saveCompetitie(Main.huidigeCompetitie);
+		XMLWriter.saveCompetitie(Main.huidigSpel.getCompetitie());
 		Parent root = FXMLLoader.load(Main.class
 				.getResource("view/LoadPopup.fxml"));
 		Scene scene = new Scene(root);

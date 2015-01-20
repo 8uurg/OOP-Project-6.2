@@ -45,6 +45,9 @@ public class Main extends Application {
     public static Stage stage = new Stage();
     public static Group root = new Group();
     
+    public static Spel huidigSpel;
+    
+    @Deprecated
     public static Competitie huidigeCompetitie;
     
     public ScreensController getController(){
@@ -84,6 +87,7 @@ public static Stage getStage(){
 	return stage;
 }
     public static void main(String[] args) {
+    	Main.huidigSpel = new Spel();
         launch(args);
     }
 }
