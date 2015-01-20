@@ -23,7 +23,7 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 
 	@FXML
 	private Button Terug;
-	@FXML private TableView<Team> klassementTabel;
+	@FXML private TableView<Team> klassementTable;
 	//@FXML private TableColumn<Integer> RangKolom;
 	@FXML private TableColumn<Team, String> TeamKolom;
 	@FXML private TableColumn<Team, Integer> PuntenKolom;
@@ -64,8 +64,10 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 				new PropertyValueFactory<>("doelsaldo")
 		);
 		DoelTegenKolom.setCellValueFactory(
-				new PropertyValueFactory<>("doeltegen")
+				new PropertyValueFactory<>("tegendoel")
 		);
+		
+		klassementTable.setItems(teamData);
 	}
 
 	public void setScreenParent(ScreensController screen) {
