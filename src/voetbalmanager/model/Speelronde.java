@@ -7,17 +7,29 @@ import java.util.ArrayList;
 
 public class Speelronde {
 
-	int ronde;
 	ArrayList<Wedstrijd> wedstrijden;
 
 	/**
 	 * Creeert een Speelronde met wedstrijden.
 	 */
 	public Speelronde() {
-		this.ronde = ronde;
 		wedstrijden = new ArrayList<Wedstrijd>();
 	}
-
+	
+	public boolean equals(Object other) {
+		boolean a= false;
+		if(other instanceof Speelronde) {
+			Speelronde that = (Speelronde) other;
+			a=true;
+			for(int i=0;i<that.getSize();i++){
+				a = this.wedstrijden.get(i).equals(that.wedstrijden.get(i));
+				if(a==false){
+					return a;
+				}
+			}
+		}
+		return a;
+	}
 	/**
 	 * Voegt een wedstrijd toe aan de ArrayList van de speelronde
 	 * 

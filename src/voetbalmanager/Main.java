@@ -29,12 +29,10 @@ public class Main extends Application {
     public static final String HelpMe = "helpScreen";
     public static final String HelpScreen= "Help.fxml";
     
-    /*
+    
     public static final String screenKlass= "klassScreen";
     
     public static final String StartMatch = "StartMatch.fxml";
-    ";
-    */
     
     ScreensController mainContainer;
     public static Stage stage = new Stage();
@@ -66,7 +64,7 @@ public class Main extends Application {
         
         mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
         root.getChildren().addAll(mainContainer);
-        Scene scene = new Scene(root,800,600);
+        Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Main Menu");
         primaryStage.show();

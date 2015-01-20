@@ -29,5 +29,15 @@ public class BeschikbareSpeler {
 		if(speler.getSpelerWaarde()>totaalScore/totaalType)
 			return true;
 		return false;
-	}	
+	}
+	public int besluitKoop(ArrayList<Speler> spelers){
+		Speler.Type a = speler.type;
+		int j=0;
+		for(Speler inTeam: spelers){
+			if(inTeam.type==a&&inTeam.getSpelerWaarde()<speler.getSpelerWaarde()){
+				j++;
+			}
+		}
+		return j;
+	}
 }

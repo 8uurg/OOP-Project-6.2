@@ -1,5 +1,7 @@
 package voetbalmanager.model;
 
+import java.util.ArrayList;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -44,9 +46,9 @@ public class Speler {
 			int offensief, int defensief, int uithoudingsvermogen) {
 		this.naam = naam;
 		this.nummer = nummer;
-		this.prijs = prijs;
-		this.status = status;
 		this.type = type;
+		this.prijs = setPrijs();
+		this.status = status;
 		this.offensief = offensief;
 		this.defensief = defensief;
 		this.uithoudingsvermogen = uithoudingsvermogen;
@@ -224,6 +226,27 @@ public class Speler {
 		}
 		return a;
 	}
+	
+	public boolean transferAanbieden(ArrayList<Speler> spelers) {
+		Speler.Type a = type;
+		int totaalType =0;
+		double totaalScore = 0;
+		for(Speler inTeam: spelers){
+			if(inTeam.type==a){
+				totaalType++;
+				totaalScore =totaalScore+inTeam.getSpelerWaarde();
+			}
+		}
+		if(getSpelerWaarde()>totaalScore/totaalType)
+			return true;
+		return false;
+	}
+	
+	
+	public int setPrijs() {
+		int a=(int) (getSpelerWaarde()*1500);
+		return a;
+	}
 
 	public String getNaam() {
 		return naam;
@@ -231,6 +254,5 @@ public class Speler {
 
 	public Type getType() {
 		return type;
-
 	}
 }

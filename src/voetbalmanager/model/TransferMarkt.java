@@ -14,7 +14,8 @@ public class TransferMarkt {
 	}
 	
 	// Hierbij wordt gewoon de prijs van de speler zelf gebruikt (dus speler.prijs)
-	public void Transfer(Team verkopendTeam, Team kopendTeam, Speler sp) throws TransferException {
+	public void Transfer(Team verkopendTeam, Team kopendTeam, Speler sp, int prijs) throws TransferException {
+		sp.prijs=prijs;
 		recenteTransfers.add(new Transfer(verkopendTeam, kopendTeam, sp));
 	}
 	
@@ -37,7 +38,12 @@ public class TransferMarkt {
 		return verhandelbareSpelers;
 	}
 	public boolean getOudTeam(Team team){
-		return verhandelbareSpelers.contains(team);
+		for(BeschikbareSpeler a:verhandelbareSpelers){
+			if(a.getOudTeam().equals(team)){
+				return true;
+			}
+		}
+		return false; 
 	}
 
 	public double getMinWaarde() {
@@ -52,7 +58,8 @@ public class TransferMarkt {
 
 	public void koopSpeler(Team team,BeschikbareSpeler speler) {
 		try {
-			team.voegToe(speler.getSpeler(),5);
+			team.voegToe(speler.getSpeler(),(int) (speler.getSpeler().getPrijs()*1.1));
+			
 		} catch (TransferException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -60,10 +67,18 @@ public class TransferMarkt {
 		verkocht(speler);
 	}
 
-	private void verkocht(BeschikbareSpeler speler) {
-		int i = verhandelbareSpelers.indexOf(speler);
-		verhandelbareSpelers.remove(i);
-		
+	private void verkocht(BeschikbareSpeler speler){
+		verhandelbareSpelers.remove(verhandelbareSpelers.indexOf(speler));		
+	}
+	
+	public ArrayList<BeschikbareSpeler> interesse(ArrayList<Speler> spelers){
+		ArrayList<BeschikbareSpeler> potentieel = new ArrayList<BeschikbareSpeler>();
+		for(BeschikbareSpeler speler: verhandelbareSpelers){
+			if(speler.moetKopen(spelers)){
+				potentieel.add(speler);
+			}
+		}
+		return potentieel;
 	}
 	
 	
