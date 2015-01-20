@@ -49,9 +49,14 @@
    <center>
       <TableView fx:id="KlassementTabel" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn fx:id="RangKolom" prefWidth="59.0" text="Rang" />
-          <TableColumn fx:id="TeamKolom" minWidth="0.0" prefWidth="449.0" text="Team" />
-            <TableColumn fx:id="PuntenKolom" prefWidth="191.0" text="Puntentotaal" />
+          <TableColumn fx:id="RangKolom" prefWidth="43.0" text="Rang" />
+          <TableColumn fx:id="TeamKolom" minWidth="0.0" prefWidth="180.0" text="Team" />
+            <TableColumn fx:id="PuntenKolom" prefWidth="82.0" text="Puntentotaal" />
+            <TableColumn fx:id="GewonnenKolom" prefWidth="77.0" text="Gewonnen" />
+            <TableColumn fx:id="GelijkKolom" prefWidth="57.0" text="Gelijk" />
+            <TableColumn fx:id="VerlorenKolom" prefWidth="68.0" text="Verloren" />
+            <TableColumn fx:id="DoelsaldoKolom" prefWidth="78.0" text="Doelsaldo" />
+            <TableColumn fx:id="DoelTegenKolom" prefWidth="114.0" text="Doelpunten tegen" />
         </columns>
          <BorderPane.margin>
             <Insets bottom="40.0" left="50.0" right="50.0" top="50.0" />

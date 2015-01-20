@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import voetbalmanager.Main;
 import voetbalmanager.Spel;
 import voetbalmanager.model.Team;
@@ -22,10 +23,15 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 
 	@FXML
 	private Button Terug;
-	@FXML private final TableView<Team> klassementTabel;
+	@FXML private TableView<Team> klassementTabel;
 	//@FXML private TableColumn<Integer> RangKolom;
-	@FXML private TableColumn<Team, String> teamKolom;
-	@FXML private TableColumn<Team, Integer> puntenKolom;
+	@FXML private TableColumn<Team, String> TeamKolom;
+	@FXML private TableColumn<Team, Integer> PuntenKolom;
+	@FXML private TableColumn<Team, Integer> GewonnenKolom;
+	@FXML private TableColumn<Team, Integer> GelijkKolom;
+	@FXML private TableColumn<Team, Integer> VerlorenKolom;
+	@FXML private TableColumn<Team, Integer> DoelsaldoKolom;
+	@FXML private TableColumn<Team, Integer> DoelTegenKolom;
 	private ObservableList<Team> teamData = FXCollections.observableArrayList();
 	
 	ScreensController myController;
@@ -39,10 +45,27 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		//TODO init tabel kolommen
-		teamKolom.setCellValueFactory(cellData -> cellData.getValue().getNaam());
-	    puntenKolom.setCellValueFactory(cellData -> cellData.getValue().getPuntenTotaal());
-	     
-	     klassementTabel.setItems(teamData);
+		TeamKolom.setCellValueFactory(
+						new PropertyValueFactory<>("naam")
+				);
+		PuntenKolom.setCellValueFactory(
+				new PropertyValueFactory<>("puntentotaal")
+		);
+		GewonnenKolom.setCellValueFactory(
+				new PropertyValueFactory<>("gewonnen")
+		);
+		GelijkKolom.setCellValueFactory(
+				new PropertyValueFactory<>("gelijk")
+		);
+		VerlorenKolom.setCellValueFactory(
+				new PropertyValueFactory<>("verloren")
+		);
+		DoelsaldoKolom.setCellValueFactory(
+				new PropertyValueFactory<>("doelsaldo")
+		);
+		DoelTegenKolom.setCellValueFactory(
+				new PropertyValueFactory<>("doeltegen")
+		);
 	}
 
 	public void setScreenParent(ScreensController screen) {
