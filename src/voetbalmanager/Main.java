@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import voetbalmanager.controller.MainController;
 import voetbalmanager.controller.ScreensController;
 import voetbalmanager.model.Competitie;
 

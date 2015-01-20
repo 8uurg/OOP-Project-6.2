@@ -17,9 +17,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import voetbalmanager.exceptions.TransferException;
 import voetbalmanager.model.Competitie;
-import voetbalmanager.model.Team;
 
 /**
  * Hulpklasse om XML Bestanden in te laden.

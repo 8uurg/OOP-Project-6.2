@@ -1,7 +1,6 @@
 package voetbalmanager;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -18,10 +17,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import voetbalmanager.exceptions.TransferException;
 import voetbalmanager.model.Competitie;
-import voetbalmanager.model.Speler;
-import voetbalmanager.model.Team;
 
 /**
  * Hulpklasse om een XML Bestand in te laden

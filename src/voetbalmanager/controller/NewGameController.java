@@ -1,14 +1,6 @@
 package voetbalmanager.controller;
 
 //import java.awt.Dialog;
-import java.io.File;
-
-import javafx.stage.Modality;
-import javafx.stage.PopupWindow;
-import javafx.stage.Popup;
-import javafx.stage.Screen;
-import javafx.stage.WindowEvent;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,30 +9,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.geometry.Rectangle2D;
-
-import org.*;
-
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.text.Text;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
-
-import javax.xml.transform.stream.StreamResult;
-
-import com.sun.glass.ui.Window;
-
 import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
-import voetbalmanager.XMLWriter;
-import voetbalmanager.model.Competitie;
-import voetbalmanager.view.*;
 public class NewGameController implements Initializable, ControlledScreen {
 	@FXML
 	TextField TekstVeld;

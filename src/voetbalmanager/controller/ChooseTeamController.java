@@ -19,8 +19,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import voetbalmanager.Main;
 import voetbalmanager.Spel;
-import voetbalmanager.XMLLoader;
-import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Team;
 
 public class ChooseTeamController implements Initializable, ControlledScreen, Observer {
