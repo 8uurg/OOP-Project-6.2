@@ -18,7 +18,7 @@ public class SpelerStatVergelijker implements Comparator<Speler> {
 		return o.getOffensief()*amul + o.getDefensief()*dmul;
 	}
 	
-	@Override
+//	@Override
 	public int compare(Speler o1, Speler o2) {
 		float o1g = berekenGetal(o1);
 		float o2g = berekenGetal(o2);

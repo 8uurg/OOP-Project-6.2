@@ -23,8 +23,8 @@ public class Team {
 	private int doelpunten = 0;
 	private int tegenpunten = 0;
 	
-	private static int maxSpeler = 22;
-	private int maxSpelers = 22;
+	private static int maxSpeler = 30;
+	private int maxSpelers = 30;
 	private boolean gebruikerTeam;
 	
 	/**
