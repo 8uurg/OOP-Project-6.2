@@ -37,14 +37,19 @@
          </padding>
          </Label>
    </top>
-   <left>
-      <ListView fx:id="List" prefHeight="307.0" prefWidth="564.0" BorderPane.alignment="CENTER" />
-   </left>
-   <right>
-      <TextArea fx:id="myTextField" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-   </right>
    <stylesheets>
       <URL value="@Backgrounds.css" />
       <URL value="@Buttons.css" />
    </stylesheets>
+   <center>
+      <HBox spacing="60.0">
+         <children>
+            <ListView fx:id="List" prefHeight="474.0" prefWidth="439.0" BorderPane.alignment="CENTER" />
+            <TextArea fx:id="myTextField" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="50.0" right="50.0" top="20.0" />
+         </padding>
+      </HBox>
+   </center>
 </BorderPane>

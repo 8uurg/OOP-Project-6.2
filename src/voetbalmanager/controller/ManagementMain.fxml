@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.paint.*?>
 <?import java.net.*?>
 <?import javafx.scene.text.*?>
@@ -14,62 +15,68 @@
    <children>
       <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" AnchorPane.topAnchor="-159.0" />
    </children>
-   <right>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <top>
-            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Label layoutX="6.0" layoutY="14.0" text="Portefeuille: 1 million" textFill="#bc0303">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutY="176.0" text="Top 5" textFill="#a3271c">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-         </top>
-         <left>
-            <TableView prefHeight="298.0" prefWidth="200.0" styleClass="transparentBackground" BorderPane.alignment="CENTER">
-              <columns>
-                <TableColumn prefWidth="128.0" text="Club" />
-                <TableColumn prefWidth="71.0" text="Punten" />
-              </columns>
-            </TableView>
-         </left>
-      </BorderPane>
-   </right>
    <center>
-      <VBox alignment="CENTER" prefHeight="527.0" prefWidth="398.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <HBox>
          <children>
-            <Label text="Total Control">
-               <font>
-                  <Font name="System Bold Italic" size="39.0" />
-               </font>
-               <textFill>
-                  <LinearGradient endX="0.8476190476190476" endY="0.7904761904761906" startX="0.8380952380952381" startY="0.20952380952380953">
-                     <stops>
-                        <Stop color="BLACK" />
-                        <Stop color="WHITE" offset="1.0" />
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-            </Label>
-            <Button fx:id="StartMatch" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartMatch" prefWidth="100.0" styleClass="Buttons" text="Start wedstrijd" />
-            <Button fx:id="Opstelling" disable="true" layoutX="400.0" layoutY="323.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOpstelling" prefWidth="100.0" styleClass="Buttons" text="Opstelling" />
-            <Button fx:id="Spelersmarkt" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpelersmarkt" prefWidth="100.0" styleClass="Buttons" text="Spelersmarkt" />
-            <Button fx:id="Klassement" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleKlassement" prefWidth="100.0" styleClass="Buttons" text="Klassement" />
-            <Button fx:id="Statistieken" disable="true" mnemonicParsing="false" onAction="#handleStatistieken" prefWidth="100.0" styleClass="Buttons" text="Statistiek" />
-            <Button fx:id="Opslaan" mnemonicParsing="false" onAction="#handleOpslaan" prefWidth="100.0" styleClass="Buttons" text="Opslaan" />
-            <Button fx:id="Exit" mnemonicParsing="false" onAction="#handleExit" prefWidth="100.0" styleClass="Buttons" text="Terug" />
+            <VBox alignment="CENTER" prefHeight="527.0" prefWidth="398.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="StartMatch" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartMatch" prefWidth="100.0" styleClass="Buttons" text="Start wedstrijd" />
+                  <Button fx:id="Opstelling" layoutX="400.0" layoutY="323.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOpstelling" prefWidth="100.0" styleClass="Buttons" text="Opstelling" />
+                  <Button fx:id="Spelersmarkt" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpelersmarkt" prefWidth="100.0" styleClass="Buttons" text="Spelersmarkt" />
+                  <Button fx:id="Klassement" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleKlassement" prefWidth="100.0" styleClass="Buttons" text="Klassement" />
+                  <Button fx:id="Statistieken" disable="true" mnemonicParsing="false" onAction="#handleStatistieken" prefWidth="100.0" styleClass="Buttons" text="Statistiek" />
+                  <Button fx:id="Opslaan" mnemonicParsing="false" onAction="#handleOpslaan" prefWidth="100.0" styleClass="Buttons" text="Opslaan" />
+                  <Button fx:id="Exit" mnemonicParsing="false" onAction="#handleExit" prefWidth="100.0" styleClass="Buttons" text="Terug" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="60.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <TextArea fx:id="Budget" prefHeight="28.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets bottom="342.0" left="50.0" top="55.0" />
+                     </HBox.margin>
+                  </TextArea>
+                  <TableView fx:id="wedstrijdSchema" prefHeight="220.0" prefWidth="300.0">
+                    <columns>
+                      <TableColumn prefWidth="300.0" text="Aankomende wedstrijden">
+                           <columns>
+                              <TableColumn fx:id="Club" prefWidth="150.0" />
+                            <TableColumn fx:id="tegenClub" prefWidth="150.0" />
+                           </columns>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="60.0" />
+               </HBox.margin>
+            </VBox>
          </children>
-      </VBox>
+      </HBox>
    </center>
    <stylesheets>
       <URL value="@Backgrounds.css" />
       <URL value="@Buttons.css" />
    </stylesheets>
+   <top>
+      <Label prefHeight="106.0" prefWidth="248.0" text="Management" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="39.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8476190476190476" endY="0.7904761904761906" startX="0.8380952380952381" startY="0.20952380952380953">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Label>
+   </top>
 </BorderPane>

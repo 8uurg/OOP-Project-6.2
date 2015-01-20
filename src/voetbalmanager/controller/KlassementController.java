@@ -24,6 +24,7 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 	@FXML
 	private Button Terug;
 	@FXML private TableView<Team> klassementTable;
+	//TODO nummers 1 t/m 18 in de rangkolom
 	//@FXML private TableColumn<Integer> RangKolom;
 	@FXML private TableColumn<Team, String> TeamKolom;
 	@FXML private TableColumn<Team, Integer> PuntenKolom;
@@ -39,12 +40,12 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 	public KlassementController(){
 		Main.huidigSpel.addObserver(this);
 		
-		//TODO Los de tabelproblemen op aub. :)
 	}
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		//TODO init tabel kolommen
+		//TODO puntentotaal en tegendoelpunten worden niet ingeladen
+		//waarden aan de tabelkolommen toewijzen, via klasse KlassementTabel
 		TeamKolom.setCellValueFactory(
 						new PropertyValueFactory<>("naam")
 				);

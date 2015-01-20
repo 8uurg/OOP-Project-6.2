@@ -6,6 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 /**
  * @author Mayke
  * Klasse voor het klassements tabel
+ * Zorgt ervoor dat de waarden in de tabel kunnen gezet worden (via observableList)
  */
 public class KlassementTabel {
 	

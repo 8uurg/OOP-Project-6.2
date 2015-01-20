@@ -41,9 +41,11 @@ public class ChooseTeamController implements Initializable, ControlledScreen, Ob
 	}
 	@Override
 	public void initialize(URL location, ResourceBundle bundel){
-		//Schergrootte
+		//Schermgrootte
 		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
 		borderChooseTeam.setPrefSize(screen.getWidth(), screen.getHeight());;
+		//disable editing op de textarea
+		myTextField.setDisable(true);
 		//init listview
 		List.setItems(listData);
 		List.setCellFactory((list) -> {return new ListCell<Team>(){

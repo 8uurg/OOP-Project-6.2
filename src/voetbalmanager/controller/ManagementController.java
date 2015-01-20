@@ -2,8 +2,12 @@ package voetbalmanager.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -11,14 +15,18 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import voetbalmanager.Main;
 import voetbalmanager.XMLWriter;
+import voetbalmanager.model.Speelschema;
 //import voetbalmanager.Main;
+import voetbalmanager.model.Team;
 
-public class ManagementController implements Initializable, ControlledScreen {
+public class ManagementController implements Initializable, ControlledScreen, Observer {
 
 	@FXML
 	private Button StartMatch;
@@ -38,13 +46,36 @@ public class ManagementController implements Initializable, ControlledScreen {
 	private Button closeButton;
 	@FXML 
 	private BorderPane border;
+	@FXML private TextArea Budget;
+	@FXML private TableView<Speelschema> wedstrijdSchema;
+	private ObservableList<Speelschema> schemaData = FXCollections.observableArrayList();
 	
 
 	ScreensController myController;
 	Stage stage = new Stage();
 
+	
+
+	public ManagementController(){
+		Main.huidigSpel.addObserver(this);
+		
+	}
+	
+	
 	public void setScreenParent(ScreensController screens) {
 		myController = screens;
+	}
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		
+		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+		border.setPrefSize(screen.getWidth(), screen.getHeight());
+		
+		//disable editing op de textarea
+		Budget.setDisable(true);
+		
+		//TODO speelschema inladen
 	}
 
 	@FXML
@@ -96,9 +127,12 @@ public class ManagementController implements Initializable, ControlledScreen {
 		st.close();
 	}
 
+
 	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
-		border.setPrefSize(screen.getWidth(), screen.getHeight());
+	public void update(Observable arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		
 	}
+
+	
 }
