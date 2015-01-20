@@ -9,10 +9,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import javax.xml.transform.stream.StreamResult;
@@ -26,12 +29,14 @@ public class OpstellingController implements Initializable, ControlledScreen {
 	
 	@FXML private Button Terug;
 	@FXML private TextField tekst;
+	@FXML private BorderPane border;
 	
 	ScreensController myController;
    
 	@Override
    public void initialize(URL location, ResourceBundle resources){
-	   
+	   Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+	   border.setPrefSize(screen.getWidth(), screen.getHeight());
    }
 	public void setScreenParent(ScreensController screen){
 		myController = screen;

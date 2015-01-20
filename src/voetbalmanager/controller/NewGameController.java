@@ -2,20 +2,27 @@ package voetbalmanager.controller;
 
 //import java.awt.Dialog;
 import java.io.File;
+
 import javafx.stage.Modality;
 import javafx.stage.PopupWindow;
 import javafx.stage.Popup;
+import javafx.stage.Screen;
 import javafx.stage.WindowEvent;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.geometry.Rectangle2D;
+
 import org.*;
+
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -24,9 +31,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 import javax.xml.transform.stream.StreamResult;
+
 import com.sun.glass.ui.Window;
 import com.sun.javafx.scene.accessibility.Action;
+
 import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
 import voetbalmanager.XMLWriter;
@@ -37,6 +47,8 @@ public class NewGameController implements Initializable, ControlledScreen {
 	TextField TekstVeld;
 	@FXML
 	Button closeButton;
+	@FXML
+	private BorderPane newGameNavigator;
 	
 	ScreensController myController;
 	Stage ps;
@@ -82,7 +94,8 @@ public class NewGameController implements Initializable, ControlledScreen {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Code hier
+Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+newGameNavigator.setPrefSize(screen.getWidth(), screen.getHeight());
 	}
 
 }

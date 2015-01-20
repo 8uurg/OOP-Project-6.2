@@ -2,9 +2,14 @@ package voetbalmanager;
 
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import voetbalmanager.controller.MainController;
 import voetbalmanager.controller.ScreensController;
 import voetbalmanager.model.Competitie;
 
@@ -29,7 +34,8 @@ public class Main extends Application {
     public static final String LoadScreen ="LoadGame.fxml";
     public static final String HelpMe = "helpScreen";
     public static final String HelpScreen= "Help.fxml";
-    
+    @FXML
+    VBox verticalBox;
     
     public static final String screenKlass= "klassScreen";
     
@@ -65,12 +71,12 @@ public class Main extends Application {
         mainContainer.loadScreen(Main.HelpMe, Main.HelpScreen);
         mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
         root.getChildren().addAll(mainContainer);
-        Scene scene = new Scene(root,800,600);
+        
+        Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+        Scene scene = new Scene(root,screen.getWidth(),screen.getHeight());
         primaryStage.setScene(scene);
         primaryStage.sizeToScene();
-        primaryStage.setResizable(true);
         primaryStage.setFullScreen(true);;
-        
         primaryStage.setTitle("Main Menu");
         primaryStage.show();
     }

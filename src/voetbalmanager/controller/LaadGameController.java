@@ -10,12 +10,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import javax.xml.transform.stream.StreamResult;
@@ -33,6 +35,8 @@ public class LaadGameController implements Initializable, ControlledScreen{
    @FXML private Button Back2;
    @FXML private Button StartManagement;
    @FXML private ListView laadgame;
+   @FXML private BorderPane border;
+   
    ScreensController myController;
 
    public void setScreenParent(ScreensController screenParent){
@@ -40,8 +44,9 @@ public class LaadGameController implements Initializable, ControlledScreen{
    }
    
    public void initialize(URL location, ResourceBundle resources){
-	   //TODO Code hier
-   }
+Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+border.setPrefSize(screen.getWidth(), screen.getHeight());
+}
    @FXML
    public void handleLaadTerug(ActionEvent event)throws IOException{
 	   myController.setScreen(Main.MainMenu);

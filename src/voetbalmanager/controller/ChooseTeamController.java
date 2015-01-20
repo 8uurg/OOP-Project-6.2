@@ -14,9 +14,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Screen;
 
 public class ChooseTeamController implements Initializable, ControlledScreen {
     ScreensController myController = new ScreensController();
@@ -26,6 +29,8 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
     private ObservableList<Team> listData = FXCollections.observableArrayList();
     @FXML
     private TextArea myTextField;
+    @FXML
+    private BorderPane borderChooseTeam;
     
     public ChooseTeamController(){
     	//TODO Arthur
@@ -40,6 +45,9 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
 	}
 	@Override
 	public void initialize(URL location, ResourceBundle bundel){
+		//Schergrootte
+		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+		borderChooseTeam.setPrefSize(screen.getWidth(), screen.getHeight());;
 		//init listview
 		List.setItems(listData);
 		List.setCellFactory((list) -> {return new ListCell<Team>(){

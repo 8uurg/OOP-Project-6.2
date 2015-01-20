@@ -9,6 +9,9 @@ import java.util.ResourceBundle;
 
 
 
+
+
+
 import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
 import voetbalmanager.model.Competitie;
@@ -19,10 +22,13 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class MarktController implements Initializable, ControlledScreen{
@@ -54,7 +60,7 @@ public class MarktController implements Initializable, ControlledScreen{
 	@FXML private ListView<Speler> LijstVerkopenD;
 	@FXML private ListView<Speler> SecLijstVerkopenD;
 	private ObservableList<Speler> VerkopenDdata = FXCollections.observableArrayList();
-	
+	@FXML private BorderPane border;
 	
 	
 	public MarktController(){
@@ -64,6 +70,8 @@ public class MarktController implements Initializable, ControlledScreen{
 
 	   @Override
 	   public void initialize(URL location, ResourceBundle resources){
+		   Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+		   border.setPrefSize(screen.getWidth(), screen.getHeight());
 		   
 	   }
 	   
