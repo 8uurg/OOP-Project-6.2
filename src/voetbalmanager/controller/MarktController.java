@@ -50,11 +50,12 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		   Rectangle2D screen = Screen.getPrimary().getVisualBounds();
 		   border.setPrefSize(screen.getWidth(), screen.getHeight());
 		   
-		  // verkopenSpelerId.setDisable(true);
-		   //kopenSpelerId.setDisable(true);
+		  verkopenSpelerId.setDisable(true);
+		  kopenSpelerId.setDisable(true);
 		   
 		   
 		   //init verkopenList
+		  //TODO Arthur help
 		   Verkopendata.addAll(Main.huidigSpel.getCompetitie().getSpelerTeam().getSelectie());
 		   verkopenSpeler.setItems(Verkopendata);
 		   verkopenSpeler.setCellFactory((list) -> {return new ListCell<Speler>(){
@@ -77,7 +78,7 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		   
 		   
 		   //init kopenList
-
+			//TODO Arthur help
 			Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
 		   kopenSpeler.setItems(Kopendata);
 		   kopenSpeler.setCellFactory((list) -> {return new ListCell<BeschikbareSpeler>(){
@@ -105,6 +106,23 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 	       myController = screenParent;
 	   }
 	   
+	
+	@FXML
+	public void handleKopen() throws IOException{
+		
+		kopenSpeler.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
+			Main.huidigSpel.getCompetitie().getTransferMarkt().koopSpeler(Main.huidigSpel.getCompetitie().getSpelerTeam(), newValue);
+		});
+		
+	}
+	
+	@FXML
+	public void handleVerkopen() throws IOException{
+		
+		verkopenSpeler.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
+			Main.huidigSpel.getCompetitie().getTransferMarkt().maakVerhandelbaar(newValue);
+		});
+	}
 	
 	@FXML
 	public void handleBackMarket() throws IOException{

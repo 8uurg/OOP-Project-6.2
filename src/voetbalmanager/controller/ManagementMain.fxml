@@ -21,7 +21,7 @@
             <VBox alignment="CENTER" prefHeight="527.0" prefWidth="398.0" spacing="10.0" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="StartMatch" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartMatch" prefWidth="100.0" styleClass="Buttons" text="Start wedstrijd" />
-                  <Button fx:id="Opstelling" layoutX="400.0" layoutY="323.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOpstelling" prefWidth="100.0" styleClass="Buttons" text="Opstelling" />
+                  <Button fx:id="Opstelling" disable="true" layoutX="400.0" layoutY="323.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleOpstelling" prefWidth="100.0" styleClass="Buttons" text="Opstelling" />
                   <Button fx:id="Spelersmarkt" layoutX="400.0" layoutY="373.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSpelersmarkt" prefWidth="100.0" styleClass="Buttons" text="Spelersmarkt" />
                   <Button fx:id="Klassement" layoutX="400.0" layoutY="418.0" mnemonicParsing="false" onAction="#handleKlassement" prefWidth="100.0" styleClass="Buttons" text="Klassement" />
                   <Button fx:id="Statistieken" disable="true" mnemonicParsing="false" onAction="#handleStatistieken" prefWidth="100.0" styleClass="Buttons" text="Statistiek" />

@@ -25,7 +25,7 @@
                                     <Insets bottom="175.0" />
                                  </HBox.margin>
                               </TextArea>
-                              <Button fx:id="Kopen" mnemonicParsing="false" prefHeight="27.0" prefWidth="165.0" styleClass="Buttons" text="Kopen" />
+                              <Button fx:id="Kopen" mnemonicParsing="false" onAction="#handleKopen" prefHeight="27.0" prefWidth="165.0" styleClass="Buttons" text="Kopen" />
                            </children>
                         </VBox>
                      </children>
@@ -48,7 +48,7 @@
                                     <Insets bottom="175.0" />
                                  </HBox.margin>
                               </TextArea>
-                              <Button fx:id="Verkopen" mnemonicParsing="false" prefHeight="25.0" prefWidth="169.0" styleClass="Buttons" text="Verkopen" />
+                              <Button fx:id="Verkopen" mnemonicParsing="false" onAction="#handleVerkopen" prefHeight="25.0" prefWidth="169.0" styleClass="Buttons" text="Verkopen" />
                            </children>
                         </VBox>
                      </children>
