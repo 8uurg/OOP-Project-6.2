@@ -93,11 +93,21 @@ public class Speelronde {
 	public void verwijder(int i) {
 		wedstrijden.remove(i);
 	}
-
+	
+	/**
+	 * Retourneert een Wedstrijd uit de speelronde.
+	 * @param i de Wedstrijd op plaats i in de ArrayList.
+	 * @return Wedstrijd.
+	 */
 	public Wedstrijd get(int i) {
 		return wedstrijden.get(i);
 	}
 	
+	/**
+	 * Kijkt of een team al voorkomt in de speelronde.
+	 * @param team Team dat gecheckt wordt.
+	 * @return boolean.
+	 */
 	public boolean teamEquals(Team team) {
 		for(int j=0;j<2;j++){
 		for (int i = 0; i < wedstrijden.size(); i++)
@@ -106,17 +116,12 @@ public class Speelronde {
 		}
 		return false;
 	}
-	public boolean containsAny(Speelronde b){
-		int x=0;
-		while(x<b.getSize()){
-			if(wedstrijden.contains(b.get(x))){
-				return true;
-			}
-			x++;
-		}
-		return false;
-	}
 	
+	/**
+	 * Checkt of de Speelronde alle teams bevat die Speelronde b ook bevat
+	 * @param b de Speelronde die vergeleken wordt.
+	 * @return boolean.
+	 */
 	public boolean containsAll(Speelronde b){
 		if(!(getSize()==b.getSize())){
 			return false;
@@ -131,10 +136,18 @@ public class Speelronde {
 		}
 		return true;
 	}
-	public void merge(Speelronde b){
-		while(b.getSize()>0){
-			voegToe(b.get(0));
-			b.verwijder(0);
+	
+	/**
+	 * Checkt of alle teams die in wedstrijden zijn onderverdeeld in de speelronde zitten.
+	 * @param teams Alle teams die onderverdeeld zijn in wedstrijden.
+	 * @return boolean.
+	 */
+	public boolean containsTeams(ArrayList<Team> teams){
+		for(Team team:teams){
+			if(!teamEquals(team)){
+				return false;
+			}
 		}
+		return true;
 	}
 }

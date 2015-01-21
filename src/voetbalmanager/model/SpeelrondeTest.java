@@ -13,11 +13,15 @@ public class SpeelrondeTest {
 	Team Ttwo = new Team("T2", false);
 	Team Tthree = new Team("T3",false);
 	Team Tfour = new Team("T4",false);
+	Team Tfive = new Team("T5",false);
 	Wedstrijd a = new Wedstrijd(Tone,Ttwo);
 	Wedstrijd b = new Wedstrijd(Ttwo,Tone);
 	Wedstrijd c = new Wedstrijd(Tone,Tthree);
 	Wedstrijd d = new Wedstrijd(Tone,Tfour);
 	Wedstrijd e = new Wedstrijd(Tthree,Tfour);
+	Wedstrijd f = new Wedstrijd(Ttwo,Tfour);
+	Wedstrijd g = new Wedstrijd(Ttwo,Tfive);
+	
 	@Test
 	public void testSpeelronde() {
 		assertNotEquals(A,a);
@@ -89,6 +93,33 @@ public class SpeelrondeTest {
 		assertEquals(A.get(0),a);
 		assertEquals(A.get(3),d);
 		assertFalse(A.get(0).equals(c));
+	}
+	
+	@Test
+	public void testContainsAll(){
+		A.voegToe(a);
+		A.voegToe(e);
+		B.voegToe(c);
+		B.voegToe(f);
+		assertTrue(A.containsAll(B));
+		B.voegToe(g);
+		assertFalse(A.containsAll(B));
+		B.verwijder(1);
+		assertFalse(A.containsAll(B));
+	}
+	
+	@Test
+	public void testContainsTeams(){
+		ArrayList<Team> tl = new ArrayList<Team>();
+		tl.add(Tone);
+		tl.add(Ttwo);
+		tl.add(Tthree);
+		tl.add(Tfour);
+		A.voegToe(a);
+		A.voegToe(e);
+		assertTrue(A.containsTeams(tl));
+		A.verwijder(0);
+		assertFalse(A.containsTeams(tl));
 	}
 
 }
