@@ -97,4 +97,44 @@ public class Speelronde {
 	public Wedstrijd get(int i) {
 		return wedstrijden.get(i);
 	}
+	
+	public boolean teamEquals(Team team) {
+		for(int j=0;j<2;j++){
+		for (int i = 0; i < wedstrijden.size(); i++)
+			if (wedstrijden.get(i).getTeams()[j].equals(team))
+				return true;
+		}
+		return false;
+	}
+	public boolean containsAny(Speelronde b){
+		int x=0;
+		while(x<b.getSize()){
+			if(wedstrijden.contains(b.get(x))){
+				return true;
+			}
+			x++;
+		}
+		return false;
+	}
+	
+	public boolean containsAll(Speelronde b){
+		if(!(getSize()==b.getSize())){
+			return false;
+		}
+		int x = 0;
+		while(x<b.getSize()){
+			for(int i=0;i<2;i++){
+				if(!teamEquals(b.get(x).getTeams()[i])){
+					return false;
+				}
+			}x++;
+		}
+		return true;
+	}
+	public void merge(Speelronde b){
+		while(b.getSize()>0){
+			voegToe(b.get(0));
+			b.verwijder(0);
+		}
+	}
 }

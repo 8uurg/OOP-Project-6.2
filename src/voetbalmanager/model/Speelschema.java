@@ -28,6 +28,7 @@ public class Speelschema {
 	public ArrayList<Speelronde> getSchema(){
 		return schema;
 	}
+	
 	/**
 	 * Creëert uit verschillende teams wedstrijden.
 	 */
@@ -46,6 +47,7 @@ public class Speelschema {
 	 */
 	public ArrayList<Speelronde> maakRonden() {
 		maakWedstrijden();
+//		System.out.println(wedstrijden.size());
 		while(wedstrijden.size()>aantalTeams){
 			recursieRonden();
 		}
@@ -53,6 +55,7 @@ public class Speelschema {
 		Collections.shuffle(schema, new Random());
 		return schema;
 		}
+	
 	/**
 	 * Bouwt het grootste deel van de ronden op
 	 */
@@ -93,47 +96,107 @@ public class Speelschema {
 		wedstrijden = mismatch;
 		schema.addAll(temp);
 	}
+	
 	/**
 	 * Is gefocust op de laatste 2 ronden die nogal vervelend kunnen doen.
 	 */
 	public void laatsteRonden(){
 		Speelronde a = new Speelronde();
 		Speelronde b = new Speelronde();
-		Speelronde temp = new Speelronde();
-		while(wedstrijden.size()>0){
-			a.voegToe(wedstrijden.get(0));
-			b.voegToe(wedstrijden.get(1));
-			wedstrijden.remove(0);
-			wedstrijden.remove(0);
+		
+		a.voegToe(wedstrijden.get(0));
+		wedstrijden.remove(0);
+		for(Wedstrijd wedstrijd:wedstrijden){
+			if(!b.WedstrijdEquals(wedstrijd)){
+				if(a.teamEquals(wedstrijd.getTeams()[0])&&a.teamEquals(wedstrijd.getTeams()[1])){
+					b.voegToe(wedstrijd);
+					wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
+					break;
+				}
+				else if(!a.teamEquals(wedstrijd.getTeams()[0])&&a.teamEquals(wedstrijd.getTeams()[1])){
+					b.voegToe(wedstrijd);
+					wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
+					break;
+				}
+				else if(!a.teamEquals(wedstrijd.getTeams()[1])&&a.teamEquals(wedstrijd.getTeams()[0])){
+					b.voegToe(wedstrijd);
+					wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
+					break;
+				}
+			}
 		}
-		for(int i=0;i<aantalTeams*1000;i++){
-			temp.voegToe(a.get(0));
-			a.verwijder(0);
-			for(int j=0;j<a.getSize();j++){
-				if(a.get(j).teamEquals(temp.get(0))){
-					b.voegToe(a.get(j));
-					a.verwijder(j);
+		int i=0;
+		while(!a.containsAll(b)&i<1000){
+			for(Wedstrijd wedstrijd:wedstrijden){
+				if(!a.WedstrijdEquals(wedstrijd)){
+					if(b.teamEquals(wedstrijd.getTeams()[0])&&b.teamEquals(wedstrijd.getTeams()[1])){
+						a.voegToe(wedstrijd);
+						wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
+						break;
+					}
+				else if(!b.teamEquals(wedstrijd.getTeams()[0])&&b.teamEquals(wedstrijd.getTeams()[1])){
+					a.voegToe(wedstrijd);
+					wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
+					break;
+					}
+				else if(!b.teamEquals(wedstrijd.getTeams()[1])&&b.teamEquals(wedstrijd.getTeams()[0])){
+					a.voegToe(wedstrijd);
+					wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
+					break;
+					}
 				}
 			}
-			a.voegToe(temp.get(0));
-			temp.verwijder(0);
-			temp.voegToe(b.get(0));
-			b.verwijder(0);
-			for(int j=0;j<b.getSize();j++){
-				if(b.get(j).teamEquals(temp.get(0))){
-					a.voegToe(b.get(j));
-					b.verwijder(j);
+			for(Wedstrijd wedstrijd:wedstrijden){
+				if(!b.WedstrijdEquals(wedstrijd)){
+					if(a.teamEquals(wedstrijd.getTeams()[0])&&a.teamEquals(wedstrijd.getTeams()[1])){
+						b.voegToe(wedstrijd);
+						wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
+						break;
+				}
+					else if(!a.teamEquals(wedstrijd.getTeams()[0])&&a.teamEquals(wedstrijd.getTeams()[1])){
+						b.voegToe(wedstrijd);
+						wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
+						break;
+					}
+					else if(!a.teamEquals(wedstrijd.getTeams()[1])&&a.teamEquals(wedstrijd.getTeams()[0])){
+						b.voegToe(wedstrijd);
+						wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
+						break;
+					}
 				}
 			}
-			b.voegToe(temp.get(0));
-			temp.verwijder(0);
+			i++;
+			if(i>aantalTeams){
+				i=1000;
+			}
 		}
 		if(a.getSize()==aantalTeams/2&&b.getSize()==aantalTeams/2){
 			schema.add(a);
 			schema.add(b);
-			
+		}
+		else{
+			while(a.getSize()>0){
+				wedstrijden.add(a.get(0));
+				a.verwijder(0);
+			}
+			while(b.getSize()>0){
+				wedstrijden.add(b.get(0));
+				b.verwijder(0);
+			}
+			while(schema.size()>0){
+				while(schema.get(0).getSize()>0){
+					wedstrijden.add(schema.get(0).get(0));
+					schema.get(0).verwijder(0);
+				}
+				schema.remove(0);
+			}
+			while(wedstrijden.size()>aantalTeams){
+				recursieRonden();
+			}
+			laatsteRonden();
 		}
 	}
+	
 	/**
 	 * Stringmethode, let op! Op dit moment wordt alleen het schema weergeven.
 	 */
