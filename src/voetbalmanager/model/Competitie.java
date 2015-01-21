@@ -109,10 +109,8 @@ public class Competitie {
 		C.addAll(D);
 		ArrayList<Speelronde> A = new ArrayList<Speelronde>();
 		Speelschema S = new Speelschema(C, B.size());
-		while (A.size() < teams.size() * 2 - 2) {
-			S = new Speelschema(C, B.size());
 			A = S.maakRonden();
-		}
+		System.out.println(A.size() < teams.size() * 2 - 2);
 		schema = S;
 		return S;
 	}

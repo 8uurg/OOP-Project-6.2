@@ -52,7 +52,7 @@ public class TeamTest {
 	
 	@Test
 	public void testGetSpelerNamen() {
-		assertEquals(Ajax.getSpelerNamen(Ajax), "SpelerA\nSpelerC\n");
+		assertEquals(Ajax.getSpelerNamen(), "SpelerA\nSpelerC\n");
 	}
 	
 	@Test

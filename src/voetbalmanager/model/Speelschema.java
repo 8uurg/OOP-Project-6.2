@@ -2,7 +2,6 @@ package voetbalmanager.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
-//import java.util.Iterator;
 import java.util.Random;
 
 public class Speelschema {
@@ -106,7 +105,7 @@ public class Speelschema {
 			wedstrijden.remove(0);
 			wedstrijden.remove(0);
 		}
-		for(int i=0;i<aantalTeams*1000;i++){
+		for(int i=0;i<200;i++){
 			temp.voegToe(a.get(0));
 			a.verwijder(0);
 			for(int j=0;j<a.getSize();j++){
@@ -131,6 +130,28 @@ public class Speelschema {
 		if(a.getSize()==aantalTeams/2&&b.getSize()==aantalTeams/2){
 			schema.add(a);
 			schema.add(b);
+			
+		}
+		else{
+			while(a.getSize()>0){
+				wedstrijden.add(a.get(0));
+				a.verwijder(0);
+			}
+			while(b.getSize()>0){
+				wedstrijden.add(b.get(0));
+				b.verwijder(0);
+			}
+			while(!schema.isEmpty()){
+				while(schema.get(0).getSize()>0){
+					wedstrijden.add(schema.get(0).get(0));
+					schema.get(0).verwijder(0);
+				}
+				schema.remove(0);
+			}
+			while(wedstrijden.size()>aantalTeams){
+				recursieRonden();
+			}
+			laatsteRonden();
 			
 		}
 	}

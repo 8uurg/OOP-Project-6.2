@@ -37,10 +37,10 @@ public class CompetitieTest {
 		competitie2.addTeam(Ajax);
 		competitie2.addTeam(Feyenoord);
 		competitie2.addTeam(PSV);
-		assertFalse(competitie2.equals(eredivisie));
-		assertFalse(competitie2.equals("A"));
+		assertNotEquals(competitie2,eredivisie);
+		assertNotEquals(competitie2,("A"));
 		competitie2.addTeam(AZ);
-		assertTrue(competitie2.equals(eredivisie));
+		assertEquals(competitie2,eredivisie);
 	}
 	
 	
