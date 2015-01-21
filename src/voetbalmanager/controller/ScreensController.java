@@ -50,6 +50,7 @@ public class ScreensController extends StackPane {
 			addScreen(name, loadScreen);
 			return true;
 		} catch (Exception e) {
+			e.printStackTrace();
 			System.out.println("Het inladen van "+ resource +" is niet gelukt. Onderzoek de fout bij de fxml,controller of bij de Main");
 			return false;
 		}
