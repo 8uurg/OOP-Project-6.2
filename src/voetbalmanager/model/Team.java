@@ -24,7 +24,6 @@ public class Team {
 	private int tegenpunten = 0;
 	
 	private static int maxSpeler = 30;
-	private int maxSpelers = 30;
 	private boolean gebruikerTeam;
 	
 	/**
@@ -169,7 +168,7 @@ public class Team {
 	public void voegToe(Speler sp, int transferbedrag) throws TransferException {
 		if (spelers.indexOf(sp) != -1)
 			throw new TransferException(sp.naam + " zit al in de selectie!");
-		else if (spelers.size() >= maxSpelers)
+		else if (spelers.size() >= maxSpeler)
 			throw new TransferException("De selectie bevat al het maximum aantal spelers!");
 		else {
 			verlaagBudget(transferbedrag);
