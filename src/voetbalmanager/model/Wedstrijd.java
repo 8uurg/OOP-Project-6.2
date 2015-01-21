@@ -69,6 +69,7 @@ public class Wedstrijd {
 		WedstrijdSimulator sim = new WedstrijdSimulator(this.teams[0], this.teams[1]);
 		Resultaat res = sim.simuleer();
 		this.uitslag = res.getScore();
+		kenPuntenToe();
 	}
 	
 	/**
@@ -79,6 +80,11 @@ public class Wedstrijd {
 		s += teams[0].getNaam() + " - " + teams[1].getNaam();
 //		s += ": " + uitslag[0] + " - "  + uitslag[1];
 		return s;
+	}
+	
+	public void kenPuntenToe(){
+		teams[0].kenPuntenToe(uitslag[0],uitslag[1]);
+		teams[1].kenPuntenToe(uitslag[1],uitslag[0]);
 	}
 
 }

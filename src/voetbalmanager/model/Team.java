@@ -332,4 +332,17 @@ public class Team {
 		return a;
 	}
 	
+	public void kenPuntenToe(int uitslag0,int uitslag1){
+		doelpunten=doelpunten+uitslag0;
+		tegenpunten=tegenpunten+uitslag1;
+		if(uitslag0>uitslag1){
+			gewonnen=gewonnen+1;
+		}
+		else if(uitslag0==uitslag1){
+			gelijk = gelijk+1;
+		}
+		else if(uitslag0<uitslag1){
+			verloren = verloren+1;
+		}
+	}
 }

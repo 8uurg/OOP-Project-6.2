@@ -14,170 +14,48 @@
         <tabs>
           <Tab text="Kopen">
                <content>
-                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
-                    <tabs>
-                      <Tab text="Aanvallers">
-                           <content>
-                              <HBox spacing="100.0">
-                                 <children>
-                                    <ListView fx:id="LijstKopenA" prefHeight="200.0" prefWidth="300.0">
-                                       <HBox.margin>
-                                          <Insets left="25.0" />
-                                       </HBox.margin>
-                                    </ListView>
-                                    <VBox spacing="100.0">
-                                       <children>
-                                          <ListView fx:id="SecLijstKopenA" prefHeight="295.0" prefWidth="200.0" />
-                                          <Button fx:id="KopenA" mnemonicParsing="false" onAction="#handleKopenA" prefWidth="200.0" styleClass="Buttons" text="Kopen">
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                          </Button>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </HBox>
-                           </content></Tab>
-                      <Tab text="Verdedigers">
-                           <content>
-                              <HBox spacing="100.0">
-                                 <children>
-                                    <ListView fx:id="LijstKopenV" prefHeight="200.0" prefWidth="300.0">
-                                       <HBox.margin>
-                                          <Insets left="25.0" />
-                                       </HBox.margin>
-                                    </ListView>
-                                    <VBox spacing="100.0">
-                                       <children>
-                                          <ListView fx:id="SecLijstKopenV" prefHeight="295.0" prefWidth="200.0" />
-                                          <Button fx:id="KopenV" mnemonicParsing="false" onAction="#handleKopenV" prefWidth="200.0" styleClass="Buttons" text="Kopen">
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                          </Button>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </HBox>
-                           </content></Tab>
-                        <Tab text="Doelmannen">
-                           <content>
-                              <HBox spacing="100.0">
-                                 <children>
-                                    <ListView fx:id="LijstKopenD" prefHeight="200.0" prefWidth="300.0">
-                                       <HBox.margin>
-                                          <Insets left="25.0" />
-                                       </HBox.margin>
-                                    </ListView>
-                                    <VBox spacing="100.0">
-                                       <children>
-                                          <ListView fx:id="SecLijstKopenD" prefHeight="295.0" prefWidth="200.0" />
-                                          <Button fx:id="KopenD" mnemonicParsing="false" onAction="#handleKopenD" prefWidth="200.0" styleClass="Buttons" text="Kopen">
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                          </Button>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </HBox>
-                           </content>
-                        </Tab>
-                    </tabs>
-                  </TabPane>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" />
+                  <HBox spacing="200.0">
+                     <children>
+                        <ListView fx:id="kopenSpeler" prefHeight="200.0" prefWidth="200.0" />
+                        <VBox spacing="50.0">
+                           <children>
+                              <TextArea fx:id="kopenSpelerId" prefHeight="250.0" prefWidth="177.0">
+                                 <HBox.margin>
+                                    <Insets bottom="175.0" />
+                                 </HBox.margin>
+                              </TextArea>
+                              <Button fx:id="Kopen" mnemonicParsing="false" onAction="#handleKopen" prefHeight="27.0" prefWidth="165.0" styleClass="Buttons" text="Kopen" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" top="30.0" />
+                     </padding>
+                  </HBox>
                </content>
             </Tab>
           <Tab text="Verkopen">
                <content>
-                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
-                    <tabs>
-                      <Tab text="Aanvallers">
-                           <content>
-                              <HBox spacing="100.0">
-                                 <children>
-                                    <ListView fx:id="LijstVerkopenA" prefHeight="200.0" prefWidth="300.0">
-                                       <HBox.margin>
-                                          <Insets left="25.0" />
-                                       </HBox.margin>
-                                    </ListView>
-                                    <VBox spacing="100.0">
-                                       <children>
-                                          <ListView fx:id="SecLijstVerkopenA" prefHeight="295.0" prefWidth="200.0" />
-                                          <Button fx:id="VerkopenA" mnemonicParsing="false" onAction="#handleVerkopenA" prefWidth="200.0" styleClass="Buttons" text="Verkopen">
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                          </Button>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </HBox>
-                           </content></Tab>
-                      <Tab text="Verdedigers">
-                           <content>
-                              <HBox spacing="100.0">
-                                 <children>
-                                    <ListView fx:id="LijstVerkopenV" prefHeight="200.0" prefWidth="300.0">
-                                       <HBox.margin>
-                                          <Insets left="25.0" />
-                                       </HBox.margin>
-                                    </ListView>
-                                    <VBox spacing="100.0">
-                                       <children>
-                                          <ListView fx:id="SecLijstVerkopenV" prefHeight="295.0" prefWidth="200.0" />
-                                          <Button fx:id="VerkopenV" mnemonicParsing="false" onAction="#handleVerkopenV" prefWidth="200.0" styleClass="Buttons" text="Verkopen">
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                          </Button>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </HBox>
-                           </content></Tab>
-                        <Tab text="Doelmannen">
-                           <content>
-                              <HBox spacing="100.0">
-                                 <children>
-                                    <ListView fx:id="LijstVerkopenD" prefHeight="200.0" prefWidth="300.0">
-                                       <HBox.margin>
-                                          <Insets left="25.0" />
-                                       </HBox.margin>
-                                    </ListView>
-                                    <VBox spacing="100.0">
-                                       <children>
-                                          <ListView fx:id="SecLijstVerkopenD" prefHeight="295.0" prefWidth="200.0" />
-                                          <Button fx:id="VerkopenD" mnemonicParsing="false" onAction="#handleVerkopenD" prefWidth="200.0" styleClass="Buttons" text="Verkopen">
-                                             <VBox.margin>
-                                                <Insets />
-                                             </VBox.margin>
-                                          </Button>
-                                       </children>
-                                    </VBox>
-                                 </children>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </HBox>
-                           </content>
-                        </Tab>
-                    </tabs>
-                  </TabPane>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" />
+                  <HBox spacing="200.0">
+                     <children>
+                        <ListView fx:id="verkopenSpeler" prefHeight="200.0" prefWidth="200.0" />
+                        <VBox spacing="50.0">
+                           <children>
+                              <TextArea fx:id="verkoperSpelerId" prefHeight="250.0" prefWidth="177.0">
+                                 <HBox.margin>
+                                    <Insets bottom="175.0" />
+                                 </HBox.margin>
+                              </TextArea>
+                              <Button fx:id="Verkopen" mnemonicParsing="false" onAction="#handleVerkopen" prefHeight="25.0" prefWidth="169.0" styleClass="Buttons" text="Verkopen" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" top="30.0" />
+                     </padding>
+                  </HBox>
                </content>
             </Tab>
         </tabs>
@@ -186,7 +64,7 @@
    <bottom>
       <Pane prefHeight="88.0" prefWidth="653.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="BackMarket" layoutX="37.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleBackMarket" styleClass="Buttons" text="Terug" />
+            <Button fx:id="BackMarket" layoutX="37.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleBackMarket" prefHeight="27.0" prefWidth="88.0" styleClass="Buttons" text="Terug" />
          </children>
       </Pane>
    </bottom>

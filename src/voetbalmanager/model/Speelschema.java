@@ -50,7 +50,9 @@ public class Speelschema {
 		while(wedstrijden.size()>aantalTeams){
 			recursieRonden();
 		}
-		laatsteRonden();
+		if(wedstrijden.size()>0){
+			laatsteRonden();
+		}
 		Collections.shuffle(schema, new Random());
 		return schema;
 		}
@@ -205,5 +207,14 @@ public class Speelschema {
 			res = res + schema.get(i).toString();	
 		}
 		return res;
+	}
+	
+	public boolean allContainTeams(ArrayList<Team> team){
+		for(Speelronde ronde:schema){
+			if(!ronde.containsTeams(team)){
+				return false;
+			}
+		}
+		return true;
 	}
 }

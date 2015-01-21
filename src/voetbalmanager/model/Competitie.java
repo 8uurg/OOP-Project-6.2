@@ -8,6 +8,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import voetbalmanager.controller.teammanager.AITeamManager;
+
 /**
  * Klasse die een Competitie representeert.
  * 
@@ -20,6 +22,7 @@ public class Competitie {
 	private TransferMarkt transfer;
 	private Team spelerTeam;
 	private Speelschema schema;
+	private int week;
 
 	/**
 	 * Creëert een competitie met een naam (Bv, Eredivisie)en maakt het mogelijk
@@ -39,7 +42,8 @@ public class Competitie {
 	public boolean equals(Object other) {
 		if (other instanceof Competitie) {
 			Competitie that = (Competitie) other;
-			return this.naam.equals(that.naam) && this.teams.equals(that.teams);
+			return this.naam.equals(that.naam) && 
+					this.teams.equals(that.teams);
 		}
 
 		return false;
@@ -144,6 +148,8 @@ public class Competitie {
 				res.append("	");
 			res.append("	");
 			res.append(team.toString());
+			res.append("	");
+			res.append(team.getPuntenTotaal());
 			res.append('\n');
 		}
 
@@ -159,7 +165,7 @@ public class Competitie {
 	 */
 	public Element getXMLElement(Document doc) {
 		Element comp = doc.createElement("competitie");
-
+		
 		comp.setAttribute("naam", this.naam);
 
 		Element teamlist = doc.createElement("teams");
@@ -171,9 +177,14 @@ public class Competitie {
 
 		return comp;
 	}
+	
 	public Speelschema getSchema(){
+		if(schema==null){
+			maakSpeelSchema();
+		}
 		return schema;
 	}
+	
 	public TransferMarkt getTransferMarkt(){
 		return transfer;
 	}
@@ -253,13 +264,13 @@ public class Competitie {
 		public int compare(Team a, Team b) {
 			int puntena = a.getPuntenTotaal();
 			int puntenb = b.getPuntenTotaal();
-			if(puntena>puntenb) return 1;
-			if(puntenb>puntena) return -1;
+			if(puntena<puntenb) return 1;
+			if(puntenb<puntena) return -1;
 			// Zelfde aantal punten.
 			puntena = a.getDoelsaldo();
 			puntenb = b.getDoelsaldo();
-			if(puntena>puntenb) return 1;
-			if(puntenb>puntena) return -1;
+			if(puntena<puntenb) return 1;
+			if(puntenb<puntena) return -1;
 			return 0;
 			
 		}
@@ -275,5 +286,25 @@ public class Competitie {
 		}
 		spelerTeam = team;
 		spelerTeam.setGebruikerTeam(true);
+	}
+	
+	public void startCompetitie(){
+		int week=this.week;
+		if(week<schema.getSchema().size()){
+			schema.getSchema().get(week);
+			if(week+1<schema.getSchema().size()){
+				schema.getSchema().get(week+1);
+			}
+			else{
+				System.out.println("Dit is de laatste speelronde, hierna volgen geen rondes meer");
+			}
+			AITeamManager a = new AITeamManager();
+			a.runManagementCycle(this);
+			week++;
+		}
+		else{
+			System.out.println("Deze competitie is afgelopen, er kan geen nieuwe ronde meer gespeeld worden");
+		}
+		
 	}
 }
