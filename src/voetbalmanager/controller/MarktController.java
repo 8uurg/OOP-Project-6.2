@@ -2,6 +2,8 @@ package voetbalmanager.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -10,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
@@ -18,7 +21,7 @@ import voetbalmanager.Main;
 import voetbalmanager.model.BeschikbareSpeler;
 import voetbalmanager.model.Speler;
 
-public class MarktController implements Initializable, ControlledScreen{
+public class MarktController implements Initializable, ControlledScreen, Observer{
 
 	@FXML private Button BackMarket;
 	ScreensController myController;   
@@ -37,8 +40,8 @@ public class MarktController implements Initializable, ControlledScreen{
 	
 	
 	public MarktController(){
-		 Verkopendata.addAll(Main.huidigSpel.getCompetitie().getSpelerTeam().getSelectie());
-		 Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
+		Main.huidigSpel.addObserver(this);
+		
 	}
 	
 
@@ -47,10 +50,53 @@ public class MarktController implements Initializable, ControlledScreen{
 		   Rectangle2D screen = Screen.getPrimary().getVisualBounds();
 		   border.setPrefSize(screen.getWidth(), screen.getHeight());
 		   
-		   verkopenSpelerId.setDisable(true);
-		   kopenSpelerId.setDisable(true);
+		  // verkopenSpelerId.setDisable(true);
+		   //kopenSpelerId.setDisable(true);
+		   
+		   
+		   //init verkopenList
+		   Verkopendata.addAll(Main.huidigSpel.getCompetitie().getSpelerTeam().getSelectie());
+		   verkopenSpeler.setItems(Verkopendata);
+		   verkopenSpeler.setCellFactory((list) -> {return new ListCell<Speler>(){
+				@Override
+				protected void updateItem(Speler item,boolean empty){
+					super.updateItem(item, empty);
+					if(item==null || empty){
+						setText(null);
+					}else{
+						setText(item.getNaam());
+					}
+				}
+			};
+		});
+			// Details in de textarea
+			verkopenSpeler.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
+				verkopenSpelerId.clear();
+				verkopenSpelerId.appendText(newValue.toString());
+			});
+		   
 		   
 		   //init kopenList
+
+			Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
+		   kopenSpeler.setItems(Kopendata);
+		   kopenSpeler.setCellFactory((list) -> {return new ListCell<BeschikbareSpeler>(){
+				@Override
+				protected void updateItem(BeschikbareSpeler item,boolean empty){
+					super.updateItem(item, empty);
+					if(item==null || empty){
+						setText(null);
+					}else{
+						setText(item.getSpeler().getNaam());
+					}
+				}
+			};
+		});
+			// Details in de textarea
+			kopenSpeler.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
+				kopenSpelerId.clear();
+				kopenSpelerId.appendText(newValue.getSpeler().toString());
+			});
 		   
 	   }
 	   
@@ -64,7 +110,14 @@ public class MarktController implements Initializable, ControlledScreen{
 	public void handleBackMarket() throws IOException{
 	myController.setScreen(Main.ManagementMain);
 	Main.getStage().setTitle("Main Managment");
-	 } 
+	 }
+
+
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		
+	} 
 	 
 
 

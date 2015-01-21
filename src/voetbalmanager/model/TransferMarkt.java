@@ -19,6 +19,8 @@ public class TransferMarkt {
 	public TransferMarkt(){
 		recenteTransfers = new ArrayList<Transfer>();
 		verhandelbareSpelers = new ArrayList<BeschikbareSpeler>();
+		//BeschikbareSpeler dummie = new BeschikbareSpeler(new Speler("a", 0, 0, null, null, 0, 0, 0),null);
+		//maakVerhandelbaar(new Speler("a", 0, 0, null, null, 0, 0, 0));
 	}
 	
 	// Hierbij wordt gewoon de prijs van de speler zelf gebruikt (dus speler.prijs)
