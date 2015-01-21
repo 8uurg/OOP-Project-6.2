@@ -1,15 +1,9 @@
 package voetbalmanager.controller.wedstrijdsimulatie.unit;
 
-import java.io.File;
-
-import javax.xml.transform.stream.StreamResult;
-
 import org.junit.Before;
 import org.junit.Test;
 
-import voetbalmanager.XMLWriter;
 import voetbalmanager.controller.wedstrijdsimulatie.WedstrijdSimulator;
-import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Speler;
 import voetbalmanager.model.Team;
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="370.0" styleClass="popupBackground" stylesheets="@../controller/Backgrounds.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.ManagementController">
+   <children>
+      <Pane styleClass="popupBackground" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.38114754098360654" layoutY="-3.0" orientation="VERTICAL" prefHeight="241.0" prefWidth="370.0" styleClass="popupBackground">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="101.0" prefWidth="207.0">
+                     <children>
+                        <Text layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uw spel is succesvol opgeslagen.." wrappingWidth="259.7099609375">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="132.0" prefWidth="318.0">
+                     <children>
+                        <Button fx:id="closeButton" layoutX="283.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleLoadPopup" prefHeight="23.0" prefWidth="64.0" styleClass="Buttons" stylesheets="@../controller/Buttons.css" text="Oke" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="21.0" />
+                        <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klik &quot;Oke&quot; om verder te gaan." />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

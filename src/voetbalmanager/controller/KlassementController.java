@@ -1,32 +1,75 @@
 package voetbalmanager.controller;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-
-import javax.xml.transform.stream.StreamResult;
-
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import voetbalmanager.Main;
-import voetbalmanager.XMLLoader;
-import voetbalmanager.XMLWriter;
-import voetbalmanager.model.Competitie;
+import voetbalmanager.Spel;
+import voetbalmanager.model.Team;
 
-public class KlassementController implements Initializable, ControlledScreen {
+public class KlassementController implements Initializable, ControlledScreen, Observer {
 
 	@FXML
 	private Button Terug;
+	@FXML private TableView<Team> klassementTable;
+	//TODO nummers 1 t/m 18 in de rangkolom
+	//@FXML private TableColumn<Integer> RangKolom;
+	@FXML private TableColumn<Team, String> TeamKolom;
+	@FXML private TableColumn<Team, Integer> PuntenKolom;
+	@FXML private TableColumn<Team, Integer> GewonnenKolom;
+	@FXML private TableColumn<Team, Integer> GelijkKolom;
+	@FXML private TableColumn<Team, Integer> VerlorenKolom;
+	@FXML private TableColumn<Team, Integer> DoelsaldoKolom;
+	@FXML private TableColumn<Team, Integer> DoelTegenKolom;
+	private ObservableList<Team> teamData = FXCollections.observableArrayList();
+	
 	ScreensController myController;
+	
+	public KlassementController(){
+		Main.huidigSpel.addObserver(this);
+		
+	}
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		//TODO puntentotaal en tegendoelpunten worden niet ingeladen
+		//waarden aan de tabelkolommen toewijzen, via klasse KlassementTabel
+		TeamKolom.setCellValueFactory(
+						new PropertyValueFactory<>("naam")
+				);
+		PuntenKolom.setCellValueFactory(
+				new PropertyValueFactory<>("puntentotaal")
+		);
+		GewonnenKolom.setCellValueFactory(
+				new PropertyValueFactory<>("gewonnen")
+		);
+		GelijkKolom.setCellValueFactory(
+				new PropertyValueFactory<>("gelijk")
+		);
+		VerlorenKolom.setCellValueFactory(
+				new PropertyValueFactory<>("verloren")
+		);
+		DoelsaldoKolom.setCellValueFactory(
+				new PropertyValueFactory<>("doelsaldo")
+		);
+		DoelTegenKolom.setCellValueFactory(
+				new PropertyValueFactory<>("tegendoel")
+		);
+		
+		klassementTable.setItems(teamData);
+	}
 
 	public void setScreenParent(ScreensController screen) {
 		myController = screen;
@@ -38,7 +81,13 @@ public class KlassementController implements Initializable, ControlledScreen {
 	}
 
 	@Override
-	public void initialize(URL location, ResourceBundle resources) {
+	public void update(Observable o, Object arg) {
+		if(o instanceof Spel) {
+			Spel spel = (Spel) o;
+			teamData.addAll(spel.getCompetitie().getTeams());
+		}
 	}
+
+	
 
 }

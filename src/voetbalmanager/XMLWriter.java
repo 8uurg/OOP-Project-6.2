@@ -1,6 +1,6 @@
 package voetbalmanager;
 import java.io.File;
-import java.util.ArrayList;
+import java.io.IOException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -17,10 +17,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import voetbalmanager.exceptions.TransferException;
 import voetbalmanager.model.Competitie;
-import voetbalmanager.model.Speler;
-import voetbalmanager.model.Team;
 
 /**
  * Hulpklasse om een XML Bestand in te laden
@@ -93,11 +90,14 @@ public class XMLWriter {
 	/**
 	 * Simpele methode om competitie op te slaan.
 	 * @param competitie
+	 * @throws IOException 
 	 */
-	public static void saveCompetitie(Competitie competitie) {
-		File loc = new File("./saves/" + competitie.getNaam() + ".xml");
-		loc.mkdirs();
+	public static void saveCompetitie(Competitie competitie) throws IOException {
+		(new File("saves")).mkdirs();
+		File loc = new File("saves/" + competitie.getNaam() + ".xml");
+		loc.createNewFile();
 		XMLWriter.saveCompetitie(competitie, new StreamResult(loc));
+		
 	}
 	
 	/**

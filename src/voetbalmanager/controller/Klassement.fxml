@@ -24,33 +24,25 @@
          </children>
       </HBox>
    </bottom>
-   <top>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Klassement " BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets top="10.0" />
-         </BorderPane.margin>
-         <font>
-            <Font name="System Bold Italic" size="27.0" />
-         </font>
-         <fill>
-            <LinearGradient endX="0.9952380952380953" endY="0.5190476190476192" startX="0.9857142857142858" startY="0.19523809523809524">
-               <stops>
-                  <Stop color="BLACK" />
-                  <Stop color="WHITE" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </fill>
-      </Text>
-   </top>
-   <center>
-      <ListView prefHeight="200.0" prefWidth="200.0" styleClass="transparentBackground" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
-         </BorderPane.margin>
-      </ListView>
-   </center>
    <stylesheets>
       <URL value="@Backgrounds.css" />
       <URL value="@Buttons.css" />
    </stylesheets>
+   <center>
+      <TableView fx:id="klassementTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="RangKolom" prefWidth="43.0" text="Rang" />
+          <TableColumn fx:id="TeamKolom" minWidth="0.0" prefWidth="180.0" text="Club" />
+            <TableColumn fx:id="PuntenKolom" prefWidth="82.0" text="Puntentotaal" />
+            <TableColumn fx:id="GewonnenKolom" prefWidth="77.0" text="Gewonnen" />
+            <TableColumn fx:id="GelijkKolom" prefWidth="57.0" text="Gelijk" />
+            <TableColumn fx:id="VerlorenKolom" prefWidth="68.0" text="Verloren" />
+            <TableColumn fx:id="DoelsaldoKolom" prefWidth="78.0" text="Doelsaldo" />
+            <TableColumn fx:id="DoelTegenKolom" prefWidth="114.0" text="Doelpunten tegen" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="40.0" left="50.0" right="50.0" top="50.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
 </BorderPane>

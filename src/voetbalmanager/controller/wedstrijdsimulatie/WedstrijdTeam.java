@@ -1,7 +1,5 @@
 package voetbalmanager.controller.wedstrijdsimulatie;
 
-import java.util.Random;
-
 import voetbalmanager.model.Opstelling;
 import voetbalmanager.model.Team;
 

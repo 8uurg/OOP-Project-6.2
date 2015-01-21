@@ -9,7 +9,7 @@ import voetbalmanager.exceptions.TransferException;
 
 public class TeamTest {
 	Speler A, B, C, D;
-	Team Ajax, Feyenoord;
+	Team Ajax, Feyenoord, PSV;
 	
 	
 	@Before
@@ -21,6 +21,7 @@ public class TeamTest {
 		
 		Ajax = new Team("Ajax", false);
 		Feyenoord = new Team("Feyenoord", false);
+		PSV=new Team("PSV",true);
 		
 		Ajax.overrideAdd(A);
 		Feyenoord.overrideAdd(B);
@@ -48,6 +49,12 @@ public class TeamTest {
 		Ajax2.overrideAdd(A);
 		Ajax2.overrideAdd(C);
 		assertEquals(Ajax2, Ajax);
+	}
+	
+	@Test
+	public void getPuntenTotaal() {
+		assertTrue(Ajax.isComputerGestuurd());
+		assertFalse(PSV.isComputerGestuurd());
 	}
 	
 	@Test
@@ -125,6 +132,34 @@ public class TeamTest {
 		assertEquals(PSV.getOpstelling(), opstelling);
 	}
 	
+	@Test
+	public void testSetGebruikerTeam(){
+		Ajax.setGebruikerTeam(true);
+		assertFalse(Ajax.isComputerGestuurd());
+	}
+	
+	@Test
+	public void testDoeBod(){
+		assertEquals(Ajax.doeBod(A),(int) (A.getPrijs()*1.25));
+	}
+	
+	@Test
+	public void testMaxAantalSpelers(){
+		assertEquals(Team.maxAantalSpelers(),30);
+		assertNotEquals(Team.maxAantalSpelers(),25);
+	}
+	
+	@Test
+	public void testGetSelectie(){
+		assertEquals(Ajax.getSelectie().get(0),A);
+		assertNotEquals(Ajax.getSelectie().get(1),A);
+	}
+	
+	@Test
+	public void testIsSpelerBestuurd(){
+		assertTrue(PSV.isSpelerBestuurd());
+		assertFalse(Feyenoord.isSpelerBestuurd());
+	}
 	
 
 }

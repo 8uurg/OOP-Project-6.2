@@ -169,10 +169,10 @@ public class AITeamManager {
 		Opstelling opstelling = team.getOpstelling();
 		opstelling.clear();
 		
-		ArrayList<Speler> a = new ArrayList<>();
-		ArrayList<Speler> m = new ArrayList<>();
-		ArrayList<Speler> v = new ArrayList<>();
-		ArrayList<Speler> d = new ArrayList<>();
+		ArrayList<Speler> a = new ArrayList<Speler>();
+		ArrayList<Speler> m = new ArrayList<Speler>();
+		ArrayList<Speler> v = new ArrayList<Speler>();
+		ArrayList<Speler> d = new ArrayList<Speler>();
 		
 		// TODO: overleg alle spelers op alle posities, of gebruik maken van type?
 		// In geval van alle spelers op alle posities, let op dat je een speler niet op meer dan 1 positie zet.

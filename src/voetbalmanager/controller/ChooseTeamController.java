@@ -2,23 +2,26 @@ package voetbalmanager.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.ResourceBundle;
 
-import voetbalmanager.XMLLoader;
-import voetbalmanager.Main;
-import voetbalmanager.model.Competitie;
-import voetbalmanager.model.Team;
-import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Screen;
+import voetbalmanager.Main;
+import voetbalmanager.Spel;
+import voetbalmanager.model.Team;
 
-public class ChooseTeamController implements Initializable, ControlledScreen {
+public class ChooseTeamController implements Initializable, ControlledScreen, Observer {
     ScreensController myController = new ScreensController();
     
     @FXML
@@ -26,12 +29,11 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
     private ObservableList<Team> listData = FXCollections.observableArrayList();
     @FXML
     private TextArea myTextField;
+    @FXML
+    private BorderPane borderChooseTeam;
     
     public ChooseTeamController(){
-    	Competitie com = new Competitie("blah");
-		com = XMLLoader.creeerCompetitie("this");
-		for(int i=0; i<18; i++)
-		listData.add(com.getTeams().get(i));
+    	Main.huidigSpel.addObserver(this);
     }
     
 	public void setScreenParent(ScreensController controller){
@@ -39,6 +41,11 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
 	}
 	@Override
 	public void initialize(URL location, ResourceBundle bundel){
+		//Schermgrootte
+		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+		borderChooseTeam.setPrefSize(screen.getWidth(), screen.getHeight());;
+		//disable editing op de textarea
+		myTextField.setDisable(true);
 		//init listview
 		List.setItems(listData);
 		List.setCellFactory((list) -> {return new ListCell<Team>(){
@@ -57,6 +64,7 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
 		List.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
 			myTextField.clear();
 			myTextField.appendText(newValue.getSpelerNamen());
+			Main.huidigSpel.getCompetitie().setSpelerTeam(newValue);
 			
 		});
 	}
@@ -72,5 +80,15 @@ public class ChooseTeamController implements Initializable, ControlledScreen {
 		   
 		   
 	    }
+
+	@Override
+	public void update(Observable ob, Object data) {
+		if(ob instanceof Spel) {
+			Spel spel = (Spel) ob;
+			listData.clear();
+			listData.addAll(spel.getCompetitie().getTeams());
+		}
+		
+	}
 	  
 }
