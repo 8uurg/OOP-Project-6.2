@@ -59,7 +59,8 @@ public class Speler {
 		if (other instanceof Speler) {
 			Speler that = (Speler) other;
 
-			return this.naam.equals(that.naam) && this.nummer == that.nummer
+			return this.naam.equals(that.naam) 
+					&& this.nummer == that.nummer
 					&& this.status.equals(that.status)
 					&& this.type.equals(that.type)
 					&& this.offensief == that.offensief
