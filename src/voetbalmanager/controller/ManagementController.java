@@ -26,7 +26,8 @@ import voetbalmanager.model.Speelschema;
 //import voetbalmanager.Main;
 import voetbalmanager.model.Team;
 
-public class ManagementController implements Initializable, ControlledScreen, Observer {
+public class ManagementController implements Initializable, ControlledScreen,
+		Observer {
 
 	@FXML
 	private Button StartMatch;
@@ -44,38 +45,40 @@ public class ManagementController implements Initializable, ControlledScreen, Ob
 	private Button Exit;
 	@FXML
 	private Button closeButton;
-	@FXML 
+	@FXML
 	private BorderPane border;
-	@FXML private TextArea Budget;
-	@FXML private TableView<Speelschema> wedstrijdSchema;
-	private ObservableList<Speelschema> schemaData = FXCollections.observableArrayList();
-	
+	@FXML
+	private Button oplaan;
+	@FXML
+	private Button terug;
+	@FXML
+	private TextArea Budget;
+	@FXML
+	private TableView<Speelschema> wedstrijdSchema;
 
+	private ObservableList<Speelschema> schemaData = FXCollections
+			.observableArrayList();
 	ScreensController myController;
 	Stage stage = new Stage();
+	Rectangle2D screen = Screen.getPrimary().getVisualBounds();
 
-	
-
-	public ManagementController(){
+	public ManagementController() {
 		Main.huidigSpel.addObserver(this);
-		
+
 	}
-	
-	
+
 	public void setScreenParent(ScreensController screens) {
 		myController = screens;
+		border.setPrefSize(screen.getWidth(), screen.getHeight());
+
 	}
-	
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
-		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
-		border.setPrefSize(screen.getWidth(), screen.getHeight());
-		
-		//disable editing op de textarea
-		Budget.setDisable(true);
-		
-		//TODO speelschema inladen
+		// disable editing op de textarea
+		//Budget.setDisable(true);
+
+		// TODO speelschema inladen
 	}
 
 	@FXML
@@ -117,8 +120,15 @@ public class ManagementController implements Initializable, ControlledScreen, Ob
 
 	@FXML
 	public void handleExit() throws IOException {
+		Parent root = FXMLLoader.load(Main.class
+				.getResource("view/exitPopup.fxml"));
+		Scene scene = new Scene(root);
+		Stage stage = new Stage();
+		stage.setScene(scene);
+		stage.setTitle("Save?");
+		stage.show();
 		myController.setScreen(Main.MainMenu);
-		// TODO popup met 'heeft u het spel opgeslagen?'
+
 	}
 
 	@FXML
@@ -127,12 +137,29 @@ public class ManagementController implements Initializable, ControlledScreen, Ob
 		st.close();
 	}
 
+	@FXML
+	public void jaExitPopup() throws IOException{
+		//XMLWriter.saveCompetitie(Main.huidigSpel.getCompetitie());
+		Stage st = (Stage) oplaan.getScene().getWindow();
+		st.close();
+		Parent root = FXMLLoader.load(Main.class
+				.getResource("view/LoadPopup.fxml"));
+		Scene scene = new Scene(root);
+		Stage stage = new Stage();
+		stage.setScene(scene);
+		stage.setTitle("Save?");
+		stage.show();
+	}
+	@FXML
+	public void neeExitPopup(){
+		Stage st = (Stage) terug.getScene().getWindow();
+		st.close();
+	}
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	
 }
