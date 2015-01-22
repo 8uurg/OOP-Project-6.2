@@ -25,23 +25,22 @@
                </Label>
             <TextField fx:id="TekstVeld" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="400.0" VBox.vgrow="ALWAYS">
                   </TextField>
+            <HBox spacing="600.0" translateY="200.0">
+               <children>
+                  <Button fx:id="Back" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack" prefWidth="115.0" styleClass="Buttons" text="Terug" translateX="40.0">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Next" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNext" prefWidth="115.0" styleClass="Buttons" text="Volgende" translateX="20.0" />
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
          </children>
       </VBox>
    </center>
-   <bottom>
-      <HBox spacing="410.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="Back" layoutX="38.0" layoutY="453.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBack" prefWidth="115.0" styleClass="Buttons" text="Terug" translateX="40.0">
-               <HBox.margin>
-                  <Insets left="50.0" />
-               </HBox.margin></Button>
-            <Button fx:id="Next" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNext" prefWidth="115.0" styleClass="Buttons" text="Volgende" translateX="20.0" />
-         </children>
-         <padding>
-            <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />hkjhn
-         </padding>
-      </HBox>
-   </bottom>
    <stylesheets>
       <URL value="@Backgrounds.css" />
       <URL value="@Buttons.css" />
