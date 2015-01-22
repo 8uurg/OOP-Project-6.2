@@ -80,9 +80,9 @@ public class Speelschema {
 				while (a.get(j).WedstrijdEquals(wedstrijden.get(z))) {
 					j++;
 				}
-				if(!a.get(j).WedstrijdEquals(wedstrijden.get(z))){
+		//		if(!a.get(j).WedstrijdEquals(wedstrijden.get(z))){
 				a.get(j).voegToe(wedstrijden.get(z));
-				}
+			//	}
 			}
 		}
 		ArrayList<Wedstrijd> mismatch = new ArrayList<Wedstrijd>();
@@ -108,13 +108,12 @@ public class Speelschema {
 		a.voegToe(wedstrijden.get(0));
 		wedstrijden.remove(0);
 		for(Wedstrijd wedstrijd:wedstrijden){
-			if(!b.WedstrijdEquals(wedstrijd)){
 				if(a.teamEquals(wedstrijd.getTeams()[0])&&a.teamEquals(wedstrijd.getTeams()[1])){
 					b.voegToe(wedstrijd);
 					wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
 					break;
 				}
-				else if(!a.teamEquals(wedstrijd.getTeams()[0])&&a.teamEquals(wedstrijd.getTeams()[1])){
+				if(!a.teamEquals(wedstrijd.getTeams()[0])&&a.teamEquals(wedstrijd.getTeams()[1])){
 					b.voegToe(wedstrijd);
 					wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
 					break;
@@ -124,7 +123,6 @@ public class Speelschema {
 					wedstrijden.remove(wedstrijden.indexOf(wedstrijd));
 					break;
 				}
-			}
 		}
 		int i=0;
 		while(!a.containsAll(b)&i<1000){
@@ -171,9 +169,11 @@ public class Speelschema {
 				i=1000;
 			}
 		}
-		if(a.getSize()==aantalTeams/2&&b.getSize()==aantalTeams/2){
+		if(a.containsAll(b)&&a.getSize()==aantalTeams/2){
 			schema.add(a);
 			schema.add(b);
+			System.out.println(a.toString());
+			System.out.println(b.toString());
 		}
 		else{
 			while(a.getSize()>0){
@@ -216,5 +216,9 @@ public class Speelschema {
 			}
 		}
 		return true;
+	}
+	
+	public void overrideAddSchema(ArrayList<Speelronde> a){
+		schema=a;
 	}
 }

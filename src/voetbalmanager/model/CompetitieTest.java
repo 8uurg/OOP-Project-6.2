@@ -158,6 +158,6 @@ public class CompetitieTest {
 		a.addTeam(Ajax);
 		a.addTeam(PSV);
 		a.getSchema();
-		assertTrue(a.getSchema().getSchema().size()>0);
+		assertNotEquals(a.getSchema().getSchema().size(),0);
 	}
 }
