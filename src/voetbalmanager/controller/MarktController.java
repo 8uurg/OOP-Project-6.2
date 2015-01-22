@@ -140,16 +140,29 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		if(arg0 instanceof Spel) {
 			// Huidige spel is veranderd. Update!
 			Main.huidigSpel.getCompetitie().addObserver(this);
+			Team steam;
+			if((steam = Main.huidigSpel.getCompetitie().getSpelerTeam())!=null){
+				this.update(steam, arg1);
+			}
+			TransferMarkt smarkt;
+			if((smarkt = Main.huidigSpel.getCompetitie().getTransferMarkt())!=null){
+				this.update(smarkt, arg1);
+			}
+			
 		}
 		if(arg0 instanceof Competitie) {
 			Main.huidigSpel.getCompetitie().getSpelerTeam().addObserver(this);
+
+			Kopendata.clear();
+			Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
+			
+			Verkopendata.clear();
+			Verkopendata.addAll(Main.huidigSpel.getCompetitie().getSpelerTeam().getSelectie());
 		}
 		if(arg0 instanceof Team) {
 			// Team is veranderd. Update!
 			Verkopendata.clear();
 			Verkopendata.addAll(Main.huidigSpel.getCompetitie().getSpelerTeam().getSelectie());
-			Kopendata.clear();
-			Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
 		}
 		if(arg0 instanceof TransferMarkt) {
 			// Transfermarkt is veranderd. Update!

@@ -201,12 +201,13 @@ public class Competitie extends Observable {
 
 		Competitie competitie = new Competitie(naam);
 
-		NodeList teamsnodes = ((Element) el.getElementsByTagName("teams").item(
-				0)).getElementsByTagName("team");
+		NodeList teamsnodes = ((Element) el.getElementsByTagName("teams").item(0)).getElementsByTagName("team");
 
-		for (int i = 0; i < teamsnodes.getLength(); i++)
-			competitie
-					.addTeam(Team.laadXMLElement((Element) teamsnodes.item(i)));
+		for (int i = 0; i < teamsnodes.getLength(); i++){
+			Team nieuwteam = Team.laadXMLElement((Element) teamsnodes.item(i));
+			competitie.addTeam(nieuwteam);
+			if(nieuwteam.isSpelerBestuurd()) competitie.setSpelerTeam(nieuwteam);
+		}
 
 		return competitie;
 	}
