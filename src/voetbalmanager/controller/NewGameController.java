@@ -55,7 +55,6 @@ public class NewGameController implements Initializable, ControlledScreen {
 	public void handleNext(ActionEvent event) throws IOException{
 		
 		String naam = TekstVeld.getText();
-		String loc = "./saves/" + naam + ".xml";
 		Main.huidigSpel.setCompetitie(XMLLoader.creeerCompetitie(naam));
 		Main.huidigSpel.getCompetitie().setNaam(naam);
 		
