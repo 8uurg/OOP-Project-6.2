@@ -24,7 +24,6 @@ import org.xml.sax.InputSource;
 
 import voetbalmanager.Main;
 import voetbalmanager.XMLLoader;
-import voetbalmanager.model.Team;
 
 public class LaadGameController implements Initializable, ControlledScreen{
 
