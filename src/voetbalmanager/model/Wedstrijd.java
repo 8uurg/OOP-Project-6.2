@@ -105,13 +105,10 @@ public class Wedstrijd {
 		String TeamOne = XMLLoader.getTaggedString("Team1", el);
 		String TeamTwo = XMLLoader.getTaggedString("Team2", el);
 		for(Team teams:competitie.getTeams()){
-			if(TeamOne.equals(teams.getNaam())){
+			if(TeamOne.equals(teams.getNaam()))
 				b=teams;
-			}
-			if(TeamTwo.equals(teams.getNaam())){
+			if(TeamTwo.equals(teams.getNaam()))
 				c=teams;
-			}
-			
 		}
 		a=new Wedstrijd(b,c);
 		return a;

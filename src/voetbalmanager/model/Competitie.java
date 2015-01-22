@@ -209,22 +209,22 @@ public class Competitie extends Observable {
 		Competitie competitie = new Competitie(naam);
 		competitie.week=week;
 
-		NodeList teamsnodes = ((Element) el.getElementsByTagName("teams").item(
-				0)).getElementsByTagName("team");
-
-		for (int i = 0; i < teamsnodes.getLength(); i++)
-			competitie
-				.addTeam(Team.laadXMLElement((Element) teamsnodes.item(i)));
-		if(el.hasAttribute("Speelschema")){
-		NodeList rondenodes = ((Element) el.getElementsByTagName("Speelschema").item(0)).getElementsByTagName("Speelronde");
-		competitie.maakSpeelSchema();
-		ArrayList<Speelronde> actualSchema = new ArrayList<Speelronde>();
-		for (int i=0;i<rondenodes.getLength();i++){
-			actualSchema.add(Speelronde.laadXMLelement((Element) rondenodes.item(i),competitie));
-		}
-		competitie.overrideAddSchema(actualSchema);
+		NodeList teamsnodes = ((Element) el.getElementsByTagName("teams").item(0)).getElementsByTagName("team");
+		for (int i = 0; i < teamsnodes.getLength(); i++){
+			Team nieuwteam = Team.laadXMLElement((Element) teamsnodes.item(i));
+			competitie.addTeam(nieuwteam);
+			if(nieuwteam.isSpelerBestuurd()) competitie.setSpelerTeam(nieuwteam);
 		}
 		
+		if(el.hasAttribute("Speelschema")){
+			NodeList rondenodes = ((Element) el.getElementsByTagName("Speelschema").item(0)).getElementsByTagName("Speelronde");
+			competitie.maakSpeelSchema();
+			ArrayList<Speelronde> actualSchema = new ArrayList<Speelronde>();
+			for (int i=0;i<rondenodes.getLength();i++)	
+				actualSchema.add(Speelronde.laadXMLelement((Element) rondenodes.item(i),competitie));
+			
+			competitie.overrideAddSchema(actualSchema);
+		}
 		return competitie;
 	}
 
