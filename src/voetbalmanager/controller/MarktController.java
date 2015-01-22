@@ -53,8 +53,7 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
 		border.setPrefSize(screen.getWidth(), screen.getHeight());
 		 
-		verkopenSpelerId.setDisable(true);
-		kopenSpelerId.setDisable(true);
+		
 		 
 		//init verkopenList
 		//TODO Arthur help
@@ -80,7 +79,7 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		   
 		//init kopenList
 		//TODO Arthur help
-		Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
+		
 		kopenSpeler.setItems(Kopendata);
 		kopenSpeler.setCellFactory((list) -> {return new ListCell<BeschikbareSpeler>(){
 			@Override
@@ -99,6 +98,9 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		kopenSpelerId.clear();
 		kopenSpelerId.appendText(newValue.getSpeler().toString());
 		});
+		
+		verkopenSpelerId.setDisable(true);
+		kopenSpelerId.setDisable(true);
 	   
 	}
 	   
@@ -142,6 +144,8 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 			// Team is veranderd. Update!
 			Verkopendata.clear();
 			Verkopendata.addAll(Main.huidigSpel.getCompetitie().getSpelerTeam().getSelectie());
+			Kopendata.clear();
+			Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
 		}
 		if(arg0 instanceof TransferMarkt) {
 			// Transfermarkt is veranderd. Update!
