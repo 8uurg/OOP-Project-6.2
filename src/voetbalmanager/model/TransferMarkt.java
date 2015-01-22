@@ -1,5 +1,7 @@
 package voetbalmanager.model;
 import java.util.ArrayList;
+import java.util.Observable;
+
 import voetbalmanager.exceptions.TransferException;
 
 /**
@@ -7,7 +9,7 @@ import voetbalmanager.exceptions.TransferException;
  * @author Jeroen, Marco
  * 
  */
-public class TransferMarkt {
+public class TransferMarkt extends Observable {
 	
 	/**
 	 * recenteTransfers geeft alle transfers terug die tussen teams plaatsvonden.
@@ -35,6 +37,8 @@ public class TransferMarkt {
 	public void Transfer(Team verkopendTeam, Team kopendTeam, Speler sp, int prijs) throws TransferException {
 		sp.prijs=prijs;
 		recenteTransfers.add(new Transfer(verkopendTeam, kopendTeam, sp));
+		this.setChanged();
+		this.notifyObservers();
 	}
 	
 	/**
@@ -44,6 +48,8 @@ public class TransferMarkt {
 	public void maakVerhandelbaar(Speler sp) {
 		BeschikbareSpeler bsp = new BeschikbareSpeler(sp,sp.getTeam());
 		verhandelbareSpelers.add(bsp);
+		this.setChanged();
+		this.notifyObservers();
 	}
 	
 	// Moet prijs bij ontslag op 0 worden gezet?
@@ -122,7 +128,9 @@ public class TransferMarkt {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		verhandelbareSpelers.remove(verhandelbareSpelers.indexOf(speler));		
+		verhandelbareSpelers.remove(verhandelbareSpelers.indexOf(speler));	
+		this.setChanged();
+		this.notifyObservers();
 	}
 	
 	/**

@@ -77,7 +77,8 @@ public class Main extends Application {
         Scene scene = new Scene(root,screen.getWidth(),screen.getHeight());
         primaryStage.setScene(scene);
         primaryStage.centerOnScreen();
-        primaryStage.alwaysOnTopProperty();
+        // Deze werkt niet bij mij, probleem? - Arthur
+        //primaryStage.alwaysOnTopProperty();
         primaryStage.setFullScreen(true);;
         primaryStage.setTitle("Main Menu");
         primaryStage.show();

@@ -1,5 +1,6 @@
 package voetbalmanager.model;
 import java.util.ArrayList;
+import java.util.Observable;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -11,7 +12,7 @@ import voetbalmanager.exceptions.TransferException;
 /**
  * Een klasse die een team voorstelt.
  */
-public class Team {
+public class Team extends Observable {
 	private String naam;
 	private ArrayList<Speler> spelers;
 	private Opstelling opstelling;
@@ -24,7 +25,6 @@ public class Team {
 	private int tegenpunten = 0;
 	
 	private static int maxSpeler = 30;
-	private int maxSpelers = 30;
 	private boolean gebruikerTeam;
 	
 	/**
@@ -138,6 +138,8 @@ public class Team {
 	
 	public void maakBudget(int budget) {
 		this.budget = budget;
+		this.setChanged();
+		this.notifyObservers();
 	}
 	
 	public int getBudget() {
@@ -169,12 +171,14 @@ public class Team {
 	public void voegToe(Speler sp, int transferbedrag) throws TransferException {
 		if (spelers.indexOf(sp) != -1)
 			throw new TransferException(sp.naam + " zit al in de selectie!");
-		else if (spelers.size() >= maxSpelers)
+		else if (spelers.size() >= maxSpeler)
 			throw new TransferException("De selectie bevat al het maximum aantal spelers!");
 		else {
 			verlaagBudget(transferbedrag);
 			spelers.add(sp);
 			sp.wijzigTeam(this);
+			this.setChanged();
+			this.notifyObservers();
 		}
 	}
 	
@@ -185,6 +189,8 @@ public class Team {
 			verhoogBudget(transferbedrag);
 			spelers.remove(sp);
 			sp.wijzigTeam(new Team("Vrij beschikbaar", false));
+			this.setChanged();
+			this.notifyObservers();
 		}
 	}
 	
@@ -286,6 +292,8 @@ public class Team {
 	public void overrideAdd(Speler speler) {
 		spelers.add(speler);
 		speler.wijzigTeam(this);
+		this.setChanged();
+		this.notifyObservers();
 	}
 	
 	/**
@@ -345,5 +353,7 @@ public class Team {
 		else if(uitslag0<uitslag1){
 			verloren = verloren+1;
 		}
+		this.setChanged();
+		this.notifyObservers();
 	}
 }
