@@ -168,14 +168,21 @@ public class Competitie extends Observable {
 		Element comp = doc.createElement("competitie");
 		
 		comp.setAttribute("naam", this.naam);
-
+		comp.setAttribute("Weeknummer", String.valueOf(week));
 		Element teamlist = doc.createElement("teams");
 
 		for (Team team : teams)
 			teamlist.appendChild(team.getXMLElement(doc));
 
 		comp.appendChild(teamlist);
-
+		
+		if(schema!=null){
+		Element speelschema = doc.createElement("Speelschema");
+		for (Speelronde ronde: schema.getSchema())
+			speelschema.appendChild(ronde.getXMLElement(doc));
+		
+		comp.appendChild(speelschema);
+		}
 		return comp;
 	}
 	
@@ -198,16 +205,26 @@ public class Competitie extends Observable {
 	 */
 	public static Competitie laadXMLElement(Element el) {
 		String naam = el.getAttribute("naam");
-
+		int week = Integer.parseInt(el.getAttribute("Weeknummer"));
 		Competitie competitie = new Competitie(naam);
+		competitie.week=week;
 
 		NodeList teamsnodes = ((Element) el.getElementsByTagName("teams").item(
 				0)).getElementsByTagName("team");
 
 		for (int i = 0; i < teamsnodes.getLength(); i++)
 			competitie
-					.addTeam(Team.laadXMLElement((Element) teamsnodes.item(i)));
-
+				.addTeam(Team.laadXMLElement((Element) teamsnodes.item(i)));
+		if(el.hasAttribute("Speelschema")){
+		NodeList rondenodes = ((Element) el.getElementsByTagName("Speelschema").item(0)).getElementsByTagName("Speelronde");
+		competitie.maakSpeelSchema();
+		ArrayList<Speelronde> actualSchema = new ArrayList<Speelronde>();
+		for (int i=0;i<rondenodes.getLength();i++){
+			actualSchema.add(Speelronde.laadXMLelement((Element) rondenodes.item(i),competitie));
+		}
+		competitie.overrideAddSchema(actualSchema);
+		}
+		
 		return competitie;
 	}
 
@@ -309,5 +326,9 @@ public class Competitie extends Observable {
 			System.out.println("Deze competitie is afgelopen, er kan geen nieuwe ronde meer gespeeld worden");
 		}
 		
+	}
+	
+	public void overrideAddSchema(ArrayList<Speelronde> a){
+		schema.overrideAddSchema(a);
 	}
 }
