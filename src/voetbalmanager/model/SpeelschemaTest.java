@@ -31,15 +31,7 @@ public class SpeelschemaTest {
 		
 		speelschema = new Speelschema(wedstrijden, 6);
 	}
-	
-	@Test
-	public void testMaakRonden() {
-/*		Hij crasht bij uitvoeren van maakRonden(), maar ik weet niet
- * 		hoe ik de fout moet verhelpen 
- * 		speelschema.maakRonden();
- */
-		
-	}
+
 	@Test
 	public void overallTest() {
 		Team A = new Team("A",true);
@@ -102,15 +94,55 @@ public class SpeelschemaTest {
 		Speelschema S = new Speelschema(Y,X.size());
 		S.maakRonden();
 		assertTrue(S.allContainTeams(X));
-		assertTrue(S.getSchema().size()==(TEST.getTeams().size()*2-2));
-		assertFalse(S.getSchema().size()==(TEST.getTeams().size()*2-3));
+		assertEquals(S.getSchema().size(),(TEST.getTeams().size()*2-2));
+		assertNotEquals(S.getSchema().size(),(TEST.getTeams().size()*2-3));
 		assertFalse(S.getSchema().get(0).equals(S.getSchema().get(1)));
+		int i=0;
+		while(i<10){
 		S = new Speelschema(Y,X.size());
 		S.maakRonden();
 		assertTrue(S.allContainTeams(X));
+		i++;
+		}
 		S = new Speelschema(Y,X.size());
 		S.maakRonden();
 		assertTrue(S.allContainTeams(X));
 	}
+	
+	@Test
+	public void testAllContainsTeams(){
+		ArrayList<Team> a = new ArrayList<Team>();
+		a.add(Ajax);
+		a.add(Feyenoord);
+		a.add(PSV);
+		a.add(AZ);
+		
+		ArrayList<Speelronde> schema = new ArrayList<Speelronde>();
+		Speelronde ronde = new Speelronde();
+		schema.add(ronde);
+		ronde.voegToe(new Wedstrijd(Ajax,Feyenoord));
+		ronde.voegToe(new Wedstrijd(Feyenoord,PSV));
+
+		ArrayList<Team[]> Y = new ArrayList<Team[]>();
+		int x=10;
+		Speelschema S = new Speelschema(Y,x);
+		S.overrideAddSchema(schema);
+		assertFalse(S.allContainTeams(a));
+		ronde.voegToe(new Wedstrijd(AZ,PSV));
+		assertTrue(S.allContainTeams(a));
+	}
+	
+	@Test
+	public void testOverrideAddSchema(){
+		ArrayList<Speelronde> schema = new ArrayList<Speelronde>();
+		Speelronde ronde = new Speelronde();
+		schema.add(ronde);
+		ronde.voegToe(new Wedstrijd(Ajax,Feyenoord));
+		ronde.voegToe(new Wedstrijd(Feyenoord,PSV));
+		assertNotEquals(speelschema.getSchema(),schema);
+		speelschema.overrideAddSchema(schema);
+		assertEquals(speelschema.getSchema(),schema);
+	}
+	
 	
 }
