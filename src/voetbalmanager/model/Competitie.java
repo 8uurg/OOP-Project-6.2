@@ -3,6 +3,7 @@ package voetbalmanager.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Observable;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -16,7 +17,7 @@ import voetbalmanager.controller.teammanager.AITeamManager;
  * @author MarcoH
  * @version 30/11/2014
  */
-public class Competitie {
+public class Competitie extends Observable {
 	private String naam;
 	private ArrayList<Team> teams;
 	private TransferMarkt transfer;
@@ -286,6 +287,8 @@ public class Competitie {
 		}
 		spelerTeam = team;
 		spelerTeam.setGebruikerTeam(true);
+		this.setChanged();
+		this.notifyObservers();
 	}
 	
 	public void startCompetitie(){

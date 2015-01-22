@@ -20,6 +20,7 @@ import javafx.stage.Screen;
 import voetbalmanager.Main;
 import voetbalmanager.Spel;
 import voetbalmanager.model.BeschikbareSpeler;
+import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Speler;
 import voetbalmanager.model.Team;
 import voetbalmanager.model.TransferMarkt;
@@ -80,7 +81,6 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		   
 		//init kopenList
 		//TODO Arthur help
-		Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
 		kopenSpeler.setItems(Kopendata);
 		kopenSpeler.setCellFactory((list) -> {return new ListCell<BeschikbareSpeler>(){
 			@Override
@@ -136,6 +136,9 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 	public void update(Observable arg0, Object arg1) {
 		if(arg0 instanceof Spel) {
 			// Huidige spel is veranderd. Update!
+			Main.huidigSpel.getCompetitie().addObserver(this);
+		}
+		if(arg0 instanceof Competitie) {
 			Main.huidigSpel.getCompetitie().getSpelerTeam().addObserver(this);
 		}
 		if(arg0 instanceof Team) {
@@ -145,6 +148,8 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		}
 		if(arg0 instanceof TransferMarkt) {
 			// Transfermarkt is veranderd. Update!
+			Kopendata.clear();
+			Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
 		}
 	} 
 	 
