@@ -38,7 +38,7 @@
             <Button fx:id="Next" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNext" prefWidth="115.0" styleClass="Buttons" text="Volgende" translateX="20.0" />
          </children>
          <padding>
-            <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />hkjhn
+            <Insets bottom="15.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </HBox>
    </bottom>

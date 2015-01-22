@@ -76,6 +76,8 @@ public class ManagementController implements Initializable, ControlledScreen,
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// disable editing op de textarea
+		
+		Main.huidigSpel.getCompetitie().getSpelerTeam().getBudget();
 		//Budget.setDisable(true);
 
 		// TODO speelschema inladen
@@ -83,7 +85,7 @@ public class ManagementController implements Initializable, ControlledScreen,
 
 	@FXML
 	public void handleStartMatch() throws IOException {
-		myController.setScreen(Main.MainMenu);
+		myController.setScreen(Main.StartMatch);
 		// todo linken naar start wedstrijd simulatie
 	}
 
