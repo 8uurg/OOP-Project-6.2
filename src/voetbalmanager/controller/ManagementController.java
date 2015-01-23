@@ -173,7 +173,7 @@ public class ManagementController implements Initializable, ControlledScreen,
 			}
 		}
 		if(arg0 instanceof Team) {
-			Budget.setText(Integer.toString(Main.huidigSpel.getCompetitie().getSpelerTeam().getBudget()));
+			Budget.setText("Budget: " + Integer.toString(Main.huidigSpel.getCompetitie().getSpelerTeam().getBudget()));
 		}
 	}
 

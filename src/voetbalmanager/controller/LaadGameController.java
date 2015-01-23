@@ -29,8 +29,6 @@ public class LaadGameController implements Initializable, ControlledScreen{
 
    @FXML private Button Terug;
    @FXML private Button Doorgaan;
-   @FXML private Button Back2;
-   @FXML private Button StartManagement;
    @FXML private ListView<File> laadgame;
    private ObservableList<File> listData = FXCollections.observableArrayList();
    @FXML private BorderPane border;
