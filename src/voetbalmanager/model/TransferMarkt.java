@@ -29,6 +29,15 @@ public class TransferMarkt extends Observable {
 		//maakVerhandelbaar(new Speler("a", 0, 0, null, null, 0, 0, 0));
 	}
 	
+	public boolean equals(Object other) {
+		if (other instanceof TransferMarkt) {
+			TransferMarkt that = (TransferMarkt)other;
+			return this.recenteTransfers.equals(that.recenteTransfers)
+					&&this.verhandelbareSpelers.equals(that.verhandelbareSpelers);
+			
+		}
+		return false;
+	}
 	// Hierbij wordt gewoon de prijs van de speler zelf gebruikt (dus speler.prijs)
 	/**
 	 * Maakt transfers mogelijk tussen twee verschillende teams.

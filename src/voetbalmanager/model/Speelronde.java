@@ -5,6 +5,10 @@ package voetbalmanager.model;
  */
 import java.util.ArrayList;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
 public class Speelronde {
 
 	ArrayList<Wedstrijd> wedstrijden;
@@ -149,5 +153,24 @@ public class Speelronde {
 			}
 		}
 		return true;
+	}
+	
+	public Element getXMLElement(Document doc) {
+		Element speelronde = doc.createElement("Speelronde");
+		for(Wedstrijd wedstrijd: wedstrijden){
+			speelronde.appendChild(wedstrijd.getXMLElement(doc));
+		}
+		return speelronde;
+	}
+
+	public static Speelronde laadXMLelement(Element el, Competitie competitie) {
+		Speelronde ronde = new Speelronde();
+		NodeList wedstrijden = el.getElementsByTagName("Wedstrijd");
+		
+		for(int i=0;i<wedstrijden.getLength();i++){
+			Element wedstrijd = (Element) wedstrijden.item(i);
+			ronde.voegToe(Wedstrijd.laadXMLElement(wedstrijd,competitie));
+		}
+		return ronde;
 	}
 }
