@@ -21,8 +21,6 @@ public class TransferMarkt extends Observable {
 	public TransferMarkt(){
 		recenteTransfers = new ArrayList<Transfer>();
 		verhandelbareSpelers = new ArrayList<BeschikbareSpeler>();
-		//BeschikbareSpeler dummie = new BeschikbareSpeler(new Speler("a", 0, 0, null, null, 0, 0, 0),null);
-		//maakVerhandelbaar(new Speler("a", 0, 0, null, null, 0, 0, 0));
 	}
 	
 	public boolean equals(Object other) {

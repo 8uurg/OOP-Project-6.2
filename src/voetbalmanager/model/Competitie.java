@@ -310,17 +310,23 @@ public class Competitie extends Observable {
 	
 	public void startCompetitie(){
 		int week=this.week;
+		AITeamManager a = new AITeamManager();
 		if(week<schema.getSchema().size()){
+			for(Team team: teams){
+				a.genereerOpstelling(team);
+			}
+			for(Wedstrijd wedstrijd: schema.getSchema().get(week).getWedstrijden()){
+				wedstrijd.speelWedstrijd();
+			}
 			schema.getSchema().get(week);
 			if(week+1<schema.getSchema().size()){
-				schema.getSchema().get(week+1);
+				System.out.println(schema.getSchema().get(week+1));
 			}
 			else{
 				System.out.println("Dit is de laatste speelronde, hierna volgen geen rondes meer");
 			}
-			AITeamManager a = new AITeamManager();
-			a.runManagementCycle(this);
-			week++;
+		//	a.runManagementCycle(this);
+			this.week++;
 		}
 		else{
 			System.out.println("Deze competitie is afgelopen, er kan geen nieuwe ronde meer gespeeld worden");
@@ -330,5 +336,10 @@ public class Competitie extends Observable {
 	
 	public void overrideAddSchema(ArrayList<Speelronde> a){
 		schema.overrideAddSchema(a);
+	}
+
+	public int getWeek() {
+		return week;
+		
 	}
 }
