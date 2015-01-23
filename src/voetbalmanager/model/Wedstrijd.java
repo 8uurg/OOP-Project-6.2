@@ -125,5 +125,12 @@ public class Wedstrijd {
 		}
 		return a;
 	}
+	
+	public boolean getSpelerWedstrijd(){
+		if(teams[0].isSpelerBestuurd()||teams[1].isSpelerBestuurd()){
+			return true;
+		}
+		return false;
+	}
 
 }

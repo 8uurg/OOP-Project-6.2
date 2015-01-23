@@ -348,4 +348,14 @@ public class Competitie extends Observable {
 		return week;
 		
 	}
+	
+	public Wedstrijd getSpelerWedstrijd(){
+		for(Wedstrijd w :schema.getSchema().get(week-1).getWedstrijden()){
+			if(w.getSpelerWedstrijd()){
+				return w;
+			}
+		}
+		System.out.println("Er is geen spelerswedstrijd");
+		return null;
+	}
 }
