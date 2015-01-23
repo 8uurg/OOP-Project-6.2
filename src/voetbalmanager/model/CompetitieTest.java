@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import voetbalmanager.XMLLoader;
+
 public class CompetitieTest {
 	Team Ajax, Feyenoord, PSV, AZ;
 	Competitie eredivisie,competitie;
@@ -159,5 +161,28 @@ public class CompetitieTest {
 		a.addTeam(PSV);
 		a.getSchema();
 		assertNotEquals(a.getSchema().getSchema().size(),0);
+	}
+	
+	@Test
+	public void testZoekTeam() {
+		Competitie c = XMLLoader.creeerCompetitie("Heh");
+		assertNull(c.zoekTeam("Wilfried"));
+		Team t = c.getTeams().get(0);
+		assertEquals(t, c.zoekTeam(t.getNaam()));
+	}
+	
+	@Test
+	public void testToString() {
+		Competitie c = XMLLoader.creeerCompetitie("Heh");
+		assertNotNull(c.toString());
+		assertTrue(c.toString().startsWith("Competitie"));
+	}
+	
+	@Test
+	public void testSpeel() {
+		Competitie c = XMLLoader.creeerCompetitie("Heh");
+		c.maakSpeelSchema();
+		for(int i=0; i<100; ++i)
+			c.startCompetitie();
 	}
 }

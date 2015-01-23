@@ -36,6 +36,9 @@ public class TestXMLLoad {
 		oud.addTeam(a);
 		oud.addTeam(b);
 		
+		oud.getTransferMarkt().maakVerhandelbaar(a.getSelectie().get(0));
+		oud.getTransferMarkt().maakVerhandelbaar(new Speler("James Watt", 13, 2, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 60, 40, 70));
+		
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		StreamResult outs = new StreamResult(out);
 		

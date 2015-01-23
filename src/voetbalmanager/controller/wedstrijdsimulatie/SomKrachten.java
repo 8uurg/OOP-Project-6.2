@@ -26,8 +26,10 @@ public class SomKrachten {
 	public boolean equals(Object other) {
 		if (other instanceof SomKrachten) {
 			SomKrachten that = (SomKrachten)other;
-			if (this.aanval == that.aanval && this.verdediging == that.verdediging && this.uithouding == that.uithouding)
-				return true;
+			return  this.aanval == that.aanval &&
+					this.verdediging == that.verdediging &&
+					this.uithouding == that.uithouding;
+				
 		}
 		return false;
 	}
