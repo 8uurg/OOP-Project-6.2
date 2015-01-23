@@ -21,7 +21,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import voetbalmanager.Main;
+import voetbalmanager.Spel;
 import voetbalmanager.XMLWriter;
+import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Speelschema;
 //import voetbalmanager.Main;
 import voetbalmanager.model.Team;
@@ -76,8 +78,6 @@ public class ManagementController implements Initializable, ControlledScreen,
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// disable editing op de textarea
-		
-		Main.huidigSpel.getCompetitie().getSpelerTeam().getBudget();
 		//Budget.setDisable(true);
 
 		// TODO speelschema inladen
@@ -160,8 +160,21 @@ public class ManagementController implements Initializable, ControlledScreen,
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
-		// TODO Auto-generated method stub
-
+		if(arg0 instanceof Spel) {
+			if(Main.huidigSpel.getCompetitie()!=null)
+				update(Main.huidigSpel.getCompetitie(), arg1);
+			
+			Main.huidigSpel.getCompetitie().addObserver(this);
+		}
+		if(arg0 instanceof Competitie) {
+			if(Main.huidigSpel.getCompetitie().getSpelerTeam()!=null) {
+				Main.huidigSpel.getCompetitie().getSpelerTeam().addObserver(this);
+				update(Main.huidigSpel.getCompetitie().getSpelerTeam(), arg1);
+			}
+		}
+		if(arg0 instanceof Team) {
+			Budget.setText(Integer.toString(Main.huidigSpel.getCompetitie().getSpelerTeam().getBudget()));
+		}
 	}
 
 }
