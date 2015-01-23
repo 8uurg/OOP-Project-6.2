@@ -1,5 +1,11 @@
 package voetbalmanager.model;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
+import voetbalmanager.XMLLoader;
+import voetbalmanager.XMLWriter;
 import voetbalmanager.controller.wedstrijdsimulatie.Resultaat;
 import voetbalmanager.controller.wedstrijdsimulatie.WedstrijdSimulator;
 
@@ -85,6 +91,27 @@ public class Wedstrijd {
 	public void kenPuntenToe(){
 		teams[0].kenPuntenToe(uitslag[0],uitslag[1]);
 		teams[1].kenPuntenToe(uitslag[1],uitslag[0]);
+	}
+	public Element getXMLElement(Document doc) {
+		Element wedstrijd = doc.createElement("Wedstrijd");
+		wedstrijd.appendChild(XMLWriter.getElementContainingString("Team1", teams[0].getNaam(), doc));
+		wedstrijd.appendChild(XMLWriter.getElementContainingString("Team2", teams[1].getNaam(), doc));
+		return wedstrijd;
+	}
+	public static Wedstrijd laadXMLElement(Element el,Competitie competitie) {
+		Wedstrijd a;
+		Team b = null;
+		Team c = null;
+		String TeamOne = XMLLoader.getTaggedString("Team1", el);
+		String TeamTwo = XMLLoader.getTaggedString("Team2", el);
+		for(Team teams:competitie.getTeams()){
+			if(TeamOne.equals(teams.getNaam()))
+				b=teams;
+			if(TeamTwo.equals(teams.getNaam()))
+				c=teams;
+		}
+		a=new Wedstrijd(b,c);
+		return a;
 	}
 
 }
