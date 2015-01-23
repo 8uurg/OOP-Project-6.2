@@ -311,4 +311,18 @@ public class Competitie extends Observable {
 		}
 		
 	}
+	
+	/**
+	 * Zoek een team in de competitie bij naam.
+	 * @param naam De naam van het team.
+	 * @return Het team met deze naam.
+	 */
+	public Team zoekTeam(String naam) {
+		for(Team t:teams){
+			if(t.getNaam().equalsIgnoreCase(naam)) return t;
+		}
+		return null;
+	}
+	
+	
 }

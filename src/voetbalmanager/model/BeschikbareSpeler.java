@@ -1,6 +1,9 @@
 package voetbalmanager.model;
 
 import java.util.ArrayList;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 /**
  * Spelers die beschikbaar zijn op de spelersmarkt om te kopen.
  * @author Marco
@@ -70,5 +73,33 @@ public class BeschikbareSpeler {
 			}
 		}
 		return j;
+	}
+	
+	/**
+	 * Creeer een beschikbare speler uit een xml element en de competitie waarin hij zich bevindt.
+	 * @param el Het element dat ingeladen moet worden.
+	 * @param c De competitie waarin de speler zich bevindt.
+	 * @return Een beschikbarespeler die overeenkomt met de gegevens uit het element.
+	 */
+	public static BeschikbareSpeler laadXMLElement(Element el, Competitie c) {
+		Team t = c.zoekTeam(el.getAttribute("team"));
+		Speler s = Speler.laadXMLElement((Element) el.getElementsByTagName("speler").item(0));
+		if(t==null) System.out.println("De speler " + s.getNaam() + " heeft geen oud team in de transfermarkt.");
+		return new BeschikbareSpeler(s, t);
+	}
+	
+	/**
+	 * Creeer een element die deze instantie van deze beschikbarespeler weergeeft.
+	 * @param doc Het document waarin het element wordt gebruikt.
+	 * @return Een nieuw element met de eigenschappen van deze instantie.
+	 */
+	public Element getXMLElement(Document doc) {
+		Element el = doc.createElement("beschikbarespeler");
+		
+		el.setAttribute("team", oudTeam.getNaam());
+		
+		el.appendChild(speler.getXMLElement(doc));
+		
+		return el;
 	}
 }
