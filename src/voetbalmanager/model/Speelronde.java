@@ -156,7 +156,7 @@ public class Speelronde {
 	}
 	
 	public Element getXMLElement(Document doc) {
-		Element speelronde = doc.createElement("Speelronde");
+		Element speelronde = doc.createElement("speelronde");
 		for(Wedstrijd wedstrijd: wedstrijden){
 			speelronde.appendChild(wedstrijd.getXMLElement(doc));
 		}
@@ -165,7 +165,7 @@ public class Speelronde {
 
 	public static Speelronde laadXMLelement(Element el, Competitie competitie) {
 		Speelronde ronde = new Speelronde();
-		NodeList wedstrijden = el.getElementsByTagName("Wedstrijd");
+		NodeList wedstrijden = el.getElementsByTagName("wedstrijd");
 		
 		for(int i=0;i<wedstrijden.getLength();i++){
 			Element wedstrijd = (Element) wedstrijden.item(i);

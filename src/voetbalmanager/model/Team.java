@@ -352,4 +352,9 @@ public class Team extends Observable {
 		this.setChanged();
 		this.notifyObservers();
 	}
+
+	public void overrideAddTegenpunt(int z) {
+		tegenpunten = z;
+		
+	}
 }

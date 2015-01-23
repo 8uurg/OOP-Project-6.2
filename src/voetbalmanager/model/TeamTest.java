@@ -49,6 +49,10 @@ public class TeamTest {
 		Ajax2.overrideAdd(A);
 		Ajax2.overrideAdd(C);
 		assertEquals(Ajax2, Ajax);
+		Team ajax3 = new Team("Ajax", false);
+		int z = 3;
+		ajax3.overrideAddTegenpunt(z);
+		assertNotEquals(Ajax2,ajax3);
 	}
 	
 	@Test

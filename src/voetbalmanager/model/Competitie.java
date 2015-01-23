@@ -168,7 +168,7 @@ public class Competitie extends Observable {
 		Element comp = doc.createElement("competitie");
 		
 		comp.setAttribute("naam", this.naam);
-		comp.setAttribute("Weeknummer", String.valueOf(week));
+		comp.setAttribute("weeknummer", String.valueOf(week));
 		Element teamlist = doc.createElement("teams");
 
 		for (Team team : teams)
@@ -179,10 +179,8 @@ public class Competitie extends Observable {
 		comp.appendChild(transfer.getXMLElement(doc));
 		
 		if(schema!=null){
-		Element speelschema = doc.createElement("Speelschema");
-		for (Speelronde ronde: schema.getSchema())
-			speelschema.appendChild(ronde.getXMLElement(doc));
-		
+		Element speelschema = doc.createElement("speelschema");
+		speelschema.appendChild(schema.getXMLElement(doc));
 		comp.appendChild(speelschema);
 		}
 		return comp;
@@ -207,7 +205,7 @@ public class Competitie extends Observable {
 	 */
 	public static Competitie laadXMLElement(Element el) {
 		String naam = el.getAttribute("naam");
-		int week = Integer.parseInt(el.getAttribute("Weeknummer"));
+		int week = Integer.parseInt(el.getAttribute("weeknummer"));
 		Competitie competitie = new Competitie(naam);
 		competitie.week=week;
 
@@ -220,14 +218,10 @@ public class Competitie extends Observable {
 		
 		competitie.transfer = TransferMarkt.laadXMLElement((Element) el.getElementsByTagName("transfermarkt").item(0), competitie);
 		
-		if(el.hasAttribute("Speelschema")){
-			NodeList rondenodes = ((Element) el.getElementsByTagName("Speelschema").item(0)).getElementsByTagName("Speelronde");
-			competitie.maakSpeelSchema();
-			ArrayList<Speelronde> actualSchema = new ArrayList<Speelronde>();
-			for (int i=0;i<rondenodes.getLength();i++)	
-				actualSchema.add(Speelronde.laadXMLelement((Element) rondenodes.item(i),competitie));
-			
-			competitie.overrideAddSchema(actualSchema);
+		if(el.getElementsByTagName("speelschema").item(0)!=null){
+			Speelschema actualSchema = Speelschema.laadXMLelement(((Element) el.getElementsByTagName("speelschema").item(0)) ,competitie);
+
+			competitie.schema = actualSchema;
 		}
 		return competitie;
 	}
@@ -348,10 +342,6 @@ public class Competitie extends Observable {
 			if(t.getNaam().equalsIgnoreCase(naam)) return t;
 		}
 		return null;
-	}
-	
-	public void overrideAddSchema(ArrayList<Speelronde> a){
-		schema.overrideAddSchema(a);
 	}
 
 	public int getWeek() {

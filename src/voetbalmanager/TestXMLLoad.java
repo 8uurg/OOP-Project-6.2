@@ -16,6 +16,7 @@ import org.xml.sax.InputSource;
 import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Speler;
 import voetbalmanager.model.Team;
+import voetbalmanager.model.Wedstrijd;
 
 public class TestXMLLoad {
 
@@ -43,7 +44,7 @@ public class TestXMLLoad {
 		
 		ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
 		
-	//	System.out.print(out);
+		System.out.print(out);
 		
 		Competitie nieuw = XMLLoader.laadCompetitie(new InputSource(in));
 		
@@ -164,6 +165,18 @@ public class TestXMLLoad {
 	@Test
 	public void testCreatie() {
 		Competitie c = XMLLoader.creeerCompetitie("eredivisie");
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		StreamResult outs = new StreamResult(out);
+		c.maakSpeelSchema();
+		c.startCompetitie();
+		XMLWriter.saveCompetitie(c, outs);
+		ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
+		Competitie nieuw = XMLLoader.laadCompetitie(new InputSource(in));
+		assertEquals(c.getWeek(),nieuw.getWeek());
+//		assertEquals(c.getSchema().getSchema(),nieuw.getSchema().getSchema());
+		assertEquals(c.getNaam(),nieuw.getNaam());
+//		assertEquals(c.getTeams(),nieuw.getTeams());
+		assertEquals(c.getTransferMarkt(),nieuw.getTransferMarkt());
 	}
 
 }

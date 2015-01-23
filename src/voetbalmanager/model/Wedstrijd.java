@@ -23,8 +23,8 @@ public class Wedstrijd {
 	public boolean equals(Object other){
 		if(other instanceof Wedstrijd){
 			 Wedstrijd that= (Wedstrijd)other;
-			 return this.teams[1].equals(that.teams[1])&&
-					 this.teams[0].equals(that.teams[0]);
+			 return this.teams[1].equals(that.teams[1])
+					 &&this.teams[0].equals(that.teams[0]);
 		}
 		return false;
 	}
@@ -93,17 +93,21 @@ public class Wedstrijd {
 		teams[1].kenPuntenToe(uitslag[1],uitslag[0]);
 	}
 	public Element getXMLElement(Document doc) {
-		Element wedstrijd = doc.createElement("Wedstrijd");
-		wedstrijd.appendChild(XMLWriter.getElementContainingString("Team1", teams[0].getNaam(), doc));
-		wedstrijd.appendChild(XMLWriter.getElementContainingString("Team2", teams[1].getNaam(), doc));
+		Element wedstrijd = doc.createElement("wedstrijd");
+		wedstrijd.appendChild(XMLWriter.getElementContainingString("team1", teams[0].getNaam(), doc));
+		wedstrijd.appendChild(XMLWriter.getElementContainingString("team2", teams[1].getNaam(), doc));
+		if(uitslag!=null){
+			wedstrijd.appendChild(XMLWriter.getElementContainingInt("scoreteam1", uitslag[0], doc));
+			wedstrijd.appendChild(XMLWriter.getElementContainingInt("scoreteam2",uitslag[1],doc));
+		}
 		return wedstrijd;
 	}
 	public static Wedstrijd laadXMLElement(Element el,Competitie competitie) {
 		Wedstrijd a;
 		Team b = null;
 		Team c = null;
-		String TeamOne = XMLLoader.getTaggedString("Team1", el);
-		String TeamTwo = XMLLoader.getTaggedString("Team2", el);
+		String TeamOne = XMLLoader.getTaggedString("team1", el);
+		String TeamTwo = XMLLoader.getTaggedString("team2", el);
 		for(Team teams:competitie.getTeams()){
 			if(TeamOne.equals(teams.getNaam()))
 				b=teams;
@@ -111,6 +115,14 @@ public class Wedstrijd {
 				c=teams;
 		}
 		a=new Wedstrijd(b,c);
+		int scoreteam1;
+		int scoreteam2;
+		if(el.getElementsByTagName("scoreteam1").item(0)!=null){
+			scoreteam1 =XMLLoader.getTaggedInt("scoreteam1",el);
+			scoreteam2 = XMLLoader.getTaggedInt("scoreteam2", el);
+			a.maakUitslag(scoreteam1,scoreteam2);
+			a.kenPuntenToe();
+		}
 		return a;
 	}
 

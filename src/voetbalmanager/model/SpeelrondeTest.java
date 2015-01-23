@@ -28,7 +28,9 @@ public class SpeelrondeTest {
 		assertEquals(A,B);
 		A.voegToe(a);
 		A.voegToe(b);
+		a.maakUitslag(5, 5);
 		B.voegToe(a);
+		a.maakUitslag(5, 5);
 		B.voegToe(b);
 		assertEquals(A,B);
 		A.voegToe(e);
