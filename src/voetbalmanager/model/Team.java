@@ -17,6 +17,7 @@ public class Team extends Observable {
 	private ArrayList<Speler> spelers;
 	private Opstelling opstelling;
 	private int budget = -1;
+	public static final int startBudget = 100000;
 	
 	private int gewonnen = 0;
 	private int gelijk = 0;
@@ -239,16 +240,11 @@ public class Team extends Observable {
 	 */
 	public static Team laadXMLElement(Element el)
 	{
-		/* TODO: De teamnaam moet nog worden ingelezen vanuit het XML-bestand
-		 * TODO: Budget moet worden ingelezen uit XML-bestand (kan worden ingevoerd door getBudget()
-		 * 		 of door 
-		 */
 		String naam = el.getAttribute("naam");
 		boolean gebruikerTeam = el.getAttribute("gebruikerteam").equalsIgnoreCase("true");
 		
-		//TODO Controleer budget van alle teams.
 		String bg = el.getAttribute("budget"); 
-		int budget = bg==""?-1:Integer.parseInt(bg);
+		int budget = bg==""?startBudget:Integer.parseInt(bg);
 		
 		Team team = new Team(naam, gebruikerTeam);
 		NodeList spelers = el.getElementsByTagName("speler");

@@ -2,6 +2,10 @@ package voetbalmanager.model;
 import java.util.ArrayList;
 import java.util.Observable;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
 import voetbalmanager.exceptions.TransferException;
 
 /**
@@ -155,6 +159,40 @@ public class TransferMarkt extends Observable {
 		return potentieel;
 	}
 	
+	/**
+	 * Laad een TransferMarkt uit een XML Element.
+	 * @param el	Het element waaruit de transfermarkt moet worden ingeladen.
+	 * @param c		De competitie waaruit het element komt.
+	 * @return De ingeladen transfermarkt.
+	 */
+	public static TransferMarkt laadXMLElement(Element el, Competitie c) {
+		TransferMarkt transferMarkt = new TransferMarkt();
+		
+		if(el!=null) {
+			NodeList l = el.getElementsByTagName("beschikbarespeler");
+			
+			for(int i=0; i<l.getLength(); ++i) {
+				transferMarkt.verhandelbareSpelers.add(BeschikbareSpeler.laadXMLElement(el, c));
+			}
+		}
+		
+		return transferMarkt;
+	}
+	
+	/**
+	 * Genereer een XML Element voor opslaan.
+	 * @param doc Het document waarin het element terecht komt
+	 * @return Een nieuw element dat deze instantie van deze klasse weergeeft.
+	 */
+	public Element getXMLElement(Document doc) {
+		Element e = doc.createElement("transfermarkt");
+		
+		for(BeschikbareSpeler s: verhandelbareSpelers) {
+			e.appendChild(s.getXMLElement(doc));
+		}
+		
+		return e;
+	}
 	
 
 }

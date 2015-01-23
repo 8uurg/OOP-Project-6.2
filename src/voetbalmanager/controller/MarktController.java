@@ -40,6 +40,9 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 	@FXML private Button Verkopen;
 	private ObservableList<Speler> Verkopendata = FXCollections.observableArrayList();
 	
+	private Speler verkoopFocus;
+	private BeschikbareSpeler koopFocus;
+	
 	@FXML private BorderPane border;
 	
 	
@@ -73,8 +76,11 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		});
 		// Details in de textarea
 		verkopenSpeler.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
-		verkopenSpelerId.clear();
-		verkopenSpelerId.appendText(newValue.toString());
+			verkopenSpelerId.clear();
+			if(newValue!= null)verkopenSpelerId.appendText(newValue.toString());
+			else verkopenSpelerId.appendText("Geen speler geselecteerd.");
+			
+			verkoopFocus = newValue;
 		});
 		   
 		   
@@ -96,8 +102,11 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		});
 		// Details in de textarea
 		kopenSpeler.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
-		kopenSpelerId.clear();
-		kopenSpelerId.appendText(newValue.getSpeler().toString());
+			kopenSpelerId.clear();
+			if(newValue!=null) kopenSpelerId.appendText(newValue.getSpeler().toString());
+			else kopenSpelerId.appendText("Geen speler geselecteerd.");
+			
+			koopFocus = newValue;
 		});
 		
 		verkopenSpelerId.setDisable(true);
@@ -113,19 +122,12 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 	
 	@FXML
 	public void handleKopen() throws IOException{
-		
-		kopenSpeler.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
-			Main.huidigSpel.getCompetitie().getTransferMarkt().koopSpeler(Main.huidigSpel.getCompetitie().getSpelerTeam(), newValue);
-		});
-		
+		Main.huidigSpel.getCompetitie().getTransferMarkt().koopSpeler(Main.huidigSpel.getCompetitie().getSpelerTeam(), koopFocus);
 	}
 	
 	@FXML
 	public void handleVerkopen() throws IOException{
-		
-		verkopenSpeler.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
-			Main.huidigSpel.getCompetitie().getTransferMarkt().maakVerhandelbaar(newValue);
-		});
+		Main.huidigSpel.getCompetitie().getTransferMarkt().maakVerhandelbaar(verkoopFocus);;
 	}
 	
 	@FXML
@@ -152,7 +154,7 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		}
 		if(arg0 instanceof Competitie) {
 			Main.huidigSpel.getCompetitie().getSpelerTeam().addObserver(this);
-
+			Main.huidigSpel.getCompetitie().getTransferMarkt().addObserver(this);
 			Kopendata.clear();
 			Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
 			
