@@ -173,8 +173,10 @@ public class Competitie extends Observable {
 
 		for (Team team : teams)
 			teamlist.appendChild(team.getXMLElement(doc));
-
+		
 		comp.appendChild(teamlist);
+		
+		comp.appendChild(transfer.getXMLElement(doc));
 		
 		if(schema!=null){
 		Element speelschema = doc.createElement("Speelschema");
@@ -215,6 +217,8 @@ public class Competitie extends Observable {
 			competitie.addTeam(nieuwteam);
 			if(nieuwteam.isSpelerBestuurd()) competitie.setSpelerTeam(nieuwteam);
 		}
+		
+		competitie.transfer = TransferMarkt.laadXMLElement((Element) el.getElementsByTagName("transfermarkt").item(0), competitie);
 		
 		if(el.hasAttribute("Speelschema")){
 			NodeList rondenodes = ((Element) el.getElementsByTagName("Speelschema").item(0)).getElementsByTagName("Speelronde");
