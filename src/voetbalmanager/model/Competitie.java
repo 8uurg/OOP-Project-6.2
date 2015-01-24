@@ -304,6 +304,10 @@ public class Competitie extends Observable {
 		this.notifyObservers();
 	}
 	
+	/**
+	 * Start een speelronde, voert het maken van een opstelling uit, vervolgens speelt hij alle wedstrijden van die week.
+	 * Hierna runt de managementcycle van de AI die spelers koopt,verkoopt en transfert.
+	 */
 	public void startSpeelronde(){
 		int week=this.week;
 		AITeamManager a = new AITeamManager();
@@ -334,12 +338,21 @@ public class Competitie extends Observable {
 		}
 		return null;
 	}
-
+	
+	/**
+	 * Geeft de huidige speelweek, begint met tellen bij 1.
+	 * @return
+	 */
 	public int getWeek() {
-		return week;
+		return week+1;
 		
 	}
 	
+	/**
+	 * Geeft De wedstrijd die in de afgelopen week gespeeld is door de speler terug.
+	 * (uitvoeren na startSpeelronde())
+	 * @return Wedstrijd van de speler.
+	 */
 	public Wedstrijd getSpelerWedstrijd(){
 		for(Wedstrijd w :schema.getSchema().get(week-1).getWedstrijden()){
 			if(w.getSpelerWedstrijd()){
@@ -350,10 +363,20 @@ public class Competitie extends Observable {
 		return null;
 	}
 	
+	/**
+	 * Geeft de wedstrijden terug die in de volgende ronde gespeeld moeten worden.
+	 * (kan voor startSpeelronde() uitgevoerd worden voor de wedstrijden in eerste week)
+	 * @return ArrayList met de wedstrijden die in de volgende ronde gespeeld worden.
+	 */
 	public ArrayList<Wedstrijd> volgendeRonde(){
 		return getSchema().getSchema().get(week).getWedstrijden();
 	}
 	
+	/**
+	 * Geeft de resultaten terug van de wedstrijden van de afgelopen week. 
+	 * (dus na startSpeelronde()).
+	 * @return ArrayList met de wedstrijden die gespeeld zijn in de afgelopen speelronde.
+	 */
 	public ArrayList<Wedstrijd> huidigeResultaten(){
 		if(!(week<1)){
 		return getSchema().getSchema().get(week-1).getWedstrijden();
