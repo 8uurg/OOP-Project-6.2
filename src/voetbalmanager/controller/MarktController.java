@@ -28,23 +28,19 @@ import voetbalmanager.model.TransferMarkt;
 public class MarktController implements Initializable, ControlledScreen, Observer{
 
 	@FXML private Button BackMarket;
-	ScreensController myController;   
-	
 	@FXML private ListView<BeschikbareSpeler> kopenSpeler;
 	@FXML private TextArea kopenSpelerId;
 	@FXML private Button Kopen;
-	private ObservableList<BeschikbareSpeler> Kopendata = FXCollections.observableArrayList();
-	
 	@FXML private ListView<Speler> verkopenSpeler;
 	@FXML private TextArea verkopenSpelerId;
 	@FXML private Button Verkopen;
-	private ObservableList<Speler> Verkopendata = FXCollections.observableArrayList();
-	
-	private Speler verkoopFocus;
-	private BeschikbareSpeler koopFocus;
-	
 	@FXML private BorderPane border;
 	
+	ScreensController myController; 
+	private Speler verkoopFocus;
+	private BeschikbareSpeler koopFocus;
+	private ObservableList<Speler> Verkopendata = FXCollections.observableArrayList();
+	private ObservableList<BeschikbareSpeler> Kopendata = FXCollections.observableArrayList();
 	
 	public MarktController(){
 		Main.huidigSpel.addObserver(this);

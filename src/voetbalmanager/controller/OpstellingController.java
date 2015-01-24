@@ -15,24 +15,29 @@ import javafx.stage.Screen;
 import voetbalmanager.Main;
 
 public class OpstellingController implements Initializable, ControlledScreen {
-	
-	@FXML private Button Terug;
-	@FXML private TextField tekst;
-	@FXML private BorderPane border;
+
+	@FXML
+	private Button Terug;
+	@FXML
+	private TextField tekst;
+	@FXML
+	private BorderPane border;
 	
 	ScreensController myController;
-   
+
 	@Override
-   public void initialize(URL location, ResourceBundle resources){
-	   Rectangle2D screen = Screen.getPrimary().getVisualBounds();
-	   border.setPrefSize(screen.getWidth(), screen.getHeight());
-   }
-	public void setScreenParent(ScreensController screen){
+	public void initialize(URL location, ResourceBundle resources) {
+		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+		border.setPrefSize(screen.getWidth(), screen.getHeight());
+	}
+
+	public void setScreenParent(ScreensController screen) {
 		myController = screen;
 	}
-	 @FXML
-	   public void handleTerug(ActionEvent event)throws IOException{
-		   myController.setScreen(Main.ManagementMain);
-	   }
+
+	@FXML
+	public void handleTerug(ActionEvent event) throws IOException {
+		myController.setScreen(Main.ManagementMain);
+	}
 
 }
