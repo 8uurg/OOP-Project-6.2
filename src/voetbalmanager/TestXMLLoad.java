@@ -171,7 +171,7 @@ public class TestXMLLoad {
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		StreamResult outs = new StreamResult(out);
 		c.maakSpeelSchema();
-		c.startCompetitie();
+		c.startSpeelronde();
 		XMLWriter.saveCompetitie(c, outs);
 		ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
 		Competitie nieuw = XMLLoader.laadCompetitie(new InputSource(in));

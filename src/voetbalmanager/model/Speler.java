@@ -259,24 +259,6 @@ public class Speler {
 	
 	public boolean overweegVerkopen(ArrayList<Speler> spelers) {
 		Speler.Type a = type;
-		int min = 0;
-		switch (type) {
-		case Aanvaller:
-			min = 4;
-			break;
-		case Doelman:
-			min = 1;
-			break;
-		case Middenvelder:
-			min = 4;
-			break;
-		case Verdediger:
-			min = 3;
-
-			break;
-		default:
-			break;
-		}
 		int totaalType =0;
 		double totaalScore = 0;
 		for(Speler inTeam: spelers){
@@ -285,8 +267,39 @@ public class Speler {
 				totaalScore =totaalScore+inTeam.getSpelerWaarde();
 			}
 		}
-		if(getSpelerWaarde()<totaalScore/totaalType&&totaalType>min)
+		if(checkMinimum(spelers)&&getSpelerWaarde()<totaalScore/totaalType)
 			return true;
+		return false;
+	}
+	
+	public boolean checkMinimum(ArrayList<Speler> spelers){
+		Speler.Type a = type;
+		int min = 0;
+		switch (a) {
+		case Aanvaller:
+			min = 5;
+			break;
+		case Doelman:
+			min = 2;
+			break;
+		case Middenvelder:
+			min = 5;
+			break;
+		case Verdediger:
+			min = 5;
+			break;
+		default:
+			break;
+		}
+		int i=0;
+		for(Speler inTeam: spelers){
+			if(inTeam.type==a){
+				i++;
+			}
+		}
+		if(i>min){
+			return true;
+		}
 		return false;
 	}
 }

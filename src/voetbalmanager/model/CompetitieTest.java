@@ -180,9 +180,15 @@ public class CompetitieTest {
 	
 	@Test
 	public void testSpeel() {
-		Competitie c = XMLLoader.creeerCompetitie("Heh");
-		c.maakSpeelSchema();
-		for(int i=0; i<34; ++i)
-			c.startCompetitie();
+		//De for loop runt een complete competitie 32 ronden, dus als je 25 keer een competitie wil testen moet je
+		//de comments even weghalen ^^.
+	//	for(int j=0;j<25;++j){	
+			Competitie c = XMLLoader.creeerCompetitie("Heh");
+			c.maakSpeelSchema();
+			for(int i=0; i<34; ++i){
+				c.startSpeelronde();
+			}
+			System.out.println(c.Sorteren("Punten").toString());
+	//	}
 	}
 }

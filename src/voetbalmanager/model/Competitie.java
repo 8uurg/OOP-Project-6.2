@@ -148,8 +148,6 @@ public class Competitie extends Observable {
 			if (team.getNaam().length() < 8)
 				res.append("	");
 			res.append("	");
-			res.append(team.toString());
-			res.append("	");
 			res.append(team.getPuntenTotaal());
 			res.append('\n');
 		}
@@ -306,7 +304,7 @@ public class Competitie extends Observable {
 		this.notifyObservers();
 	}
 	
-	public void startCompetitie(){
+	public void startSpeelronde(){
 		int week=this.week;
 		AITeamManager a = new AITeamManager();
 		if(week<schema.getSchema().size()){
@@ -315,13 +313,6 @@ public class Competitie extends Observable {
 			}
 			for(Wedstrijd wedstrijd: schema.getSchema().get(week).getWedstrijden()){
 				wedstrijd.speelWedstrijd();
-			}
-			schema.getSchema().get(week);
-			if(week+1<schema.getSchema().size()){
-				System.out.println(schema.getSchema().get(week+1));
-			}
-			else{
-				System.out.println("Dit is de laatste speelronde, hierna volgen geen rondes meer");
 			}
 			a.runManagementCycle(this);
 			this.week++;
@@ -357,5 +348,17 @@ public class Competitie extends Observable {
 		}
 		System.out.println("Er is geen spelerswedstrijd");
 		return null;
+	}
+	
+	public ArrayList<Wedstrijd> volgendeRonde(){
+		return getSchema().getSchema().get(week).getWedstrijden();
+	}
+	
+	public ArrayList<Wedstrijd> huidigeResultaten(){
+		if(!(week<1)){
+		return getSchema().getSchema().get(week-1).getWedstrijden();
+		}System.out.println("Er zijn nog geen wedstrijden gespeeld dus er zijn nog geen resultaten beschikbaar.");
+		return null;
+		
 	}
 }

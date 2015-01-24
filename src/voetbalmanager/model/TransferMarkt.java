@@ -119,6 +119,7 @@ public class TransferMarkt extends Observable {
 	 */
 	public void koopSpeler(Team team,BeschikbareSpeler speler) {
 		try {
+			speler.getSpeler().getTeam().verwijderVanSelectie(speler.getSpeler(),speler.getSpeler().getPrijs());
 			team.voegToe(speler.getSpeler(),speler.getSpeler().getPrijs());
 			
 		} catch (TransferException e) {

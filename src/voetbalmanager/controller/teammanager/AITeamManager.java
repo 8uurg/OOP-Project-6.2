@@ -43,7 +43,7 @@ public class AITeamManager {
 		// TODO Schrijf code voor verwerken team.
 		// Afhankelijk van gekozen systeem: vereist speelschema.
 		ArrayList<Speler> spelers = team.getSelectie();
-		if(context.getTransferMarkt().getOudTeam(spelerteam)||context.getTransferMarkt().getVerhandelbareSpelers().size()<10){
+		if(context.getTransferMarkt().getVerhandelbareSpelers().size()<20){
 			if((spelers.size()<Team.maxAantalSpelers()||context.getTransferMarkt().getVerhandelbareSpelers().size()>10)&&rng.nextDouble()>0.45){
 				if(!checkSpelerMarkt(spelers).isEmpty())
 					spelerKopen(checkSpelerMarkt(spelers),spelers);
@@ -54,12 +54,12 @@ public class AITeamManager {
 						spelerVerkopen(spelers);
 				//	spelerKopen(checkSpelerMarkt(spelers),spelers);*/
 			//	}else{
-					if(moetVerkopen(team)&&rng.nextDouble()>0.15)
+					if(moetVerkopen(team)&&rng.nextDouble()>0.45)
 						spelerVerkopen(spelers);
 			//	}
 			}
 		}
-		else if(!(spelers.size()>Team.maxAantalSpelers())){
+		else if(!(spelers.size()>=Team.maxAantalSpelers())){
 			ArrayList<Speler> mogelijkeTransfer = zoekNaarTransfer(team);
 			if(!mogelijkeTransfer.isEmpty()){
 				int a = rng.nextInt(mogelijkeTransfer.size());
@@ -77,9 +77,9 @@ public class AITeamManager {
 	 * @param prijs De prijs die er voor de speler betaald wordt.
 	 */
 	private void biedTransferAan(Team team,Speler sp,int prijs) {
-		int b = rng.nextInt(100);
+		int b = rng.nextInt(1000);
 		Team a = sp.getTeam();
-		if(!(b>5)){
+		if(sp.checkMinimum(team.getSelectie())&&!(b>5)){
 			try {
 				competitie.getTransferMarkt().Transfer(a, team, sp,prijs);
 			} catch (TransferException e) {
@@ -101,7 +101,6 @@ public class AITeamManager {
 				if(speler.overweegVerkopen(spelers)){
 					if(a<30){
 						competitie.getTransferMarkt().maakVerhandelbaar(speler);
-						System.out.println("Er is een speler verkocht");
 						break;
 					}
 				}
@@ -122,7 +121,6 @@ public class AITeamManager {
 			int b = competitie.Sorteren("Punten").getTeams().indexOf(speler.getOudTeam());
 			if(rng.nextDouble()<(0.1+(0.1*a)+(0.1-0.1/competitie.getTeams().size()*b))&&budget/2>speler.getSpeler().getPrijs()){
 				competitie.getTransferMarkt().koopSpeler(spelers.get(0).getTeam(),speler);
-				System.out.println("Team "+spelers.get(1).getTeam().getNaam()+" Heeft de speler "+speler.getSpeler().getNaam()+ " Gekocht.");
 				break;
 			}
 		}
