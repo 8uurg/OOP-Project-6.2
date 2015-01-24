@@ -74,7 +74,7 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 				new PropertyValueFactory<>("tegendoel")
 		);
 		
-		klassementTable.setItems(teamData);
+		
 	}
 
 	public void setScreenParent(ScreensController screen) {
@@ -90,7 +90,9 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 	public void update(Observable o, Object arg) {
 		if(o instanceof Spel) {
 			Spel spel = (Spel) o;
+			Main.huidigSpel.getCompetitie().Sorteren("Punten");
 			teamData.addAll(spel.getCompetitie().getTeams());
+			klassementTable.setItems(teamData);
 		}
 	}
 

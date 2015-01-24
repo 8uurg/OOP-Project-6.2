@@ -98,13 +98,14 @@ public class ManagementController implements Initializable, ControlledScreen,
 			);
 		
 		wedstrijdSchema.setItems(schemaData);
-		//wedstrijdSchema.getColumns().addAll(Club, tegenClub);
+	
 	}
 
 	@FXML
 	public void handleStartMatch() throws IOException {
 		myController.setScreen(Main.StartMatch);
-		// todo linken naar start wedstrijd simulatie
+		//TODO if statement knop disable
+		Main.huidigSpel.getCompetitie().startSpeelronde();
 	}
 
 	@FXML
