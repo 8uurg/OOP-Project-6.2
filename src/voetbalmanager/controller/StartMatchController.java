@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import voetbalmanager.Main;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
@@ -23,7 +24,7 @@ public class StartMatchController implements Initializable, ControlledScreen {
 	}
 	
 	@FXML
-	public void handleExit(){
+	public void handleExit(ActionEvent event){
 		myController.setScreen(Main.ManagementMain);
 	}
 	 @Override
