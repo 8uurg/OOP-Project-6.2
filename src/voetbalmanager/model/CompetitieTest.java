@@ -182,7 +182,7 @@ public class CompetitieTest {
 	public void testSpeel() {
 		Competitie c = XMLLoader.creeerCompetitie("Heh");
 		c.maakSpeelSchema();
-		for(int i=0; i<100; ++i)
+		for(int i=0; i<34; ++i)
 			c.startCompetitie();
 	}
 }

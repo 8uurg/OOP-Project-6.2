@@ -256,4 +256,37 @@ public class Speler {
 	public Type getType() {
 		return type;
 	}
+	
+	public boolean overweegVerkopen(ArrayList<Speler> spelers) {
+		Speler.Type a = type;
+		int min = 0;
+		switch (type) {
+		case Aanvaller:
+			min = 4;
+			break;
+		case Doelman:
+			min = 1;
+			break;
+		case Middenvelder:
+			min = 4;
+			break;
+		case Verdediger:
+			min = 3;
+
+			break;
+		default:
+			break;
+		}
+		int totaalType =0;
+		double totaalScore = 0;
+		for(Speler inTeam: spelers){
+			if(inTeam.type==a){
+				totaalType++;
+				totaalScore =totaalScore+inTeam.getSpelerWaarde();
+			}
+		}
+		if(getSpelerWaarde()<totaalScore/totaalType&&totaalType>min)
+			return true;
+		return false;
+	}
 }

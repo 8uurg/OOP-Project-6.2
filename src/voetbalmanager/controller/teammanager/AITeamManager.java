@@ -15,7 +15,7 @@ import voetbalmanager.model.Team;
  * Algemene klasse voor teambeheer
  */
 public class AITeamManager {
-	private static Random rng;
+	private Random rng= new Random();
 	private Competitie competitie;
 	private Team spelerteam;
 	
@@ -26,11 +26,11 @@ public class AITeamManager {
 	public void runManagementCycle(Competitie competitie){
 		this.competitie = competitie;
 		ArrayList<Team> teams = competitie.getTeams();
-		for(Team team:teams){
-			if(team.isComputerGestuurd())
-				this.manageTeam(team, competitie);
-			if(team.isSpelerBestuurd())
-				this.spelerteam=team;			
+		for(int i=0;i<teams.size();i++){
+			if(teams.get(i).isComputerGestuurd())
+				this.manageTeam(teams.get(i), competitie);
+			if(teams.get(i).isSpelerBestuurd())
+				this.spelerteam=teams.get(i);			
 		}
 	}
 	
@@ -43,24 +43,29 @@ public class AITeamManager {
 		// TODO Schrijf code voor verwerken team.
 		// Afhankelijk van gekozen systeem: vereist speelschema.
 		ArrayList<Speler> spelers = team.getSelectie();
-		if(context.getTransferMarkt().getOudTeam(spelerteam)){
-			if(!(spelers.size()==Team.maxAantalSpelers())){
+		if(context.getTransferMarkt().getOudTeam(spelerteam)||context.getTransferMarkt().getVerhandelbareSpelers().size()<10){
+			if((spelers.size()<Team.maxAantalSpelers()||context.getTransferMarkt().getVerhandelbareSpelers().size()>10)&&rng.nextDouble()>0.45){
 				if(!checkSpelerMarkt(spelers).isEmpty())
 					spelerKopen(checkSpelerMarkt(spelers),spelers);
 			}
 			else{
-				if(!checkSpelerMarkt(spelers).isEmpty()&&rng.nextDouble()<0.1){
-					moetVerkopen(team);
-					spelerVerkopen(spelers);
-					spelerKopen(checkSpelerMarkt(spelers),spelers);
-				}
+		/*		if(checkSpelerMarkt(spelers).isEmpty()){
+					if(moetVerkopen(team))
+						spelerVerkopen(spelers);
+				//	spelerKopen(checkSpelerMarkt(spelers),spelers);*/
+			//	}else{
+					if(moetVerkopen(team)&&rng.nextDouble()>0.15)
+						spelerVerkopen(spelers);
+			//	}
 			}
 		}
-		if(!(spelers.size()==Team.maxAantalSpelers())){
+		else if(!(spelers.size()>Team.maxAantalSpelers())){
 			ArrayList<Speler> mogelijkeTransfer = zoekNaarTransfer(team);
-			int a = rng.nextInt(mogelijkeTransfer.size());
-			if(team.doeBod(mogelijkeTransfer.get(a))>team.getBudget()/3){
-				biedTransferAan(team,mogelijkeTransfer.get(a),team.doeBod(mogelijkeTransfer.get(a)));
+			if(!mogelijkeTransfer.isEmpty()){
+				int a = rng.nextInt(mogelijkeTransfer.size());
+				if(team.doeBod(mogelijkeTransfer.get(a))<team.getBudget()/4){
+					biedTransferAan(team,mogelijkeTransfer.get(a),team.doeBod(mogelijkeTransfer.get(a)));
+				}
 			}
 		}
 	}
@@ -72,8 +77,9 @@ public class AITeamManager {
 	 * @param prijs De prijs die er voor de speler betaald wordt.
 	 */
 	private void biedTransferAan(Team team,Speler sp,int prijs) {
+		int b = rng.nextInt(100);
 		Team a = sp.getTeam();
-		if(!(rng.nextInt(100)>1)){
+		if(!(b>5)){
 			try {
 				competitie.getTransferMarkt().Transfer(a, team, sp,prijs);
 			} catch (TransferException e) {
@@ -88,11 +94,14 @@ public class AITeamManager {
 	 * @param spelers De spelers die te verkopen zijn.
 	 */
 	private void spelerVerkopen(ArrayList<Speler> spelers){		
+		
 		for(Speler speler:spelers){
+			int a = rng.nextInt(100);
 			if(moetVerkopen(speler.getTeam())){
-				if(speler.getSpelerWaarde()<competitie.getTransferMarkt().getMinWaarde()){
-					if(rng.nextDouble()<0.5){
+				if(speler.overweegVerkopen(spelers)){
+					if(a<30){
 						competitie.getTransferMarkt().maakVerhandelbaar(speler);
+						System.out.println("Er is een speler verkocht");
 						break;
 					}
 				}
@@ -113,6 +122,7 @@ public class AITeamManager {
 			int b = competitie.Sorteren("Punten").getTeams().indexOf(speler.getOudTeam());
 			if(rng.nextDouble()<(0.1+(0.1*a)+(0.1-0.1/competitie.getTeams().size()*b))&&budget/2>speler.getSpeler().getPrijs()){
 				competitie.getTransferMarkt().koopSpeler(spelers.get(0).getTeam(),speler);
+				System.out.println("Team "+spelers.get(1).getTeam().getNaam()+" Heeft de speler "+speler.getSpeler().getNaam()+ " Gekocht.");
 				break;
 			}
 		}
@@ -135,10 +145,10 @@ public class AITeamManager {
 	 * @return geeft aan of er een speler verkocht moet worden.
 	 */
 	private boolean moetVerkopen(Team team){
-		if(competitie.Sorteren("Punten").getTeams().indexOf(team)>competitie.getTeams().size()/2&&rng.nextFloat()<0.5){
+		if(competitie.Sorteren("Punten").getTeams().indexOf(team)>competitie.getTeams().size()/2/*&&rng.nextFloat()<0.5*/){
 			return true;
 		}
-		else if(competitie.Sorteren("Punten").getTeams().indexOf(team)<competitie.getTeams().size()/2&&rng.nextFloat()<0.1){
+		else if(competitie.Sorteren("Punten").getTeams().indexOf(team)<competitie.getTeams().size()/2/*&&rng.nextFloat()<0.1*/){
 			return true;
 		}
 		return false;
@@ -151,8 +161,9 @@ public class AITeamManager {
 	 */
 	private ArrayList<Speler> zoekNaarTransfer(Team team){
 		ArrayList<Speler> speler = new ArrayList<Speler>();
+		competitie.Sorteren("Punten");
 		for(Team tf: competitie.getTeams()){
-			if(competitie.Sorteren("Punten").getTeams().indexOf(team)>competitie.Sorteren("Punten").getTeams().indexOf(tf)){
+			if(competitie.getTeams().indexOf(team)>competitie.getTeams().indexOf(tf)){
 				for(Speler sp: tf.getSelectie()){
 					if(sp.transferAanbieden(team.getSelectie())){
 						speler.add(sp);

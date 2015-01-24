@@ -323,7 +323,7 @@ public class Competitie extends Observable {
 			else{
 				System.out.println("Dit is de laatste speelronde, hierna volgen geen rondes meer");
 			}
-		//	a.runManagementCycle(this);
+			a.runManagementCycle(this);
 			this.week++;
 		}
 		else{

@@ -17,7 +17,7 @@ public class Team extends Observable {
 	private ArrayList<Speler> spelers;
 	private Opstelling opstelling;
 	private int budget = -1;
-	public static final int startBudget = 100000;
+	public static final int startBudget = 1000000;
 	
 	private int gewonnen = 0;
 	private int gelijk = 0;
