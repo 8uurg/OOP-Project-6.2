@@ -53,10 +53,10 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 		//waarden aan de tabelkolommen toewijzen, via klasse KlassementTabel
 		border.setPrefSize(screen.getWidth(), screen.getHeight());
 		TeamKolom.setCellValueFactory(
-						new PropertyValueFactory<>("naam")
-				);
+			new PropertyValueFactory<>("naam")
+		);
 		PuntenKolom.setCellValueFactory(
-				new PropertyValueFactory<>("puntentotaal")
+				new PropertyValueFactory<>("puntenTotaal")
 		);
 		GewonnenKolom.setCellValueFactory(
 				new PropertyValueFactory<>("gewonnen")
@@ -71,7 +71,7 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 				new PropertyValueFactory<>("doelsaldo")
 		);
 		DoelTegenKolom.setCellValueFactory(
-				new PropertyValueFactory<>("tegendoel")
+				new PropertyValueFactory<>("tegendoelpunten")
 		);
 		//klassementTable.setItems(teamData);
 		
