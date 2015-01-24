@@ -91,10 +91,10 @@ public class ManagementController implements Initializable, ControlledScreen,
 
 		// TODO speelschema inladen
 		Club.setCellValueFactory(
-			    new PropertyValueFactory<>("team")
+			    new PropertyValueFactory<>("Teams")
 			);
 		tegenClub.setCellValueFactory(
-			    new PropertyValueFactory<>("tegenteam")
+			    new PropertyValueFactory<>("Teams")
 			);
 		
 		
