@@ -16,22 +16,19 @@ import voetbalmanager.exceptions.TransferException;
 public class TransferMarkt extends Observable {
 	
 	/**
-	 * recenteTransfers geeft alle transfers terug die tussen teams plaatsvonden.
 	 * verhandelbarespelers geeft alle Beschikbare Spelers op de spelersmarkt.
 	 */
-	private ArrayList<Transfer> recenteTransfers;
 	private ArrayList<BeschikbareSpeler> verhandelbareSpelers;
 	
 	public TransferMarkt(){
-		recenteTransfers = new ArrayList<Transfer>();
+//		recenteTransfers = new ArrayList<Transfer>();
 		verhandelbareSpelers = new ArrayList<BeschikbareSpeler>();
 	}
 	
 	public boolean equals(Object other) {
 		if (other instanceof TransferMarkt) {
 			TransferMarkt that = (TransferMarkt)other;
-			return this.recenteTransfers.equals(that.recenteTransfers)
-					&&this.verhandelbareSpelers.equals(that.verhandelbareSpelers);
+			return this.verhandelbareSpelers.equals(that.verhandelbareSpelers);
 			
 		}
 		return false;
@@ -46,8 +43,13 @@ public class TransferMarkt extends Observable {
 	 * @throws TransferException
 	 */
 	public void Transfer(Team verkopendTeam, Team kopendTeam, Speler sp, int prijs) throws TransferException {
-		sp.prijs=prijs;
-		recenteTransfers.add(new Transfer(verkopendTeam, kopendTeam, sp));
+		verkopendTeam.verwijderVanSelectie(sp, prijs);
+		try {
+			kopendTeam.voegToe(sp, prijs);
+		} catch (TransferException e) {
+			verkopendTeam.voegToe(sp, prijs);
+			throw e;
+		}
 		this.setChanged();
 		this.notifyObservers();
 	}
@@ -58,26 +60,14 @@ public class TransferMarkt extends Observable {
 	 */
 	public void maakVerhandelbaar(Speler sp) {
 		BeschikbareSpeler bsp = new BeschikbareSpeler(sp,sp.getTeam());
-		verhandelbareSpelers.add(bsp);
+		if(!verhandelbareSpelers.contains(bsp)){
+			verhandelbareSpelers.add(bsp);
+		}
 		this.setChanged();
 		this.notifyObservers();
 	}
 	
-	// Moet prijs bij ontslag op 0 worden gezet?
-	//Wordt op dit moment nog niet geimplementeerd.
-	public void Ontsla(Speler sp) throws TransferException {
-		sp.team.verwijderVanSelectie(sp, 0);
-		maakVerhandelbaar(sp);
-	}
-	
-	/**
-	 * Laat alle transfers zien tussen teams die er hebben plaatsgevonden.
-	 * @return alle recente transfers.
-	 */
-	public ArrayList<Transfer> getRecenteTransfers() {
-		return recenteTransfers;
-	}
-	
+
 	/**
 	 * Geeft alle Spelers die op de spelermarkt staan om te verkopen.
 	 * @return alle beschikbare spelers op de markt.

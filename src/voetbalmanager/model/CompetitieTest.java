@@ -2,6 +2,8 @@ package voetbalmanager.model;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -94,7 +96,7 @@ public class CompetitieTest {
 		Speelschema a = eredivisie.maakSpeelSchema();
 		
 		assertTrue(a.allContainTeams(eredivisie.getTeams()));
-		assertTrue(a.getSchema().size()==(eredivisie.getTeams().size()*2-2));
+		assertEquals(a.getSchema().size(),(eredivisie.getTeams().size()*2-2));
 	}
 	
 	@Test
@@ -185,10 +187,49 @@ public class CompetitieTest {
 	//	for(int j=0;j<25;++j){	
 			Competitie c = XMLLoader.creeerCompetitie("Heh");
 			c.maakSpeelSchema();
-			for(int i=0; i<34; ++i){
+			for(int i=0; i<35; ++i){
 				c.startSpeelronde();
 			}
 			System.out.println(c.Sorteren("Punten").toString());
 	//	}
+	}
+	
+	@Test
+	public void testGetSpelerWedstrijd(){
+		Competitie c = XMLLoader.creeerCompetitie("HA");
+		c.setSpelerTeam(c.getTeams().get(0));
+		System.out.println(c.getSpelerTeam());
+		c.getSchema();
+		c.startSpeelronde();
+		System.out.println(c.getWeek());
+		System.out.println(c.getSchema().getSchema().get(0).getWedstrijden().get(0));
+		System.out.println(c.getSpelerWedstrijd());
+		ArrayList<Wedstrijd> a = c.getSchema().getSchema().get(0).getWedstrijden();
+		Wedstrijd j=null;
+		for(Wedstrijd w : a){
+			if(w.getSpelerWedstrijd()){
+				j = w;
+			}
+		}
+		assertEquals(c.getSpelerWedstrijd(),j);
+		c.getSpelerTeam().setGebruikerTeam(false);
+		assertEquals(c.getSpelerWedstrijd(),new Wedstrijd(new Team("geenSpelerWedstrijd", false),new Team("geenSpelerWedstrijd", false)));
+		
+	}
+	
+	@Test
+	public void testVolgendeRonde(){
+		Competitie c = XMLLoader.creeerCompetitie("Yay");
+		c.getSchema();
+		assertEquals(c.volgendeRonde(),c.getSchema().getSchema().get(0).getWedstrijden());
+	}
+	
+	@Test
+	public void testHuidigeResultaten(){
+		Competitie c = XMLLoader.creeerCompetitie("WAUW");
+		c.getSchema();
+		assertEquals(c.huidigeResultaten(),c.getSchema().getSchema().get(0).getWedstrijden());
+		c.startSpeelronde();
+		assertEquals(c.huidigeResultaten(), c.getSchema().getSchema().get(0).getWedstrijden());
 	}
 }

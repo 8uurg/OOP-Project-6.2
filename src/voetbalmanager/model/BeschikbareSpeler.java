@@ -23,6 +23,16 @@ public class BeschikbareSpeler {
 		this.speler = speler;
 	}
 	
+	
+	public boolean equal(Object other){
+		if(other instanceof BeschikbareSpeler){
+			BeschikbareSpeler that =(BeschikbareSpeler)other;
+			return this.speler.equals(that.speler)
+					&&this.oudTeam.equals(that.oudTeam);
+		}
+		return false;
+	}
+	
 	/**
 	 * Geeft het oude team van de speler
 	 * @return Team
