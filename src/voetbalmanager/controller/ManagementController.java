@@ -15,10 +15,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -26,11 +23,9 @@ import voetbalmanager.Main;
 import voetbalmanager.Spel;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
-import voetbalmanager.model.Speelronde;
 import voetbalmanager.model.Speelschema;
-//import voetbalmanager.Main;
+
 import voetbalmanager.model.Team;
-import voetbalmanager.model.Wedstrijd;
 
 public class ManagementController implements Initializable, ControlledScreen,
 		Observer {
@@ -57,15 +52,7 @@ public class ManagementController implements Initializable, ControlledScreen,
 	private Button oplaan;
 	@FXML
 	private Button terug;
-	@FXML
-	private TextArea Budget;
-	@FXML
-	private TableView<Speelschema> wedstrijdSchema;
-	@FXML private TableColumn<Speelschema, String> Club;
-	@FXML private TableColumn<Speelschema, String> tegenClub;
-
-	private ObservableList<Speelschema> schemaData = FXCollections
-			.observableArrayList();
+	
 	
 	ScreensController myController;
 	Stage stage = new Stage();
@@ -73,8 +60,6 @@ public class ManagementController implements Initializable, ControlledScreen,
 
 	public ManagementController() {
 		Main.huidigSpel.addObserver(this);
-		//TODO schema in schemaData laden
-		//schemaData.addAll(Main.huidigSpel.getCompetitie().)
 
 	}
 
@@ -86,27 +71,13 @@ public class ManagementController implements Initializable, ControlledScreen,
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// disable editing op de textarea
-		Budget.setDisable(true);
-
-		// TODO speelschema inladen
-		Club.setCellValueFactory(
-			    new PropertyValueFactory<>("Teams")
-			);
-		tegenClub.setCellValueFactory(
-			    new PropertyValueFactory<>("Teams")
-			);
-		
-		
+	
 	
 	}
 
 	@FXML
 	public void handleStartMatch() throws IOException {
-		//TODO if statement knop disable
-		//Main.huidigSpel.getCompetitie().maakSpeelSchema();
-		Main.huidigSpel.getCompetitie().startSpeelronde();
-		myController.setScreen(Main.StartMatch);
+		myController.setScreen(Main.Uitslagen);
 	}
 
 	@FXML
@@ -151,8 +122,8 @@ public class ManagementController implements Initializable, ControlledScreen,
 		if(arg0 instanceof Spel) {
 			if(Main.huidigSpel.getCompetitie()!=null)
 				update(Main.huidigSpel.getCompetitie(), arg1);
-			
-			wedstrijdSchema.setItems(schemaData);
+
+
 			Main.huidigSpel.getCompetitie().addObserver(this);
 		}
 		if(arg0 instanceof Competitie) {
@@ -161,9 +132,7 @@ public class ManagementController implements Initializable, ControlledScreen,
 				update(Main.huidigSpel.getCompetitie().getSpelerTeam(), arg1);
 			}
 		}
-		if(arg0 instanceof Team) {
-			Budget.setText("Budget: " + Integer.toString(Main.huidigSpel.getCompetitie().getSpelerTeam().getBudget()));
-		}
+		
 	}
 
 }

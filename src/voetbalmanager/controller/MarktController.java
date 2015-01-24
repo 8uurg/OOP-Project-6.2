@@ -35,6 +35,10 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 	@FXML private TextArea verkopenSpelerId;
 	@FXML private Button Verkopen;
 	@FXML private BorderPane border;
+	@FXML
+	private TextArea budgetKopen;
+	@FXML
+	private TextArea budgetVerkopen;
 	
 	ScreensController myController; 
 	private Speler verkoopFocus;
@@ -53,10 +57,11 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 		Rectangle2D screen = Screen.getPrimary().getVisualBounds();
 		border.setPrefSize(screen.getWidth(), screen.getHeight());
 		 
-		
+		//budgetKopen.setDisable(true);
+		//budgetVerkopen.setDisable(true);
 		 
 		//init verkopenList
-		//TODO Arthur help
+		
 		verkopenSpeler.setItems(Verkopendata);
 		verkopenSpeler.setCellFactory((list) -> {return new ListCell<Speler>(){
 			@Override
@@ -159,12 +164,18 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 			// Team is veranderd. Update!
 			Verkopendata.clear();
 			Verkopendata.addAll(Main.huidigSpel.getCompetitie().getSpelerTeam().getSelectie());
+			
+			
+			budgetVerkopen.setText("Budget: " + Integer.toString(Main.huidigSpel.getCompetitie().getSpelerTeam().getBudget()));
+			
+			budgetKopen.setText("Budget: " + Integer.toString(Main.huidigSpel.getCompetitie().getSpelerTeam().getBudget()));
 		}
 		if(arg0 instanceof TransferMarkt) {
 			// Transfermarkt is veranderd. Update!
 			Kopendata.clear();
 			Kopendata.addAll(Main.huidigSpel.getCompetitie().getTransferMarkt().getVerhandelbareSpelers());
 		}
+	
 	} 
 	 
 

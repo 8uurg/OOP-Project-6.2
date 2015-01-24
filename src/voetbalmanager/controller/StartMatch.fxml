@@ -5,22 +5,21 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.StartMatchController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <ListView prefHeight="362.0" prefWidth="656.0" />
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" text="Terug" HBox.hgrow="ALWAYS" />
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Uitslagen" />
+                  <Button fx:id="terug" alignment="BOTTOM_CENTER" mnemonicParsing="false" text="Terug" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="start" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Start" />
                </children>
             </HBox>
          </children>
       </VBox>
    </center>
    <top>
-      <Label prefHeight="81.0" prefWidth="125.0" text="Komende Wedstrijden:" BorderPane.alignment="CENTER" />
+      <Label prefHeight="81.0" prefWidth="125.0" text="Speelronde" BorderPane.alignment="CENTER" />
    </top>
 </BorderPane>

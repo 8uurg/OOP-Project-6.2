@@ -29,6 +29,10 @@ public class Main extends Application {
     public static final String screen7ID = "Klassement.fxml";
     public static final String StartMatch = "screen8";
     public static final String screen8ID = "StartMatch.fxml";
+    // blijbaar een fout?
+    public static final String Uitslagen = "screen9";
+    public static final String screen9ID = "Uitslagen.fxml";
+
 
 
     public static final String Statistieken = "Statistieken.fxml";
@@ -71,8 +75,11 @@ public class Main extends Application {
         mainContainer.loadScreen(Main.Market, Main.screen6ID);
         mainContainer.loadScreen(Main.Klassement, Main.screen7ID);
         mainContainer.loadScreen(Main.StartMatch, Main.screen8ID);
+        // ravi blijbaar heb ik iets fout gedaan
+        mainContainer.loadScreen(Main.Uitslagen, Main.screen9ID);
         mainContainer.loadScreen(Main.LoadGame, Main.LoadScreen);
         mainContainer.loadScreen(Main.HelpMe, Main.HelpScreen);
+        
         
         mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
         root.getChildren().addAll(mainContainer);
