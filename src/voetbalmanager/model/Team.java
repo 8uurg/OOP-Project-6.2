@@ -57,6 +57,13 @@ public class Team extends Observable {
 		}
 		return false;
 	}
+	public Speler zoekSpeler(String naam){
+		for(Speler sp: getSelectie()){
+			if(sp.getNaam().equalsIgnoreCase(naam))
+			return sp;
+		}
+		return null;
+	}
 	
 	/**
 	 * Berekend het huidige puntensaldo van dit team op.
@@ -355,6 +362,9 @@ public class Team extends Observable {
 
 	public void overrideAddTegenpunt(int z) {
 		tegenpunten = z;
-		
+	}
+	
+	public void overrideAddDoelpunt(int z){
+		doelpunten=z;
 	}
 }

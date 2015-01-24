@@ -359,8 +359,8 @@ public class Competitie extends Observable {
 				return w;
 			}
 		}
-		System.out.println("Er is geen spelerswedstrijd");
-		return null;
+		System.out.println("Er is geen spelerswedstrijd, hier is een random wedstrijd!");
+		return new Wedstrijd(new Team("geenSpelerWedstrijd", false),new Team("geenSpelerWedstrijd", false));
 	}
 	
 	/**
@@ -379,9 +379,9 @@ public class Competitie extends Observable {
 	 */
 	public ArrayList<Wedstrijd> huidigeResultaten(){
 		if(!(week<1)){
-		return getSchema().getSchema().get(week-1).getWedstrijden();
-		}System.out.println("Er zijn nog geen wedstrijden gespeeld dus er zijn nog geen resultaten beschikbaar.");
-		return null;
+			return getSchema().getSchema().get(week-1).getWedstrijden();
+		}System.out.println("Er zijn nog geen wedstrijden gespeeld dus er zijn nog geen resultaten beschikbaar, hier is het rooster van deze week");
+		return getSchema().getSchema().get(week).getWedstrijden();
 		
 	}
 }
