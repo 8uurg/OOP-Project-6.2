@@ -216,11 +216,10 @@ public class Competitie extends Observable {
 		
 		competitie.transfer = TransferMarkt.laadXMLElement((Element) el.getElementsByTagName("transfermarkt").item(0), competitie);
 		
-		if(el.getElementsByTagName("speelschema").item(0)!=null){
-			Speelschema actualSchema = Speelschema.laadXMLelement(((Element) el.getElementsByTagName("speelschema").item(0)) ,competitie);
+		Speelschema actualSchema = Speelschema.laadXMLelement(((Element) el.getElementsByTagName("speelschema").item(0)), competitie);
 
-			competitie.schema = actualSchema;
-		}
+		competitie.schema = actualSchema;
+		
 		return competitie;
 	}
 
@@ -238,9 +237,9 @@ public class Competitie extends Observable {
 		Competitie a = new Competitie(naam);
 		a.teams = this.teams;
 		if (voorwaarde.equals("Naam"))
-			Collections.sort(a.teams, NaamOrder);
+			a.teams.sort(NaamOrder);
 		else if (voorwaarde.equals("Punten"))
-			Collections.sort(a.teams, PuntenOrder);
+			a.teams.sort(PuntenOrder);
 		return a;
 	}
 	
@@ -310,6 +309,7 @@ public class Competitie extends Observable {
 	 */
 	public void startSpeelronde(){
 		int week=this.week;
+		System.out.println("Week: " + this.week);
 		AITeamManager a = new AITeamManager();
 		if(week<schema.getSchema().size()){
 			for(Team team: teams){
@@ -324,6 +324,9 @@ public class Competitie extends Observable {
 		else{
 			System.out.println("Deze competitie is afgelopen, er kan geen nieuwe ronde meer gespeeld worden");
 		}
+		
+		this.setChanged();
+		this.notifyObservers();
 		
 	}
 	
@@ -356,6 +359,7 @@ public class Competitie extends Observable {
 	public Wedstrijd getSpelerWedstrijd(){
 		for(Wedstrijd w :schema.getSchema().get(week-1).getWedstrijden()){
 			if(w.getSpelerWedstrijd()){
+				System.out.println(w);
 				return w;
 			}
 		}

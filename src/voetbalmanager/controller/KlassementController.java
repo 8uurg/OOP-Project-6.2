@@ -20,6 +20,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import voetbalmanager.Main;
 import voetbalmanager.Spel;
+import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Team;
 
 public class KlassementController implements Initializable, ControlledScreen, Observer {
@@ -53,10 +54,10 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 		//waarden aan de tabelkolommen toewijzen, via klasse KlassementTabel
 		border.setPrefSize(screen.getWidth(), screen.getHeight());
 		TeamKolom.setCellValueFactory(
-						new PropertyValueFactory<>("naam")
-				);
+			new PropertyValueFactory<>("naam")
+		);
 		PuntenKolom.setCellValueFactory(
-				new PropertyValueFactory<>("puntentotaal")
+				new PropertyValueFactory<>("puntenTotaal")
 		);
 		GewonnenKolom.setCellValueFactory(
 				new PropertyValueFactory<>("gewonnen")
@@ -71,10 +72,10 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 				new PropertyValueFactory<>("doelsaldo")
 		);
 		DoelTegenKolom.setCellValueFactory(
-				new PropertyValueFactory<>("tegendoel")
+				new PropertyValueFactory<>("tegendoelpunten")
 		);
-		
 		klassementTable.setItems(teamData);
+		
 	}
 
 	public void setScreenParent(ScreensController screen) {
@@ -89,8 +90,16 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 	@Override
 	public void update(Observable o, Object arg) {
 		if(o instanceof Spel) {
-			Spel spel = (Spel) o;
-			teamData.addAll(spel.getCompetitie().getTeams());
+			System.out.println(o.countObservers());
+			Main.huidigSpel.getCompetitie().Sorteren("Punten");
+			Main.huidigSpel.getCompetitie().addObserver(this);
+			if(Main.huidigSpel.getCompetitie().getTeams()!=null) {
+				update(Main.huidigSpel.getCompetitie(), arg);
+			}
+		}
+		if(o instanceof Competitie) {
+			teamData.clear();
+			teamData.addAll(Main.huidigSpel.getCompetitie().getTeams());
 		}
 	}
 

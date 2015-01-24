@@ -234,14 +234,16 @@ public class Speelschema {
 	
 	public static Speelschema laadXMLelement(Element el, Competitie competitie) {
 		Speelschema schema = competitie.maakSpeelSchema();
-		NodeList speelschema = el.getElementsByTagName("speelronde");
-		ArrayList<Speelronde> speelronden = new ArrayList<Speelronde>();
-		System.out.println(speelschema.getLength());
-		for(int i=0;i<speelschema.getLength();i++){
-			Element speelronde = (Element) speelschema.item(i);
-			speelronden.add(Speelronde.laadXMLelement(speelronde,competitie));
+		if(el!=null) {
+			NodeList speelschema = el.getElementsByTagName("speelronde");
+			ArrayList<Speelronde> speelronden = new ArrayList<Speelronde>();
+			System.out.println(speelschema.getLength());
+			for(int i=0;i<speelschema.getLength();i++){
+				Element speelronde = (Element) speelschema.item(i);
+				speelronden.add(Speelronde.laadXMLelement(speelronde,competitie));
+			}
+			schema.schema=speelronden;
 		}
-		schema.schema=speelronden;
 		return schema;
 	}
 	
