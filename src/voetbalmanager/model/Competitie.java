@@ -237,9 +237,9 @@ public class Competitie extends Observable {
 		Competitie a = new Competitie(naam);
 		a.teams = this.teams;
 		if (voorwaarde.equals("Naam"))
-			Collections.sort(a.teams, NaamOrder);
+			a.teams.sort(NaamOrder);
 		else if (voorwaarde.equals("Punten"))
-			Collections.sort(a.teams, PuntenOrder);
+			a.teams.sort(PuntenOrder);
 		return a;
 	}
 	
@@ -309,6 +309,7 @@ public class Competitie extends Observable {
 	 */
 	public void startSpeelronde(){
 		int week=this.week;
+		System.out.println("Week: " + this.week);
 		AITeamManager a = new AITeamManager();
 		if(week<schema.getSchema().size()){
 			for(Team team: teams){
@@ -323,6 +324,9 @@ public class Competitie extends Observable {
 		else{
 			System.out.println("Deze competitie is afgelopen, er kan geen nieuwe ronde meer gespeeld worden");
 		}
+		
+		this.setChanged();
+		this.notifyObservers();
 		
 	}
 	
