@@ -105,8 +105,6 @@ public class MarktController implements Initializable, ControlledScreen, Observe
 			koopFocus = newValue;
 		});
 		
-		verkopenSpelerId.setDisable(true);
-		kopenSpelerId.setDisable(true);
 	   
 	}
 	   

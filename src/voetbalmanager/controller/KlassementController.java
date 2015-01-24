@@ -20,6 +20,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import voetbalmanager.Main;
 import voetbalmanager.Spel;
+import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Team;
 
 public class KlassementController implements Initializable, ControlledScreen, Observer {
@@ -73,7 +74,7 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 		DoelTegenKolom.setCellValueFactory(
 				new PropertyValueFactory<>("tegendoelpunten")
 		);
-		//klassementTable.setItems(teamData);
+		klassementTable.setItems(teamData);
 		
 	}
 
@@ -89,10 +90,16 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 	@Override
 	public void update(Observable o, Object arg) {
 		if(o instanceof Spel) {
-			Spel spel = (Spel) o;
+			System.out.println(o.countObservers());
 			Main.huidigSpel.getCompetitie().Sorteren("Punten");
-			teamData.addAll(spel.getCompetitie().getTeams());
-			klassementTable.setItems(teamData);
+			Main.huidigSpel.getCompetitie().addObserver(this);
+			if(Main.huidigSpel.getCompetitie().getTeams()!=null) {
+				update(Main.huidigSpel.getCompetitie(), arg);
+			}
+		}
+		if(o instanceof Competitie) {
+			teamData.clear();
+			teamData.addAll(Main.huidigSpel.getCompetitie().getTeams());
 		}
 	}
 

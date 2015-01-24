@@ -106,7 +106,6 @@ public class ManagementController implements Initializable, ControlledScreen,
 		//TODO if statement knop disable
 		//Main.huidigSpel.getCompetitie().maakSpeelSchema();
 		Main.huidigSpel.getCompetitie().startSpeelronde();
-		
 		myController.setScreen(Main.StartMatch);
 	}
 
