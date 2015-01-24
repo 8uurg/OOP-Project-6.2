@@ -17,6 +17,7 @@ public class StartMatchController implements Initializable, ControlledScreen {
 	Rectangle2D screen = Screen.getPrimary().getVisualBounds();
 	@FXML private BorderPane border;
 	@FXML private Label Scoor;
+	//String uitslag = Main.huidigSpel.getCompetitie().getSpelerWedstrijd().toString();
 	
 	public void StartMatchController(){
 	}
@@ -31,7 +32,7 @@ public class StartMatchController implements Initializable, ControlledScreen {
 	 @Override
 	   public void initialize(URL location, ResourceBundle resources){
 		   border.setPrefSize(screen.getWidth(), screen.getHeight());
-		   Scoor.setText(Main.h);
+		  // Scoor.setText(uitslag);
 	   }
 
 
