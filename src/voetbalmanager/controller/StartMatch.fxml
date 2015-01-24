@@ -1,13 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-
-<BorderPane prefHeight="549.0" prefWidth="588.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<BorderPane fx:id="border" prefHeight="576.0" prefWidth="775.0" styleClass="mainMenuBackground" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.StartMatchController">
+   <children>
+      <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
    <center>
-      <TextArea fx:id="uitslag" prefHeight="440.0" prefWidth="501.0" BorderPane.alignment="CENTER" />
+      <VBox fx:id="verticalBox" alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="800.0" spacing="10.0" styleClass="navigator" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Scoor" text="Hier komt de scoor" textFill="WHITE" translateX="-20.0" translateY="-40.0">
+               <font>
+                  <Font name="System Bold Italic" size="41.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="0.2" light="$null" specularConstant="2.0" specularExponent="17.68" surfaceScale="5.1">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+            </Label>
+         </children>
+      </VBox>
    </center>
+   <stylesheets>
+      <URL value="@Backgrounds.css" />
+      <URL value="@Buttons.css" />
+   </stylesheets>
+   <bottom>
+      <Pane prefHeight="177.0" prefWidth="775.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="exit" layoutX="126.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleExit" styleClass="Buttons" text="Terug" />
+         </children>
+      </Pane>
+   </bottom>
 </BorderPane>

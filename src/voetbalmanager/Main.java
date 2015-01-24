@@ -27,18 +27,20 @@ public class Main extends Application {
     public static final String screen6ID= "Market.fxml";
     public static final String Klassement = "screen7";
     public static final String screen7ID = "Klassement.fxml";
+    public static final String StartMatch = "screen8";
+    public static final String screen8ID = "StartMatch.fxml";
+
 
     public static final String Statistieken = "Statistieken.fxml";
     public static final String LoadGame = "laadScreen";
     public static final String LoadScreen ="LoadGame.fxml";
     public static final String HelpMe = "helpScreen";
     public static final String HelpScreen= "Help.fxml";
+    
     @FXML
     VBox verticalBox;
     
-    public static final String screenKlass= "klassScreen";
     
-    public static final String StartMatch = "StartMatch.fxml";
     
     ScreensController mainContainer;
     public static Stage stage = new Stage();
@@ -68,9 +70,10 @@ public class Main extends Application {
         mainContainer.loadScreen(Main.Opstelling, Main.screen5ID);
         mainContainer.loadScreen(Main.Market, Main.screen6ID);
         mainContainer.loadScreen(Main.Klassement, Main.screen7ID);
-        
+        mainContainer.loadScreen(Main.StartMatch, Main.screen8ID);
         mainContainer.loadScreen(Main.LoadGame, Main.LoadScreen);
         mainContainer.loadScreen(Main.HelpMe, Main.HelpScreen);
+        
         mainContainer.setScreen(Main.MainMenu); //Zet de eerste scherm te voorschijn
         root.getChildren().addAll(mainContainer);
         Rectangle2D screen = Screen.getPrimary().getVisualBounds();

@@ -15,8 +15,10 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -24,9 +26,11 @@ import voetbalmanager.Main;
 import voetbalmanager.Spel;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
+import voetbalmanager.model.Speelronde;
 import voetbalmanager.model.Speelschema;
 //import voetbalmanager.Main;
 import voetbalmanager.model.Team;
+import voetbalmanager.model.Wedstrijd;
 
 public class ManagementController implements Initializable, ControlledScreen,
 		Observer {
@@ -57,15 +61,20 @@ public class ManagementController implements Initializable, ControlledScreen,
 	private TextArea Budget;
 	@FXML
 	private TableView<Speelschema> wedstrijdSchema;
+	@FXML private TableColumn<Speelschema, String> Club;
+	@FXML private TableColumn<Speelschema, String> tegenClub;
 
 	private ObservableList<Speelschema> schemaData = FXCollections
 			.observableArrayList();
+	
 	ScreensController myController;
 	Stage stage = new Stage();
 	Rectangle2D screen = Screen.getPrimary().getVisualBounds();
 
 	public ManagementController() {
 		Main.huidigSpel.addObserver(this);
+		//TODO schema in schemaData laden
+		//schemaData.addAll(Main.huidigSpel.getCompetitie().)
 
 	}
 
@@ -81,6 +90,15 @@ public class ManagementController implements Initializable, ControlledScreen,
 		//Budget.setDisable(true);
 
 		// TODO speelschema inladen
+		Club.setCellValueFactory(
+			    new PropertyValueFactory<>("team")
+			);
+		tegenClub.setCellValueFactory(
+			    new PropertyValueFactory<>("tegenteam")
+			);
+		
+		wedstrijdSchema.setItems(schemaData);
+		//wedstrijdSchema.getColumns().addAll(Club, tegenClub);
 	}
 
 	@FXML
