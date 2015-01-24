@@ -359,6 +359,7 @@ public class Competitie extends Observable {
 	public Wedstrijd getSpelerWedstrijd(){
 		for(Wedstrijd w :schema.getSchema().get(week-1).getWedstrijden()){
 			if(w.getSpelerWedstrijd()){
+				System.out.println(w);
 				return w;
 			}
 		}

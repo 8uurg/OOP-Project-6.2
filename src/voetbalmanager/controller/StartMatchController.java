@@ -18,7 +18,8 @@ public class StartMatchController implements Initializable, ControlledScreen {
 	@FXML private BorderPane border;
 	@FXML private Label Scoor;
 	
-	
+	public void StartMatchController(){
+	}
 	public void setScreenParent(ScreensController screens){
 		myController = screens;
 	}
@@ -30,6 +31,7 @@ public class StartMatchController implements Initializable, ControlledScreen {
 	 @Override
 	   public void initialize(URL location, ResourceBundle resources){
 		   border.setPrefSize(screen.getWidth(), screen.getHeight());
+		   Scoor.setText(Main.h);
 	   }
 
 
