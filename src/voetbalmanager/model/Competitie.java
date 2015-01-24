@@ -216,11 +216,10 @@ public class Competitie extends Observable {
 		
 		competitie.transfer = TransferMarkt.laadXMLElement((Element) el.getElementsByTagName("transfermarkt").item(0), competitie);
 		
-		if(el.getElementsByTagName("speelschema").item(0)!=null){
-			Speelschema actualSchema = Speelschema.laadXMLelement(((Element) el.getElementsByTagName("speelschema").item(0)) ,competitie);
+		Speelschema actualSchema = Speelschema.laadXMLelement(((Element) el.getElementsByTagName("speelschema").item(0)), competitie);
 
-			competitie.schema = actualSchema;
-		}
+		competitie.schema = actualSchema;
+		
 		return competitie;
 	}
 
