@@ -73,7 +73,7 @@ public class KlassementController implements Initializable, ControlledScreen, Ob
 		DoelTegenKolom.setCellValueFactory(
 				new PropertyValueFactory<>("tegendoel")
 		);
-		
+		//klassementTable.setItems(teamData);
 		
 	}
 
