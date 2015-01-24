@@ -87,7 +87,7 @@ public class ManagementController implements Initializable, ControlledScreen,
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// disable editing op de textarea
-		Budget.setDisable(true);
+		//Budget.setDisable(true);
 
 		// TODO speelschema inladen
 		Club.setCellValueFactory(
