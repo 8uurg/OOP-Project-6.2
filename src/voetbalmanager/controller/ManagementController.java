@@ -97,14 +97,14 @@ public class ManagementController implements Initializable, ControlledScreen,
 			    new PropertyValueFactory<>("tegenteam")
 			);
 		
-		wedstrijdSchema.setItems(schemaData);
+		
 	
 	}
 
 	@FXML
 	public void handleStartMatch() throws IOException {
 		//TODO if statement knop disable
-		Main.huidigSpel.getCompetitie().maakSpeelSchema();
+		//Main.huidigSpel.getCompetitie().maakSpeelSchema();
 		Main.huidigSpel.getCompetitie().startSpeelronde();
 		myController.setScreen(Main.StartMatch);
 	}
@@ -152,6 +152,7 @@ public class ManagementController implements Initializable, ControlledScreen,
 			if(Main.huidigSpel.getCompetitie()!=null)
 				update(Main.huidigSpel.getCompetitie(), arg1);
 			
+			wedstrijdSchema.setItems(schemaData);
 			Main.huidigSpel.getCompetitie().addObserver(this);
 		}
 		if(arg0 instanceof Competitie) {
