@@ -16,6 +16,22 @@
    <center>
       <VBox alignment="CENTER" fillWidth="false" maxHeight="800.0" maxWidth="600.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
+         	<Label prefHeight="65.0" prefWidth="243.0" text="Laad een Game" BorderPane.alignment="CENTER">
+		         <font>
+		            <Font name="System Bold Italic" size="33.0" />
+		         </font>
+		         <textFill>
+		            <LinearGradient cycleMethod="REFLECT" endX="0.0380952380952381" endY="1.0" startY="0.41904761904761906">
+		               <stops>
+		                  <Stop color="BLACK" />
+		                  <Stop color="#830000" offset="1.0" />
+		               </stops>
+		            </LinearGradient>
+		         </textFill>
+		         <opaqueInsets>
+		            <Insets />
+		         </opaqueInsets>
+		      </Label>
             <ListView fx:id="laadgame" maxHeight="-Infinity" maxWidth="-Infinity" opacity="0.85" prefHeight="262.0" prefWidth="250.0" translateY="20.0" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets top="40.0" />
@@ -44,19 +60,4 @@
       <URL value="@Backgrounds.css" />
       <URL value="@Buttons.css" />
    </stylesheets>
-   <top>
-      <Label prefHeight="65.0" prefWidth="243.0" text="Laad een Game" translateY="120.0" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="System Bold Italic" size="33.0" />
-         </font>
-         <textFill>
-            <LinearGradient cycleMethod="REFLECT" endX="0.0380952380952381" endY="1.0" startY="0.41904761904761906">
-               <stops>
-                  <Stop color="BLACK" />
-                  <Stop color="#830000" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Label>
-   </top>
 </BorderPane>
