@@ -77,7 +77,8 @@ public class ManagementController implements Initializable, ControlledScreen,
 
 	@FXML
 	public void handleStartMatch() throws IOException {
-		myController.setScreen(Main.Uitslagen);
+		Main.huidigSpel.getCompetitie().startSpeelronde();
+		myController.setScreen(Main.StartMatch);
 	}
 
 	@FXML
