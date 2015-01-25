@@ -39,7 +39,7 @@
    <bottom>
       <Pane prefHeight="177.0" prefWidth="775.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="ManagementTerug" layoutX="126.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleExit" styleClass="Buttons" text="Management" />
+            <Button fx:id="ManagementTerug" layoutX="126.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleManagementTerug" styleClass="Buttons" text="Management" />
          </children>
       </Pane>
    </bottom>
