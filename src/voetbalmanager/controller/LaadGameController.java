@@ -45,7 +45,9 @@ public class LaadGameController implements Initializable, ControlledScreen{
 	   border.setPrefSize(screen.getWidth(), screen.getHeight());
 	   
 	   //listview
-	   listData.addAll((new File("saves/")).listFiles());
+	   File dir = new File("saves/");
+	   dir.mkdir();
+	   listData.addAll(dir.listFiles());
 	   laadgame.setItems(listData);
 	   Doorgaan.setDisable(true);
 	   laadgame.setCellFactory((list) -> {return new ListCell<File>(){
