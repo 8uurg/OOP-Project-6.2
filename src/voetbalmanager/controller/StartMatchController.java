@@ -66,7 +66,7 @@ public class StartMatchController implements Initializable, ControlledScreen, Ob
 		if(arg0 instanceof Competitie) {
 			int week = Main.huidigSpel.getCompetitie().getWeek();
 			
-			Ronde.appendText(Main.huidigSpel.getCompetitie().getSchema().getSchema().get(week-1).toString() + Main.huidigSpel.getCompetitie().huidigeResultaten().toString());
+			Ronde.setText(Main.huidigSpel.getCompetitie().getSchema().getSchema().get(week-1).toString() + Main.huidigSpel.getCompetitie().huidigeResultaten().toString());
 		}
 	}
 }
