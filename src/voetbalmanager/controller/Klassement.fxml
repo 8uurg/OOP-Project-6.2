@@ -29,7 +29,7 @@
       <URL value="@Buttons.css" />
    </stylesheets>
    <center>
-      <TableView fx:id="klassementTable" opacity="0.83" prefHeight="200.0" prefWidth="200.0" styleClass="Buttons" BorderPane.alignment="CENTER">
+      <TableView fx:id="klassementTable" opacity="0.83" prefHeight="200.0" prefWidth="200.0" styleClass="Table-View" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="TeamKolom" minWidth="0.0" prefWidth="180.0" text="Club" />
             <TableColumn fx:id="PuntenKolom" prefWidth="82.0" text="Puntentotaal" />

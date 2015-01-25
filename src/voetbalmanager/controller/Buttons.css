@@ -19,11 +19,22 @@
     -fx-font-weight: bold;
  }
  
- .table-view {
+ .Text-Area	{
+ 	-fx-border-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #0E0E0E;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+ }
+ 
+ .Table-View {
     -fx-base: #0E0E0E;
     -fx-control-inner-background: #0E0E0E;
     -fx-background-color: #0E0E0E;
-    -fx-padding: 5;
+    -fx-padding: 10;
 }
 
 

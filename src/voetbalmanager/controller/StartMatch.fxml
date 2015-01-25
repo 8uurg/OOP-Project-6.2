@@ -44,7 +44,7 @@
       </Label>
    </top>
    <center>
-      <TextArea fx:id="Ronde" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+      <TextArea fx:id="Ronde" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.85" prefHeight="200.0" prefWidth="400.0" styleClass="transparentBackground" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets left="100.0" right="100.0" top="20.0" />
          </BorderPane.margin>

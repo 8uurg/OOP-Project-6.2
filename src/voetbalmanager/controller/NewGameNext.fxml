@@ -35,8 +35,8 @@
                   <Insets bottom="20.0" left="50.0" right="50.0" top="20.0" />
                </padding>
                <children>
-                  <ListView fx:id="List" prefHeight="474.0" prefWidth="439.0" />
-                  <TextArea fx:id="myTextField" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                  <ListView fx:id="List" opacity="0.85" prefHeight="474.0" prefWidth="439.0" />
+                  <TextArea fx:id="myTextField" editable="false" opacity="0.85" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" />
                </children>
             </HBox>
             <HBox alignment="BOTTOM_CENTER" spacing="500.0" VBox.vgrow="ALWAYS">
