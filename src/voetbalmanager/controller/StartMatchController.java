@@ -23,10 +23,7 @@ public class StartMatchController implements Initializable, ControlledScreen, Ob
 	
 	
 	@FXML private BorderPane border;
-	@FXML private Label Scoor;
-	@FXML private Button terug;
-	@FXML private Button start;
-	@FXML private Button ManagementTerug;
+	@FXML private Button Terug;
 	@FXML private TextArea Ronde;
 	
 

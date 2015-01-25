@@ -22,7 +22,7 @@
    <bottom>
       <Pane prefHeight="177.0" prefWidth="775.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="ManagementTerug" layoutX="126.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleManagementTerug" styleClass="Buttons" text="Management" />
+            <Button fx:id="Terug" layoutX="141.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleTerug" prefHeight="27.0" prefWidth="82.0" styleClass="Buttons" text="Terug" />
          </children>
       </Pane>
    </bottom>
