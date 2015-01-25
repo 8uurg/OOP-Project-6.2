@@ -213,12 +213,12 @@ public class Competitie extends Observable {
 			competitie.addTeam(nieuwteam);
 			if(nieuwteam.isSpelerBestuurd()) competitie.setSpelerTeam(nieuwteam);
 		}
-		
-		competitie.transfer = TransferMarkt.laadXMLElement((Element) el.getElementsByTagName("transfermarkt").item(0), competitie);
-		
+		if(el.getElementsByTagName("transfermarkt").item(0)!=null){
+			competitie.transfer = TransferMarkt.laadXMLElement((Element) el.getElementsByTagName("transfermarkt").item(0), competitie);
+		}
 		Speelschema actualSchema = Speelschema.laadXMLelement(((Element) el.getElementsByTagName("speelschema").item(0)), competitie);
-
 		competitie.schema = actualSchema;
+		
 		
 		return competitie;
 	}
@@ -309,7 +309,7 @@ public class Competitie extends Observable {
 	 */
 	public void startSpeelronde(){
 		int week=this.week;
-		System.out.println("Week: " + this.week);
+//		System.out.println("Week: " + this.week);
 		AITeamManager a = new AITeamManager();
 		if(week<schema.getSchema().size()){
 			for(Team team: teams){
@@ -337,7 +337,10 @@ public class Competitie extends Observable {
 	 */
 	public Team zoekTeam(String naam) {
 		for(Team t:teams){
-			if(t.getNaam().equalsIgnoreCase(naam)) return t;
+			if(t.getNaam().equalsIgnoreCase(naam)) {
+				System.out.println(t);
+				return t;
+			}
 		}
 		return null;
 	}

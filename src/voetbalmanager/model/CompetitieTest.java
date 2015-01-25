@@ -62,7 +62,7 @@ public class CompetitieTest {
 		competitie.Sorteren("Naam");
 		assertEquals(competitie.getTeams().get(0),AZ);
 		assertNotEquals(competitie.getTeams().get(0),PSV);
-		System.out.println(competitie.getTeams().get(0).toString());
+	//	System.out.println(competitie.getTeams().get(0).toString());
 		Wedstrijd x = new Wedstrijd(PSV,Ajax);
 		Wedstrijd y = new Wedstrijd(Feyenoord,AZ);
 		x.maakUitslag(5,1);
@@ -184,26 +184,26 @@ public class CompetitieTest {
 	public void testSpeel() {
 		//De for loop runt een complete competitie 32 ronden, dus als je 25 keer een competitie wil testen moet je
 		//de comments even weghalen ^^.
-	//	for(int j=0;j<25;++j){	
+		for(int j=0;j<25;++j){	
 			Competitie c = XMLLoader.creeerCompetitie("Heh");
-			c.maakSpeelSchema();
+			c.getSchema();
 			for(int i=0; i<35; ++i){
 				c.startSpeelronde();
 			}
 			System.out.println(c.Sorteren("Punten").toString());
-	//	}
+		}
 	}
 	
 	@Test
 	public void testGetSpelerWedstrijd(){
 		Competitie c = XMLLoader.creeerCompetitie("HA");
 		c.setSpelerTeam(c.getTeams().get(0));
-		System.out.println(c.getSpelerTeam());
+	//	System.out.println(c.getSpelerTeam());
 		c.getSchema();
 		c.startSpeelronde();
-		System.out.println(c.getWeek());
-		System.out.println(c.getSchema().getSchema().get(0).getWedstrijden().get(0));
-		System.out.println(c.getSpelerWedstrijd());
+	//	System.out.println(c.getWeek());
+	//	System.out.println(c.getSchema().getSchema().get(0).getWedstrijden().get(0));
+	//	System.out.println(c.getSpelerWedstrijd());
 		ArrayList<Wedstrijd> a = c.getSchema().getSchema().get(0).getWedstrijden();
 		Wedstrijd j=null;
 		for(Wedstrijd w : a){

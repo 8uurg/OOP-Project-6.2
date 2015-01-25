@@ -81,7 +81,7 @@ public class Opstelling {
 	
 	public void kanWordenOpgesteld(Speler sp) throws OpstellingException  {
 		if(aanvallers.indexOf(sp) != -1 || middenvelders.indexOf(sp) != -1 || verdedigers.indexOf(sp) != -1)
-			throw new OpstellingException(sp.naam + " staat al opgesteld!");
+			throw new OpstellingException(sp.getNaam() + " staat al opgesteld!");
 	}
 	
 	public void voegToeAanvaller(Speler sp) throws OpstellingException {
@@ -129,7 +129,7 @@ public class Opstelling {
 		else if (doelmannen.indexOf(sp) != -1)
 			doelmannen.remove(sp);
 		else
-			throw new OpstellingException(sp.naam + " staat niet opgesteld!");
+			throw new OpstellingException(sp.getNaam() + " staat niet opgesteld!");
 	}
 	
 	/**
@@ -181,9 +181,9 @@ public class Opstelling {
 		int uithouding = 0;
 		
 		for(Speler speler: spelers) {
-			aanval += speler.offensief;
-			verdediging += speler.defensief;
-			uithouding += speler.uithoudingsvermogen;
+			aanval += speler.getOffensief();
+			verdediging += speler.getDefensief();
+			uithouding += speler.getUithouding();
 		}
 		
 		return new SomKrachten(aanval, verdediging, uithouding);

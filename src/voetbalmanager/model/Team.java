@@ -178,7 +178,7 @@ public class Team extends Observable {
 	
 	public void voegToe(Speler sp, int transferbedrag) throws TransferException {
 		if (spelers.indexOf(sp) != -1)
-			throw new TransferException(sp.naam + " zit al in de selectie!");
+			throw new TransferException(sp.getNaam() + " zit al in de selectie!");
 		else if (spelers.size() >= maxSpeler)
 			throw new TransferException("De selectie bevat al het maximum aantal spelers!");
 		else {
@@ -192,7 +192,7 @@ public class Team extends Observable {
 	
 	public void verwijderVanSelectie(Speler sp, int transferbedrag) throws TransferException {
 		if (spelers.indexOf(sp) == -1)
-			throw new TransferException(sp.naam + " zit niet in de selectie!");
+			throw new TransferException(sp.getNaam() + " zit niet in de selectie!");
 		else {
 			verhoogBudget(transferbedrag);
 			spelers.remove(sp);
@@ -313,7 +313,7 @@ public class Team extends Observable {
 		
 		if(selectie) {
 		try {
-			switch(speler.type) {
+			switch(speler.getType()) {
 			case Aanvaller:
 				opstelling.voegToeAanvaller(speler);
 				break;

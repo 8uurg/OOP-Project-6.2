@@ -24,17 +24,17 @@ public class SpelerTest {
 		assertEquals(C,D);
 		assertNotEquals(D,E);
 		assertNotEquals(D,"A");
-		assertEquals(C.team,D.team);
+		assertEquals(C.getTeam(),D.getTeam());
 		assertEquals(E,F);
 	}
 
 	@Test
 	public void testWijzigTeam() {
 		C.wijzigTeam(T);
-		D.team=T;
-		G.team=J;
+		D.setTeam(T);
+		G.setTeam(J);
 		assertEquals(D,C);
-		assertNotEquals(C.team,G.team);
+		assertNotEquals(C.getTeam(),G.getTeam());
 	}
 	
 /*	@Test
@@ -49,7 +49,7 @@ public class SpelerTest {
 		int Rugnummer = 5;
 		int Rugnummerb = 5;
 		Speler C = new Speler("Naam",Rugnummer,1,B,A,5,5,3);
-		assertEquals(C.getRugNummer(),C.nummer);
+		assertEquals(C.getRugNummer(),5);
 		assertEquals(Rugnummerb,C.getRugNummer());
 	}
 
@@ -58,9 +58,9 @@ public class SpelerTest {
 		Speler.Status B = Speler.Status.Beschikbaar;
 		Speler.Type A= Speler.Type.Aanvaller;
 		Speler C = new Speler("Naam",5,1,B,A,5,5,3);
-		C.prijs=5;
+		C.setPrijs(5);
 		int z = 4;
-		assertEquals(C.prijs,C.getPrijs());
+		assertEquals(5,C.getPrijs());
 		assertEquals(5,C.getPrijs());
 		assertNotEquals(z, C.getPrijs());
 	}

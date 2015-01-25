@@ -163,7 +163,8 @@ public class TransferMarkt extends Observable {
 			NodeList l = el.getElementsByTagName("beschikbarespeler");
 			
 			for(int i=0; i<l.getLength(); ++i) {
-				transferMarkt.verhandelbareSpelers.add(BeschikbareSpeler.laadXMLElement(el, c));
+				Element beschikbarespeler = (Element) l.item(i);
+				transferMarkt.verhandelbareSpelers.add(BeschikbareSpeler.laadXMLElement(beschikbarespeler, c));
 			}
 		}
 		

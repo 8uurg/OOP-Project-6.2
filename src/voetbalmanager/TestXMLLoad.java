@@ -7,24 +7,31 @@ import java.io.IOException;
 
 import javax.xml.transform.stream.StreamResult;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 import org.xml.sax.InputSource;
 
+import voetbalmanager.controller.teammanager.AITeamManager;
 import voetbalmanager.model.Competitie;
 import voetbalmanager.model.Speler;
 import voetbalmanager.model.Team;
 import voetbalmanager.model.Wedstrijd;
 
 public class TestXMLLoad {
+	AITeamManager a;
+	Competitie oud;
+	@Before
+	public void testBefore(){
+		a=new AITeamManager();
+		oud = new Competitie("oud");
+	}
 
 	// Test competitie
 	@Test
 	public void testZonderSchema() {
-		Competitie oud = new Competitie("eredivisie");
-		
 		Team a = new Team("Ajax", false);
 			a.overrideAdd(new Speler("James", 12, 12, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 90, 10, 70));
 			a.overrideAdd(new Speler("Patrick", 13, 2, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 60, 40, 70));
@@ -38,7 +45,6 @@ public class TestXMLLoad {
 		oud.addTeam(b);
 		
 		oud.getTransferMarkt().maakVerhandelbaar(a.getSelectie().get(0));
-		oud.getTransferMarkt().maakVerhandelbaar(new Speler("James Watt", 13, 2, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 60, 40, 70));
 		
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		StreamResult outs = new StreamResult(out);
@@ -56,8 +62,6 @@ public class TestXMLLoad {
 	
 	@Test
 	public void testMetSchema() {
-		Competitie Marcoseredivisietest = new Competitie("Marcoseredivisietest");
-		
 		Team A = new Team("A", false);
 			A.overrideAdd(new Speler("James", 12, 12, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 90, 10, 70));
 			A.overrideAdd(new Speler("Patrick", 13, 2, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 60, 40, 70));
@@ -131,55 +135,57 @@ public class TestXMLLoad {
 		R.overrideAdd(new Speler("Patrick", 13, 2, Speler.Status.Beschikbaar, Speler.Type.Aanvaller, 60, 40, 70));
 
 	
-		Marcoseredivisietest.addTeam(A);
-		Marcoseredivisietest.addTeam(B);
-		Marcoseredivisietest.addTeam(C);
-		Marcoseredivisietest.addTeam(D);
-		Marcoseredivisietest.addTeam(E);
-		Marcoseredivisietest.addTeam(F);
-		Marcoseredivisietest.addTeam(G);
-		Marcoseredivisietest.addTeam(H);
-		Marcoseredivisietest.addTeam(I);
-		Marcoseredivisietest.addTeam(J);
-		Marcoseredivisietest.addTeam(K);
-		Marcoseredivisietest.addTeam(L);
-		Marcoseredivisietest.addTeam(M);
-		Marcoseredivisietest.addTeam(N);
-		Marcoseredivisietest.addTeam(O);
-		Marcoseredivisietest.addTeam(P);
-		Marcoseredivisietest.addTeam(Q);
-		Marcoseredivisietest.addTeam(R);
-		Marcoseredivisietest.maakSpeelSchema();
+		oud.addTeam(A);
+		oud.addTeam(B);
+		oud.addTeam(C);
+		oud.addTeam(D);
+		oud.addTeam(E);
+		oud.addTeam(F);
+		oud.addTeam(G);
+		oud.addTeam(H);
+		oud.addTeam(I);
+		oud.addTeam(J);
+		oud.addTeam(K);
+		oud.addTeam(L);
+		oud.addTeam(M);
+		oud.addTeam(N);
+		oud.addTeam(O);
+		oud.addTeam(P);
+		oud.addTeam(Q);
+		oud.addTeam(R);
+		oud.maakSpeelSchema();
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		StreamResult outs = new StreamResult(out);
 		
-		XMLWriter.saveCompetitie(Marcoseredivisietest, outs);
+		XMLWriter.saveCompetitie(oud, outs);
 		
 		ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
 		
-	//	System.out.print(out);
-		
 		Competitie nieuw = XMLLoader.laadCompetitie(new InputSource(in));
 		
-		assertEquals(Marcoseredivisietest, nieuw);
+		assertEquals(oud, nieuw);
 		
 	}
 	
 	@Test
 	public void testCreatie() {
-		Competitie c = XMLLoader.creeerCompetitie("eredivisie");
+		oud = XMLLoader.creeerCompetitie("eredivisie");
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		StreamResult outs = new StreamResult(out);
-		c.maakSpeelSchema();
-		c.startSpeelronde();
-		XMLWriter.saveCompetitie(c, outs);
+		oud.maakSpeelSchema();
+		oud.startSpeelronde();
+		XMLWriter.saveCompetitie(oud, outs);
 		ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
 		Competitie nieuw = XMLLoader.laadCompetitie(new InputSource(in));
-		assertEquals(c.getWeek(),nieuw.getWeek());
-//		assertEquals(c.getSchema().getSchema(),nieuw.getSchema().getSchema());
-		assertEquals(c.getNaam(),nieuw.getNaam());
-//		assertEquals(c.getTeams(),nieuw.getTeams());
-		assertEquals(c.getTransferMarkt(),nieuw.getTransferMarkt());
+		for(Team team:oud.getTeams())
+			a.genereerOpstelling(team);
+		for(Team team:nieuw.getTeams())
+			a.genereerOpstelling(team);
+		assertEquals(oud.getWeek(),nieuw.getWeek());
+		assertEquals(oud.getSchema().getSchema(),nieuw.getSchema().getSchema());
+		assertEquals(oud.getNaam(),nieuw.getNaam());
+		assertEquals(oud.getTeams(),nieuw.getTeams());
+		assertEquals(oud.getTransferMarkt(),nieuw.getTransferMarkt());
 	}
 
 }

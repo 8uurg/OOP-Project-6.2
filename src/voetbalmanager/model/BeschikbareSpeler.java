@@ -24,7 +24,7 @@ public class BeschikbareSpeler {
 	}
 	
 	
-	public boolean equal(Object other){
+	public boolean equals(Object other){
 		if(other instanceof BeschikbareSpeler){
 			BeschikbareSpeler that =(BeschikbareSpeler)other;
 			return this.speler.equals(that.speler)
@@ -55,11 +55,11 @@ public class BeschikbareSpeler {
 	 * @return boolean
 	 */
 	public boolean moetKopen(ArrayList<Speler> spelers) {
-		Speler.Type a = speler.type;
+		Speler.Type a = speler.getType();
 		int totaalType =0;
 		double totaalScore = 0;
 		for(Speler inTeam: spelers){
-			if(inTeam.type==a){
+			if(inTeam.getType()==a){
 				totaalType++;
 				totaalScore =totaalScore+inTeam.getSpelerWaarde();
 			}
@@ -75,10 +75,10 @@ public class BeschikbareSpeler {
 	 * @return integer Het aantal spelers wat slechter is dan de Beschikbare Speler.
 	 */
 	public int besluitKoop(ArrayList<Speler> spelers){
-		Speler.Type a = speler.type;
+		Speler.Type a = speler.getType();
 		int j=0;
 		for(Speler inTeam: spelers){
-			if(inTeam.type==a&&inTeam.getSpelerWaarde()<speler.getSpelerWaarde()){
+			if(inTeam.getType()==a&&inTeam.getSpelerWaarde()<speler.getSpelerWaarde()){
 				j++;
 			}
 		}
@@ -92,10 +92,15 @@ public class BeschikbareSpeler {
 	 * @return Een beschikbarespeler die overeenkomt met de gegevens uit het element.
 	 */
 	public static BeschikbareSpeler laadXMLElement(Element el, Competitie c) {
+		
 		Team t = c.zoekTeam(el.getAttribute("team"));
-		Speler s = Speler.laadXMLElement((Element) el.getElementsByTagName("speler").item(0));
-		if(t==null) System.out.println("De speler " + s.getNaam() + " heeft geen oud team in de transfermarkt.");
-		return new BeschikbareSpeler(s, t);
+		Speler s = t.zoekSpeler(el.getAttribute("speler"));
+	//	Speler s = Speler.laadXMLElement((Element) el.getElementsByTagName("speler").item(0));
+	//	if(t==null) System.out.println("De speler " + s.getNaam() + " heeft geen oud team in de transfermarkt.");
+		 BeschikbareSpeler bsp;
+		return bsp = new BeschikbareSpeler(s,s.getTeam());
+	//	return new BeschikbareSpeler(s, t);
+		
 	}
 	
 	/**
@@ -108,7 +113,8 @@ public class BeschikbareSpeler {
 		
 		el.setAttribute("team", oudTeam.getNaam());
 		
-		el.appendChild(speler.getXMLElement(doc));
+		el.setAttribute("speler", speler.getNaam());
+//		el.appendChild(speler.getXMLElement(doc));
 		
 		return el;
 	}

@@ -12,15 +12,15 @@ import voetbalmanager.XMLWriter;
  * Een klasse die een speler representeerdt
  */
 public class Speler {
-	String naam;
-	int nummer;
-	int prijs;
-	int offensief;
-	int defensief;
-	int uithoudingsvermogen;
-	Status status;
-	Type type;
-	Team team = new Team("Ongedefinieerd", false);
+	private String naam;
+	private int nummer;
+	private int prijs;
+	private int offensief;
+	private int defensief;
+	private int uithoudingsvermogen;
+	private Status status;
+	private Type type;
+	private Team team = new Team("Ongedefinieerd", false);
 
 	public enum Status {
 		Beschikbaar, Blessure, Gelekaart, Rodekaart;
@@ -301,5 +301,13 @@ public class Speler {
 			return true;
 		}
 		return false;
+	}
+	
+	public void setTeam(Team team){
+		this.team = team;
+	}
+	
+	public void setPrijs(int prijs){
+		this.prijs = prijs;
 	}
 }
