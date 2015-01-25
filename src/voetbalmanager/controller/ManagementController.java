@@ -127,10 +127,7 @@ public class ManagementController implements Initializable, ControlledScreen,
 			Main.huidigSpel.getCompetitie().addObserver(this);
 		}
 		if(arg0 instanceof Competitie) {
-			if(Main.huidigSpel.getCompetitie().getSpelerTeam()!=null) {
-				Main.huidigSpel.getCompetitie().getSpelerTeam().addObserver(this);
-				update(Main.huidigSpel.getCompetitie().getSpelerTeam(), arg1);
-			}
+			StartMatch.setDisable(!Main.huidigSpel.getCompetitie().bestaatVolgendeRonde());
 		}
 		
 	}
