@@ -163,7 +163,7 @@ public class AITeamManager {
 		for(Team tf: competitie.getTeams()){
 			if(competitie.getTeams().indexOf(team)>competitie.getTeams().indexOf(tf)){
 				for(Speler sp: tf.getSelectie()){
-					if(tf.isComputerGestuurd()&&sp.transferAanbieden(team.getSelectie())){
+					if(!tf.equals(spelerteam)&&sp.transferAanbieden(team.getSelectie())){
 						speler.add(sp);
 						break;
 					}
