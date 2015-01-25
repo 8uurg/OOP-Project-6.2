@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.StartMatchController">
-   <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+<BorderPane fx:id="border" prefHeight="576.0" prefWidth="775.0" styleClass="mainMenuBackground" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="voetbalmanager.controller.StartMatchController">
+   <children>
+      <Pane layoutX="-100.0" layoutY="-159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+   <stylesheets>
+      <URL value="@Backgrounds.css" />
+      <URL value="@Buttons.css" />
+   </stylesheets>
+   <bottom>
+      <Pane prefHeight="177.0" prefWidth="775.0" BorderPane.alignment="CENTER">
          <children>
-            <ListView prefHeight="362.0" prefWidth="656.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Button fx:id="terug" alignment="BOTTOM_CENTER" mnemonicParsing="false" text="Terug" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="start" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" mnemonicParsing="false" text="Start" />
-               </children>
-            </HBox>
+            <Button fx:id="Terug" layoutX="141.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleTerug" prefHeight="27.0" prefWidth="82.0" styleClass="Buttons" text="Terug" />
          </children>
-      </VBox>
-   </center>
+      </Pane>
+   </bottom>
    <top>
-      <Label prefHeight="81.0" prefWidth="125.0" text="Speelronde" BorderPane.alignment="CENTER" />
+      <Label fx:id="Scoor" text="Speelronde en uitslag" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="0.2" light="$null" specularConstant="2.0" specularExponent="17.68" surfaceScale="5.1">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
+      </Label>
    </top>
+   <center>
+      <TextArea fx:id="Ronde" prefHeight="294.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="100.0" right="100.0" top="20.0" />
+         </BorderPane.margin>
+      </TextArea>
+   </center>
 </BorderPane>

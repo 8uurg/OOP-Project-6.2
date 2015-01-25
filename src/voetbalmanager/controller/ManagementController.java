@@ -52,6 +52,7 @@ public class ManagementController implements Initializable, ControlledScreen,
 	private Button oplaan;
 	@FXML
 	private Button terug;
+	@FXML private TextArea Speelronde;
 	
 	
 	ScreensController myController;
@@ -77,7 +78,8 @@ public class ManagementController implements Initializable, ControlledScreen,
 
 	@FXML
 	public void handleStartMatch() throws IOException {
-		myController.setScreen(Main.Uitslagen);
+		Main.huidigSpel.getCompetitie().startSpeelronde();
+		myController.setScreen(Main.StartMatch);
 	}
 
 	@FXML
@@ -127,10 +129,10 @@ public class ManagementController implements Initializable, ControlledScreen,
 			Main.huidigSpel.getCompetitie().addObserver(this);
 		}
 		if(arg0 instanceof Competitie) {
-			if(Main.huidigSpel.getCompetitie().getSpelerTeam()!=null) {
-				Main.huidigSpel.getCompetitie().getSpelerTeam().addObserver(this);
-				update(Main.huidigSpel.getCompetitie().getSpelerTeam(), arg1);
-			}
+			StartMatch.setDisable(!Main.huidigSpel.getCompetitie().bestaatVolgendeRonde());
+			
+			int week = Main.huidigSpel.getCompetitie().getWeek();
+			Speelronde.setText("Aankomende " + Main.huidigSpel.getCompetitie().getSchema().getSchema().get(week-1).toString());
 		}
 		
 	}

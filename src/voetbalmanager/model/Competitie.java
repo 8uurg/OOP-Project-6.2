@@ -311,7 +311,7 @@ public class Competitie extends Observable {
 		int week=this.week;
 //		System.out.println("Week: " + this.week);
 		AITeamManager a = new AITeamManager();
-		if(week<schema.getSchema().size()){
+		if(bestaatVolgendeRonde()){
 			for(Team team: teams){
 				a.genereerOpstelling(team);
 			}
@@ -328,6 +328,10 @@ public class Competitie extends Observable {
 		this.setChanged();
 		this.notifyObservers();
 		
+	}
+	
+	public boolean bestaatVolgendeRonde() {
+		return week<schema.getSchema().size();
 	}
 	
 	/**
