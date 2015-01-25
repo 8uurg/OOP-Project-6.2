@@ -77,32 +77,6 @@ public class TransferMarkt extends Observable {
 	}
 	
 	/**
-	 * Vergelijkt de oude teams van de beschikbare spelers met 1 team. Dit is voor de AI om te checken of de speler de markt gebruikt heeft.
-	 * @param team Het team waarvan gecheckt moet worden of er een speler op de markt staat.
-	 * @return boolean.
-	 */
-	public boolean getOudTeam(Team team){
-		for(BeschikbareSpeler a:verhandelbareSpelers){
-			if(a.getOudTeam().equals(team)){
-				return true;
-			}
-		}
-		return false; 
-	}
-	/**
-	 * Geeft de score terug van de slechtste speler op de spelersmarkt.
-	 * @return Score.
-	 */
-	public double getMinWaarde() {
-		double minSpelerwaarde = 5*10^6;
-		for(BeschikbareSpeler speler:verhandelbareSpelers){
-			if(speler.getSpeler().getSpelerWaarde()<minSpelerwaarde){
-				minSpelerwaarde=speler.getSpeler().getSpelerWaarde();
-			}
-		}
-		return 0;
-	}
-	/**
 	 * Koop een speler van de markt voor de gevraagde prijs.
 	 * @param team Het team dat de speler gekocht heeft.
 	 * @param speler De speler die verkocht is aan het team.
@@ -159,14 +133,13 @@ public class TransferMarkt extends Observable {
 	public static TransferMarkt laadXMLElement(Element el, Competitie c) {
 		TransferMarkt transferMarkt = new TransferMarkt();
 		
-		if(el!=null) {
-			NodeList l = el.getElementsByTagName("beschikbarespeler");
-			
-			for(int i=0; i<l.getLength(); ++i) {
-				Element beschikbarespeler = (Element) l.item(i);
-				transferMarkt.verhandelbareSpelers.add(BeschikbareSpeler.laadXMLElement(beschikbarespeler, c));
-			}
+		NodeList l = el.getElementsByTagName("beschikbarespeler");
+		
+		for(int i=0; i<l.getLength(); ++i) {
+			Element beschikbarespeler = (Element) l.item(i);
+			transferMarkt.verhandelbareSpelers.add(BeschikbareSpeler.laadXMLElement(beschikbarespeler, c));
 		}
+		
 		
 		return transferMarkt;
 	}

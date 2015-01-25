@@ -238,7 +238,7 @@ public class Speler {
 				totaalScore =totaalScore+inTeam.getSpelerWaarde();
 			}
 		}
-		if(getSpelerWaarde()>totaalScore/totaalType)
+		if(checkMinimum(spelers)&&getSpelerWaarde()>totaalScore/totaalType)
 			return true;
 		return false;
 	}

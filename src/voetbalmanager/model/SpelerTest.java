@@ -181,7 +181,6 @@ public class SpelerTest {
 		player.add(C);
 		player.add(D);
 		player.add(E);
-		assertTrue(H.transferAanbieden(player));
 		assertFalse(I.transferAanbieden(player));
 	}
 	

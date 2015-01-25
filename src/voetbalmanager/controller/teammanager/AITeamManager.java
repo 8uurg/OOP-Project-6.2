@@ -79,7 +79,7 @@ public class AITeamManager {
 	private void biedTransferAan(Team team,Speler sp,int prijs) {
 		int b = rng.nextInt(1000);
 		Team a = sp.getTeam();
-		if(sp.checkMinimum(team.getSelectie())&&!(b>5)){
+		if(sp.checkMinimum(a.getSelectie())&&!(b>5)){
 			try {
 				competitie.getTransferMarkt().Transfer(a, team, sp,prijs);
 			} catch (TransferException e) {
