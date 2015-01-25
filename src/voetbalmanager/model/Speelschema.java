@@ -232,7 +232,7 @@ public class Speelschema {
 		return speelschema;
 	}
 	
-	public static Speelschema laadXMLelement(Element el, Competitie competitie) {
+	public static Speelschema laadXMLElement(Element el, Competitie competitie) {
 		Speelschema schema = competitie.maakSpeelSchema();
 		if(el!=null) {
 			NodeList speelschema = el.getElementsByTagName("speelronde");
@@ -240,7 +240,7 @@ public class Speelschema {
 			System.out.println(speelschema.getLength());
 			for(int i=0;i<speelschema.getLength();i++){
 				Element speelronde = (Element) speelschema.item(i);
-				speelronden.add(Speelronde.laadXMLelement(speelronde,competitie));
+				speelronden.add(Speelronde.laadXMLElement(speelronde,competitie));
 			}
 			schema.schema=speelronden;
 		}

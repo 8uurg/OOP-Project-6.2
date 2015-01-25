@@ -163,7 +163,7 @@ public class Speelronde {
 		return speelronde;
 	}
 
-	public static Speelronde laadXMLelement(Element el, Competitie competitie) {
+	public static Speelronde laadXMLElement(Element el, Competitie competitie) {
 		Speelronde ronde = new Speelronde();
 		NodeList wedstrijden = el.getElementsByTagName("wedstrijd");
 		
