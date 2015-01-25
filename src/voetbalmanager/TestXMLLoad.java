@@ -7,6 +7,7 @@ import java.io.IOException;
 
 import javax.xml.transform.stream.StreamResult;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -186,6 +187,12 @@ public class TestXMLLoad {
 		assertEquals(oud.getNaam(),nieuw.getNaam());
 		assertEquals(oud.getTeams(),nieuw.getTeams());
 		assertEquals(oud.getTransferMarkt(),nieuw.getTransferMarkt());
+	}
+	
+	@After
+	public void testAfter(){
+		a=null;
+		oud = null;
 	}
 
 }

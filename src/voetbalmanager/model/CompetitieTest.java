@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -231,5 +232,14 @@ public class CompetitieTest {
 		assertEquals(c.huidigeResultaten(),c.getSchema().getSchema().get(0).getWedstrijden());
 		c.startSpeelronde();
 		assertEquals(c.huidigeResultaten(), c.getSchema().getSchema().get(0).getWedstrijden());
+	}
+	
+	@After
+	public void naAlleTests() {
+		Ajax = null;
+		Feyenoord = null;
+		PSV = null;
+		AZ = null;
+		eredivisie = null;
 	}
 }
