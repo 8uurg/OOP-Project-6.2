@@ -36,9 +36,6 @@
                <VBox.margin>
                   <Insets top="40.0" />
                </VBox.margin>
-               <padding>
-                  <Insets top="50.0" />
-               </padding>
             </ListView>
             <HBox prefHeight="0.0" prefWidth="750.0" spacing="410.0" translateY="80.0" VBox.vgrow="ALWAYS">
                <children>
