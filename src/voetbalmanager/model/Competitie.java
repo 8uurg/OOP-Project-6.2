@@ -395,4 +395,14 @@ public class Competitie extends Observable {
 		return getSchema().getSchema().get(week).getWedstrijden();
 		
 	}
+	
+	public String rondeToString(){
+		ArrayList<Wedstrijd> a = huidigeResultaten();
+		StringBuilder b = new StringBuilder();
+		b.append("Speelronde "+getWeek()+"\n");
+		for(Wedstrijd w:a){
+			b.append(w.toString()+"\n");
+		}
+		return b.toString();
+	}
 }

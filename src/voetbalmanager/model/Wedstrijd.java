@@ -85,7 +85,7 @@ public class Wedstrijd {
 		String s = "";
 		s += teams[0].getNaam() + " - " + teams[1].getNaam();
 		if(uitslag!=null){
-			s +="\n"+ ": " + uitslag[0] + " - "  + uitslag[1];
+			s +="\n" + uitslag[0] + " - "  + uitslag[1];
 		}
 		return s;
 	}
