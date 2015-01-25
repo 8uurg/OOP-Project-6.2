@@ -17,11 +17,11 @@
                   <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" />
                   <HBox spacing="200.0">
                      <children>
-                        <ListView fx:id="kopenSpeler" prefHeight="200.0" prefWidth="200.0" />
+                        <ListView fx:id="kopenSpeler" opacity="0.85" prefHeight="200.0" prefWidth="200.0" />
                         <VBox spacing="49.0">
                            <children>
-                              <TextArea fx:id="budgetKopen" editable="false" prefHeight="42.0" prefWidth="165.0" />
-                              <TextArea fx:id="kopenSpelerId" editable="false" prefHeight="250.0" prefWidth="177.0">
+                              <TextArea fx:id="budgetKopen" editable="false" opacity="0.85" prefHeight="42.0" prefWidth="165.0" />
+                              <TextArea fx:id="kopenSpelerId" editable="false" opacity="0.85" prefHeight="250.0" prefWidth="177.0">
                                  <HBox.margin>
                                     <Insets bottom="175.0" />
                                  </HBox.margin>
@@ -41,11 +41,11 @@
                   <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" />
                   <HBox spacing="200.0">
                      <children>
-                        <ListView fx:id="verkopenSpeler" prefHeight="200.0" prefWidth="200.0" />
+                        <ListView fx:id="verkopenSpeler" opacity="0.85" prefHeight="200.0" prefWidth="200.0" />
                         <VBox spacing="49.0">
                            <children>
-                              <TextArea fx:id="budgetVerkopen" editable="false" prefHeight="42.0" prefWidth="165.0" />
-                              <TextArea fx:id="verkopenSpelerId" editable="false" prefHeight="250.0" prefWidth="177.0">
+                              <TextArea fx:id="budgetVerkopen" editable="false" opacity="0.85" prefHeight="42.0" prefWidth="165.0" />
+                              <TextArea fx:id="verkopenSpelerId" editable="false" opacity="0.85" prefHeight="250.0" prefWidth="177.0">
                                  <HBox.margin>
                                     <Insets bottom="175.0" />
                                  </HBox.margin>
