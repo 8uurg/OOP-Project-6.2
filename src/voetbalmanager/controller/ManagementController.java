@@ -6,14 +6,10 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.ResourceBundle;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
@@ -23,9 +19,6 @@ import voetbalmanager.Main;
 import voetbalmanager.Spel;
 import voetbalmanager.XMLWriter;
 import voetbalmanager.model.Competitie;
-import voetbalmanager.model.Speelschema;
-
-import voetbalmanager.model.Team;
 
 public class ManagementController implements Initializable, ControlledScreen,
 		Observer {

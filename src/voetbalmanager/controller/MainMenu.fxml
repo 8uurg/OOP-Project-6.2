@@ -17,7 +17,7 @@
    <center>
       <VBox fx:id="verticalBox" alignment="CENTER" fillWidth="false" prefHeight="600.0" prefWidth="800.0" spacing="10.0" styleClass="navigator" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Total Control 2015" textFill="WHITE" translateX="-20.0" translateY="-40.0">
+            <Label text="Total Control 2015" textFill="#0813a6d2" translateX="-20.0" translateY="-40.0">
                <font>
                   <Font name="System Bold Italic" size="41.0" />
                </font>
@@ -29,11 +29,6 @@
                   </Lighting>
                </effect>
             </Label>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="manage the world..." translateX="150.0" translateY="-60.0">
-               <font>
-                  <Font name="System Bold Italic" size="14.0" />
-               </font>
-            </Text>
             <Button fx:id="NewGame" layoutX="400.0" layoutY="288.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleNewGame" prefHeight="25.0" prefWidth="88.0" styleClass="Buttons" text="Nieuw Spel" textFill="#463e3e" VBox.vgrow="ALWAYS">
                <font>
                   <Font name="System Bold" size="12.0" />
