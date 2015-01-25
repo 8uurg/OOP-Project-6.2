@@ -19,8 +19,12 @@
     -fx-font-weight: bold;
  }
  
+ .table-view {
+    -fx-base: #0E0E0E;
+    -fx-control-inner-background: #0E0E0E;
+    -fx-background-color: #0E0E0E;
+    -fx-padding: 5;
+}
+
 
  
- 
- /* *radial-gradient( focus-angle 0.0deg, focus-distance 0.0%, center 50.0% 50.0%, radius 100.0%, rgb(0.0,26.0,128.0) 0.0, rgb(0.0,0.0,0.0) 100.0 );
-    -fx-effect: dropshadow( three-pass-box , rgba(0.0,0.0,0.0,0.6) , 5.0, 0.0 , 0.0 , 1.0 ); */

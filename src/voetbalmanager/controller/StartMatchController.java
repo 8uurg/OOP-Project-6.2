@@ -64,7 +64,7 @@ public class StartMatchController implements Initializable, ControlledScreen, Ob
 		}
 		if(arg0 instanceof Competitie) {
 			
-			Ronde.setText(Main.huidigSpel.getCompetitie().huidigeResultaten().toString());
+			Ronde.setText(Main.huidigSpel.getCompetitie().rondeToString());
 		}
 	}
 }
